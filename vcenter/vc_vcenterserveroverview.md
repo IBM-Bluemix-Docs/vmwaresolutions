@@ -42,7 +42,7 @@ This layer virtualizes the physical infrastructure through different VMware prod
 
 ### Virtualization management
 
-This layer consists of vCenter Server Appliance (vCSA), NSX Manager, two NSX ESGs, three NSX Controllers, Platform Services Controller (PSC) virtual appliance, vCSA, and the IBM CloudDriver virtual machine.
+This layer consists of vCenter Server Appliance (vCSA), NSX Manager, two NSX ESGs, three NSX Controllers, Platform Services Controller (PSC) virtual appliance, and the IBM CloudDriver virtual machine.
 
 The base offering is deployed with a vCenter Server appliance that is sized to support an environment with up to 400 hosts and up to 4000 VMs. The same vSphere API-compatible tools and scripts can be used to manage the IBM-hosted VMware environment.
 
