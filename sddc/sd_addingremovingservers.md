@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-25"
+lastupdated: "2018-06-01"
 
 ---
 
@@ -14,19 +14,10 @@ You can expand or contract the capacity of your VMware Cloud Foundation instance
 
 ## Before you begin
 
-* The {{site.data.keyword.cloud_notm}} infrastructure provides an automatic and free upgrade to your CPU model if the configuration that you order is not available. The following table identifies the possible upgrade scenarios.
-
-Table 1. Possible CPU model upgrade options
-
-| Ordered CPU        | Automatic CPU upgrade options       |
-|:------------- |:------------- |
-| Dual Intel Xeon E5-2620 v4 / 16 cores total, 2.1 GHz | Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz<br><br>Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz |
-| Dual Intel Xeon E5-2650 v4 / 24 cores total, 2.2 GHz | Dual Intel Xeon E5-2690 v4 / 28 cores total, 2.6 GHz |
-* When you remove ESXi servers, the servers are placed in maintenance mode, and after that, all the virtual machines (VMs) running on the servers are migrated before they are removed from vCenter Server. For maximum of control over the relocation of VMs, it is recommended that you place the ESXi servers to be removed in maintenance mode and migrate the VMs running on them manually using the VMware vSphere Web Client. After that, remove the ESXi servers using the {{site.data.keyword.vmwaresolutions_full}} console.
-
-   **Note**: Do not add or remove ESXi servers from the VMware vSphere Web Client. The changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console.
-
 * Before you remove ESXi servers with the IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} service installed, ensure that there are no active (failed or in progress) backup or restore operations, because these active operations might prevent the ESXi servers to be removed.
+
+**Note**: Do not add or remove ESXi servers from the VMware vSphere Web Client. The changes that you make on the VMware vSphere Web Client are not synchronized with the {{site.data.keyword.vmwaresolutions_short}} console.
+
 * The base platform that you ordered has 4 ESXi servers by default. You can expand the platform to a maximum of 32 ESXi servers. However, the number of the {{site.data.keyword.baremetal_short}} that you can add at a time is as follows:
    * For the **Small** and **Large** configuration, you can add 1 - 10 ESXi servers at a time.
    * For the **Customized** configuration, you can add 1 - 20 ESXi servers at a time.
