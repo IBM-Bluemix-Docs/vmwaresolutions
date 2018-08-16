@@ -14,27 +14,27 @@ This release includes new features, component updates, usability enhancements, a
 
 ## FortiGate Virtual Appliance on IBM Cloud
 
-The FortiGate Virtual Appliance on IBM Cloud service is now available to V2.0 and later VMware Cloud Foundation instances and VMware vCenter Server instances. This service deploys a high-availability (HA) pair of FortiGate Virtual Appliances to your environment, which can help you to reduce risk by implementing critical security controls within your virtual infrastructure.
+The FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service is now available to V2.0 and later VMware Cloud Foundation instances and VMware vCenter Server instances. This service deploys a high-availability (HA) pair of FortiGate Virtual Appliances to your environment, which can help you to reduce risk by implementing critical security controls within your virtual infrastructure.
 
-You can order instances with the FortiGate Virtual Appliance on IBM Cloud service included when you order your instance, or add this service to your existing instances later from the **Services** tab on the instance details page. Depending on your requirements, you can select one of three deployment sizes and licensing options for this service. After the service is installed successfully, you can manage and configure firewall rules for the FortiGate Virtual Appliances from the FortiGate console.
+You can order instances with the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service included when you order your instance, or add this service to your existing instances later from the **Services** tab on the instance details page. Depending on your requirements, you can select one of three deployment sizes and licensing options for this service. After the service is installed successfully, you can manage and configure firewall rules for the FortiGate Virtual Appliances from the FortiGate console.
 
-For more information, see:
-* [Components and considerations for FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_considerations.html)
-* [Managing FortiGate Virtual Appliance on IBM Cloud](../services/managingfortinetvm.html)
+For more information, see the following topics:
+* [Components and considerations for FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html)
+* [Managing FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/managingfortinetvm.html)
 
 ## Multiple service installation for F5 on IBM Cloud and FortiGate Virtual Appliance on IBM Cloud
 
-You can now install multiple instances of the F5 on IBM Cloud service and the FortiGate Virtual Appliance on IBM Cloud service for a Cloud Foundation instance or a vCenter Server instance. When you select the F5 service or the FortiGate service during instance ordering, you must specify a name for the service instance to distinguish it from the additional service instances that you install later on.
+You can now install multiple instances of the F5 on {{site.data.keyword.cloud_notm}} service and the FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service for a Cloud Foundation instance or a vCenter Server instance. When you select the F5 service or the FortiGate service during instance ordering, you must specify a name for the service instance to distinguish it from the additional service instances that you install later on.
 
 After the instance deployment is completed, you can add more instances of the F5 or the FortiGate service by installing the service on the **Add Services** tab of the instance details page. You can add only one service instance at a time, and you must repeat the process for all the instances that you want to add for a service.
 
-For more information, see:
+For more information, see the following topics:
 * [Ordering, viewing, and removing services for Cloud Foundation instances](../sddc/sd_addingremovingservices.html)
 * [Ordering, viewing, and removing services for vCenter Server instances](../vcenter/vc_addingremovingservices.html)
 
 ## Updates for FortiGate Security Appliance on IBM Cloud
 
-In this release, the Fortinet on IBM Cloud service is renamed to FortiGate Security Appliance on IBM Cloud, and the pair of FortiGate Security Appliances (FSAs) of the service is configured to be secure by default when they are deployed to your instance:
+In this release, the Fortinet on {{site.data.keyword.cloud_notm}} service is renamed to FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}, and the pair of FortiGate Security Appliances (FSAs) of the service is configured to be secure by default when they are deployed to your instance:
 * If you deploy a pair of FSAs as part of a new Cloud Foundation instance or vCenter Server instance, the FSAs are configured to allow only the required outbound communications from your instance to the public network and deny all other communications.
 * If you deploy a pair of FSAs as part of an existing Cloud Foundation instance or vCenter Server instance, the FSAs are configured with an explicit rule to allow all the required outbound management communications from your instance to the public network, and the FSAs are also configured with an additional rule to allow all other communications to ensure that your existing application traffic is not interrupted.
 
@@ -44,17 +44,17 @@ In all cases, you must manage the FSAs configuration carefully to allow only nec
 
 The fully-qualified domain name (FQDN) is now represented in a consistent way for all instances. When you place an order, you can enter your own subdomain prefix and host name prefix. This ensures that the industry convention for the FQDN format is followed, such as: `host-name-prefix<n>.subdomain-prefix.domain-name`.
 
-For more information, see:
+For more information, see the following topics:
 * [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html)
 * [Ordering vCenter Server instances](../vcenter/vc_orderinginstance.html)
 * [Ordering new vSphere clusters](../vsphere/vs_orderinginstances.html)
 
 ## Workload and storage estimates during instance ordering
 
-* During a VMware vSphere on IBM Cloud order, you are provided with an estimate of how many virtual machines can run on the ordered instance.
+* During a VMware vSphere on {{site.data.keyword.cloud_notm}} order, you are provided with an estimate of how many virtual machines can run on the ordered instance.
 * During a Cloud Foundation and vCenter Server order, you are provided with an estimate of the usable storage capacity for the ordered instance.
 
-For more information, see:
+For more information, see the following topics:
 * [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html)
 * [Ordering vCenter Server instances](../vcenter/vc_orderinginstance.html)
 * [Ordering new vSphere clusters](../vsphere/vs_orderinginstances.html)
@@ -72,7 +72,7 @@ The current release applies the following component updates and improvements for
 
 **Note**: Existing instances (from releases V1.9 and earlier) cannot be upgraded to the component versions in this list.
 
-For more information on components, see [Cloud Foundation overview](../sddc/sd_cloudfoundationoverview.html).
+For more information about components, see [Cloud Foundation overview](../sddc/sd_cloudfoundationoverview.html).
 
 ### Cluster support for Cloud Foundation instances
 
@@ -84,7 +84,7 @@ You can view the cluster details or add up to a total of five clusters to an ins
 
 You can now customize the vSAN storage configuration by selecting the number and size of the vSAN storage drives as part of your instance order.
 
-For more information, see:
+For more information, see the following topics:
 * [Cloud Foundation overview](../sddc/sd_cloudfoundationoverview.html)
 * [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html)
 
@@ -100,7 +100,7 @@ The following Bare Metal Server configuration settings are now available:
 
 **Note**: The chassis has space for 12 disks, however not all slots are filled in. The **Small** configuration provides two 1.9 TB Micron 5100 MAX drives and the **Large** configuration provides four 3.8 TB Micron 5100 PRO drives.
 
-For more information, see:
+For more information, see the following topics:
 * [Cloud Foundation overview](../sddc/sd_cloudfoundationoverview.html)
 * [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html)
 
@@ -115,7 +115,7 @@ The current release applies the following component updates for new deployments:
 
 **Note:** vCenter Server customized orders with or without the VMware vSAN component always include a 12-disk chassis server which reflects a slightly higher cost for the {{site.data.keyword.baremetal_short}} for the non-vSAN order case in the price estimate PDF.
 
-For more information on components, see [vCenter Server overview](../vcenter/vc_vcenterserveroverview.html).
+For more information about components, see [vCenter Server overview](../vcenter/vc_vcenterserveroverview.html).
 
 ### Multi-site configuration support for vCenter Server instances
 
@@ -133,7 +133,7 @@ For more information, see [Ordering vCenter Server instances](../vcenter/vc_orde
 
 BYOL is now available to vCenter Server instances. BYOL allows you to use one or more of your own vCenter Server, vSphere, vSAN, and NSX VMware licenses when ordering vCenter Server instances.
 
-For more information, see:
+For more information, see the following topics:
 * [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html)
 * [Ordering vCenter Server instances](../vcenter/vc_orderinginstance.html)
 * [Ordering new vSphere clusters](../vsphere/vs_orderinginstances.html)
@@ -148,7 +148,7 @@ For the VMware vSAN component, the following disk types are now available for {{
 * 3.8 TB SSD SED
 
 **Notes:**
-* 3.8 TB SSD SED drives will be supported when they are made generally available in a data center.
+* 3.8 TB SSD SED drives will be supported when they are made generally available in an {{site.data.keyword.CloudDataCent_notm}}.
 * Orders with or without the VMware vSAN component always include a 12-disk chassis server which reflects a slightly higher cost for the {{site.data.keyword.baremetal_short}} for the non-vSAN order case in the price estimate PDF.
 
 For more information, see [Ordering new vSphere clusters](../vsphere/vs_orderinginstances.html).
@@ -162,15 +162,15 @@ The following bare metal server configuration options are now available:
 * **High Performance (Large)** – Premium license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 128 GB RAM / Twenty Two 3.8 TB SSD drives capacity per node / Effective capacity of a 4-node cluster – 118 TB
 * **High Capacity** – Standard license / Dual Intel Xeon E5-2650 v4 (24 cores total, 2.2 GHz) / 64 GB RAM / Ten 4 TB SATA drives capacity per node / Effective capacity of a 4-node cluster – 60 TB
 
-**Note:** 3.8 TB SSD drives will be supported when they are made generally available in a data center.
+**Note:** 3.8 TB SSD drives will be supported when they are made generally available in an {{site.data.keyword.CloudDataCent_notm}}.
 
-For more information, see:
+For more information, see the following topics:
 * [NetApp ONTAP Select overview](../netapp/np_netappoverview.html)
 * [Ordering NetApp ONTAP Select instances](../netapp/np_orderinginstances.html)
 
 ## New and updated documentation
 
-VMware Cloud Foundation users can use step-by-step instructions along with VMware's NSX platform on the IBM Cloud to allow virtual machines to communicate with each other and the Internet. For more information, see [Setting up NSX for workload VMs on VMware Cloud Foundation on IBM Cloud (VCF)](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/){:new_window}.
+VMware Cloud Foundation users can use step-by-step instructions along with VMware's NSX platform on the {{site.data.keyword.cloud_notm}} to allow virtual machines to communicate with each other and the Internet. For more information, see [Setting up NSX for workload VMs on VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} (VCF)](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/){:new_window}.
 
 ## User interface updates and enhancements
 

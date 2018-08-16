@@ -24,7 +24,7 @@ For more information, see [Addressing Spectre and Meltdown vulnerabilities](../v
 
 ## National Language support
 
-Starting with the V2.4 release, National Language Support (NLS) is available for IBM Cloud for VMware Solutions.
+Starting with the V2.4 release, National Language Support (NLS) is available for {{site.data.keyword.vmwaresolutions_short}}.
 All features on the console, including the user documentation, are available in multiple languages.
 
 The following languages are supported, in addition to English:
@@ -58,7 +58,7 @@ For more information, see the *Bare Metal Server settings* section in:
 
 ### Network File System performance enhancement
 
-The performance level of 10 IOPS/GB, designed for the most demanding workload types, is no longer limited to specific {{site.data.keyword.CloudDataCent_notm}}, but is now available to all. For more information, see the *Storage* section in [vCenter Server overview](../vcenter/vc_vcenterserveroverview.html#vcenter-server-technical-specifications).
+The performance level of 10 IOPS/GB, designed for the most demanding workload types, is no longer limited to specific {{site.data.keyword.CloudDataCent_notm}}, but is now available to all. For more information, see the *Storage* section in [vCenter Server overview](../vcenter/vc_vcenterserveroverview.html#technical-specifications-for-vcenter-server-instances).
 
 ## Updates for VMware Federal instances
 
@@ -70,11 +70,11 @@ You can now deploy VMware Federal instances to the DAL08 - Dallas, TX {{site.dat
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-The current release installs IBM Spectrum Protect&trade; Plus V10.1.1 Patch 1 on all newly deployed instances. For information about the new features in IBM Spectrum Protect Plus V10.1.1 Patch 1, see [IBM Spectrum Protect Plus updates](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
+The current release installs IBM Spectrum Protect&trade; Plus V10.1.1 Patch 1 on all newly deployed instances. For more information about the new features in IBM Spectrum Protect Plus V10.1.1 Patch 1, see [IBM Spectrum Protect Plus updates](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
 
 ### VMware HCX on IBM Cloud
 
-A new option is now available for you to choose between public network and private network for HCX interconnects when you order this service. For more information, see [Ordering VMware HCX on IBM Cloud](../services/hcx_ordering.html).
+A new option is now available for you to choose between public network and private network for HCX interconnects when you order this service. For more information, see [Ordering VMware HCX on {{site.data.keyword.cloud_notm}}](../services/hcx_ordering.html).
 
 ## New and updated documentation
 
@@ -86,17 +86,17 @@ The {{site.data.keyword.vmwaresolutions_short}} architecture document is now ava
 
 The services information has been restructured and the navigation has been improved to easily locate relevant information when ordering services.
 
-For more information, see:
+For more information, see the following topics:
 
-* [Ordering F5 on IBM Cloud](../services/f5_ordering.html)
-* [Ordering FortiGate Security Appliance on IBM Cloud](../services/fsa_ordering.html)
-* [Ordering FortiGate Virtual Appliance on IBM Cloud](../services/fortinetvm_ordering.html)
-* [Ordering Hytrust CloudControl on IBM Cloud](../services/htcc_ordering.html)
-* [Ordering Hytrust DataControl on IBM Cloud](../services/htdc_ordering.html)
-* [Ordering IBM Spectrum Protect Plus on IBM Cloud](../services/spp_ordering.html)
-* [Ordering KMIP for VMware on IBM Cloud](../services/kmip_ordering.html)
-* [Ordering Veeam on IBM Cloud](../services/veeam_ordering.html)
-* [Ordering Zerto on IBM Cloud](../services/zerto_ordering.html)
+* [Ordering F5 on {{site.data.keyword.cloud_notm}}](../services/f5_ordering.html)
+* [Ordering FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}](../services/fsa_ordering.html)
+* [Ordering FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_ordering.html)
+* [Ordering Hytrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_ordering.html)
+* [Ordering Hytrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_ordering.html)
+* [Ordering IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](../services/spp_ordering.html)
+* [Ordering KMIP for VMware on {{site.data.keyword.cloud_notm}}](../services/kmip_ordering.html)
+* [Ordering Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_ordering.html)
+* [Ordering Zerto on {{site.data.keyword.cloud_notm}}](../services/zerto_ordering.html)
 
 ## User interface updates and enhancements
 

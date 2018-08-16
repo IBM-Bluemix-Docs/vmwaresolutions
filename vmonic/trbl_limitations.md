@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-08"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -14,7 +14,7 @@ Review the following considerations and limitations when you work with {{site.da
 
 ## Windows automatic installation of updates
 
-The Microsoft Active Directory (AD) / Domain Name Server (DNS) is automatically set up to only download updates. It does not install these updates or reboot automatically. You must install the updates manually and reboot at a scheduled time that avoids any interruptions of the ongoing AD server configuration and other backup jobs. To apply Windows updates, install the updates manually.
+The Microsoft Active Directory (AD) / Domain Name Server (DNS) is automatically set up to download the updates only. It does not install these updates or restart automatically. You must install the updates manually and restart at a scheduled time that avoids any interruptions of the ongoing AD server configuration and other backup jobs. To apply Windows updates, install the updates manually.
 
 ## Considerations when choosing a root domain name for Cloud Foundation instances
 

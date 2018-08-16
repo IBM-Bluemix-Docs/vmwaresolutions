@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-05-30"
+lastupdated: "2018-08-16"
 
 ---
 
 # Managing system notifications
 
-You can check notifications for the status of system or user operations. You can also use the information to diagnose and troubleshoot problems that might occur.
+You can check notifications for the status of system or user operations. You can also use the information to investigate problems that might occur.
 
 ## Viewing notifications
 
@@ -31,7 +31,7 @@ You can check notifications for the status of system or user operations. You can
           <dt class="dt dlterm">Critical</dt>
           <dd class="dd">A critical event might impact the entire system or service.</dd>
           <dt class="dt dlterm">Error</dt>
-          <dd class="dd">An error event occurs during an operation that might need intervention from the administrator or the end user.</dd>
+          <dd class="dd">An error event occurs during an operation that might need intervention from the administrator or the user.</dd>
           <dt class="dt dlterm">Warning</dt>
           <dd class="dd">A component fails or is not working properly. However, the failure does not disrupt the ongoing process of the component.</dd>
             <dt class="dt dlterm">Informational</dt>
@@ -69,9 +69,9 @@ You can check notifications for the status of system or user operations. You can
 
 ## Filtering notifications
 
-By default, all unread notifications are displayed. You can filter the notifications by status, severity, and type. To filter the notifications, select the check boxes only for the items that you want to display in the **Status**, **Severity**, or **Type** drop-down lists.
+By default, all unread notifications are displayed. You can filter the notifications by status, severity, and type. To filter the notifications, select the check boxes only for the items that you want to display in the **Status**, **Severity**, or **Type** lists.
 
-## Related links
+### Related links
 
 * [FAQ](faq.html)
 * [User account and settings](useraccount.html)

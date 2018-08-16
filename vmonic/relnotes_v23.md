@@ -24,11 +24,11 @@ For more information, see [Addressing Spectre and Meltdown vulnerabilities](../v
 
 ## VMware vCenter Server on IBM Cloud with Hybridity Bundle
 
-This release introduces the VMware vCenter Server on IBM Cloud with Hybridity Bundle offering. The vCenter Server with Hybridity Bundle is a hosted private cloud that helps quickly and easily extend your on-premises infrastructure into the cloud. The VMware environment is based on IBM-provided VMware Software Defined Data Center licenses and includes the VMware HCX on {{site.data.keyword.cloud_notm}} service that easily and securely connects a vSphere 5.0+ environment on-premises with IBM Cloud sites for seamless infrastructure hybridity and true application mobility.
+This release introduces the VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle offering. The vCenter Server with Hybridity Bundle is a hosted private cloud that helps quickly and easily extend your on-premises infrastructure into the cloud. The VMware environment is based on IBM-provided VMware Software Defined Data Center licenses and includes the VMware HCX on {{site.data.keyword.cloud_notm}} service that easily and securely connects a vSphere 5.0+ environment on-premises with {{site.data.keyword.cloud_notm}} sites for seamless infrastructure hybridity and true application mobility.
 
 The HCX on {{site.data.keyword.cloud_notm}} service is available only through the vCenter Server with Hybridity Bundle instance. You can upgrade your existing vCenter Server instance to a vCenter Server with Hybridity Bundle instance after first applying the base vCenter Server V2.3 software update. For more information, see [Applying updates to vCenter Server instances](../vcenter/vc_applyingupdates.html).
 
-For more information on the vCenter Server with Hybridity Bundle, see:
+For more information about the vCenter Server with Hybridity Bundle, see the following topics:
 
 * [vCenter Server with Hybridity Bundle overview](../vcenter/vc_hybrid_overview.html)
 * [Requirements and planning for vCenter Server with Hybridity Bundle instances](../vcenter/vc_hybrid_planning.html)
@@ -38,7 +38,7 @@ For more information on the vCenter Server with Hybridity Bundle, see:
 
 You can now delete clusters from an instance without having to delete the entire instance. For clusters deployed in V2.2 or earlier instances, you must upgrade the instance to V2.3 to be able to delete the clusters that you added to the instance.
 
-For more information, see:
+For more information, see the following topics:
 
 * [Adding, viewing, and deleting clusters for vCenter Server instances](../vcenter/vc_addingviewingclusters.html#deleting-clusters-from-vcenter-server-instances)
 * [Adding, viewing, and deleting clusters for Cloud Foundation instances](../sddc/sd_addingviewingclusters.html#deleting-clusters-from-cloud-foundation-instances)
@@ -55,7 +55,7 @@ Starting with the V2.3 release, the following new CPU models are available for d
 * Dual Intel Xeon Silver 4110 Processor / 16 cores total, 2.1 GHz
 * Dual Intel Xeon Gold 5120 Processor / 28 cores total, 2.2 GHz
 
-For more information, see:
+For more information, see the following topics:
 
 * [Ordering vCenter Server instances](../vcenter/vc_orderinginstance.html)
 * [Adding, viewing, and deleting clusters for vCenter Server instances](../vcenter/vc_addingviewingclusters.html)
@@ -93,9 +93,9 @@ The HyTrust CloudControl on {{site.data.keyword.cloud_notm}} service is now avai
 
 You can order instances with the service included when you order your instance, or add this service to your existing instances later.
 
-For more information, see:
-* [Components and considerations for HyTrust CloudControl on IBM Cloud](../services/htcc_considerations.html)
-* [Managing HyTrust CloudControl on IBM Cloud](../services/managinghtcc.html)
+For more information, see the following topics:
+* [Components and considerations for HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/htcc_considerations.html)
+* [Managing HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](../services/managinghtcc.html)
 
 ### HyTrust DataControl on IBM Cloud
 
@@ -103,13 +103,13 @@ The HyTrust DataControl on {{site.data.keyword.cloud_notm}} service is now avail
 
 You can order instances with the service included when you order your instance, or add this service to your existing instances later.
 
-For more information, see:
-* [Components and considerations for HyTrust DataControl on IBM Cloud](../services/htdc_considerations.html)
-* [Managing HyTrust DataControl on IBM Cloud](../services/managinghtdc.html)
+For more information, see the following topics:
+* [Components and considerations for HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html)
+* [Managing HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/managinghtdc.html)
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 
-The current release installs IBM Spectrum Protect&trade; Plus V10.1.1, as the default backup service, on all newly deployed instances. For information about the new features in IBM Spectrum Protect Plus V10.1.1, see [IBM Spectrum Protect Plus updates](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
+The current release installs IBM Spectrum Protect&trade; Plus V10.1.1, as the default backup service, on all newly deployed instances. For more information about the new features in IBM Spectrum Protect Plus V10.1.1, see [IBM Spectrum Protect Plus updates](https://www.ibm.com/support/knowledgecenter/en/SSNQFQ_10.1.1/spp/r_techchg_spp.html){:new_window}.
 
 ## New and updated documentation
 
@@ -118,8 +118,8 @@ A new developerWorks recipe is available with step-by-step instructions on how t
 ## User interface updates and enhancements
 
 The user interface is updated and provides the following enhancements:
-* **Consistency**: The user interface now provides a consistent look and feel with other services on IBM Cloud.
-* **Ease of access**: You can now access the VMware offerings directly from the IBM Cloud **Catalog**.
+* **Consistency**: The user interface now provides a consistent look and feel with other services on {{site.data.keyword.cloud_notm}}.
+* **Ease of access**: You can now access the VMware offerings directly from the {{site.data.keyword.cloud_notm}} **Catalog**.
 * **Streamlined and simplified ordering experience**: You can now complete ordering a VMware instance and deploying its add-on services in a single interface. In addition, estimated cost is calculated and shown instantly in the same interface so that you can adjust your configuration based on your cost plan.
 * The option to Bring Your Own License (BYOL) when ordering instances or adding clusters is not available to Business Partner users.
 * Various error messages and tooltip enhancements have been made to assist you in selecting the appropriate setting on the user interface.

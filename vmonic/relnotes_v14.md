@@ -36,15 +36,15 @@ As part of the NSX installation, the NSX Manager is installed and licensed on al
 
 **Note**: The NSX Controller is not installed on vCenter Server instances (the way it is installed on Cloud Foundation instances). If you are using VXLAN or distributed logical routers for your vCenter Server instances, then you must install the NSX Controller yourself.
 
-For information about the enhancements that are introduced in VMware NSX for vSphere 6.2.4, its requirements, and known issues, see [NSX for vSphere 6.2.4 release notes](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}.
+For more information about the enhancements that are introduced in VMware NSX for vSphere 6.2.4, its requirements, and known issues, see [NSX for vSphere 6.2.4 release notes](http://pubs.vmware.com/Release_Notes/en/nsx/6.2.4/releasenotes_nsx_vsphere_624.html){:new_window}.
 
 ### VMware NSX Edge
 
 NSX Edge is now included as part of the new vCenter Server instances that you are ordering. NSX Edge provides network edge security and gateway services to isolate a virtualized network.
 
-During instance deployment, a Management VMware NSX Edge Services Gateway (ESG) is deployed by IBM. This ESG is used by the IBM management virtual machines to communicate with specific external IBM management components that are related to automation. This ESG is deployed to include two interfaces: one interface is connected to the IBM Cloud private VLAN, and the other one is connected to the IBM Cloud public VLAN.
+During instance deployment, a Management VMware NSX Edge Services Gateway (ESG) is deployed by IBM. This ESG is used by the IBM management virtual machines to communicate with specific external IBM management components that are related to automation. This ESG is deployed to include two interfaces: one interface is connected to the {{site.data.keyword.cloud_notm}} private VLAN, and the other one is connected to the {{site.data.keyword.cloud_notm}} public VLAN.
 
-To ensure security, firewall rules are in place to allow only outbound HTTPS communications that are initiated by the management virtual machines. This ESG is deployed in a Large configuration, and only IBM Support can modify the configuration. For more information, see:
+To ensure security, firewall rules are in place to allow only outbound HTTPS communications that are initiated by the management virtual machines. This ESG is deployed in a Large configuration, and only IBM Support can modify the configuration. For more information, see the following topics:
 
 * [vCenter Server technical specifications](../vcenter/vc_vcenterserveroverview.html)
 * [Does the management services NSX Edge pose a security risk?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
@@ -96,7 +96,7 @@ The instance order process is greatly simplified:
 * For both Cloud Foundation instances and vCenter Server instances, the SoftLayer Credentials page is no longer displayed during the order process. The SoftLayer credentials that are defined on the Settings page are used by default and you are prompted to update them only if they do not meet the requirements.
 * In addition, for vCenter Server instances, only the **Large** option for the **Hardware** type and the **10 Gbps Dual** setting for the **Uplink Port Speed** are now available, which reduces the number of settings to specify when ordering.
 
-For more information, see:
+For more information, see the following topics:
 
 * [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html)
 * [Ordering vCenter Server instances](../vcenter/vc_orderinginstance.html)
@@ -112,7 +112,7 @@ New features and improvements are made to the instance management process:
 
 You can now configure console notifications on the **Settings** page. By default, the setting is enabled, which means that you receive a notification in the console for all events. You can also disable notifications for the console on the **Settings** page.
 
-For more information, see:
+For more information, see the following topics:
 
 * [User accounts and settings](useraccount.html)
 * [Notifications](notifications.html)

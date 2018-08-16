@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-06-22"
+lastupdated: "2018-08-16"
 
 ---
 
 # Contacting IBM Support
 
-If you need help with {{site.data.keyword.vmwaresolutions_full}}, create an {{site.data.keyword.cloud_notm}} Support ticket to get assistance through one of the following channels:
+If you need help with {{site.data.keyword.vmwaresolutions_full}}, create an {{site.data.keyword.cloud_notm}} Support ticket to get assistance by using one of the following channels:
 
 ## From the IBM Cloud for VMware Solutions console
 
@@ -19,11 +19,11 @@ To contact IBM Support from the {{site.data.keyword.vmwaresolutions_short}} cons
 1. Go to
    https://console.ng.bluemix.net/infrastructure/vmware-solutions/console.
 2. Log in to the console with your **IBMid** account.
-3. At the upper-right corner of the console, click **Support > Add Ticket**.
+3. At the left side of the banner, click **Support > Add Ticket**.
 4. On the {{site.data.keyword.slportal_short}} page, click **Log in with IBMid**, and then you are automatically logged in to the portal.
 5. Review the _{{site.data.keyword.cloud_notm}} Infrastructure and Platform Services Support Policy_, and then click **Acknowledge**.
 
-   By acknowledging the services support policy, you agree that the IBM Support and Operations teams can access the vCenter management layer for issue investigation and troubleshooting, in order to provide the best level of support to customers.
+   By acknowledging the services support policy, you agree that the IBM Support and Operations teams can access the vCenter management layer for issue investigation and troubleshooting in order to provide the best level of support to customers.
 
 6. Click **Support > Add Ticket** on the banner.
 7. On the **Add Ticket** page, provide the following information:
@@ -47,6 +47,6 @@ To contact IBM Support from the {{site.data.keyword.slportal}}, complete the fol
 
 1. Go to https://control.softlayer.com.
 2. Log in to the portal with your **IBMid** account.
-3. Complete steps 6 to 8 described in the _From the IBM Cloud for VMware Solutions console_ section in this topic to submit your ticket.
+3. Complete steps 6 - 8 described in the _From the IBM Cloud for VMware Solutions console_ section in this topic to submit your ticket.
 
     **Note**: Regardless of the channel you use to open the support ticket (either the {{site.data.keyword.vmwaresolutions_short}} console or the {{site.data.keyword.slportal}}), the terms of the _{{site.data.keyword.cloud_notm}} Infrastructure and Platform Services Support Policy_ still apply.

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-01-03"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-01-03"
 
 ## Problem
 
-In a multi-site configuration, after you add a new secondary instance, its vCenter Server system is not visible when logged into the VMware vSphere Web Client of a previously ordered instance.
+In a multi-site configuration, after you add a new secondary instance, its vCenter Server system is not visible when logged in to the VMware vSphere Web Client of a previously ordered instance.
 
 ## Resolution
 

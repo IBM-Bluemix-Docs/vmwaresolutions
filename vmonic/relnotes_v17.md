@@ -24,9 +24,9 @@ This update applies the following upgrades and improvements:
 
   **Note**: EVC mode is not enabled for any existing or new deployments on V4 servers.
 
-* VMware Cloud Foundation deployments that were deployed prior to May 22 and are therefore using V3 servers will now order V4 servers when adding a new node to the instance. These servers have 256 GB of memory; if you require 512 GB of memory, after adding the servers, open a support ticket to request a server upgrade to 512 GB of memory. For information on contacting IBM Support, see [Contacting IBM Support](trbl_support.html).
+* VMware Cloud Foundation deployments that were deployed prior to May 22 and are therefore using V3 servers will now order V4 servers when adding a new node to the instance. These servers have 256 GB of memory; if you require 512 GB of memory, after adding the servers, open a support ticket to request a server upgrade to 512 GB of memory. For more  information about contacting IBM Support, see [Contacting IBM Support](trbl_support.html).
 
-For more information on components, see [Cloud Foundation instance components](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components).
+For more information about components, see [Technical specifications for Cloud Foundation instances](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ### Update process requirements
 
