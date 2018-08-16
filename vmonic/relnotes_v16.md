@@ -29,7 +29,7 @@ For the complete list of components, see [VMware Cloud Foundation overview](../s
 
 Starting with the V1.6 release, several enhancements are available for your vCenter Server instances.
 
-*  Full implementation of the V2.0 specification for the vCenter Server offering. For more information, see the [VMware vCenter Server on IBM Cloud solution architecture](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture#2_0).
+*  Full implementation of the V2.0 specification for the vCenter Server offering. For more information, see the [VMware vCenter Server on {{site.data.keyword.cloud_notm}} solution architecture](https://www.ibm.com/devops/method/content/architecture/virtualizationArchitecture#2_0).
 *  New hardware specifications: **Small**, **Medium**, or **Large**, depending on your requirements.
 *  New data centers available for deployment: **HKG02 - Hong Kong**, **OSL01 - Oslo**, **SEO01 - Seoul**, **SNG01 - Singapore**, and **SYD04 - Sydney**.
 *  At least two ESXi servers in your instance order, with VMware vSphere DRS (Distributed Resource Scheduler) and VMware HA (High Availability) enabled by default.

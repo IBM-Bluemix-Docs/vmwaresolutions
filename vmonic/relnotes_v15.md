@@ -24,7 +24,7 @@ To confirm if your SoftLayer account is a VRF account, verify with IBM Bluemix S
 
 ## Service charge model updates
 
-For Cloud Foundation instances, a new _SDDC Manager_ license is introduced, which is a monthly fee that is applied to each node. For more information, see [Cloud Foundation instance components](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components).
+For Cloud Foundation instances, a new _SDDC Manager_ license is introduced, which is a monthly fee that is applied to each node. For more information, see [Technical specifications for Cloud Foundation instances](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
 
 ## Usability enhancements
 

@@ -31,7 +31,7 @@ During the V2.2 upgrade process, the IBM CloudDriver virtual machine is redeploy
 * If you are using a backup solution that references the IBM CloudDriver virtual machine, after you upgrade to V2.2, ensure that the backup solution is referencing the new IBM CloudDriver virtual machine.
 * Before you upgrade to V2.2, ensure that you replace the Legacy Veeam VSI with the Veeam on {{site.data.keyword.cloud_notm}} service. Legacy Veeam is no longer supported in V2.2 and future releases, therefore the management component backups associated with Legacy Veeam are not available for a restore.
 
-For more information on using the Veeam on {{site.data.keyword.cloud_notm}} service, see:
+For more information about using the Veeam on {{site.data.keyword.cloud_notm}} service, see the following topics:
 * [Components and considerations for Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html)
 * [Managing Veeam on {{site.data.keyword.cloud_notm}}](../services/managingveeam.html)
 
@@ -43,7 +43,7 @@ For important considerations before securing a VMware Federal instance, see [Sec
 
 (Updated on April 2, 2018) You can now expand or contract the capacity of your VMware Federal instance by adding or removing ESXi servers. This option is available only to VMware Federal instances that have not been secured.
 
-For more information, see:
+For more information, see the following topics:
 
 * [VMware Federal on {{site.data.keyword.cloud_notm}} overview](../vcenter/vc_fed_overview.html)
 * [Adding, viewing, and deleting clusters for VMware Federal instances](../vcenter/fed_addviewdeleteclusters.html)
@@ -78,7 +78,7 @@ For important considerations before selecting existing VLANs, see the *Network i
 
 ### NSX component and port group configuration setting updates
 
-The current release applies the VMware NSX for vSphere 6.3.5 component update. For more information on components, see [vCenter Server Bill of Materials](../vcenter/vc_bom.html).
+The current release applies the VMware NSX for vSphere 6.3.5 component update. For more information about components, see [vCenter Server Bill of Materials](../vcenter/vc_bom.html).
 
 For VMware vCenter Server instances that are deployed in V2.2 or later releases, the NSX and port group configuration settings have changed. For more information, see the *NSX and port group configuration settings* section in  [vCenter Server Software Bill of Materials](../vcenter/vc_bom.html#nsx-and-port-group-configuration-settings).
 
@@ -108,7 +108,7 @@ The current release applies the update of NetApp ONTAP Select 9.3.
 
 ### Increased number of SATA drives for high capacity IBM Cloud Bare Metal Servers
 
-Thirty Four SATA drives are now available for NetApp ONTAP Select high capacity {{site.data.keyword.baremetal_short}}. For more information, see the *NetApp ONTAP Select instance components* section in [NetApp ONTAP Select overview](../netapp/np_netappoverview.html#netapp-ontap-select-instance-components).
+Thirty Four SATA drives are now available for NetApp ONTAP Select high capacity {{site.data.keyword.baremetal_short}}. For more information, see [Technical specifications for NetApp ONTAP Select instances](../netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances).
 
 ## Updates for add-on services
 
@@ -144,7 +144,7 @@ The Zerto on {{site.data.keyword.cloud_notm}} service provides replication and d
 
 You can request managed services for your instances from the **Getting Started** page, either by placing a new instance order, or by adding the service to an existing instance.
 
-For more information, see:
+For more information, see the following topics:
 * [Requesting services for Veeam on {{site.data.keyword.cloud_notm}}](../services/managing_veeam_services.html)
 * [Requesting services for Zerto on {{site.data.keyword.cloud_notm}}](../services/managing_zerto_services.html)
 
@@ -154,7 +154,7 @@ For more information, see:
 
 * The VLANs and software Bill of Materials (BOM) is now provided in the documentation for Cloud Foundation and vCenter Server instances, as well as VMware vSphere clusters.
 
-  For more information, see:
+  For more information, see the following topics:
 
   * [vCenter Server Bill of Materials](../vcenter/vc_bom.html)
   * [Cloud Foundation Bill of Materials](../sddc/sd_bom.html)

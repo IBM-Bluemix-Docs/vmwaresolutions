@@ -10,7 +10,7 @@ lastupdated: "2017-01-23"
 
 # Release notes for V1.3
 
-This release includes new features, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and additional tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+This release includes new features, usability enhancements, and bug fixes. For a list of fixed issues in different releases, known issues with the product, and more tips to use {{site.data.keyword.vmwaresolutions_full}}, see [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Shared File-level Storage for vCenter Server instances
 
@@ -20,7 +20,7 @@ You can now add shared NAS (Network Attached Storage) to vCenter Server instance
 
 Whether you ordered Zerto disaster recovery as part of your instance or added it to an existing instance, you can now remove this service when you no longer need it. After you request to remove the service from the console, you are guided by IBM Support to complete the removal process.
 
-For more information, see:
+For more information, see the following topics:
 
 * [Disaster recovery removal](../services/removingzertodr.html)
 * [Viewing Cloud Foundation instances](../sddc/sd_viewinginstances.html)
@@ -30,14 +30,14 @@ For more information, see:
 
 NSX Edge is now included as part of the new Cloud Foundation instances that you are ordering. NSX Edge provides network edge security and gateway services to isolate a virtualized network.
 
-During instance deployment, a Management NSX Edge Services Gateway (ESG) is deployed by IBM. This ESG is used by the IBM management virtual machines to communicate with specific external IBM management components that are related to automation. This ESG is deployed to include two interfaces: one interface is connected to the IBM Cloud private VLAN, and the other one is connected to the IBM Cloud public VLAN.
+During instance deployment, a Management NSX Edge Services Gateway (ESG) is deployed by IBM. This ESG is used by the IBM management virtual machines to communicate with specific external IBM management components that are related to automation. This ESG is deployed to include two interfaces: one interface is connected to the {{site.data.keyword.cloud_notm}} private VLAN, and the other one is connected to the {{site.data.keyword.cloud_notm}} public VLAN.
 
 To ensure security, firewall rules are in place to allow only outbound HTTPS communications that are initiated by the management virtual
 machines. This ESG is deployed in a Large configuration, and only IBM Support can modify the configuration.
 
-For more information, see:
+For more information, see the following topics:
 
-* [Cloud Foundation instance components](../sddc/sd_cloudfoundationoverview.html#cloud-foundation-instance-components)
+* [Technical specifications for Cloud Foundation instances](../sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances)
 * [Does the management services NSX Edge pose a security risk?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 * [VMware NSX Documentation](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 
@@ -48,7 +48,7 @@ The instance order process is improved for both Cloud Foundation instances and v
 * The summary page displays all applicable terms and conditions for all components and services that are ordered, for easy access to review and agree with these terms before you place the order.
 * You can save and print the order summary for your instance before you place the order. With this new function, you can review the instance settings and cost, modify the components that are ordered if needed, obtain approval, and then come back to your order.
 
-For more information, see:
+For more information, see the following topics:
 
 * [Ordering Cloud Foundation instances](../sddc/sd_orderinginstance.html)
 * [Ordering vCenter Server instances](../vcenter/vc_orderinginstance.html)

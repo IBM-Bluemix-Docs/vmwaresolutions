@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2018-03-16"
 ## Resolution
 
 To deploy an OVF (Open Virtualization Format) file by using the vSphere Web Client, use the following procedure:
-1. Before attempting deployment, you must add the following host information to the `/etc/hosts` file:
+1. Before you attempt to deploy an OVF file, add the following host information to the `/etc/hosts` file:
 
    * Host information for Platform Services Controller (PSC)
    * Host information for VMware ESXi server
@@ -30,5 +30,5 @@ To deploy an OVF (Open Virtualization Format) file by using the vSphere Web Clie
     ```
 3. Ensure that you have access to all the necessary VPNs (Virtual Private Networks) in the {{site.data.keyword.slportal_full}}. In this example, it would be `10.131.7.xx` and `10.131.9.xxx`.
 4. Sign in the VPN for your data center.
-5. Click **vCenter** to access the the vSphere Web Client.
+5. Click **vCenter** to access the vSphere Web Client.
 6. Right-click on a host and deploy an `.ovf` file.

@@ -14,29 +14,29 @@ This release includes new features, component updates, usability enhancements, a
 
 ## VMware vSphere on IBM Cloud
 
-This release introduces the VMware vSphere on IBM Cloud offering, which allows you to build your own IBM-hosted VMware virtual environment by customizing and ordering the VMware-compatible compute, storage, and network resources based on selected VMware components. While vSphere on IBM Cloud does not automate the installation, configuration and bring-up of the optional VMware components, you have maximum flexibility to design and architect an environment that best fits your business needs. You can start by creating a new vSphere cluster of ESXi servers or by scaling out an existing vSphere cluster in an IBM Cloud data center.
+This release introduces the VMware vSphere on {{site.data.keyword.cloud_notm}} offering, which allows you to build your own IBM-hosted VMware virtual environment by customizing and ordering the VMware-compatible compute, storage, and network resources based on selected VMware components. While vSphere on {{site.data.keyword.cloud_notm}} does not automate the installation, configuration and bring-up of the optional VMware components, you have maximum flexibility to design and architect an environment that best fits your business needs. You can start by creating a new vSphere cluster of ESXi servers or by scaling out an existing vSphere cluster in an {{site.data.keyword.CloudDataCent_notm}}.
 
-For more information, see:
+For more information, see the following topics:
 * [Ordering new vSphere clusters](../vsphere/vs_orderinginstances.html)
 * [Scaling existing vSphere clusters](../vsphere/vs_scalingexistingclusters.html)
 
 ## NetApp ONTAP Select on IBM Cloud
 
-This release introduces the NetApp ONTAP Select on IBM Cloud offering, a virtual appliance for software-defined storage, which implements NetApp ONTAP Select as a service on IBM Cloud’s dedicated {{site.data.keyword.baremetal_short}}. NetApp ONTAP Select on IBM Cloud is offered in both high-performance (all SSD) and high-capacity (all SATA) configurations.
+This release introduces the NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} offering, a virtual appliance for software-defined storage, which implements NetApp ONTAP Select as a service on IBM Cloud’s dedicated {{site.data.keyword.baremetal_short}}. NetApp ONTAP Select on {{site.data.keyword.cloud_notm}} is offered in both high-performance (all SSD) and high-capacity (all SATA) configurations.
 It hosts your storage on dedicated infrastructure and provides NetApp capabilities, such as deduplication, compression and encryption of data at rest. With this offering, you can provision storage resources with agility and flexibility while protecting data by using advanced data management functions, such as the fast and efficient NetApp Snapshot® copies, FlexClone® copies, and SnapMirror® replication.
 
-For more information, see:
+For more information, see the following topics:
 * [NetApp ONTAP Select overview](../netapp/np_netappoverview.html)
 * [Ordering NetApp ONTAP Select instances](../netapp/np_orderinginstances.html)
 
 ## F5 on IBM Cloud service
 
-The F5 BIG-IP Virtual Edition (VE) on IBM Cloud service is now available to both VMware Cloud Foundation and VMware vCenter Server instances. This service provides intelligent L4-L7 load balancing and traffic management services at a local and global scale, robust network and web application firewall protection, secure, and federated application access.
-You can order instances with the F5 BIG-IP Virtual Edition (VE) on IBM Cloud service included when you order your instance, or add this service to your existing instances later from the **Services** tab on the instance property details page of the {{site.data.keyword.vmwaresolutions_short}} console. Depending on your requirements, you can select one of three licensing options for BIG-IP VEs.
+The F5 BIG-IP Virtual Edition (VE) on {{site.data.keyword.cloud_notm}} service is now available to both VMware Cloud Foundation and VMware vCenter Server instances. This service provides intelligent L4-L7 load balancing and traffic management services at a local and global scale, robust network and web application firewall protection, secure, and federated application access.
+You can order instances with the F5 BIG-IP Virtual Edition (VE) on {{site.data.keyword.cloud_notm}} service included when you order your instance, or add this service to your existing instances later from the **Services** tab on the instance property details page of the {{site.data.keyword.vmwaresolutions_short}} console. Depending on your requirements, you can select one of three licensing options for BIG-IP VEs.
 
-For more information, see:
-* [Considerations for F5 on IBM Cloud](../services/f5_considerations.html)
-* [Managing F5 on IBM Cloud](../services/managing_f5.html)
+For more information, see the following topics:
+* [Considerations for F5 on {{site.data.keyword.cloud_notm}}](../services/f5_considerations.html)
+* [Managing F5 on {{site.data.keyword.cloud_notm}}](../services/managing_f5.html)
 
 ## Managed services from IBM Integrated Managed Infrastructure
 
@@ -49,7 +49,7 @@ For more information, see [Requesting managed services from IMI](../services/man
 
 Instance names entered on the {{site.data.keyword.vmwaresolutions_short}} when you order your instances cannot have special characters (such as the dash character) in them. Only alphanumeric characters are allowed. This restriction does not apply to Cloud Foundation instances.
 
-For more information, see:
+For more information, see the following topics:
 * [Ordering vCenter Server instances](../vcenter/vc_orderinginstance.html)
 * [Ordering NetApp ONTAP Select instances](../netapp/np_orderinginstances.html)
 
@@ -65,7 +65,7 @@ For more information, see [Ordering Cloud Foundation instances](../sddc/sd_order
 
 ### Cross data center cluster support
 
-In order to enhance the scale out of your hosted VMware environment, you can now create a new cluster in a different {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) pod, or a different IBM Cloud data center than the initial cluster deployed in the instance.
+In order to enhance the scale out of your hosted VMware environment, you can now create a new cluster in a different {{site.data.keyword.cloud_notm}} Infrastructure (SoftLayer) pod, or a different {{site.data.keyword.CloudDataCent_notm}} than the initial cluster deployed in the instance.
 
 For more information, see [Adding and viewing clusters for vCenter Server instances](../vcenter/vc_addingviewingclusters.html).
 
@@ -91,7 +91,7 @@ For more information, see [Ordering vCenter Server instances](../vcenter/vc_orde
 
 You can now provide the Domain Name Server (DNS) domain name for a vCenter Server instance during an order. A Microsoft Windows Server Virtual Server Instance (VSI), that functions as the DNS for the instance where the hosts and virtual machines are registered, is deployed and can be looked up. Microsoft Active Directory (AD) is also set up on the Microsoft Windows VSI and the DNS domain name is the AD domain forest root. This Microsoft Windows VSI is only available in V1.9 and later.
 
-For more information, see:
+For more information, see the following topics:
 * [vCenter Server overview](../vcenter/vc_vcenterserveroverview.html)
 * [Viewing vCenter Server instances](../vcenter/vc_viewinginstances.html)
 
@@ -101,5 +101,5 @@ The Microsoft Active Directory (AD) / Domain Name Server (DNS) is automatically 
 
 ## New and updated documentation
 
-* Learn how to safeguard your private multi-site VCF instances while extending your VMware applications to use public IBM Cloud services. For more information, see [Securely connect your private VMware workloads in the IBM Cloud](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}.
-* Additional documentation is provided for configuring firewalls that permit all protocol communication from the IBM CloudDriver and the SDDC Manager virtual machines. For more information, see [Components and considerations for Fortinet on IBM Cloud](../services/fsa_considerations.html).
+* Learn how to safeguard your private multi-site VCF instances while extending your VMware applications to use public {{site.data.keyword.cloud_notm}} services. For more information, see [Securely connect your private VMware workloads in the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/developerworks/library/se-securely-connect-private-vmware-workloads-ibm-cloud/index.html){:new_window}.
+* Additional documentation is provided for configuring firewalls that permit all protocol communication from the IBM CloudDriver and the SDDC Manager virtual machines. For more information, see [Components and considerations for Fortinet on {{site.data.keyword.cloud_notm}}](../services/fsa_considerations.html).
