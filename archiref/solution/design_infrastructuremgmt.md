@@ -8,118 +8,118 @@ lastupdated: "2018-07-13"
 
 ---
 
-# Infrastructure management design
+# Conception de gestion d'infrastructure
 
-Infrastructure management refers to the components that are managing the VMware infrastructure. This design uses a single external Platform Services Controller (PSC) instance and a single vCenter Server instance:
-* The vCenter Server is the centralized platform for managing vSphere environments and is one of the fundamental components in this solution.
-* The PSC is leveraged in this solution to provide a set of infrastructure services including VMware vCenter Single Sign On, license service, lookup service, and VMware Certificate Authority.
+La gestion d'infrastructure fait référence aux composants qui gèrent l'infrastructure VMware. Cette conception utilise une seule instance PSC (Platform Services Controller) externe et une seule instance vCenter Server :
+* vCenter Server est la plateforme centralisée dédiée à la gestion des environnements vSphere ; il s'agit de l'un des composants fondamentaux de cette solution.
+* Le contrôleur PSC est optimisé dans cette solution pour fournir un ensemble de services d'infrastructure, y compris VMware vCenter Single Sign On, un service de licence, un service de consultation et l'autorité de certification VMware.
 
-The PSC instances and vCenter Server instances are separate virtual machines (VMs).
+Les instances PSC et les instances vCenter Server sont des machines virtuelles distinctes.
 
-## PSC design
+## Conception de PSC
 
-This design deploys a single external PSC as a virtual appliance on a portable subnet on the private VLAN that is associated with the management VMs. Its default gateway is set to the back-end customer router (BCR). The virtual appliance is configured with the specifications in the following table.
+Cette conception déploie une seule instance PSC externe en tant que dispositif virtuel sur un sous-réseau portable, sur le VLAN privé qui est associé aux machines virtuelles de gestion. Le routeur BCR (Back-end Customer Router) lui sert de passerelle par défaut. Le dispositif virtuel est configuré avec les spécifications décrites dans le tableau suivant.
 
-**Note**: These values are set at the time of deployment and cannot be changed.
+**Remarque** : ces valeurs sont définies au moment du déploiement et elles ne peuvent pas être modifiées.
 
-Table 1. Platform Services Controller specifications
+Tableau 1. Spécifications PSC (Platform Services Controller)
 
-| Attribute                    | Specification                  |
+| Attribut                    | Spécification                  |
 |------------------------------|--------------------------------|
-| Platform Services Controller | Virtual appliance              |
-| Number of vCPUs              | 2                              |
-| Memory                       | 4 GB                           |
-| Disk                         | 114 GB on local VMFS datastore |
-| Disk type                    | Thin provisioned               |
+| Contrôleur PSC (Platform Services Controller) | Dispositif virtuel              |
+| Nombre d'unités centrales virtuelles              | 2                              |
+| Mémoire                       | 4 Go                           |
+| Disque                         | 114 Go sur le magasin de données VMFS local |
+| Type de disque                    | A allocation dynamique               |
 
-The PSC located in the primary instance is assigned the default SSO domain of `vsphere.local`.
+Le domaine SSO par défaut `vsphere.local` est affecté au contrôleur PSC situé dans l'instance principale.
 
-## vCenter Server design
+## Conception de vCenter Server
 
-The vCenter Server is also deployed as a virtual appliance. Additionally, the vCenter Server is installed on a portable subnet on the private VLAN that is associated with management VMs. Its default gateway is set to the IP address assigned on the BCR for that particular subnet. The virtual appliance is configured with the specifications in the following table.
+vCenter Server est également déployé en tant que dispositif virtuel. En outre, vCenter Server est installé sur un sous-réseau portable, sur le VLAN privé qui est associé aux machines virtuelles de gestion. L'adresse IP affectée sur le routeur BCR pour ce sous-réseau spécifique lui sert de passerelle par défaut. Le dispositif virtuel est configuré avec les spécifications décrites dans le tableau suivant.
 
-Table 2. vCenter Server Appliance specifications
+Tableau 2. Spécifications vCenter Server Appliance
 
-| Attribute                    | Specification                       |
+| Attribut                    | Spécification                       |
 |------------------------------|-------------------------------------|
-| vCenter Server               | Virtual appliance                   |
-| Appliance installation size  | Medium (up to 400 hosts, 4,000 VMs) |
-| Platform Services Controller | External                            |
-| Number of vCPUs              | 8                                   |
-| Memory                       | 24 GB                               |
-| Disk                         | 400 GB on local datastore           |
-| Disk type                    | Thin provisioned                    |
+| vCenter Server               | Dispositif virtuel                   |
+| Taille d'installation du dispositif  | Moyenne (jusqu'à 400 hôtes, 4 000 machines virtuelles) |
+| Contrôleur PSC (Platform Services Controller) | Externe                            |
+| Nombre d'unités centrales virtuelles              | 8                                   |
+| Mémoire                       | 24 Go                               |
+| Disque                         | 400 Go sur magasin de données local           |
+| Type de disque                    | A allocation dynamique                    |
 
-### vCenter Server database
+### Base de données vCenter Server
 
-The vCenter Server configuration uses a local, embedded PostgreSQL database that is included with the appliance. The embedded database is used to remove any dependencies on external databases and licensing.
+La configuration de vCenter Server utilise une base de données PostgreSQL imbriquée locale qui est incluse avec le dispositif. La base de données imbriquée est utilisée pour retirer les dépendances sur les bases de données externes et l'octroi de licence.
 
-### vCenter Server cluster specification
+### Spécification de cluster vCenter Server
 
-This design allows you to cluster the vSphere ESXi hosts that are provisioned through the solution. Before clusters can be created, however, a data center object is created that signifies the location of the vSphere ESXi hosts as well as the pod within the data center. A cluster is created after the data center object is created. The cluster is deployed with VMware vSphere High Availability (HA) and VMware vSphere Distributed Resource Scheduler (DRS) enabled.
+Cette conception vous permet de regrouper en cluster les hôtes vSphere ESXi qui sont mis à disposition via la solution. Toutefois, avant les clusters, un objet de centre de données est créé afin de signifier l'emplacement des hôtes vSphere ESXi, ainsi que celui du pod dans le centre de données. Un cluster est créé une fois l'objet de centre de données créé. L cluster est déployé avec la haute disponibilité VMware vSphere et le planificateur DRS (Distributed Resource Scheduler) VMware vSphere activés.
 
-### vSphere Distributed Resource Scheduler
+### Planificateur DRS (Distributed Resource Scheduler) vSphere
 
-This design uses vSphere Distributed Resource Scheduling (DRS) in the initial cluster to place VMs and uses DRS in additional clusters to dynamically migrate VMs to achieve balanced clusters. The automation level is set to fully automated so that initial placement and migration recommendations are executed automatically by vSphere. Additionally, the migration threshold is set to moderate so that vCenter will apply priority 1, 2, 3 recommendations to achieve at least a decent improvement in the load balance of the cluster.
+Cette conception utilise la planification DRS (Distributed Resource Scheduling) vSphere dans le cluster initial pour placer les machines virtuelles et dans les autres clusters pour faire migrer dynamiquement des machines virtuelles afin d'obtenir des clusters équilibrés. La valeur "Fully Automated" est affectée au paramètre Automation Level, par conséquent, les recommandations de placement initial et de migration sont automatiquement exécutées par vSphere. En outre, le seuil de migration défini est modéré, ainsi, vCenter appliquera les recommandations de priorité 1, 2, 3 pour obtenir au moins une amélioration décente de l'équilibrage de charge du cluster.
 
-**Note:** Power management via the **Distributed Power Management** feature is not used in this design.
+**Remarque :** la gestion de l'alimentation via la fonction **Distributed Power Management** n'est pas utilisée dans cette conception.
 
-### vSphere High Availability
+### Haute disponibilité vSphere
 
-This design uses vSphere High Availability (HA) in the initial cluster and additional clusters to detect compute failures and recover VMs that run within a cluster. The vSphere HA feature in this design is configured with both **Host Monitoring** and **Admission Control** options enabled within the cluster. Additionally, the initial cluster reserves one node’s resources as spare capacity for the admission control policy.
+Cette conception utilise la haute disponibilité vSphere dans le cluster initial et les autres clusters pour détecter les pannes de traitement et récupérer les machines virtuelles qui s'exécutent dans un cluster. La haute disponibilité vSphere dans cette conception est configurée avec les options de **surveillance hôte** et de **contrôle d'admission** activées dans le cluster. De plus, le cluster initial réserve les ressources d'un noeud comme capacité de secours pour la règle de contrôle d'admission.
 
-**Note**: You are responsible to adjust the admission control policy when the cluster is later expanded or contracted.
+**Remarque** : vous êtes chargé d'ajuster la règle de contrôle d'admission lorsque le cluster est développé ou réduit par la suite.
 
-By default, the **VM restart priority** option is set to medium and the **Host isolation response** option is disabled. Additionally, **VM monitoring** is disabled and the **Datastore Heartbeating** feature is configured to include any of the cluster data stores. This approach uses the NAS data stores if they are present.
+Par défaut, une valeur moyenne est affectée à l'option de **priorité de redémarrage des machines virtuelles** et l'option de **réponse d'isolement hôte** est désactivée. De plus, l'option de **surveillance des machines virtuelles** est désactivée et la fonction de **pulsation de magasin de données** est configurée pour inclure n'importe lequel des magasins de données de cluster. Cette approche utilise les magasins de données NAS éventuellement présents.
 
-## Automation
+## Automatisation
 
-The cornerstone to these solutions is automation. Automation brings the following benefits:
-* Reduces the complexity of deployment.
-* Drastically reduces the deployment time.
-* Ensures that the VMware instance is deployed in a consistent manner.
+L'automatisation est l'élément central de ces solutions. Elle offre les avantages suivants :
+* Elle réduit la complexité du déploiement
+* Elle réduit le temps de déploiement
+* Elle assure un déploiement cohérent de l'instance VMware
 
-{{site.data.keyword.IBM}} CloudBuilder, IBM CloudDriver, and SDDC Manager VMs work together to bring up a new VMware instance and perform lifecycle management functions.
+Les machines virtuelles {{site.data.keyword.IBM}} CloudBuilder, IBM CloudDriver et SDDC Manager fonctionnent conjointement pour fournir une nouvelle instance VMware et effectuer des fonctions de gestion de cycle de vie.
 
-### IBM CloudBuilder and IBM CloudDriver
+### IBM CloudBuilder et IBM CloudDriver
 
-The IBM CloudBuilder and IBM CloudDriver virtual server instance (VSI) are IBM-developed components that you cannot access.
-* The IBM CloudBuilder is a temporary {{site.data.keyword.cloud_notm}} virtual server instance (VSI) that bootstraps the deployment, configuration, and validation of the solution components within the provisioned bare metal ESXi hosts.
-* The IBM CloudDriver VSI is deployed for instance creation and then periodically, as needed, with the latest {{site.data.keyword.cloud_notm}} for VMware code for operations such as deploying additional nodes, clusters, or services. The IBM CloudDriver communicates with the {{site.data.keyword.vmwaresolutions_short}} console through a VMware NSX Edge Services Gateway deployed exclusively for instance management purpose, and acts as an agent to maintain the instance. The IBM CloudDriver is responsible for ongoing actions such as the addition of new bare metal hosts to the cluster and the deployment of add-on services into the instance. For Cloud Foundation instances, the IBM CloudDriver communicates with the VMware SDDC Manager VM to perform functions such as host addition and patching.
+Les instances de serveur virtuel IBM CloudBuilder et IBM CloudDriver sont des composants développés par IBM auxquels vous ne pouvez pas accéder.
+* IBM CloudBuilder est une instance de serveur virtuel {{site.data.keyword.cloud_notm}} temporaire qui amorce le déploiement, la configuration et la validation des composants de solution dans les hôtes ESXi bare metal mis à disposition.
+* L'instance de serveur virtuel IBM CloudDriver est déployée pour la création d'instance, puis régulièrement, selon les besoins, avec le dernier code {{site.data.keyword.cloud_notm}} pour VMware pour les opérations, telles que le déploiement de noeuds, de clusters ou de services supplémentaires. IBM CloudDriver communique avec la console {{site.data.keyword.vmwaresolutions_short}} via une passerelle VMware NSX ESG (Edge Services Gateway) déployée exclusivement à des fins de gestion d'instance, et agit en tant qu'agent chargé de gérer l'instance. IBM CloudDriver est responsable des actions en cours, telles que l'ajout de nouveaux hôtes bare metal au cluster et le déploiement de services complémentaires dans l'instance. Pour les instances Cloud Foundation, IBM CloudDriver communique avec la machine virtuelle VMware SDDC Manager pour effectuer des fonctions, telles que l'ajout d'hôtes et l'application de modules de correction à des hôtes.
 
-It is possible for the user to delete or damage the VMs described in the following sections. When a VM is removed, shut down, or it becomes inoperable, the following Cloud Foundation or vCenter Server operations on the {{site.data.keyword.vmwaresolutions_short}} console are interrupted:
-* Viewing the instance or host status
-* Adding or removing clusters
-* Adding or removing ESXi hosts
-* Adding or removing services
-* Patching
+L'utilisateur peut supprimer ou endommager les machines virtuelles décrites dans les sections ci-dessous. Lorsqu'une machine virtuelle est retirée, arrêtée ou lorsqu'elle devient inutilisable, les opérations Cloud Foundation ou vCenter Server suivantes sur la console {{site.data.keyword.vmwaresolutions_short}} sont interrompues :
+* Affichage de l'état de l'hôte ou de l'instance
+* Ajout ou retrait de clusters
+* Ajout ou retrait d'hôtes ESXi
+* Ajout ou retrait de services
+* Application de correctif
 
 ### SDDC Manager
 
-For Cloud Foundation instances, the SDDC Manager VM is a component that is developed and maintained by VMware. It remains as part of the instance during its entire lifecycle. It is responsible for the following lifecycle functions of instances:
-* Management of VMware components: vCenter Server, Platform Services Controller (PSC), vSAN, and NSX, including IP address allocation and hostname resolution.
-* Expansion and retraction of ESXi hosts within the cluster including any affected services, such as NSX VTEP, vSAN, resource pools.
+Pour les instances Cloud Foundation, la machine virtuelle SDDC Manager est un composant qui est développé et géré par VMware. Il continue de faire partie de l'instance tout au long de son cycle de vie. Il est responsable des fonctions de cycle de vie suivantes pour les instances :
+* Gestion des composants VMware : vCenter Server, Platform Services Controller (PSC), vSAN et NSX, y compris l'allocation d'adresse IP et la résolution de nom d'hôte
+* Développement et rétraction d'hôtes ESXi dans le cluster, y compris les services concernés, tels que NSX VTEP, vSAN et les pools de ressources
 
-For vCenter Server instances, these activities are performed by the IBM CloudDriver as there is no SDDC Manager.
+Pour les instances vCenter Server, ces activités sont effectuées par IBM CloudDriver en l'absence de gestionnaire SDDC Manager.
 
-### Automation flow
+### Flux d'automatisation
 
-The following procedure describes the order of events when a VMware instance is ordered via the {{site.data.keyword.vmwaresolutions_short}} console:
-1.  Ordering VLANs and subnets for networking from {{site.data.keyword.cloud_notm}}.
-2.  Ordering {{site.data.keyword.baremetal_short}} with vSphere Hypervisor installed.
-3.  If applicable, ordering Microsoft Windows Virtual Server Instance (VSI) to serve as Active Directory domain controller.
-4.  Validation of the networking and deployed hardware.
-5.  If applicable, initial configuration of single node vSAN.
-6.  If applicable, deployment and configuration of two Microsoft Windows virtual machines to serve as Active Directory domain controllers.
-7.  Deployment and configuration of vCenter, PSC, and NSX.
-8.  Clustering of remaining ESXi nodes, expansion of vSAN if applicable, and configuration of NSX components (VTEP).
-9.  Deploying VMware Cloud Foundation SDDC Manager VM, if applicable, and the IBM CloudDriver VSI.
-10.  Validating the installation and configuration of the environment.
-11. Removal of the CloudBuilder VSI.
-12. Deployment of optional services, such as backup server and storage.
+La procédure suivante décrit l'ordre dans lequel les événements se déroulent lorsqu'une instance VMware est commandée via la console {{site.data.keyword.vmwaresolutions_short}} :
+1.  Commande de VLAN et de sous-réseaux pour la mise en réseau à partir d'{{site.data.keyword.cloud_notm}}
+2.  Commande de serveurs bare metal avec vSphere Hypervisor installé
+3.  Le cas échéant, commande de l'instance de serveur virtuel Microsoft Windows qui servira de contrôleur de domaine Active Directory
+4.  Validation du matériel mis en réseau et déployé
+5.  Le cas échéant, configuration initiale d'un réseau de stockage virtuel de noeud unique
+6.  Le cas échéant, déploiement et configuration de deux machines virtuelles Microsoft Windows qui serviront de contrôleurs de domaine Active Directory
+7.  Déploiement et configuration de vCenter, PSC et NSX
+8.  Regroupement en cluster des autres noeuds ESXi, développement de vSAN, le cas échéant, et configuration des composants NSX (VTEP)
+9.  Déploiement de machine virtuelle DDC Manager VMware Cloud Foundation, le cas échéant, et de l'instance de serveur virtuel IBM CloudDriver
+10.  Validation de l'installation et de la configuration de l'environnement
+11. Retrait de l'instance de serveur virtuel CloudBuilder
+12. Déploiement de services facultatifs, tels que le serveur de sauvegarde et le stockage
 
-### Related links
+### Liens connexes
 
-* [Physical infrastructure design](design_physicalinfrastructure.html)
-* [Virtual infrastructure design](design_virtualinfrastructure.html)
-* [Common services design](design_commonservice.html)
+* [Conception d'infrastructure physique](design_physicalinfrastructure.html)
+* [Conception d'infrastructure virtuelle](design_virtualinfrastructure.html)
+* [Conception des services communs](design_commonservice.html)

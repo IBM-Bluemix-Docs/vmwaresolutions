@@ -8,165 +8,164 @@ lastupdated: "2018-09-25"
 
 ---
 
-# Physical infrastructure design
+# Conception d'infrastructure physique
 
-The physical infrastructure comprises the following components:
+L'infrastructure physique est constituée des composants suivants :
 
 <dl class="dl">
-  <dt class="dt dlterm">Physical compute</dt>
-  <dd class="dd">The physical compute provides the physical processing and memory that is used by the virtualization infrastructure. For this design, the compute components are provided by {{site.data.keyword.baremetal_long}} and are listed in the [VMware Hardware Compatibility Guide (HCG)](https://www.vmware.com/resources/compatibility/search.php).</dd>
-  <dt class="dt dlterm">Physical storage</dt>
-  <dd class="dd">The physical storage provides the raw storage capacity used by the virtualization infrastructure. Storage components are provided either by {{site.data.keyword.baremetal_short}} or by shared Network Attached Storage (NAS) array using NFS v3.</dd>
-  <dt class="dt dlterm">Physical network</dt>
-  <dd class="dd">The physical network provides the network connectivity into the environment that is then used by the network virtualization. The network is provided by the {{site.data.keyword.cloud_notm}} services network and it includes extra services such as DNS and NTP.</dd>
+  <dt class="dt dlterm">Calcul physique</dt>
+  <dd class="dd">Le calcul physique fournit le traitement et la mémoire physiques utilisés par l'infrastructure de virtualisation. Pour cette conception, les composants de calcul sont fournis par les serveurs bare metal IBM Cloud et sont répertoriés dans le document [VMware Hardware Compatibility Guide (HCG)](https://www.vmware.com/resources/compatibility/search.php).</dd>
+  <dt class="dt dlterm">Stockage physique</dt>
+  <dd class="dd">Le stockage physique fournit la capacité de stockage brut utilisée par l'infrastructure de virtualisation. Les composants de stockage sont fournis par les serveurs bare metal ou par la matrice NAS (Network Attached Storage) à l'aide de NFS v3.</dd>
+  <dt class="dt dlterm">Réseau physique</dt>
+  <dd class="dd">Le réseau physique fournit la connectivité réseau dans l'environnement qui est ensuite utilisé par la virtualisation de réseau. Le réseau est fourni par le réseau des services {{site.data.keyword.cloud_notm}} et comprend d'autres services, tels que DNS et NTP.</dd>
 </dl>
 
-For more information about the physical components, see the Bill of Materials for [Cloud Foundation instance](../../sddc/sd_bom.html) or [vCenter Server instance](../../vcenter/vc_bom.html).
+Pour plus d'informations sur les composants physiques, voir la nomenclature pour l'[instance Cloud Foundation](../../sddc/sd_bom.html) ou l'[instance vCenter Server](../../vcenter/vc_bom.html).
 
-For more information about storage, see [Shared storage architecture](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
+Pour plus d'informations sur le stockage, voir la documentation sur l'[architecture de stockage partagé](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
 
-## Physical host design
+## Conception d'hôte physique
 
-Physical host refers to the {{site.data.keyword.baremetal_short}} in the environment that serves compute resources. The {{site.data.keyword.baremetal_short}} applied in this solution are certified by VMware and listed in the [VMware HCG](http://www.vmware.com/resources/compatibility/search.php).
+L'hôte physique fait référence aux serveurs {{site.data.keyword.baremetal_short}} dans l'environnement qui sert les ressources de calcul. Les serveurs bare metal appliqués dans cette solution sont certifiés par VMware et répertoriés sur le site [VMware Compatibility Guide](http://www.vmware.com/resources/compatibility/search.php).
 
-The server configurations available in the solution meet or exceed the minimum requirements to install, configure, and manage vSphere ESXi. Various configurations are available to satisfy different requirements. For the detailed listing of the exact specifications used for the VMware on {{site.data.keyword.cloud_notm}} solution, see the Bill of Materials for [Cloud Foundation instance](../../sddc/sd_bom.html) or [vCenter Server instance](../../vcenter/vc_bom.html). Note that the {{site.data.keyword.baremetal_short}} reside in the {{site.data.keyword.cloud_notm}}.
+Les configurations de serveur disponibles dans la solution sont conformes ou supérieures aux exigences minimales relatives à l'installation, la configuration et la gestion de vSphere ESXi. Différentes configurations sont disponibles pour satisfaire différentes exigences. Pour obtenir la liste détaillée des spécifications exactes utilisées pour la solution VMware on {{site.data.keyword.cloud_notm}}, voir la nomenclature pour l'[instance Cloud Foundation](../../sddc/sd_bom.html) ou l'[instance vCenter Server](../../vcenter/vc_bom.html). Notez que les serveurs bare metal résident dans {{site.data.keyword.cloud_notm}}.
 
-Each Cloud Foundation instance begins with a 4-host deployment, and each vCenter Server instance begins with a 3- or 4-host deployment depending on the choice of storage solution.
+Chaque instance Cloud Foundation commence avec un déploiement de 4 hôtes, et chaque instance vCenter Server commence avec un déploiement de 3 ou 4 hôtes selon la solution de stockage choisie.
 
-The physical host employs two locally attached disks to be allocated to the vSphere ESXi hypervisor. You can allocate more disks by using vSAN as described in the _Physical storage design_ section on this page or by using NetApp ONTAP as described in [NetApp ONTAP Select architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf). Each
-physical host has redundant 10-Gbps network connections for both public and private network access.
+L'hôte physique emploie deux disques connectés localement destinés à être alloués à l'hyperviseur vSphere ESXi. Vous pouvez allouer davantage de disques en utilisant vSAN comme indiqué dans la section _Conception de stockage physique_ de cette page ou en utilisant NetApp ONTAP comme indiqué dans la documentation sur l'[architecture NetApp ONTAP Select](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf). Chaque hôte physique comporte des connexions réseau 10 Gbps redondantes pour l'accès au réseau public et l'accès au réseau privé.
 
-The technical specifications of the Bare Metal Server are the following:
-* CPU: Dual Intel Xeon, varying core and speed configuration
-* Memory: Varying configuration, 128 GB or larger
-* Network: 4 x 10 Gbps
-* Number of Drives: 2 or more
+Les spécifications techniques du serveur bare metal sont les suivantes :
+* Unité centrale : Dual Intel Xeon, configuration coeur et vitesse variable
+* Mémoire : Configuration variable, 128 Go ou plus
+* Réseau : 4 x 10 Gbps
+* Nombre d'unités : Au moins 2
 
-## Physical network design
+## Conception de réseau physique
 
-This section describes the physical network that is provided by the {{site.data.keyword.cloud_notm}} and the physical host connections (VLANs, MTU) that are associated with the physical hosts.
+Cette section décrit le réseau physique qui est fourni par {{site.data.keyword.cloud_notm}} et les connexions hôte physiques (VLAN, MTU) qui sont associées aux hôtes physiques.
 
-The physical network of {{site.data.keyword.cloud_notm}} is separated into three distinct networks: public, private, and management. For an illustration of the three networks and how they work, see [The {{site.data.keyword.cloud_notm}} Network](https://www.ibm.com/cloud-computing/bluemix/our-network).
+Le réseau physique d'{{site.data.keyword.cloud_notm}} est divisé en trois réseaux distincts : public, privé et gestion. Pour obtenir une illustration des trois réseaux et de leur fonctionnement, voir [Le réseau {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud-computing/bluemix/our-network).
 
-### Public network
+### Réseau public
 
-{{site.data.keyword.CloudDataCents_notm}} and network points of presence (PoPs) have multiple 1 Gbps or 10-Gbps connections to the top-tier transit and peering network carriers.
+{{site.data.keyword.CloudDataCents_notm}} et les points de présence (PoP) sont dotés de plusieurs connexions 1 Gbps ou 10 Gbps aux opérateurs réseau d'appairage et de transit de premier plan.
 
-External network traffic from anywhere in the world connects to the closest network PoP, and travels directly across the network to its data center, minimizing the number of network hops and handoffs between providers.
+Le trafic réseau externe depuis n'importe où dans le monde se connecte au PoP de réseau le plus proche et transite directement par le réseau vers son centre de données, réduisant ainsi le nombre de segments réseau et de relais entre les fournisseurs.
 
-Inside the data center, {{site.data.keyword.cloud_notm}} provides 1 Gbps or 10 Gbps of network bandwidth to individual servers via a pair of separate, peer-aggregated front-end customer switches (FCS). These aggregated switches are attached to a pair of separate front-end customer routers (FCR) for L3 networking.
+Au sein du centre de données, {{site.data.keyword.cloud_notm}} fournit 1 Gbps ou 10 Gbps de bande passante réseau à des serveurs individuels via une paire de commutateurs client frontaux distincts homologues. Ces commutateurs agrégés sont connectés à une paire de routeurs client frontaux (FCR) distincts pour la mise en réseau L3.
 
-This multitier design allows the network to scale across racks, rows, and pods within an {{site.data.keyword.CloudDataCent_notm}}.
+Cette conception multiniveau permet la mise à l'échelle du réseau dans des armoires, des lignes et des pods au sein d'un {{site.data.keyword.CloudDataCent_notm}}.
 
-### Private network
+### Réseau privé
 
-All {{site.data.keyword.CloudDataCents_notm}} and PoPs are connected by a private network backbone. The private network is separate from the public network, and it enables connectivity to services in {{site.data.keyword.CloudDataCents_notm}} around the world. Moving data between {{site.data.keyword.CloudDataCents_notm}} is done via multiple 10 Gbps or 40-Gbps connections to the private network.
+Tous les {{site.data.keyword.CloudDataCents_notm}} et PoP sont connectés par un réseau principal privé. Le réseau privé est distinct du réseau public et il permet la connectivité aux services dans des {{site.data.keyword.CloudDataCents_notm}} situés dans le monde entier. Le transfert de données entre plusieurs {{site.data.keyword.CloudDataCents_notm}} est effectué via plusieurs connexions 10 Gbps ou 40 Gbps au réseau privé.
 
-Similar to the public network, the private network is multi-tiered in that servers and other infrastructure components are connected to aggregated back-end customer switches (BCS). These aggregated switches are attached to a pair of separate back-end customer routers (BCR) for L3 networking. The private network also supports the ability to use jumbo frames (MTU 9000) for physical host connections.
+Similaire au réseau public, le réseau privé est multiniveau, ce qui signifie que les serveurs et les autres composants d'infrastructure sont connectés aux commutateurs client frontaux (BCS)agrégés. Ces commutateurs agrégés sont connectés à une paire de routeurs client frontaux (BCR) distincts pour la mise en réseau L3. Le réseau privé prend également en charge l'utilisation de trames jumbo (MTU 9000) pour des connexions hôte physiques.
 
-### Management network
+### Réseau de gestion
 
-In addition to the public and private networks, each {{site.data.keyword.cloud_notm}} server is connected to an out-of-band management network. This management network, accessible via VPN, allows Intelligent Platform Management Interface (IPMI) access to the server independently of its CPU, firmware, and operating system for maintenance and administration purposes.
+Outre les réseaux publics et privés, chaque serveur {{site.data.keyword.cloud_notm}} est connecté à un serveur de gestion externe. Ce réseau de gestion, accessible via VPN, permet un accès IPMI (Intelligent Platform Management Interface) au serveur quels que soient son unité centrale, son microprogramme et son système d'exploitation, à des fins de maintenance et d'administration.
 
-### Primary and portable IP blocks
+### Blocs d'adresses IP principales et portables
 
-{{site.data.keyword.cloud_notm}} allocates two types of IP addresses to be used within the {{site.data.keyword.cloud_notm}} infrastructure:
-* Primary IP addresses are assigned to devices, Bare Metal, and virtual servers that are provisioned by {{site.data.keyword.cloud_notm}}. You should not assign any IP addresses in these blocks.
-* Portable IP addresses are provided for you to assign and manage as needed.
+{{site.data.keyword.cloud_notm}} alloue deux types d'adresses IP à utiliser dans l'infrastructure {{site.data.keyword.cloud_notm}} :
+* Les adresses IP principales sont affectées aux unités, aux serveurs bare metal et aux serveurs virtuels qui sont mis à disposition par {{site.data.keyword.cloud_notm}}. Vous ne devez pas affecter d'adresses IP dans ces blocs.
+* Des adresses IP portables vous sont fournies et vous pouvez les affecter et les gérer en fonction de vos besoins.
 
-Primary or portable IP addresses can be made routable to any VLAN within the customer account when **VLAN spanning** is enabled within the {{site.data.keyword.slportal}} or the account is configured as a **Virtual Routing and Forwarding (VRF)** account.
+Les adresses IP principales ou portables peuvent devenir routables vers n'importe quel VLAN au sein du compte client lorsque le **VLAN spanning** est activé dans le portail {{site.data.keyword.slportal}} ou que le compte est configuré en tant que compte **d'acheminement et de routage virtuels (VRF)**.
 
 ### VLAN spanning
 
-**VLAN Spanning** is an {{site.data.keyword.slportal}} account setting that allows primary and portable subnet IP block of all VLANs within the account to be routable to each other. When the **VLAN Spanning** setting is disabled, IP blocks can still route to {{site.data.keyword.cloud_notm}} services, but not to each other.
+Le **VLAN Spanning** est un paramètre de compte de portail client d'infrastructure IBM Cloud qui permet au bloc d'adresses IP de sous-réseau portables et principales de tous les VLAN du compte d'être routables entre elles. Lorsque le **VLAN Spanning** est désactivé, les blocs d'adresses IP peuvent tout de même être routés vers les services {{site.data.keyword.cloud_notm}}, mais pas entre eux.
 
-To allow transparent connection across various subnets where the solution components reside, you need to enable **VLAN Spanning** in the {{site.data.keyword.slportal}} account where the Cloud Foundation and vCenter Server instances are deployed.
+Pour permettre des connexions transparentes entre les différents sous-réseaux sur lesquels résident les composants de solution, vous devez activer **VLAN Spanning** dans le compte de portail client d'infrastructure IBM Cloud sur lequel les instances Cloud Foundation et vCenter Server sont déployées.
 
-### Virtual Routing and Forwarding (VRF)
+### Acheminement et routage virtuels (VRF)
 
-You can also configure the {{site.data.keyword.slportal}} account as a VRF account to provide similar functionality to VLAN spanning, enabling automatic routing between subnet IP blocks. All accounts with Direct-Link connections must be converted to, or created as, a VRF account.
+Vous pouvez également configurer le compte de portail client d'infrastructure IBM Cloud comme compte VRF pour fournir une fonctionnalité similaire à VLAN spanning et activer ainsi le routage automatique entre les blocs d'adresses IP de sous-réseau. Tous les comptes dotés de connexions Direct Link doivent être convertis en ou créés en tant que compte VRF.
 
-The {{site.data.keyword.vmwaresolutions_short}} console cannot detect whether VRF is enabled in the {{site.data.keyword.slportal}}. You will receive a warning that reminds you to ensure that you enabled either **VLAN spanning** or VRF in your {{site.data.keyword.slportal}} account.
+La console {{site.data.keyword.vmwaresolutions_short}} ne peut pas déterminer si VRF est activé dans le portail client d'infrastructure IBM Cloud. Vous recevrez un avertissement vous rappelant que vous devez vérifier que **VLAN spanning** ou VRF est activé dans votre compte de portail client d'infrastructure IBM Cloud.
 
-### Physical host connections
+### Connexions d'hôte physique
 
-Each physical host in the design has two redundant pairs of 10 Gbps Ethernet connections into each {{site.data.keyword.cloud_notm}} Top of Rack (ToR) switch (public and private). The adapters are set up as individual connections (unbonded) for a total of 4 x 10 Gbps connections. This allows networking interface card (NIC) connections to work independently from each other.
+Chaque hôte physique de la conception possède deux paires redondantes de connexions Ethernet 10 Gbps dans chaque commutateur {{site.data.keyword.cloud_notm}} de niveau supérieur (ToR) (public et privé). Les adaptateurs sont configurés comme des connexions individuelles (non liées) pour un total de 4 connexions 10 Gbps. Cela permet aux connexions de carte d'interface réseau (NIC) de fonctionner indépendamment les unes des autres.
 
-Figure 1. Physical host NIC connections
+Figure 1. Connexions NIC d'hôte physique
 
-![Physical host NIC connections](physical_nic_connection.svg "Physical host NIC connections")
+![Connexions NIC d'hôte physique](physical_nic_connection.svg "Connexions NIC d'hôte physique")
 
-### VLANs
+### Réseaux locaux virtuels
 
-The {{site.data.keyword.vmwaresolutions_short}} offerings are designed with 3 VLANs, one public and two private, assigned upon deployment. As shown in Figure 2, the public VLAN is assigned to eth1 and eth3, and the private VLANs are assigned to eth0 and eth2.
+Les offres {{site.data.keyword.vmwaresolutions_short}} sont conçues avec 3 réseaux locaux virtuels, un public et deux privés, affectés lors du déploiement. Comme illustré dans la figure 2, le réseau local virtuel public est affecté à eth1 et eth3 et les réseaux locaux virtuels privés sont affectés à eth0 et eth2.
 
-The public and the first private VLAN created and assigned in this design are untagged by default within the {{site.data.keyword.cloud_notm}}. The additional private VLAN is trunked on the physical switch ports and tagged within the VMware port groups that are using these subnets.
+Le réseau local virtuel public et le premier réseau local virtuel privé créés et affectés dans cette conception ne sont pas balisés dans {{site.data.keyword.cloud_notm}}. Le réseau local virtuel privé supplémentaire est joint sur les ports de commutation physique et balisé dans les groupes de ports VMware qui utilisent ces sous-réseaux.
 
-The private network consists of two VLANs within this design. Three subnets are allocated to the first of these VLANs (here designated Private VLAN A):
-* The first subnet is a primary private IP subnet range that {{site.data.keyword.cloud_notm}} assigns to the physical hosts.
-* The second subnet is used for management virtual machines such as vCenter Server Appliance and Platform Services Controller
-* The third subnet is used for the VXLAN Tunnel Endpoints (VTEPs) assigned to each host via VMware NSX Manager.
+Le réseau privé est composé de deux réseaux locaux virtuels dans cette conception. Trois sous-réseaux sont alloués au premier de ces réseaux locaux virtuels (appelé ici VLAN privé A) :
+* Le premier sous-réseau est une plage de sous-réseaux d'adresses IP privées principales affectées par {{site.data.keyword.cloud_notm}} aux hôtes physiques.
+* Le deuxième sous-réseau est utilisé pour les machines virtuelles de gestion, telles que vCenter Server Appliance et Platform Services Controller.
+* Le troisième sous-réseau est utilisé pour les VTEP (VXLAN Tunnel Endpoint) affectés à chaque hôte via VMware NSX Manager.
 
-In addition to Private VLAN A, a second private VLAN (here designated Private VLAN B) exists to support VMware features such as vSAN and vMotion, and for connectivity to network-attached storage (NAS). As such, the VLAN is divided into two or three portable subnets.
+Outre VLAN privé A, il existe un deuxième réseau local virtuel (appelé ici VLAN privé B) permettant la prise en charge de fonctions VMware, telles que vSAN et vMotion, ainsi que la connectivité au stockage NAS. En tant que tel, le réseau local virtuel est divisé en deux ou trois sous-réseaux portables.
 
-* The first subnet is assigned to a kernel port group for vMotion traffic.
-* The remaining subnets are used for storage traffic:
-   * When using vSAN, a subnet is assigned to kernel port groups that are used for vSAN traffic.
-   * When using NAS, a subnet is assigned to a port group that is dedicated to NFS traffic.
+* Le premier sous-réseau est affecté à un groupe de ports de noyau pour le trafic vMotion.
+* Les autres sous-réseaux sont utilisés pour le trafic de stockage :
+   * Lorsque vSAN est utilisé, un sous-réseau est affecté aux groupes de ports de noyau qui sont utilisés pour le trafic vSAN.
+   * Lorsque NAS est utilisé, un sous-réseau est affecté au groupe de ports qui est dédié au trafic NFS.
 
-All subnets that are configured as part of a vCenter Server or Cloud Foundation automated deployment use {{site.data.keyword.cloud_notm}} managed ranges. This is to ensure that any IP address can be routed to any data center within the {{site.data.keyword.cloud_notm}} account when you need the connection now or in the future.
+Tous les sous-réseaux qui sont configurés dans le cadre d'un déploiement vCenter Server ou Cloud Foundation automatisé utilisent des plages gérées par {{site.data.keyword.cloud_notm}}. Cela garantit que toutes les adresses IP peuvent être routées vers n'importe quel centre de données dans le compte {{site.data.keyword.cloud_notm}} lorsque vous avez besoin de la connexion que ce soit immédiatement ou ultérieurement.
 
-This is all summarized in Table 1.
+Voir le tableau 1.
 
-Table 1. VLAN and subnet summary
+Tableau 1. Récapitulatif VLAN et sous-réseau
 
 | VLAN | Type | Description |
 |:---- |:---- |:----------- |
-| Public| Primary  | Assigned to physical hosts for public network access. Not used upon initial deployment. |
-| Private A | Primary  | Single subnet assigned to physical hosts assigned by {{site.data.keyword.cloud_notm}}. Used by the management interface for vSphere management traffic. |
-| Private A | Portable | Single subnet assigned to virtual machines functioning as management components |
-| Private A | Portable | Single subnet assigned to NSX VTEP |
-| Private B | Portable | Single subnet assigned for vSAN, if in use |
-| Private B | Portable | Single subnet assigned for NAS, if in use |
-| Private B | Portable | Single subnet assigned for vMotion |
+| Public| Principal  | Affecté à des hôtes physiques pour l'accès au réseau public. Non utilisé lors du déploiement initial. |
+| Privé A | Principal  | Sous-réseau unique affecté aux hôtes physiques affectés par {{site.data.keyword.cloud_notm}}. Utilisé par l'interface de gestion pour le trafic de gestion vSphere. |
+| Privé A | Portable | Sous-réseau unique affecté aux machines virtuelles fonctionnant comme des composants de gestion. |
+| Privé A | Portable | Sous-réseau unique affecté à NSX VTEP. |
+| Privé B | Portable | Sous-réseau unique affecté pour vSAN, si utilisé. |
+| Privé B | Portable | Sous-réseau unique affecté pour NAS, si utilisé. |
+| Privé B | Portable | Sous-réseau unique affecté pour vMotion. |
 
-In this design, all VLAN-backed hosts and virtual machines are configured to point to the {{site.data.keyword.cloud_notm}} back-end “private network” customer router as the default route. Although the vCenter Server and Cloud Foundation instances enable the use of Software-Defined Networking (SDN), network overlays created within a VMware instance that include routing to internal subnets are not known by the {{site.data.keyword.cloud_notm}} managed routers. Therefore, you might need to create static routes within the VMware instance on some or all management components.
+Dans cette conception, tous les hôtes et machines virtuelles VLAN sont configurés pour pointer vers le routeur client "réseau privé" dorsal {{site.data.keyword.cloud_notm}} comme route par défaut. Bien que les instances vCenter Server et Cloud Foundation activent l'utilisation de la mise en réseau définie par logiciel, les réseaux dissociés créés dans une instance VMware qui incluent le routage vers des sous-réseaux internes ne sont pas connus par les routeurs gérés par {{site.data.keyword.cloud_notm}}. Par conséquent, vous devrez peut-être créer des routes statiques dans l'instance VMware sur certains ou la totalité des composants de gestion.
 
-The private network connections are configured to use a jumbo frame MTU size of 9000 to improve performance for large data transfers, such as storage and vMotion. This is the maximum MTU that is allowed within VMware and by {{site.data.keyword.cloud_notm}}. The public network connections use a standard Ethernet MTU of 1500. This must be maintained as any changes might cause packet fragmentation over the internet.
+Les connexions de réseau privé sont configurées pour utiliser 9000 comme taille MTU de trame jumbo afin d'améliorer les performances des transferts d'importantes quantités de données, comme le stockage et vMotion. Il s'agit de la MTU maximale autorisée dans VMware et par {{site.data.keyword.cloud_notm}}. Les connexions de réseau public utilisent 1500 comme taille MTU Ethernet standard. Cette valeur doit être conservée ; tout changement peut provoquer une fragmentation des paquets sur Internet.
 
-## Physical storage design
+## Conception de stockage physique
 
-Physical storage design consists of the configuration of the physical disks that are installed in the physical hosts and the configuration of the shared file-level storage. This includes the operating system disks of the vSphere ESXi hypervisor and those used for storage of the virtual machines (VMs). Storage for VMs can consist of local disks that are virtualized by VMware vSAN, or of shared file-level storage.
+La conception de stockage physique fait référence à la configuration des disques physiques qui sont installés dans les hôtes physiques et à la configuration du stockage de niveau fichier partagé. Cela inclut les disques de système d'exploitation de l'hyperviseur vSphere ESXi et ceux qui sont utilisés pour le stockage des machines virtuelles. Le stockage des machines virtuelles peut être constitué de disques locaux qui sont virtualisés par VMware vSAN, ou de stockage de niveau fichier partagé.
 
-### Operating system disks
+### Disques de système d'exploitation
 
-The vSphere ESXi hypervisor is designed to be installed in a persistent location. As a result, the physical hosts contain two 1TB SATA disks in RAID-1 configuration to support redundancy for the vSphere ESXi hypervisor.
+L'hyperviseur vSphere ESXi est conçu pour être installé dans un emplacement persistant. Par conséquent, les hôtes physiques contiennent deux disques SATA 1 To dans la configuration RAID afin d'assurer la prise en charge de la redondance pour l'hyperviseur vSphere ESXi.
 
-### Virtual machine storage
+### Stockage de machine virtuelle
 
-This design allows for the option of using either VMware vSAN or shared file-level storage as the primary datastore for VMs.
+Cette conception permet d'utiliser le stockage VMware vSAN ou le stockage de niveau fichier partagé comme magasin de données principal pour les machines virtuelles.
 
-### vSAN disks
+### Disques vSAN
 
-When used, VMware vSAN is configured by using an all-flash configuration. This design allows for several configuration options, including 2U and 4U chassis, various numbers of disks, and various disk sizes. All configurations use two vSAN disk groups, with one solid-state disk (SSD) for cache and one or more SSDs for capacity. All drives that are allocated for vSAN consumption are configured in single-disk RAID-0.
+Lorsqu'il est utilisé, VMware vSAN est configuré à l'aide d'une configuration All-Flash. Cette conception offre plusieurs options de configuration, y compris les châssis 2U et 4U, différents nombres de disques et différentes tailles de disque. Toutes les configurations utilisent deux groupes de disques vSAN, avec un disque SSD pour le cache et un ou plusieurs disques SSD pour la capacité. Toutes les unités qui sont allouées pour la consommation vSAN sont configurées en RAID-0 à un disque.
 
-For more information about the supported configurations, see the Bill of Materials for [Cloud Foundation instance](../../sddc/sd_bom.html) or [vCenter Server instance](../../vcenter/vc_bom.html).
+Pour en savoir plus sur les configurations prises en charge, voir la nomenclature pour l'[instance Cloud Foundation](../../sddc/sd_bom.html) ou pour l'[instance vCenter Server](../../vcenter/vc_bom.html).
 
-### Shared File-level storage across hosts
+### Stockage de niveau fichier partagé entre plusieurs hôtes
 
-When using shared file-level storage, a 2 TB NFS share is attached to the hosts that comprise the initial VMware cluster. This share, which is known as the management share, is used for management components such as the VMware vCenter Server, Platform Services Controller, and VMware NSX. The storage is attached by using the NFSv3 protocol and can support up to 4000 IOPS.
+Lors de l'utilisation d'un stockage de niveau fichier partagé, un partage NFS de 2 To est associé aux hôtes qui constituent le cluster VMware initial. Ce partage, appelé partage de gestion, est utilisé pour les composants de gestion, tels que VMware vCenter Server, Platform Services Controller et VMware NSX. Le stockage est associé à l'aide du protocole NFSv3 et peut prendre en charge jusqu'à 4 000 IOPS.
 
-Figure 2. NFS shares attached to VMware deployment
+Figure 2. Partages NFS associés au déploiement VMware
 
-![NFS shares attached to VMware deployment](physical_nfs.svg "NFS shares attached to VMware deployment: management share and customer specified share")
+![Partages NFS associés au déploiement VMware](physical_nfs.svg "Partages NFS associés au déploiement VMware : partage de gestion et partage spécifié par le client")
 
-You can allocate and mount more file shares for your workloads at the time of purchase or later within the console. You can select from the available {{site.data.keyword.cloud_notm}} Endurance file storage capacity options and performance tiers in the corresponding {{site.data.keyword.CloudDataCent_notm}}. All shares are attached by using the NFSv3 protocol. Additionally, it is possible to attach NFSv3 file shares by applying the NetApp ONTAP Select offering.
+Vous pouvez allouer et monter des partages de fichiers supplémentaires pour vos charges de travail au moment de l'achat ou ultérieurement dans la console. Vous pouvez effectuer une sélection parmi les niveaux de performance et les options de capacité de stockage de fichiers {{site.data.keyword.cloud_notm}} Endurance disponibles dans l'{{site.data.keyword.CloudDataCent_notm}} correspondant. Tous les partages sont associés à l'aide du protocole NFSv3. En outre, il est possible d'associer des partages de fichiers NFSv3 en appliquant l'offre NetApp ONTAP Select.
 
-{{site.data.keyword.CloudDataCents_notm}} that offer the 10 IOPS/GB performance tier also include provider-managed encryption of data at rest (AES-256 encryption), and are backed up by all-flash storage. The 10 IOPS/GB performance tier is limited to a maximum capacity of 4 TB. For more information about the shared NAS used in this solution, see [Shared storage architecture](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
+Les {{site.data.keyword.CloudDataCents_notm}} qui offrent le niveau de performance 10 IOPS/Go incluent également le chiffrement géré par le fournisseur des données au repos (chiffrement AES-256) et sont sauvegardés par le stockage All-flash. Ce niveau de performance est limité à une capacité maximale de 4 To. Pour plus d'informations sur le stockage NAS partagé utilisé dans cette solution, voir la documentation sur l'[architecture de stockage partagé](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
 
-### Related links
+### Liens connexes
 
-* [Cloud Foundation Bill of Materials](../../sddc/sd_bom.html)
-* [vCenter Server Bill of Materials](../../vcenter/vc_bom.html)
-* [Shared storage architecture](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)
-* [NetApp ONTAP Select architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)
+* [Nomenclature de Cloud Foundation](../../sddc/sd_bom.html)
+* [Nomenclature de vCenter Server](../../vcenter/vc_bom.html)
+* [Architecture de stockage partagé](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf)
+* [Architecture de NetApp ONTAP Select](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf)

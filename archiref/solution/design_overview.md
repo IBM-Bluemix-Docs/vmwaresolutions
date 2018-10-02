@@ -7,28 +7,28 @@ copyright:
 lastupdated: "2018-07-10"
 
 ---
-# Design overview
+# Présentation de la conception
 
-{{site.data.keyword.vmwaresolutions_full}} provides automation to deploy VMware technology components into {{site.data.keyword.CloudDataCents_notm}} across the globe.
+{{site.data.keyword.vmwaresolutions_full}} fournit l'automatisation du déploiement des composants de technologie VMware dans les {{site.data.keyword.CloudDataCents_notm}} situés dans le monde entier.
 
-## Solution offerings
+## Offres de la solution
 
-The solution offerings include the following VMware vSphere products within an automatically deployed and configured cluster:
-* VMware Cloud Foundation: vSphere ESXi, Platform Services Controller (PSC), VMware vCenter Server Appliance, SDDC Manager, VMware NSX, and VMware vSAN.
-* VMware vCenter Server: vSphere ESXi, Platform Services Controller (PSC), vCenter Server Appliance, NSX, and optionally vSAN.
+Les offres de la solution incluent les produits VMware vSphere suivants dans un cluster automatiquement déployé et configuré :
+* VMware Cloud Foundation : vSphere ESXi, Platform Services Controller (PSC), VMware vCenter Server Appliance, SDDC Manager, VMware NSX et VMware vSAN.
+* VMware vCenter Server : vSphere ESXi, Platform Services Controller (PSC), vCenter Server Appliance, NSX et éventuellement vSAN.
 
-In this design, an instance is deployed in a single pod of an {{site.data.keyword.CloudDataCent_notm}} at the initial order. After initial deployment, you can extend your virtual environment into other pods within the same data center or into other data centers.
+Dans cette conception, une instance est déployée dans un pod d'un {{site.data.keyword.CloudDataCent_notm}} lors de la commande initiale. Après le déploiement initial, vous pouvez étendre votre environnement virtuel dans d'autres pods au sein du même centre de données ou dans d'autres centres de données.
 
-The design also allows for automated expansion and contraction of virtual capacity within a Cloud Foundation or vCenter Server instance.
+La conception permet l'extension et la contraction automatisées de la capacité virtuelle dans une instance Cloud Foundation ou vCenter Server.
 
-## VMware on IBM Cloud components
+## Composants de VMware on IBM Cloud
 
-Figure 1. Components of VMware on {{site.data.keyword.cloud_notm}}
-![Components of VMware on {{site.data.keyword.cloud_notm}}](design_overview.svg "The solution comprises physical infrastructure, virtual infrastructure, infrastructure management, and common services.")
+Figure 1. Composants de VMware on {{site.data.keyword.cloud_notm}}
+![Composants de VMware on {{site.data.keyword.cloud_notm}}](design_overview.svg "La solution est constituée d'une infrastructure physique, d'une infrastructure virtuelle, d'une gestion d'infrastructure et de services communs.")
 
-### Related links
+### Liens connexes
 
-* [Physical infrastructure design](design_physicalinfrastructure.html)
-* [Virtual infrastructure design](design_virtualinfrastructure.html)
-* [Common services design](design_commonservice.html)
-* [Infrastructure management design](design_infrastructuremgmt.html)
+* [Conception d'infrastructure physique](design_physicalinfrastructure.html)
+* [Conception d'infrastructure virtuelle](design_virtualinfrastructure.html)
+* [Conception des services communs](design_commonservice.html)
+* [Conception de gestion d'infrastructure](design_infrastructuremgmt.html)

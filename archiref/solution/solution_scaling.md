@@ -8,46 +8,46 @@ lastupdated: "2018-07-10"
 
 ---
 
-# Scaling capacity
+# Mise à l'échelle de la capacité
 
-After initial deployment, you can scale out the compute capacity from the {{site.data.keyword.vmwaresolutions_full}} console. The design supports the following scale-out paths:
-* Addition of new sites managed by separate vCenter Servers
-* Addition of new clusters
-* Addition of new hosts to an existing cluster
+Après le déploiement initial, vous pouvez ajouter de la capacité de calcul à partir de la console {{site.data.keyword.vmwaresolutions_full}}. La conception prend en charge les parcours d'évolutivité horizontale suivants :
+* Ajout de nouveaux sites gérés par des serveurs vCenter distincts
+* Ajout de nouveaux clusters
+* Ajout de nouveaux hôtes à un cluster existant
 
-## Adding more sites
+## Ajout d'autres sites
 
-{{site.data.keyword.vmwaresolutions_short}} can leverage the {{site.data.keyword.cloud_notm}} world-wide data center presence and integrated network backbone to allow for various cross-geography use cases to be deployed and functioning within a fraction of the time that it would take to build such an infrastructure from scratch.
+{{site.data.keyword.vmwaresolutions_short}} peut exploiter la présence de centres de données {{site.data.keyword.cloud_notm}} partout dans le monde et d'un réseau principal intégré pour déploiement de divers scénarios d'utilisation multi-régions opérationnels en une fraction du temps que prendrait la construction d'une telle infrastructure de toutes pièces.
 
-In this design, the definition of a multi-site deployment is comprised of the following:
-* An initial or primary VMware deployment containing a new DNS/AD root domain, subdomain, SSO domain, and SSO site name to be provided.
-* Single or multiple secondary sites that are provisioned into the primary sites SSO domain requiring the following configuration:
-   * New SSO site name
-   * New DNS site/subdomain tied to the root of the primary domain
-   * DNS and AD replication setup between the secondary and primary site AD VMs
-   * PSC deployed and configured to synchronize with the primary site PSC
-   * vCenter setup with Enhanced Linked Mode to the primary site vCenter
+Dans cette conception, la définition d'un déploiement multisite comprend les éléments suivants ;
+* Un déploiement VMware initial ou principal contenant un nouveau nom de domaine racine DNS/AD, sous-domaine, domaine SSO et site SSO à fournir.
+* Les sites secondaires uniques ou multiples mis à disposition du domaine SSO des sites principaux requièrent la configuration suivante :
+   * Nouveau nom de site SSO
+   * Nouveau site/sous-domaine DNS lié à la racine du domaine principal
+   * Configuration de la réplication DNS et AD entre les machines virtuelles AD du site principal et du site secondaire
+   * Contrôleur PSC déployé et configuré pour la synchronisation avec le contrôleur PSC du site principal
+   * Configuration vCenter en mode lien étendu (Enhanced Linked) sur le serveur vCenter du site principal
 
-Additionally, the NSX manager in secondary sites may be set up as secondary NSX managers for the NSX manager on the primary site.
+De plus, le gestionnaire NSX sur les sites secondaires peut être configuré en tant que gestionnaires NSX secondaires pour le gestionnaire NSX sur le site principal.
 
-## Adding new clusters
+## Ajout de nouveaux clusters
 
-You can also scale out the compute capacity by creating a new cluster from the {{site.data.keyword.vmwaresolutions_short}} console and ordering new hosts that are automatically added to the new cluster.
+Vous pouvez également ajouter de la capacité de calcul en créant un nouveau cluster à partir de la console {{site.data.keyword.vmwaresolutions_short}} et en commandant de nouveaux hôtes qui sont ajoutés automatiquement au nouveau cluster.
 
-This method enables you to achieve the following things:
-* Creating an additional, separate cluster in the environment.
-* Segregating management workloads from application workloads physically and logically.
-* Segregating workloads based on other characteristics, for example, Microsoft SQL database cluster.
-* Deploying applications in highly available topologies.
+Cette méthode vous permet de réaliser les opérations suivantes :
+* Création d'un cluster distinct supplémentaire dans l'environnement
+* Séparation des charges de travail de gestion à partir de charges de travail d'application, de façon physique et logique
+* Séparation des charges de travail en fonction d'autres caractéristiques, par exemple, un cluster de base de données Microsoft SQL
+* Déploiement d'applications dans des topologies à haute disponibilité
 
-**Note**: When the initial cluster is converted into a management-only cluster, the migration of existing workloads will involve manual steps to be taken by the user. This might involve the reattachment of data stores to the new cluster or alternately storage migration. The IP addresses of the workloads might need to be changed if the new cluster resides in a different {{site.data.keyword.cloud_notm}} pod or is assigned a different VLAN ID.
+**Remarque** : lorsque le cluster initial est converti en un cluster de gestion uniquement, la migration des charges de travail existantes implique des étapes que l'utilisateur doit réaliser manuellement. Il peut s'agir de réassocier les magasins de données au nouveau cluster ou d'effectuer une migration de stockage. Les adresses IP des charges de travail devront peut-être être modifiées si le nouveau cluster réside dans un autre pod {{site.data.keyword.cloud_notm}} ou si un autre ID VLAN lui est affecté.
 
-## Adding ESXi hosts into existing clusters
+## Ajout d'hôtes ESXi dans des clusters existants
 
-You can scale out an existing cluster by ordering hosts from the {{site.data.keyword.vmwaresolutions_short}} console.  The new hosts are automatically added to the cluster. Note that you may need to adjust the HA reservation policy for the cluster based on your reservation requirements.
+Vous pouvez ajouter un cluster existant en commandant des hôtes à partir de la console {{site.data.keyword.vmwaresolutions_short}}.  Les nouveaux hôtes sont ajoutés automatiquement au cluster. Notez que vous devrez peut-être ajuster la règle de réservation haute disponibilité pour le cluster en fonction de vos exigences de réservation.
 
-### Related links
+### Liens connexes
 
-* [Solution overview](solution_overview.html)
-* [Design overview](design_overview.html)
-* [Backing up components](solution_backingup.html)
+* [Présentation de la solution](solution_overview.html)
+* [Présentation de la conception](design_overview.html)
+* [Sauvegarde des composants](solution_backingup.html)

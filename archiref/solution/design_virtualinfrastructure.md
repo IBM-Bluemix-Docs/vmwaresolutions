@@ -4,226 +4,224 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-09-07"
 
 ---
 
-# Virtual infrastructure design
+# Conception d'infrastructure virtuelle
 
-The virtual infrastructure layer includes the VMware software components that virtualize the compute, storage, and network resources provided in the physical infrastructure layer: VMware vSphere ESXi, VMware NSX, and optionally VMware vSAN.
+La couche d'infrastructure virtuelle inclut les composants logiciels VMware qui virtualisent les ressources de calcul, de stockage et de réseau fournies dans la couche d'infrastructure physique : VMware vSphere ESXi, VMware NSX et éventuellement VMware vSAN.
 
-## VMware vSphere design
+## Conception de VMware vSphere
 
-The vSphere ESXi configuration consists of the following aspects:
-* Boot configuration
-* Time synchronization
-* Host access
-* User access
-* DNS configuration
+La configuration de vSphere ESXi comprend les aspects suivants :
+* Configuration d'amorçage
+* Synchronisation d'horloge
+* Accès à l'hôte
+* Accès utilisateur
+* Configuration DNS
 
-Table 1 outlines the specifications for each aspect. After the configuration and installation of ESXi, the host is added to a VMware vCenter Server and is managed from there.
+Le tableau 1 présente les spécifications de chaque aspect. Après la configuration et l'installation d'ESXi, l'hôte est ajouté à une instance VMware vCenter Server et est géré à partir de là.
 
-The design allows you to access the virtual hosts through Direct Console User Interface (DCUI), ESXi Shell, and Secure Shell (SSH).
+La conception vous permet d'accéder aux hôtes virtuels via l'interface DCUI (Direct Console User Interface), ESXi Shell et SSH (Secure Shell).
 
-By default, the only users who can log in directly are the _root_ and _ibmvmadmin_ users for the physical machine of the host. The administrator can add end users from the Microsoft Active Directory (MSAD) domain to enable user access to the host. All hosts in the vCenter Server solution design are configured to synchronize with a central NTP server.
+Par défaut, les seuls utilisateurs qui peuvent se connecter directement sont les utilisateurs _root_ et _ibmvmadmin_ pour la machine physique de l'hôte. L'administrateur peut ajouter des utilisateurs finaux au domaine MSAD (Microsoft Active Directory) pour activer l'accès utilisateur à l'hôte. Tous les hôtes de la conception de solution vCenter Server sont configurés pour être synchronisés avec un serveur NTP central.
 
-Table 1. vSphere ESXi configuration
+Tableau 1. Configuration de vSphere ESXi
 
-| Attribute              | Configuration parameter |
+| Attribut              | Paramètre de configuration |
 |:---------------------- |:----------------------- |
-| ESXi boot location     | Uses local disks configured in RAID-1 |
-| Time synchronization   | Uses {{site.data.keyword.cloud}} NTP server |
-| Host access            | Supports DCUI, ESXi Shell, or SSH |
-| User access            | Local authentication and MSAD |
-| Domain name resolution | Uses DNS as described in [Common services design](design_commonservice.html). |
+| Emplacement de l'amorçage ESXi     | Utilisation des disques locaux configurés dans RAID-1 |
+| Synchronisation d'horloge   | Utilise le serveur NTP {{site.data.keyword.cloud}} |
+| Accès à l'hôte            | Prise en charge de DCUI, ESXi Shell ou SSH |
+| Accès utilisateur            | Authentification locale et MSAD |
+| Résolution de nom de domaine | Utilisation de DNS comme indiqué dans [Conception des services communs](design_commonservice.html) |
 
-The vSphere cluster houses the virtual machines (VMs) that manage the central cloud and compute resources for user workloads.
+Le cluster vSphere héberge les machines virtuelles qui gèrent le cloud central, ainsi que les ressources de calcul des charges de travail utilisateur.
 
-For Cloud Foundation instances:
-* An instance contains 4 ESXi hosts at initial deployment.
-* You can scale up to a maximum of 32 ESXi hosts post deployment.
+Pour les instances Cloud Foundation :
+* Une instance contient 4 hôtes ESXi lors du déploiement initial.
+* Après le déploiement, vous pouvez l'étoffer jusqu'à comprendre 32 hôtes ESXi au maximum.
 
-For vCenter Server instances:
-* When an instance uses NFS only, the minimum number of ESXi hosts at initial deployment is 2, but 3 is recommended for HA. You can scale up to a maximum of 59 ESXi hosts during or post initial deployment.
-* When an instance uses vSAN, the minimum number of ESXi hosts at initial deployment is 4. You can scale up to a maximum of 59 ESXi hosts during or post initial deployment.
+Pour les instances vCenter Server :
+* Lorsqu'une instance utilise NFS uniquement, le nombre minimal d'hôtes ESXi lors du déploiement initial est 2, mais il est recommandé d'en utiliser 3 pour assurer la haute disponibilité. Vous pouvez effectuer une mise à l'échelle jusqu'à 59 hôtes ESXi au maximum durant ou après le déploiement initial.
+* Lorsqu'une instance utilise vSAN, le nombre minimal d'hôtes ESXi lors du déploiement initial est 4, mais vous pouvez effectuer une mise à l'échelle jusqu'à 59 hôtes ESXi au maximum durant ou après le déploiement initial.
 
-To support more user workloads, you can scale the environment by:  
-* Deploying additional compute hosts of existing clusters
-* Deploying additional clusters that are managed by the same vCenter Server Appliance
-* Deploying new vCenter Server or Cloud Foundation instances with their own vCenter Server Appliance
+Pour prendre en charge davantage de charges de travail utilisateur, vous pouvez effectuer une mise à l'échelle de l'environnement en :  
+* déployant d'autres hôtes de calcul de clusters existants ;
+* Déploiement de clusters supplémentaires gérés par le même dispositif vCenter Server Appliance
+* Déploiement de nouvelles instance vCenter Server ou Cloud Foundation avec leur propre dispositif vCenter Server Appliance
 
-For more information about clusters, see [{{site.data.keyword.cloud_notm}} running VMware clusters solution architecture
-document](https://www.ibm.com/cloud/garage/files/IBM-Cloud-for-VMware-Solutions-Multicluster-Architecture.pdf).
+Pour plus d'informations sur les clusters, reportez-vous au [document sur {{site.data.keyword.cloud_notm}} exécutant l'architecture de solution de clusters VMware](https://www.ibm.com/cloud/garage/files/IBM-Cloud-for-VMware-Solutions-Multicluster-Architecture.pdf).
 
-## VMware vSAN design
+## Conception de VMware vSAN
 
-In this design, VMware vSAN storage is employed in Cloud Foundation instances and optionally in vCenter Server instances to provide shared storage for the vSphere hosts.
+Dans cette conception, le stockage VMware vSAN est employé dans des instances Cloud Foundation et éventuellement dans des instances vCenter Server afin de fournir du stockage partagé pour les hôtes vSphere.
 
-As shown in Figure 1, vSAN aggregates the local storage across multiple ESXi hosts within a vSphere cluster and manages the aggregated storage as a single VM datastore. Within this design, the compute nodes contain local disk drives for the ESXi OS and the vSAN datastore. Regardless of which cluster a node belongs
-to, two 1-TB SATA drives are included in each node to house the ESXi installation.
+Comme illustré dans la figure 1, vSAN agrège le stockage local sur plusieurs hôtes ESXi dans un cluster vSphere et gère le stockage agrégé comme un seul magasin de données de machine virtuelle. Avec cette conception, les noeuds de traitement contiennent les unités de disque local pour le système d'exploitation ESXi et le magasin de données vSAN. Quel que soit le cluster auquel est rattaché un noeud, deux unités 1-TB SATA sont incluses dans chaque noeud pour héberger l'installation ESXi.
 
-Figure 1. vSAN concept
+Figure 1. Concept vSAN
 
-![vSAN concept](virtual_vSAN.svg "vSAN aggregates the local storage across multiple ESXi hosts within a vSphere cluster and manages the aggregated storage as a single VM datastore")
+![Concept vSAN](virtual_vSAN.svg "vSAN agrège le stockage local sur plusieurs hôtes ESXi dans un cluster vSphere et gère le stockage agrégé comme un seul magasin de données de machine virtuelle")
 
-vSAN employs the following components:
-* Two-disk group vSAN design, with each disk group consisting of two or more disks. One SSD of the smallest size in the group serves as the cache tier and the remaining SSDs serve as the capacity tier.
-* The onboard RAID controller is configured for each drive except for the two OS drives, at the RAID-0 level.
-* A single vSAN datastore is created from all storage.
+vSAN emploie les composants suivants :
+* Conception vSAN avec deux groupes de disques, chaque groupe de disques étant composé d'au moins deux disques. L'unité SSD la plus petite dans le groupe sert de niveau de cache et les autres unités SSD servent de niveau de capacité.
+* Le contrôleur RAID intégré est configuré pour chaque unité sauf pour les deux unités de système d'exploitation, au niveau RAID-0.
+* Un seul magasin de données vSAN est créé à partir de toutes les unités de stockage.
 
-The available vSAN features depend on the license edition that you select when you order the instance. For more information, see [VMware vSAN edition comparison](appendix.html#vmware-vsan-edition-comparison).
+Les fonctions vSAN disponibles varient en fonction de l'édition de licence que vous sélectionnez lors de la commande de l'instance. Pour plus d'informations, voir [Comparaison des éditions VMware vSAN](appendix.html#vmware-vsan-edition-comparison).
 
-### Virtual network setup for vSAN
+### Configuration de réseau virtuel pour vSAN
 
-For this design, the vSAN traffic traverses between ESXi hosts on a dedicated private VLAN. The two network adapters attached to the private network switch are configured within vSphere as a vSphere Distributed Switch (vDS) with both network adapters as uplinks. A dedicated vSAN kernel port group configured for the vSAN VLAN resides within the vDS. Jumbo frames (MTU 9000) are enabled for the private vDS.
+Pour cette conception, le trafic vSAN parcourt les hôtes ESXi sur un réseau local privé dédié. Les deux adaptateurs de réseau connectés au commutateur de réseau privé sont configurés dans vSphere sous la forme d'un commutateur vDS avec les deux adaptateurs de réseau sous la forme de liaisons montantes. Un groupe de ports de noyau vSAN dédié configuré pour le réseau local virtuel vSAN réside dans le commutateur vDS. Les trames Jumbo (MTU 9000) sont activées pour le commutateur vDS privé.
 
-vSAN does not load balance traffic across uplinks. As a result, one adapter is active while the other is in standby to support high availability (HA). The network failover policy for vSAN is configured as **Explicit Failover** between physical network ports.
+vSAN ne procède pas à l'équilibrage de charge du trafic entre les liaisons montantes. Par conséquent, un adaptateur est actif pendant que l'autre est en veille pour prendre en charge la haute disponibilité (HA). La règle de reprise par transfert configurée pour vSAN entre les ports de réseau physique est **Basculement explicite**.
 
-For more information about physical NIC connections, see Figure 2. Physical host NIC connections in [Physical infrastructure design](design_physicalinfrastructure.html).
+Pour plus d'informations sur les connexions NIC physiques, voir la Figure 2. Connexions NIC hôte physiques dans la rubrique [Conception d'infrastructure physique](design_physicalinfrastructure.html).
 
-### Storage policy design
+### Conception de règles de stockage
 
-When vSAN is enabled and configured, storage policies are configured to define the VM storage characteristics. Storage characteristics specify different levels of service for different VMs.
+Lorsque vSAN est activé et configuré, des règles de stockage sont configurées pour définir les caractéristiques de stockage de machine virtuelle. Les caractéristiques de stockage spécifient différents niveaux de service pour différentes machines virtuelles.
 
-The default storage policy in this design tolerates a single failure. The default policy is configured with RAID 5 erasure coding, with **Failure tolerance method** set to **RAID-5/6 (Erasure Coding) - Capacity** and **Primary level of failures** set to 1.
+La règle de stockage définie par défaut dans cette conception ne tolère qu'une seule panne. La règle par défaut est configurée avec le codage d'effacement RAID 5, avec la valeur **Niveau-5/6 (Codage d'effacement) - Capacité** affectée à **Méthode de tolérance aux défaillances** et la valeur 1 affectée à **Niveau principal des pannes**.
 
-The RAID 5 configuration requires a minimum of four hosts. Alternatively, you can choose the RAID 6 configuration with **Failure tolerance method** set to **RAID-5/6 (Erasure Coding) - Capacity** and **Primary level of failures** set to 2.
+La configuration RAID 5 requiert au moins quatre hôtes. Sinon, vous pouvez choisir la configuration RAID 6, avec la valeur **Niveau-5/6 (Codage d'effacement) - Capacité** affectée à **Méthode de tolérance aux défaillances** et la valeur 2 affectée à **Niveau principal des pannes**.
 
-The RAID 6 configuration requires a minimum of 6 hosts. **Duplication** and **compression** are also enabled in the default storage policy.
+La configuration RAID 6 requiert au moins 6 hôtes. La **duplication** et la **compression** sont également activées dans la règle de stockage par défaut.
 
-An instance uses the default policy unless otherwise specified from the vSphere console. When a custom policy is configured, vSAN will guarantee it when possible. However, if the policy cannot be guaranteed, it is not possible to provision a VM that uses the policy unless it is enabled to force provisioning.
+Une instance utilise la règle par défaut sauf indication contraire à partir de la console vSphere. Lorsqu'une règle personnalisée est configurée, elle est garantie par vSAN chaque fois que cela est possible. Toutefois, si la règle ne peut pas être garantie, il n'est pas possible de mettre à disposition une machine virtuelle qui utilise la règle sauf si elle est activée pour forcer la mise à disposition.
 
-Storage policies must be reapplied after addition of new ESXi hosts or patching of the ESXi hosts.
+Les règles de stockage doivent être réappliquées après l'ajout de nouveaux hôtes ESXi ou l'application de modules de correction aux hôtes ESXi.
 
-### vSAN settings
+### Paramètres vSAN
 
-vSAN settings are set based on best practices for deploying VMware solutions within {{site.data.keyword.cloud_notm}}. The vSAN settings include SIOC settings, explicit failover settings port group, and disk cache settings.
-* SSD cache policy settings: No **Read Ahead**, **Write Through**, **Direct** (NRWTD)
-* Network I/O control settings
-   * Management: 20 shares
-   * Virtual machine: 30 shares
-   * vMotion: 50 shares
-   * vSAN: 100 shares
-* vSAN kernel ports: **Explicit Failover**
+Les paramètres vSAN sont définis selon les meilleures pratiques relatives au déploiement de solutions VMware dans {{site.data.keyword.cloud_notm}}. Ils incluent les paramètres SIOC, le groupe de ports des paramètres de basculement explicite et les paramètres de cache-disque.
+* Paramètres de règles de cache SSD : NRWTD (No **Read Ahead**, **Write Through**, **Direct**)
+* Paramètres de contrôle d'E-S de réseau
+   * Gestion : 20 partages
+   * Machine virtuelle : 30 partages
+   * vMotion : 50 partages
+   * vSAN : 100 partages
+* Ports de noyau vSAN : **Basculement explicite**
 
-## VMware NSX design
+## Conception de VMware NSX
 
-Network virtualization provides a network overlay that exists within the virtual layer. Network virtualization provides the architecture with features such as rapid provisioning, deployment, reconfiguration and destruction of on-demand virtual networks. This design uses the vDS and VMware NSX for vSphere to implement virtual networking.
+La virtualisation de réseau fournit un réseau dissocié qui existe dans la couche virtuelle. Cette virtualisation offre à l'architecture des fonctions telles que la mise à disposition, le déploiement, la reconfiguration et la destruction rapides de réseaux virtuels à la demande. Cette conception utilise le commutateur vDS et VMware NSX for vSphere pour implémenter la mise en réseau virtuelle.
 
-In this design, the NSX Manager is deployed in the initial cluster. The NSX Manager is assigned a VLAN-backed IP address from the private portable address block, which is designated for management components and configured with the DNS and NTP servers discussed in [Common services design](design_commonservice.html). The NSX Manager is installed with the specifications listed in Table 2.
+Dans cette conception, NSX Manager est déployé dans le cluster initial. NSX Manager se voit affecter une adresse IP VLAN provenant du bloc d'adresses portables privées conçu pour les composants de gestion et configuré avec les serveurs DNS et NTP décrits dans [Conception des services communs](design_commonservice.html). NSX Manager est installé avec les spécifications recensées dans le tableau 2.
 
-Table 2. NSX Manager attributes
+Tableau 2. Attributs de NSX Manager
 
-| Attribute       | Specification |
+| Attribut       | Spécification |
 |:--------------- |:------------- |
-| NSX Manager     | Virtual appliance |
-| Number of vCPUs | 4 |
-| Memory          | 16 GB |
-| Disk            | 60 GB on the management NFS share |
-| Disk type       | Thin-provisioned |
-| Network         | Private a portable designated for management components |
+| NSX Manager     | Dispositif virtuel |
+| Nombre d'unités centrales virtuelles | 4 |
+| Mémoire          | 16 Go |
+| Disque            | 60 Go sur le partage NFS de gestion |
+| Type de disque       | Alloué de manière dynamique |
+| Réseau         | Privé, portable, conçu pour les composants de gestion |
 
-The following figure shows the placement of the NSX Manager in relation to other components in the architecture.
+La figure suivante illustre l'emplacement de NSX Manager par rapport aux autres composants de l'architecture.
 
-Figure 2. NSX Manager network overview
+Figure 2. Présentation du réseau NSX Manager
 
-![NSX Manager network overview](virtual_NSX.svg "NSX Manager in relation to the other components in the architecture")
+![NSX Manager](virtual_NSX.svg "Présentation de l'emplacement de NSX Manager par rapport aux autres composants de l'architecture réseau ")
 
-After initial deployment, the {{site.data.keyword.cloud_notm}} automation deploys three NSX controllers within the initial cluster. Each of the controllers is assigned a VLAN-backed IP address from the Private a portable subnet that is designated for management components. Additionally, the design creates VM-VM anti-affinity rules to separate the controllers amongst the hosts in the cluster. The initial cluster must contain a minimum of three nodes to ensure high availability for the controllers.
+Après le déploiement initial, l'automatisation d'{{site.data.keyword.cloud_notm}} déploie trois contrôleurs NSX dans le cluster initial. Chacun des contrôleurs se voit affecter une adresse IP VLAN provenant du sous-réseau portable destiné aux composants de gestion. En outre, la conception crée des règles anti-affinité MV-MV pour séparer les contrôleurs parmi les hôtes du cluster. Le cluster initial doit contenir un minimum de trois noeuds pour garantir la haute disponibilité des contrôleurs.
 
-In addition to the controllers, the {{site.data.keyword.cloud_notm}} automation prepares the deployed vSphere hosts with NSX VIBS to enable the use of a virtualized network through VXLAN Tunnel Endpoints (VTEPs). The VTEPs are assigned a VLAN-backed IP address from the Private a portable IP address range that is specified for VTEPs as listed in *Table 1. VLAN and subnet summary* of [Physical infrastructure design](design_physicalinfrastructure.html). The VXLAN traffic resides on the untagged VLAN and is assigned to the private vDS.
+Outre les contrôleurs, l'automatisation d'{{site.data.keyword.cloud_notm}} prépare les hôtes vSphere déployés avec NSX VIBS pour permettre l'utilisation d'un réseau virtualisé via des points d'extrémité de tunnel VXLAN (VTEP). Les VTEP se voient affecter des adresses IP VLAN provenant de la plage d'adresses IP du sous-réseau portable privé spécifié pour les VTEP comme indiqué dans le *Tableau 1. Récapitulatif VLAN et sous-réseau* de la rubrique [Conception d'infrastructure physique](design_physicalinfrastructure.html). Le trafic VXLAN réside sur le réseau local virtuel non balisé et est affecté au commutateur vDS privé.
 
-Subsequently, a segment ID pool is assigned and the hosts in the cluster are added to the transport zone. Only unicast is used in the transport zone because Internet Group Management Protocol (IGMP) snooping is not configured within the {{site.data.keyword.cloud_notm}}.
+Par la suite, un pool d'ID de segment est affecté et les hôtes du cluster sont ajoutés à la zone de transfert. Seul unicast est utilisé dans la zone de transfert car la surveillance IGMP (Internet Group Management Protocol) n'est pas configurée dans {{site.data.keyword.cloud_notm}}.
 
-After that, NSX Edge Services Gateway pairs are deployed. In all cases, one gateway pair is used for outbound traffic from automation components that reside in the private network. For vCenter Server, a second gateway that is known as the customer-managed edge, is deployed and configured with an uplink to the public network and an interface assigned to the private network. For more information about the NSX Edge Services Gateways that are deployed as part of the solution, see [NSX Edge on 	{{site.data.keyword.cloud_notm}} solution architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NSX_Edge_Services_Gateway.pdf).
+Après cela, des paires de passerelles NSX ESG (Edge Services Gateway) sont déployées. Dans tous les cas, une paire de passerelles est utilisée pour le trafic sortant des composants d'automatisation qui résident dans le réseau privé. Pour vCenter Server, une seconde passerelle, appelée serveur de périphérie géré par le client, est déployée et configurée avec une liaison montante au réseau public et une interface affectée au réseau privé. Pour plus d'informations sur les passerelles NSX ESG (Edge Services Gateway) déployées dans le cadre de la solution, voir [NSX Edge on 	{{site.data.keyword.cloud_notm}} Solution architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NSX_Edge_Services_Gateway.pdf).
 
-Cloud administrators can configure any required NSX components, such as Distributed Logical Router (DLR), logical switches, and firewalls. The available NSX features are dependent on the NSX license edition that you choose when you order the instance. For more information, see [VMware NSX edition comparison](appendix.html#vmware-nsx-edition-comparison). For vCenter Server instances, the {{site.data.keyword.cloud_notm}} automation adds the vCenter Server Appliance and Platform services Controller (PSC) to the NSX Manager distributed firewall exclusion list.
+Les administrateurs de cloud peuvent configurer les composants NSX requis, tels que le routeur DLR (Distributed Logical Router), les commutateurs logiques et les pare-feu. Les fonctions NSX disponibles varient en fonction de l'édition de licence NSX que vous sélectionnez lors de la commande de l'instance. Pour plus d'informations, voir [Comparaison des éditions VMware NSX](appendix.html#vmware-nsx-edition-comparison). Pour les instances vCenter Server, l'automatisation {{site.data.keyword.cloud_notm}} ajoute le dispositif vCenter Server Appliance et le contrôleur PSC (Platform Services Controller) Controller (PSC) à la liste d'exclusion de pare-feu distribué de NSX Manager.
 
-### Distributed switch design
+### Conception de commutateur distribué
 
-The design uses a minimum number of vDS Switches. The hosts in the cluster are connected to the public and private networks. The hosts are configured with two distributed virtual switches. The use of two switches follows the practice of {{site.data.keyword.cloud_notm}} network that separates the public and private networks. The following diagram shows the vDS design.
+La conception utilise un nombre minimal de commutateurs vDS. Les hôtes du cluster sont connectés aux réseaux public et privé. Les hôtes sont configurés avec deux commutateurs virtuels distribués. L'utilisation de deux commutateurs est conforme à la pratique du réseau {{site.data.keyword.cloud_notm}} qui sépare le réseau public et le réseau privé. Le diagramme suivant illustre la conception vDS.
 
-Figure 3. Distributed switch design
+Figure 3. Conception de commutateur distribué
 
-![Distributed switch design](virtual_network_distributedswitch.svg "vDS design")
+![Conception de commutateur distribué](virtual_network_distributedswitch.svg "Conception vDS")
 
-As shown in the figure, one vDS is configured for public network connectivity (SDDC-Dswitch-Public) and the other vDS is configured for private network connectivity (SDDC-Dswitch-Private).
+Comme illustré dans la figure, un commutateur vDS est configuré pour la connectivité de réseau public (SDDC-Dswitch-Public) et l'autre commutateur vDS est configuré pour la connectivité de réseau privé (SDDC-Dswitch-Private).
 
-Separating different types of traffic is required to reduce contention and latency and increase security. VLANs are used to segment physical network functions.
+La séparation des différents types de trafic est nécessaire pour réduire les conflits et les temps d'attente et renforcer la sécurité. Les VLAN sont utilisés pour segmenter les fonctions de réseau physique.
 
-This design uses three VLANs: two for private network traffic and one for public network traffic. The following table shows the traffic separation.
+Cette conception utilise VLAN, deux pour le trafic de réseau privé et l'autre pour le trafic de réseau public. Le tableau suivant illustre la séparation du trafic.
 
-Table 3. VLAN mapping to traffic types
+Tableau 3. Mappage VLAN aux types de trafic
 
-| VLAN  | Designation | Traffic type |
+| VLAN  | Désignation | Type de trafic |
 |:----- |:----------- |:------------ |
-| VLAN1 | Public      | Available for internet access |
-| VLAN2 | Private a   | ESXi management, management, VXLAN (VTEP) |
-| VLAN3 | Private B   | vSAN, NFS, vMotion |
+| VLAN1 | Public      | Disponible pour l'accès Internet |
+| VLAN2 | Privé A | Gestion ESXi, gestion, VXLAN (VTEP) |
+| VLAN3 | Privé B   | vSAN, NFS, vMotion |
 
-Traffic from workloads will travel on VXLAN­-backed logical switches.
+Le trafic issu des charges de travail transite sur des commutateurs logiques VXLAN.
 
-The vSphere cluster uses two vSphere Distributed Switches configured as in the following tables. 
+Le cluster vSphere utilise deux commutateurs distribués vSphere configurés comme indiqué dans les tableaux suivants.
 
-Table 4. Converged cluster distributed switches
+Tableau 4. Commutateurs distribués de cluster convergé
 
-| vSphere Distributed<br>Switch name | Function | Network<br>I/O control | Load balancing<br>mode | Physical NIC<br>ports | MTU |
+| Nom de commutateur<br>Nom du commutateur | Fonction | Réseau<br>Contrôle E-S | Equilibrage de charge<br>mode | Ports<br>ports | MTU |
 |:------------- |:------------- |:------------- |:------------- |:------------- |:------------- |
-| SDDC-Dswitch-Private | ESXi management, vSAN, vSphere vMotion, VXLAN tunnel endpoint, NFS (VTEP) | Enabled | Route based on explicit failover (vSAN, vMotion) originating virtual port (all else) | 2 | 9,000<br>(Jumbo frames) |
-| SDDC-Dswitch-Public | External management traffic (north-south) | Enabled | Route based on originating virtual port | 2 | 1,500<br>(default) |
+| SDDC-Dswitch-Private | gestion ESXi, vSAN, vSphere vMotion, point d'extrémité du tunnel VXLAN, NFS (VTEP) | Activé | Route basée sur le basculement explicite (vSAN, vMotion) port virtuel d'origine (tout le reste) | 2 | 9 000<br>(Trames Jumbo) |
+| SDDC-Dswitch-Public | Trafic de gestion externe (Nord-Sud) | Activé | Route basée sur le port virtuel d'origine | 2 | 1 500<br>(par défaut) |
 
-**Note:** The names, number, and ordering of the host NICs might vary depending on the {{site.data.keyword.CloudDataCent_notm}} and your host hardware selection.
+**Remarque :** les noms, le nombre et l'ordre des NIC de l'hôte peuvent varier en fonction de l'{{site.data.keyword.CloudDataCent_notm}} et du matériel de l'hôte choisi.
 
-Table 5. Converged cluster distributed switch port group configuration settings
+Tableau 5. Paramètres de configuration de groupe de ports de commutation distribuée pour le cluster convergé
 
-| Parameter          | Setting       |
+| Paramètre          | Valeur       |
 |:------------------ |:------------- |
-| Load balancing     | Route based on the originating virtual port \* |
-| Failover detection | Link status only |
-| Notify switches    | Enabled |
-| Failback           | No |
-| Failover order     | Active uplinks: Uplink1, Uplink2 \* |
+| Equilibrage de charge     | Route basée sur le port virtuel d'origine \* |
+| Détection de basculement | Statut de liaison uniquement |
+| Commutateurs de notification    | Activé |
+| Reprise par restauration           | Non |
+| Commande de basculement     | Liaisons montantes actives : Uplink1, Uplink2 \* |
 
-\* **Note:** The vSAN port group uses explicit failover with active/standby because it does not support load balancing of vSAN storage traffic.
+\* **Remarque :** le groupe de ports vSAN utilise le basculement explicite actif/en veille car il ne prend pas en charge l'équilibrage de charge du trafic de stockage vSAN.
 
-Table 6. Converged cluster virtual switch port groups and VLANs
+Tableau 6. Groupes de ports de commutation virtuelle et VLAN pour un cluster convergé
 
-| vSphere distributed switch | Port group name | Teaming | Uplinks | VLAN ID |
+| Commutateur distribué vSphere (VDS) | Nom du groupe de ports | Groupage | Liaisons montantes | ID VLAN |
 |:------------- |:------------- |:------------- |:------------- |:---------- |
-| SDDC-Dswitch-Private | SDDC-DPortGroup-Mgmt | Originating virtual port | Active: 0, 1 | VLAN1 |
-| SDDC-Dswitch-Private | SDDC-DPortGroup-vMotion | Originating virtual port | Active: 0, 1 | VLAN2 |
-| SDDC-Dswitch-Private | SDDC-DPortGroup-VSAN | Explicit failover | Active: 0<br>Standby: 1 | VLAN2 |
-| SDDC-Dswitch-Private | SDDC-DPortGroup-NFS | Originating virtual port | Active: 0, 1 | VLAN2 |
-| SDDC-Dswitch-Private | Automatically generated by NSX | Originating virtual port | Active: 0, 1 | VLAN1 |
-| SDDC-Dswitch-Public | SDDC-DPortGroup-External | Originating virtual port | Active: 0, 1 | VLAN3 |
+| SDDC-Dswitch-Private | SDDC-DPortGroup-Mgmt | Port virtuel d'origine | Actives : 0, 1 | VLAN1 |
+| SDDC-Dswitch-Private | SDDC-DPortGroup-vMotion | Port virtuel d'origine | Actives : 0, 1 | VLAN2 |
+| SDDC-Dswitch-Private | SDDC-DPortGroup-VSAN | Basculement explicite | Actives : 0<br>En veille : 1 | VLAN2 |
+| SDDC-Dswitch-Private | SDDC-DPortGroup-NFS | Port virtuel d'origine | Actives : 0, 1 | VLAN2 |
+| SDDC-Dswitch-Private | Généré automatiquement par NSX | Port virtuel d'origine | Actives : 0, 1 | VLAN1 |
+| SDDC-Dswitch-Public | SDDC-DPortGroup-External | Port virtuel d'origine | Actives : 0, 1 | VLAN3 |
 
-Table 7. Converged cluster VM kernel adapters
+Tableau 7. Adaptateurs de noyau de machine virtuelle de cluster convergé
 
-| vSphere distributed switch | Purpose | Connected port group | Enabled services | MTU |
+| Commutateur distribué vSphere (VDS) | Objectif | Groupe de ports connecté | Services activés | MTU |
 |:-------------------------- |:------- |:-------------------- |:---------------- |:--- |
-| SDDC-Dswitch-Private | Management | SDDC-DPortGroup-Mgmt | Management traffic | 1,500<br>(default) |
-| SDDC-Dswitch-Private | vMotion | SDDC-DPortGroup-vMotion | vMotion traffic | 9,000 |
-| SDDC-Dswitch-Private | VTEP | *Automatically generated by NSX* | \- | 9,000 |
-| SDDC-Dswitch-Private | VSAN | SDDC-DPortGroup-VSAN | vSAN | 9,000 |
-| SDDC-Dswitch-Private | NAS | SDDC-DPortGroup-NFS | \-  | 9,000 |
+| SDDC-Dswitch-Private | Gestion | SDDC-DPortGroup-Mgmt | Trafic de gestion | 1 500<br>(par défaut) |
+| SDDC-Dswitch-Private | vMotion | SDDC-DPortGroup-vMotion | Trafic vMotion | 9 000 |
+| SDDC-Dswitch-Private | VTEP | *Généré automatiquement par NSX* | \- | 9 000 |
+| SDDC-Dswitch-Private | VSAN | SDDC-DPortGroup-VSAN | vSAN | 9 000 |
+| SDDC-Dswitch-Private | NAS | SDDC-DPortGroup-NFS | \-  | 9 000 |
 
-### NSX configuration
+### Configuration de NSX
 
-This design specifies the configuration of NSX components but does not apply any network overlay component configuration. You can design the network overlay based on your needs. The following aspects are preconfigured:
+Cette conception spécifie la configuration des composants NSX mais n'applique aucune configuration de réseau dissocié. Vous pouvez concevoir le réseau dissocié en fonction de vos besoins. Les aspects suivants sont préconfigurés :
 
-* Management servers and controllers are installed and integrated into the vCenter web UI
-* ESXi agents are installed and VTEP IP addresses are configured per ESXi host
-* VTEP configuration, controller configuration, and VXLAN configuration (transport zone)
-* NSX Edge Services Gateway appliances for use by management components
-* For vCenter Server instances only: NSX Edge Services Gateway appliances for customer use
+* Les serveurs et contrôleurs de gestion sont installés et intégrés dns l'interface utilisateur Web vCenter
+* Les agents ESXi sont installés et des adresses IP VTEP sont configurées par hôte ESXi
+* Configuration VTEP, configuration de contrôleur et configuration VXLAN (zone de transfert)
+* Dispositifs NSX Edge Services Gateway destinés à être utilisés par les composants de gestion
+* Pour les instances vCenter Server uniquement : dispositifs NSX Edge Services Gateway destinés à être utilisés par les clients
 
-The following aspects are not configured:
-* Virtual distributed routers
+Les aspects suivants ne sont pas configurés :
+* Routeurs distribués virtuels
 * Micro segmentation
-* VXLANs
-* Linked NSX Management to other VMware instances
+* VXLAN
+* Gestion NSX liée à d'autres instances VMware
 
-### Related links
+### Liens connexes
 
-* [{{site.data.keyword.cloud_notm}} running VMware clusters solution architecture](https://www.ibm.com/cloud/garage/files/IBM-Cloud-for-VMware-Solutions-Multicluster-Architecture.pdf)
-* [NSX Edge on {{site.data.keyword.cloud_notm}} solution architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NSX_Edge_Services_Gateway.pdf)
+* [{{site.data.keyword.cloud_notm}} running VMware clusters Solution Architecture](https://www.ibm.com/cloud/garage/files/IBM-Cloud-for-VMware-Solutions-Multicluster-Architecture.pdf)
+* [NSX Edge on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NSX_Edge_Services_Gateway.pdf)
