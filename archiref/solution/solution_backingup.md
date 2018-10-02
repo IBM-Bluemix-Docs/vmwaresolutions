@@ -4,84 +4,84 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-09-25"
 
 ---
 
-# Backing up components
+# Sauvegarde des composants
 
-You’re responsible for the configuration, management, and monitoring of all software components, including the backup and availability of your management infrastructure and workloads.
+La configuration, la gestion et la surveillance de tous les composants logiciels, notamment la sauvegarde et la disponibilité de votre infrastructure de gestion et de vos charges de travail, vous incombent.
 
-As part of the solution, you can optionally deploy the {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} or Veeam on {{site.data.keyword.cloud_notm}} add-on services. Veeam and IBM Spectrum Protect Plus can help satisfy the requirement to back up your management components.
+Dans le cadre de la solution, vous pouvez éventuellement déployer les services complémentaires {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} ou Veeam on {{site.data.keyword.cloud_notm}}. Veeam et IBM Spectrum Protect Plus peuvent vous aider à répondre aux exigences de sauvegarde relatives à vos composants de gestion.
 
-These add-on services are deployed together with {{site.data.keyword.cloud_notm}} Endurance storage. The services help you back up your workloads and the management components. The [IBM Spectrum Protect Plus architecture overview](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} and [Veeam architecture overview](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window} provide helpful guidance on planning and sizing your deployment. You can also request [managed services](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed) for your Veeam deployment.
+Ces services complémentaires sont déployés en même temps que le stockage {{site.data.keyword.cloud_notm}} Endurance. Ils vous aident à sauvegarder vos charges de travail et les composants de gestion. Les rubriques de [présentation de l'architecture IBM Spectrum Protect Plus](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} et de [présentation de l'architecture Veeam](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window} fournissent des commentaires utiles en matière de planification et de dimensionnement de déploiement. Vous pouvez également demander des [services gérés](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed) pour votre déploiement Veeam.
 
-Different solution components require different strategies for backup. Some components are protected by using image-level backup, and other components are protected by using file-based backup for their configuration and data.
+Différents composants de solution requièrent différentes stratégies de sauvegarde. Certains composants sont protégés à l'aide d'une sauvegarde par image et d'autres composants sont protégés à l'aide d'une sauvegarde de niveau fichier pour leur configuration et leurs données.
 
-## File server for file-based backup
+## Serveur de fichiers pour une sauvegarde de niveau fichier
 
-Some components, such as VMware vCenter Server, Platform Services Controller (PSC), and VMware NSX, require their configuration to be backed up to a file server.
+Certains composants, tels que VMware vCenter Server, Platform Services Controller (PSC) et VMware NSX, nécessitent que leur configuration soit sauvegardée dans un serveur de fichiers.
 
-To host these backups, deploy a Linux file server into your cluster by using the following steps:
+Pour héberger ces sauvegardes, déployez un serveur de fichiers Linux dans votre cluster en procédant comme suit :
 
-1. Order a private portable subnet from the {{site.data.keyword.cloud_notm}} infrastructure and locate it on the same VLAN as your system components. This is the private VLAN on which the management IP addresses for your hosts reside.
-2. Upload an operating system image to your VMware management datastore, such as Ubuntu Server 18.04 LTS, from the {{site.data.keyword.cloud_notm}} private mirror.
-3. Deploy this virtual machine (VM) into your cluster on the management port group by using a private portable IP address ordered previously. Ensure that the VM is configured to point to your AD/DNS servers and optionally add the VM to the DNS of your subdomain.
-4. Create a non-root backup user ID on this server and ensure that all the necessary services are configured and started for file transfers. For example, FTP or SSH.
-5. Ensure that this VM is included in your Veeam or IBM Spectrum Protect Plus management backup job.
+1. Commandez un sous-réseau portable privé depuis l'infrastructure {{site.data.keyword.cloud_notm}} et implantez-le sur le même réseau local virtuel que vos composants système. Il s'agit du réseau local virtuel privé sur lequel résident les adresses IP de gestion de vos hôtes.
+2. Téléchargez une image de système d’exploitation sur votre magasin de données de gestion VMware, par exemple, [Ubuntu Server 18.04 LTS](http://mirrors.service.softlayer.com/ubuntu-releases/ubuntu-server/bionic/daily-live/current/){:new_window}, depuis le miroir privé d'{{site.data.keyword.cloud_notm}}.
+3. Déployez cette machine virtuelle dans votre cluster sur le groupe de ports de gestion à l'aide d'une adresse IP portable privée commandée précédemment. Vérifiez que la machine virtuelle est configurée pour pointer vers vos serveurs AD/DNS et ajoutez éventuellement la machine virtuelle au serveur DNS de votre sous-domaine.
+4. Créez un ID utilisateur de sauvegarde autre que root sur ce serveur et assurez-vous que tous les services nécessaires sont configurés et démarrés pour les transferts de fichiers. Par exemple FTP ou SSH.
+5. Assurez-vous que cette machine virtuelle est incluse dans votre tâche de sauvegarde de gestion Veeam ou IBM Spectrum Protect Plus. 
 
-## vCenter file-based backup
+## Sauvegarde de niveau fichier vCenter
 
-VMware vCenter Server and PSC provide an [appliance management user interface and API to export the database and configuration to a file server](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window} using various protocols. VMware documents an example of how you can configure this to [run periodically as a cron job](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window} directly on the vCenter Server Appliance and PSC, which you can adapt for your use.
+VMware vCenter Server et PSC fournissent une[interface utilisateur de gestion de dispositif et une API permettant d'exporter la base de données et la configuration dans un serveur de fichiers](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.install.doc/GUID-3EAED005-B0A3-40CF-B40D-85AD247D7EA4.html){:new_window} à l'aide de divers protocoles. Vous trouverez dans VMware un exemple montrant comment configurer cette opération [pour qu'elle s'exécute régulièrement en tant que travail cron](https://pubs.vmware.com/vsphere-6-5/index.jsp?topic=%2Fcom.vmware.vsphere.vcsapg-rest.doc%2FGUID-222400F3-678E-4028-874F-1F83036D2E85.html){:new_window} directement sur le dispositif vCenter Server Appliance et le contrôleur PSC.
 
-You must back up both the vCenter Server Appliance and the PSC separately using this technique. Familiarize yourself with and plan for the considerations and limitations that are documented by VMware. Also, plan for a regular rotation and expiration of the file backups on your file server. Note that VMware requires the backup location to be an empty folder, so you should plan for your backup rotation or automation to leave the location empty for each subsequent backup job.
+Vous devez sauvegarder le dispositif vCenter Server Appliance et le contrôleur PSC séparément à l'aide de cette technique. Familiarisez-vous avec cette technique et planifiez les aspects et les limitations documentés par VMware. En outre, planifiez une rotation et une expiration régulières des sauvegardes de fichiers sur votre serveur de fichiers. Notez que VMware exige que l'emplacement de sauvegarde soit un dossier vide, par conséquent, vous devez planifier votre rotation ou automatisation de sauvegarde de manière à laisser l'emplacement vacant pour chaque tâche de sauvegarde successive.
 
-## NSX file-based backup
+## Sauvegarde de niveau fichier NSX
 
-Proper backup of all NSX components is crucial to restoring the system to its working state if a failure occurs. The design requires you to configure NSX backup through the NSX manager backup function. For this purpose, you can [configure NSX manager to regularly perform backups](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window} to your file server. Ensure that your file server or its data is backed up correctly, and ensure the rotation of old NSX backups.
+Il est essentiel de sauvegarder correctement tous les composants NSX afin de pouvoir restaurer l'état opérationnel du système dans l'éventualité d'une panne. La conception exige que vous configuriez la sauvegarde NSX via la fonction de sauvegarde de NSX Manager. Pour cela, vous pouvez [configurer NSX Manager de sorte qu'il effectue régulièrement des sauvegardes](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window} sur votre serveur de fichiers. Assurez-vous que votre serveur de fichiers ou ses données sont correctement sauvegardés et assurez la rotation des anciennes sauvegardes NSX.
 
-## Image-based backup of management virtual machines
+## Sauvegarde par image des machines virtuelles de gestion
 
-After you deployed your instance and deployed either the IBM Spectrum Protect Plus service or the Veeam backup service, configure a backup job for your management virtual machines. Plan to back up the following VMs with at least 7 days of daily backups:
+Après avoir déployé votre instance et le service de sauvegarde IBM Spectrum Protect Plus ou Veeam, configurez une tâche de sauvegarde pour vos machines virtuelles de gestion. Prévoyez de sauvegarder les machines virtuelles suivantes avec au moins 7 jours de sauvegardes quotidiennes :
 
-* If present, VMware SDDC Manager
-* If present, Active Directory servers
-* File backup server
+* VMware SDDC Manager, si présent
+* Serveurs Active Directory, si présents
+* Serveur de sauvegarde de fichier
 
-Plan to allocate enough Veeam or IBM Spectrum Protect Plus licenses to back up these virtual machines, and plan for at least 2 TB of backup storage for the VMs.
+Prévoyez d'allouer un nombre suffisant de licences Veeam ou IBM Spectrum Protect Plus pour la sauvegarde de ces machines virtuelles et prévoyez au moins 2 To de stockage de sauvegarde pour les machines virtuelles.
 
-## Add-on services
+## Services complémentaires
 
-If you deploy add-on solution components into your instance, you should also plan for the backup of these components as part of your management backup strategy:
+Si vous déployez des composants de solution complémentaires dans votre instance, vous devez également planifier la sauvegarde de ces composants dans le cadre de votre stratégie de sauvegarde de gestion :
 
-* Zerto Virtual Replication: The Zerto Virtual Manager (ZVM) system is deployed as an {{site.data.keyword.cloud_notm}} virtual server instance (VSI) and its backup is not supported by Veeam or IBM Spectrum Protect Plus. If your disaster recovery strategy requires you to recover the ZVM without performing a site failover, you should use your preferred Windows backup solution to back up and restore the ZVM.
-* F5 BIG-IP: F5 recommends [file-based backup of the F5 configuration](https://support.f5.com/csp/article/K13132){:new_window}, which you can direct to your file server.
-* FortiGate Security Appliance or VM: Fortinet recommends [file-based backup of the FortiGate configuration](http://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-best-practices-54/Firmware/Performing_Config_Backup.htm){:new_window}, which you can direct to your file server.
-* HyTrust Cloud Control and Data Control: HyTrust supports both image and file-based backup of the HyTrust server appliances. For more information, see the HyTrust administration guides.
-* VMware HCX: The HCX appliance management interface allows you to create and download a file-based backup of the HCX manager configuration similar to the vCenter Server Appliance.
+* Réplication virtuelle Zerto : le système ZVM (Zerto Virtual Manager) est déployé en tant qu'instance de serveur virtuel {{site.data.keyword.cloud_notm}} et sa sauvegarde n'est pas prise en charge par Veeam ou IBM Spectrum Protect Plus. Si votre stratégie de reprise après incident nécessite de restaurer le système ZVM sans effectuer un basculement de site, vous devez utiliser votre solution de sauvegarde Windows préférée pour sauvegarder et restaurer le système ZVM.
+* F5 BIG-IP : F5 recommande la [sauvegarde de niveau fichier de la configuration BIG-IP](https://support.f5.com/csp/article/K13132){:new_window}, que vous pouvez diriger vers votre serveur de fichiers.
+* FortiGate Security Appliance ou machine virtuelle : Fortinet recommande la [sauvegarde de niveau fichier de la configuration FortiGate](http://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-best-practices-54/Firmware/Performing_Config_Backup.htm){:new_window}, que vous pouvez diriger vers votre serveur de fichiers.
+* HyTrust Cloud Control et Data Control : HyTrust prend en charge la sauvegarde par image et la sauvegarde de niveau fichier des dispositifs de serveur HyTrust. Pour plus d'informations, voir les guides d'administration HyTrust.
+* VMware HCX : l'interface de gestion de dispositif HCX vous permet de créer et télécharger une sauvegarde de niveau fichier de la configuration HCX Manager qui est semblable à celle du dispositif vCenter Server Appliance.
 
-## Additional considerations
+## Autres remarques
 
-If you choose to deploy your AD/DNS server as an {{site.data.keyword.cloud_notm}} virtual server instance (VSI), you cannot back it up by using Veeam or IBM Spectrum Protect Plus. In this case, use your preferred Windows backup solution for backup and restore operations, or plan to deploy your instance using AD/DNS VMs within your VMware cluster, which can be backed up by Veeam or IBM Spectrum Protect Plus.
+Si vous choisissez de déployer votre serveur AD/DNS en tant qu'instance de serveur virtuel {{site.data.keyword.cloud_notm}}, vous ne pouvez pas le sauvegarder à l'aide de Veeam ou IBM Spectrum Protect Plus. Dans ce cas, utilisez votre solution de sauvegarde Windows préférée pour les opérations de sauvegarde et de restauration ou envisagez de déployer votre instance à l'aide de machines virtuelles AD/DNS dans votre cluster VMware, lesquelles peuvent être sauvegardées par Veeam ou IBM Spectrum Protect Plus.
 
-Beginning with VMware vCenter 6.5u2, VMware supports the backup of the vCenter Postgres database by using image-based backups, with integrated suspend and resume scripts for the database during the backup window to ensure database integrity. If you upgrade your VMware instance to vCenter 6.5u2, you can choose to use Veeam or IBM Spectrum Protect Plus to back up your vCenter Server and PSC instead of using file-based backups. If you do so, you must use the Veeam or IBM Spectrum Protect Plus quiesce feature to ensure database integrity.
+A partir de VMware vCenter 6.5u2, VMware prend en charge la sauvegarde de la base de données vCenter Postgres à l'aide de sauvegardes par image, au moyen de scripts de suspension et de reprise intégrés pour la base de données durant la fenêtre de sauvegarde afin de garantir l'intégrité de la base de données. Si vous mettez à niveau votre instance VMware vers vCenter 6.5u2, vous pouvez choisir d'utiliser Veeam ou IBM Spectrum Protect Plus pour sauvegarder votre serveur vCenter Server et votre contrôleur PSC au lieu d'utiliser des sauvegardes de niveau fichier. Dans ce cas, vous devez utiliser la fonction de mise au repos de Veeam ou d'IBM Spectrum Protect Plus pour assurer l'intégrité des bases de données.
 
-## Restoring from backup
+## Restauration depuis une sauvegarde
 
-There are several special considerations when you restore your management backups:
+Vous devez tenir compte de plusieurs remarques spécifiques lorsque vous restaurez vos sauvegardes de gestion :
 
-* For vCenter and PSC, VMware provides an installer that can deploy a new virtual appliance and restore the configuration from backup.
-* When you restore an appliance from backup, the installer detects the type of appliance (vCenter Server or PSC) based on the backup information you provide.
-* Because you deploy directly to one of your hosts, you might not be able to deploy to a distributed switch or port group. You might need to create a temporary standard switch and port group for deploying the recovered appliances, and migrate one of your vmnics temporarily to this switch to provide network connectivity for your VMs. After deployment, you can migrate the VMs to the distributed port group and return the vmnic to the dvSwitch.
-* For NSX, you might need to redeploy your NSX Manager and controllers before you restore the configuration from backup.
-* Ensure that you familiarize yourself with the VMware considerations and limitations for vCenter backup and restore.
+* Pour vCenter et le contrôleur PSC, VMware fournit un programme d'installation qui peut déployer un nouveau dispositif virtuel et restaurer la configuration à partir d'une sauvegarde.
+* Lorsque vous restaurez un dispositif à partir d'une sauvegarde, le programme d'installation détecte le type de dispositif (vCenter Server ou contrôleur PSC) en fonction des informations de sauvegarde que vous indiquez.
+* Etant donné que vous effectuez un déploiement directement sur l'un de vos hôtes, il se peut que vous ne puissiez pas effectuer ce déploiement sur un commutateur ou un groupe de ports distribué. Vous devrez peut-être créer un ensemble commutateur/groupe de ports standard temporaire en vue du déploiement des dispositifs restaurés, puis faire migrer temporairement l'une de vos cartes d'interface réseau de machine virtuelle (VMNIC) vers ce commutateur pour fournir la connectivité réseau nécessaire à vos machines virtuelles. Après le déploiement, vous pouvez faire migrer les machines virtuelles vers le groupe de ports distribué et renvoyer la carte d'interface réseau de machine virtuelle (VMNIC) au commutateur virtuel distribué (dvSwitch).
+* Pour NSX, vous devrez peut-être redéployer votre gestionnaire NSX et vos contrôleurs NSX avant de restaurer la configuration à partir d'une sauvegarde.
+* Prenez soin de vous familiariser avec les remarques et les limitations propres à VMware pour les opérations de sauvegarde et de restauration vCenter.
 
-## Summary
+## Récapitulatif
 
-With proper planning, you can ensure that your VMware instance can suffer the loss of its management components and recover successfully. Ensure to regularly monitor the success of your backup jobs and availability of your backup data and ensure to test your backup and restore plan regularly, for both your management infrastructure and your workloads.
+Grâce à une planification appropriée, vous avez l'assurance que votre instance VMware puisse supporter la perte de ses composants de gestion et être restaurée avec succès. Pour votre infrastructure de gestion et pour vos charges de travail, et de façon régulière, prenez soin de vérifier que vos tâches de sauvegarde aboutissent, de contrôler la disponibilité de vos données de sauvegarde et de tester votre plan de sauvegarde et de restauration.
 
-### Related links
+### Liens connexes
 
-* [Solution overview](solution_overview.html)
-* [Design overview](design_overview.html)
-* [Scaling capacity](solution_scaling.html)
+* [Présentation de la solution](solution_overview.html)
+* [Présentation de la conception](design_overview.html)
+* [Mise à l'échelle de la capacité](solution_scaling.html)

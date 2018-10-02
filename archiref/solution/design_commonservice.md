@@ -8,78 +8,78 @@ lastupdated: "2018-09-25"
 
 ---
 
-# Common services design
+# Conception des services communs
 
-Common services provide the services that are used by other services in the cloud management platform. The common services of the solution include identity and access services, domain name services, NTP services, SMTP services, and certificate authority services.
+Les services communs fournissent les services qui sont utilisés par d'autres services de la plateforme de gestion du cloud. Les services communs de la solution comprennent des services d'identité et d'accès, des services de nom de domaine, des services NTP, des services SMTP et des services d'autorité de certification.
 
-## Identity and access services
+## Services d'identité et d'accès
 
-In this design, Microsoft Active Directory (AD) is used for identity management. The design deploys one or two Windows Active Directory virtual machines as part of the Cloud Foundation and vCenter Server deployment automation. vCenter will be configured to utilize the AD authentication.
+Dans cette conception, Microsoft Active Directory (AD) est utilisé pour la gestion des identités. La conception déploie une ou deux machines virtuelles Windows Active Directory dans le cadre de l'automatisation du déploiement Cloud Foundation et vCenter Server. vCenter sera configuré pour utiliser l'authentification AD.
 
 ### Microsoft Active Directory
 
-By default, a single Active Directory VSI is deployed onto the {{site.data.keyword.cloud}} infrastructure. The design also provides the option to deploy two highly available Microsoft Active Directory servers as dedicated Windows Server VMs in the management cluster.
+Par défaut, une seule interface de serveur virtuel est déployée sur l'infrastructure {{site.data.keyword.cloud}}. La conception permet également de déployer deux serveurs Microsoft Active Directory haute disponibilité en tant que machines virtuelles Windows Server dédiées dans le cluster de gestion.
 
-**Note**: You are responsible to provide Microsoft licensing and activation if you choose this option.
+**Remarque** : vous êtes tenu de fournir l'octroi de licence et l'activation Microsoft si vous choisissez cette option.
 
-Active Directory serves to authenticate accesses to manage the VMware instance only and not to house end users of the workloads in the deployed instances. The forest root domain name of the Active Directory server equals to the DNS domain name that you specify. This domain name is specified only for the primary Cloud Foundation and vCenter Server instance if multiple instances are linked. In the case of linked instances, each instance contains an Active Directory server that sits in the forest root replica ring. The DNS zone files are also replicated on the Active Directory servers.
+Active Directory sert à authentifier les accès uniquement pour gérer l'instance VMware et non pour héberger les utilisateurs finaux des charges de travail dans les instances déployées. Le nom de domaine racine de forêt du serveur Active Directory est identique au nom de domaine DNS que vous spécifiez. Ce nom de domaine est indiqué uniquement pour l'instance Cloud Foundation et vCenter Server si plusieurs instances sont liées. Dans le cas d'instances liées, chaque instance contient un serveur Active Directory qui se trouve dans l'anneau de réplique racine de forêt. Les fichiers de la zone DNS sont également répliqués sur les serveurs Active Directory.
 
-### vSphere SSO domain
+### Domaine SSO vSphere
 
-The vSphere Single Sign On (SSO) domain is used as the initial authentication mechanism for a single instance or multiple linked instances. The SSO domain also serves to connect a VMware instance or multiple linked instances to the Microsoft Active Directory server. The following SSO configuration is applied:  
-* The SSO domain of `vsphere.local` is always used
-* For VMware instances that are tied to an existing instance, the PSC is joined to the existing instance’s SSO domain
-* The SSO site name equals to the instance name
+Le domaine SSO (Single Sign On) vSphere est utilisé comme mécanisme d'authentification initial pour une seule instance ou pour plusieurs instances liées. Le domaine SSO est également utilisé pour connecter une instance VMware à plusieurs instances liées au serveur Microsoft Active Directory. La configuration SSO suivante est appliquée :  
+* Le domaine SSO `vsphere.local` est déjà utilisé
+* Pour les instances VMware liées à une instance existante, le contrôleur PSC est joint au domaine SSO de l'instance existante
+* Le nom de site SSO est identique au nom de l'instance
 
-## Domain name services (DNS)
+## Services de nom de domaine (DNS)
 
-DNS in this design is for the cloud management and infrastructure components only.
+Dans cette conception, DNS concerne uniquement les composants d'infrastructure et de gestion de cloud.
 
 ### VMware vCenter Server
 
-The vCenter Server deployment uses the deployed Active Directory servers as the DNS servers for the instance. All deployed components (vCenter, PSC, NSX, and ESXi hosts) are configured to point to the Active Directory server as their default DNS server. You can customize the DNS zone configuration if your configuration does not interfere with the configuration of the deployed components.
+Le déploiement vCenter Server utilise les serveurs Active Directory déployés comme serveurs DNS pour l'instance. Tous les composants déployés (vCenter, PSC, NSX et hôtes ESXi) sont configurés pour pointer vers le serveur Active Directory en tant que serveur DNS par défaut. Vous pouvez personnaliser la configuration de zone DNS si votre configuration n'interfère pas avec la configuration des composants déployés.
 
-This design integrates DNS services on the Active Directory servers through the following configuration:
-* You can specify the domain structure. The domain name can be any number of levels (up to the maximum that the vCenter Server components will handle). The lowest level is the subdomain for the instance.
-   * The DNS domain name you specify will be used as the Active Directory root forest domain name. For example, if the DNS domain name is `cloud.ibm.com` then the Active Directory forest root domain name is `cloud.ibm.com`. This DNS and Active Directory domain name is the same across all linked vCenter Server instances.
-   * You can additionally specify a subdomain name for the instance. The subdomain name must be unique across all linked vCenter Server instances.
-* The Active Directory DNS servers are configured to be authoritative for both DNS domain and subdomain space.
-* The Active Directory DNS servers are configured to point to the {{site.data.keyword.cloud_notm}} DNS servers for all other zones.
-* Any instance to be integrated to an existing target instance must use the same domain name as the primary instance.
+Cette conception intègre les services DNS sur les serveurs Active Directory via la configuration suivante :
+* Vous pouvez spécifier la structure de domaine. Le nom de domaine peut comporter un nombre quelconque de niveaux (jusqu'au nombre maximum pouvant être géré par les composants vCenter Server). Le niveau le plus bas est le sous-domaine de l'instance.
+   * Le nom de domaine DNS que vous spécifiez sera utilisé comme nom de domaine racine de forêt Active Directory. Par exemple, si le nom de domaine DNS est `cloud.ibm.com`, le nom de domaine racine de forêt Active Directory est `cloud.ibm.com`. Ce nom de domaine DNS et ce nom de domaine Active Directory sont identiques dans toutes les instances vCenter Server liées.
+   * Vous pouvez également indiquer un nom de sous-domaine pour l'instance. Le nom de sous-domaine doit être unique dans toutes les instances vCenter Server liées.
+* Les serveurs DNS Active Directory sont configurés comme faisant autorité pour le domaine et l'espace de sous-domaine DNS.
+* Les serveurs DNS Active Directory sont configurés pour pointer vers les serveurs DNS {{site.data.keyword.cloud_notm}} pour toutes les autres zones.
+* N'importe quelle instance qui doit être intégrée à une instance cible existante doit utiliser le même nom de domaine que l'instance principale.
 
 ### VMware Cloud Foundation
 
-The Cloud Foundation deployment uses VMware Cloud Foundation automation, which uses its own DNS server that resides within the SDDC Manager VM component. Cloud Foundation components that are managed by SDDC Manager, including vCenter, PSC, NSX, and ESXi hosts, are configured to use the SDDC Manager VM IP address as their default DNS by design.
+Le déploiement Cloud Foundation utilise l'automatisation VMware Cloud Foundation, laquelle utilise son propre serveur DNS qui réside dans le composant de machine virtuelle SDDC Manager. Par leur conception, les composants Cloud Foundation qui sont gérés par SDDC Manager, y compris vCenter, PSC, NSX et les hôtes ESXi, sont configurés pour utiliser l'adresse IP de machine virtuelle SDDC Manager comme serveur DNS par défaut.
 
-Because the SDDC Manager generates and maintains the host names for the components it manages, it is not recommended to tamper with its DNS zone file directly for adding and removing hosts.
+Etant donné que SDDC Manager génère et conserve les noms d'hôte pour les composants qu'il gère, il n'est pas recommandé de fausser avec son fichier de zone DNS directement pour l'ajout et le retrait d'hôtes.
 
-This design integrates DNS services on the Active Directory servers with the SDDC Manager VM in the following configuration:
-* You can specify the domain structure. The domain name can be any number of levels (up to the maximum that the Cloud Foundation components will handle).
-* The lowest level is the subdomain that the SDDC Manager is authoritative for.
-* The DNS domain name you specify will be used as the Active Directory root forest domain name. For example, if the DNS domain name is `cloud.ibm.com`, then the Active Directory domain forest root is `cloud.ibm.com`. This DNS domain and Active Directory domain is the same across all linked Cloud Foundation instances.
-* You can additionally specify a subdomain name for the instance. The subdomain name must be unique across all linked Cloud Foundation instances.  
-* The SDDC Manager DNS configuration is altered to point to the Active Directory servers for all zones except for the zone that it is responsible for.
-* The Active Directory DNS servers are configured to be authoritative for the DNS domain space over the SDDC Manager and Cloud Foundation instance subdomain.
-* The Active Directory DNS servers are configured to point to the SDDC Manager IP address for the subdomain delegation of the zone the SDDC Manager is authoritative for.
-* The Active Directory DNS servers are configured to point to the 	{{site.data.keyword.cloud_notm}} DNS servers for all other zones.
-* Any secondary instance that is to be integrated to the first or target instance must utilize the same DNS name structure over the SDDC Manager subdomain.
+Cette conception intègre les services DNS sur les serveurs Active Directory avec la machine virtuelle SDDC Manager dans la configuration suivante :
+* Vous pouvez spécifier la structure de domaine. Le nom de domaine peut comporter un nombre quelconque de niveaux (jusqu'au nombre maximum pouvant être géré par les composants Cloud Foundation).
+* Le niveau le plus bas est le sous-domaine pour lequel SDDC Manager fait autorité.
+* Le nom de domaine DNS que vous spécifiez sera utilisé comme nom de domaine racine de forêt Active Directory. Par exemple, si le nom de domaine DNS est `cloud.ibm.com`, la racine de forêt de domaine Active Directory est `cloud.ibm.com`. Ce domaine DNS et ce domaine Active Directory sont identiques dans toutes les instances Cloud Foundation liées.
+* Vous pouvez également indiquer un nom de sous-domaine pour l'instance. Le nom de sous-domaine doit être unique dans toutes les instances Cloud Foundation liées.  
+* La configuration DNS de SDDC Manager est modifiée fin de pointer vers les serveurs Active Directory pour toutes les zones, à l'exception de la zone dont elle est responsable.
+* Les serveurs DNS Active Directory sont configurés comme faisant autorité pour l'espace de domaine DNS au-dessus du sous-domaine d'instance SDDC Manager et Cloud Foundation.
+* Les serveurs DNS Active Directory sont configurés pour pointer vers l'adresse IP SDDC Manager pour la délégation de sous-domaine de la zone pour laquelle SDDC Manager fait autorité.
+* Les serveurs DNS Active Directory sont configurés pour pointer vers les serveurs DNS {{site.data.keyword.cloud_notm}} pour toutes les autres zones.
+* Toutes les instances secondaires devant être intégrées à la première instance ou à l'instance cible doivent utiliser la même structure de nom DNS au-dessus du sous-domaine SDDC Manager.
 
-## NTP services
+## Services NTP
 
-This design utilizes the {{site.data.keyword.cloud_notm}} infrastructure NTP servers. All deployed components are configured to utilize these NTP servers. Having all components within the design using the same NTP server is critical for certificates and Active Directory authentication to function correctly.
+Cette conception utilise les serveurs NTP de l'infrastructure {{site.data.keyword.cloud_notm}}. Tous les composants déployés sont configurés pour utiliser ces serveurs NTP. Le fait que tous les composants de la conception utilisent le même serveur NTP est essentiel pour que les certificats et l'authentification Active Directory puissent fonctionner correctement.
 
-Figure 1. NTP services
+Figure 1. Services NTP
 
-![NTP services](commonservice_ntp.svg "In this design, all components of an instance use the same {{site.data.keyword.cloud_notm}} infrastructure NTP server through the NTP service.")
+![Services NTP](commonservice_ntp.svg "Dans cette conception, tous les composants d'une instance utilisent le même serveur NTP de l'infrastructure {{site.data.keyword.cloud_notm}} via le service NTP.")
 
-## Certificate authority services
+## Services d'autorité de certification
 
-By default, VMware vSphere uses TLS certificates that are signed by the VMware Certificate Authority (VMCA), which resides on the VMware Platform Services Controller appliance. These certificates are not trusted by the end­ user devices or browsers. It is a security best practice to replace user-facing certificates with certificates that are signed by a third-party or enterprise certificate authority (CA). Certificates for machine-to-machine communication can remain as VMCA–signed certificates, however, you are recommended to follow best practices for your organization, which typically involve using an identified enterprise CA.
+Par défaut, VMware vSphere utilise les certificats TLS qui sont signés par l'autorité de certification VMware (VMCA), qui se trouve sur le dispositif VMware Platform Services Controller.Ces certificats ne sont pas sécurisés par les terminaux ou les navigateurs de l'utilisateur final. La meilleure pratique en matière de sécurité consiste à remplacer les certificats d'utilisateur par des certificats qui sont signés par un tiers ou une autorité de certification d'entreprise. Les certificats pour la communication entre machines peuvent être conservés en tant que certificats signés par l'autorité de certification VMware (VMCA), toutefois, il est recommandé de suivre les meilleures pratiques pour votre organisation, ce qui implique généralement d'utiliser une autorité de certification d'entreprise identifiée.
 
-You can use the Windows AD servers within this design to create certificates that are signed by the local instance. However, you can also choose to configure CA services if needed.
+Vous pouvez utiliser les serveurs Windows AD dans cette conception pour créer des certificats qui sont signés par l'instance locale. Cependant, vous pouvez également choisir de configurer des services d'autorité de certification si nécessaire.
 
-### Related links
+### Liens connexes
 
-* [Physical infrastructure design](design_physicalinfrastructure.html)
-* [Virtual infrastructure design](design_virtualinfrastructure.html)
-* [Infrastructure management design](design_infrastructuremgmt.html)
+* [Conception d'infrastructure physique](design_physicalinfrastructure.html)
+* [Conception d'infrastructure virtuelle](design_virtualinfrastructure.html)
+* [Conception de gestion d'infrastructure](design_infrastructuremgmt.html)

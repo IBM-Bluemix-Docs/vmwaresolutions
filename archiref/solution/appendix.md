@@ -8,63 +8,63 @@ lastupdated: "2018-07-09"
 
 ---
 
-# Comparison chart for VMware component editions
+# Graphique de comparaison des éditions de composant VMware
 
-## VMware NSX edition comparison
+## Comparaison des éditions VMware NSX
 
-Table 1 lists the available features for the **Base**, **Advanced**, and **Enterprise** editions of VMware NSX that the solution supports.
+Le tableau 1 répertorie les fonctions disponibles pour les éditions **Base**, **Advanced** et **Enterprise** de VMware NSX qui sont prises en charge par la solution.
 
-Table 1. VMware NSX edition comparison chart
+Tableau 1. Graphique de comparaison des éditions VMware NSX
 
-| NSX Feature                                   | Base | Advanced | Enterprise |
+| Fonction NSX                                   | Base | Advanced | Enterprise |
 |-----------------------------------------------|------|----------|------------|
-| Distributed switching and routing             | •    | •        | •          |
-| NSX Edge firewall                             | •    | •        | •          |
+| Commutation et routage distribués             | •    | •        | •          |
+| Pare-feu NSX Edge                             | •    | •        | •          |
 | NAT                                           | •    | •        | •          |
-| NSX Edge load balancing                       | •    | •        | •          |
+| Equilibrage de charge NSX Edge                       | •    | •        | •          |
 | VPN (IPsec)                                   | •    | •        | •          |
 | VPN (SSL)                                     | •    | •        | •          |
-| API-driven automation                         | •    | •        | •          |
-| Integration with vRealize and OpenStack\*     | •    | •        | •          |
-| Automation of security policies with vRealize |      | •        | •          |
-| SW L2 bridging to physical environment        |      | •        | •          |
-| Dynamic routing with ECMP (active-active)     |      | •        | •          |
-| Distributed firewalling                       |      | •        | •          |
-| Integration with Active Directory             |      | •        | •          |
-| Server activity monitoring                    |      | •        | •          |
-| Service insertion (3rd party integration)     |      | •        | •          |
-| Distributed load balancing                    |      |          | •          |
-| Cross vCenter NSX                             |      |          | •          |
-| Multi-site NSX optimizations                  |      |          | •          |
-| Remote Gateway                                |      |          | •          |
-| Integration with HW VTEPs                     |      |          | •          |
-\*L2, L3 & NSX Edge integration only. No consumption of Security Groups
+| Automatisation pilotée par API                         | •    | •        | •          |
+| Intégration avec vRealize et OpenStack\*     | •    | •        | •          |
+| Automatisation des politiques de sécurité avec vRealize |      | •        | •          |
+| Pontage SW L2 vers un environnement physique        |      | •        | •          |
+| Routage dynamique avec ECMP (actif-actif)     |      | •        | •          |
+| Protection pare-feu distribuée                       |      | •        | •          |
+| Intégration à Active Directory             |      | •        | •          |
+| Surveillance des activités de serveur                    |      | •        | •          |
+| Insertion de service (intégration tierce)     |      | •        | •          |
+| Equilibrage de charge distribué                    |      |          | •          |
+| Passerelle NSX vCenter transversale                             |      |          | •          |
+| Optimisations NSX multisite                  |      |          | •          |
+| Passerelle éloignée                                |      |          | •          |
+| Intégration à HW VTEP                     |      |          | •          |
+\*Intégration L2, L3 & NSX Edge uniquement. Pas de consommation de groupes de sécurité.
 
-## VMware vSAN edition comparison
+## Comparaison des éditions VMware vSAN
 
-Table 2 lists the available features for the **Advanced** and **Enterprise** editions of VMware vSAN that the solution supports.
+Le tableau 2 répertorie les fonctions disponibles pour les éditions **Advanced** et **Enterprise** de VMware vSAN qui sont prises en charge par la solution.
 
-Table 2. VMware vSAN edition comparison chart
+Tableau 2. Graphique de comparaison des éditions VMware vSAN
 
-| vSAN Feature                                    | Advanced | Enterprise |
+| Fonction vSAN                                    | Advanced | Enterprise |
 |-------------------------------------------------|----------|------------|
-| Storage policy-based management                 | •        | •          |
-| Flash read/write caching                        | •        | •          |
-| Distributed RAID                                | •        | •          |
-| Virtual Distributed Switch                      | •        | •          |
-| Rack awareness                                  | •        | •          |
-| vSphere replication                             | •        | •          |
-| Software checksum                               | •        | •          |
-| All-Flash hardware                              | •        | •          |
-| iSCSI target service                            | •        | •          |
-| IOPS limit                                      | •        | •          |
-| Deduplication and compression                   | •        | •          |
-| RAID-5/6 erasure coding                         | •        | •          |
-| Data at rest encryption                         |          | •          |
-| Stretched cluster with local failure protection |          | •          |
+| Gestion basée sur des règles de stockage                 | •        | •          |
+| Cache en lecture/écriture flash                        | •        | •          |
+| RAID distribué                                | •        | •          |
+| Commutateur distribué virtuel                      | •        | •          |
+| Détection d'armoire                                  | •        | •          |
+| Réplication vSphere                             | •        | •          |
+| Total de contrôle de logiciel                               | •        | •          |
+| Matériel all-flash                              | •        | •          |
+| Unité cible iSCSI                            | •        | •          |
+| Limite IOPS                                      | •        | •          |
+| Dédoublonnage et compression                   | •        | •          |
+| Codage d'effacement RAID-5/6                         | •        | •          |
+| Chiffrement des données au repos                         |          | •          |
+| Cluster étendu avec protection locale contre les pannes |          | •          |
 
-### Related links
+### Liens connexes
 
-* [Solution overview](solution_overview.html)
-* [Design overview](design_overview.html)
-* [Backing up components](solution_backingup.html)
+* [Présentation de la solution](solution_overview.html)
+* [Présentation de la conception](design_overview.html)
+* [Sauvegarde des composants](solution_backingup.html)
