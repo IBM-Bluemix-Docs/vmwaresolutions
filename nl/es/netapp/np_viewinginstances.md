@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -17,7 +17,7 @@ Ver el resumen y la información detallada de las instancias de NetApp ONTAP Sel
 Para ver un resumen de todas las instancias de NetApp ONTAP Select que se han suministrado para una cuenta de usuario, complete los pasos siguientes:
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_full}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
-2. En la esquina superior derecha de la consola, pulse el avatar y, a continuación, pulse el campo **Cuenta** para seleccionar la cuenta de usuario para la que desea comprobar las instancias.
+2. En el banner de la consola, pulse el icono de la cuenta de usuario y, a continuación, pulse el campo **Cuenta** para seleccionar la cuenta de usuario para la que desea comprobar las instancias.
 3. En la tabla **Instancias de NetApp ONTAP Select**, visualice la lista de instancias que se han suministrado en la cuenta de usuario seleccionada.
 
 Tabla 1. Elementos de la instancia de NetApp ONTAP Select

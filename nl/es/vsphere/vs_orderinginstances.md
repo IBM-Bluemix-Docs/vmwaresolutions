@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-11"
+lastupdated: "2018-09-21"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-11"
 
 # Solicitud de clústeres nuevos de vSphere
 
-Para desplegar una plataforma virtualizada de VMware altamente personalizable, solicite un clúster de VMware vSphere on {{site.data.keyword.cloud}}. Siga este procedimiento para definir un clúster nuevo de VMware vSphere.
+Para desplegar una plataforma virtualizada de VMware altamente personalizable, solicite un clúster de VMware vSphere on {{site.data.keyword.cloud}}. Siga este procedimiento para definir un clúster nuevo de vSphere.
 
 Este procedimiento le guía por la selección de componentes de VMware, los valores de Servidor nativo de {{site.data.keyword.cloud_notm}}, los valores de almacenamiento y las opciones de red para crear un nuevo clúster. Después de realizar el pedido, la configuración del clúster se captura, de modo que puede volver y continuar para escalar el clúster si es necesario. Una vez finalizado el pedido, puede configurar manualmente el clúster de VMware en función de sus requisitos.
 
@@ -34,9 +34,9 @@ El nombre del clúster debe ser exclusivo dentro de su cuenta.
 
 Seleccione los componentes de VMware que desea solicitar con el clúster y especifique la opción de licencia de los componentes.
 
-### (Solo para Business Partners de IBM) Paquetes de componentes
+### Paquetes de componentes para los usuarios de IBM Business Partner
 
-Si es un Business Partner de IBM, puede seleccionar un paquete de licencias de componente al solicitar un nuevo clúster de vSphere. Están disponibles los paquetes siguientes:
+Si es un usuario de IBM Business Partner, puede seleccionar un paquete de licencias de componente al solicitar un nuevo clúster de vSphere. Están disponibles los paquetes siguientes:
 
 Tabla 1. Paquetes de componentes de Business Partner de IBM para clústeres de vSphere
 
@@ -52,11 +52,11 @@ También puede incluir los siguientes componentes de VMware en su pedido:
 * VMware Site Recovery Manager
 * VMware vRealize Automation Enterprise
 
-**Nota:** Para los Business Partners de IBM, la opción de traer su propia licencia (BYOL) no está disponible.
+**Nota:** Para los usuarios de IBM Business Partner, la opción Traiga su propia licencia (BYOL) no está disponible.
 
-### (Solo para no Business Partners) Componentes individuales
+### Componentes individuales para usuarios que no sean de Business Partner
 
-Si no es un Business Partner, puede seleccionar los siguientes componentes de VMware de forma flexible con el clúster de vSphere:
+Si no es un Business Partner, puede seleccionar los siguientes componentes para el clúster de vSphere:
 * VMware vSphere Enterprise Plus
 * VMware vCenter Server
 * VMware NSX
@@ -115,20 +115,14 @@ Para pedidos sin vSAN, se solicitan servidores ESXi con un chasis de 12 discos, 
 
 Para pedidos con vSAN, se solicitan servidores ESXi con un chasis de 12 discos y se solicitan cuatro discos: dos para el SO ESXi y dos reservados para la colocación en memoria caché. Estos valores se configuran de forma predeterminada y no se puede cambiar. Puede solicitar más discos de capacidad seleccionando **Tipo y tamaño de disco para discos de capacidad vSAN** y **Número de discos de capacidad vSAN**.
 
-Cuando haya seleccionado el componente VMware vSAN para el clúster, especifique los valores siguientes.
+Si selecciona el componente VMware vSAN para el clúster, especifique los valores siguientes.
 
-### Tipo y tamaño de disco para discos de capacidad vSAN
+* **Tipo y tamaño de disco para discos de capacidad vSAN**: Seleccione una opción para los discos de capacidad que necesite.
+* **Número de discos de capacidad de vSAN**: Especifique el número de discos de capacidad que desea añadir.
+* **Tipo de disco para discos de memoria caché vSAN**: Seleccione una opción para los discos de memoria caché que necesite.
 
-Esta opción solo está disponible cuando se selecciona el componente VMware vSAN.
-
-Están disponibles los siguientes tipos de discos:
-* SSD SED de 960 GB
-* SSD SED de 1,9 TB
-* SSD SED de 3,8 TB (las unidades SSD SED de 3,8 TB reciben soporte cuando están disponibles a nivel general en un centro de datos)
-
-### Número de discos de capacidad vSAN
-
-Esta opción solo está disponible cuando se selecciona el componente VMware vSAN. Las opciones de cantidad de discos son 2, 4, 6 y 8.
+    **Nota**: Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto. La opción **Intel Optane de alto rendimiento** solo está disponible para los procesadores Dual Intel Xeon Gold 5120 y 6140.
+* **Número de discos de memoria caché de vSAN**: Especifique el número de discos de memoria caché que desea añadir.
 
 ## Valores de interfaz de red
 
@@ -161,6 +155,15 @@ El nombre de dominio se utiliza para todos los {{site.data.keyword.baremetal_sho
 * La longitud de otras series de caracteres debe estar comprendida entre 1 y 63 caracteres.
 * La longitud máxima del nombre de dominio es de 189 caracteres.
 
+### Red pública o privada
+
+Los valores de habilitación de la tarjeta de interfaz de red (NIC) se basan en la selección de **Red pública y privada** o de **Solo red privada**. Los siguientes servicios de complemento necesitan NIC públicos y no están disponibles si selecciona la opción privada:
+
+* F5 on {{site.data.keyword.cloud_notm}}
+* Fortigate Security Appliance on {{site.data.keyword.cloud_notm}}
+* Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}
+* Zerto on {{site.data.keyword.cloud_notm}}
+
 ### VLAN
 
 Los valores del sistema de redes dependen de si ha seleccionado **Realizar pedido de nuevas VLAN** o **Seleccionar las VLAN existentes**.
@@ -192,7 +195,7 @@ También puede seleccionar si desea incluir el par de alta disponibilidad de dis
 
 En función de sus configuraciones, el coste estimado se genera y se muestra al instante en el panel **Resumen de pedido** a la derecha. Pulse **Detalles sobre precios** para generar un documento PDF que proporcione los detalles de la estimación.
 
-## Procedimiento
+## Procedimiento para solicitar clústeres de vSphere
 
 1. Desde el catálogo de {{site.data.keyword.cloud_notm}}, pulse **VMware** en el panel de navegación izquierdo y pulse **VMware vSphere** en la sección **Centros de datos virtuales**.
 2. En la página **VMware vSphere on IBM Cloud**, pulse **Crear**.  
@@ -204,18 +207,18 @@ En función de sus configuraciones, el coste estimado se genera y se muestra al 
   Cuando opta por traer su propia licencia (BYOL) para VMware vSphere Enterprise Plus, se abre automáticamente una incidencia de {{site.data.keyword.cloud_notm}} en su nombre para solicitar que las licencias predeterminadas de vSphere de los {{site.data.keyword.baremetal_short}} solicitados se sustituyan por las licencias que proporcione.   
 
     **Importante:** El usuario es el responsable de realizar el seguimiento del tíquet para que se sustituya la licencia de vSphere de los servidores ESXi recién solicitados. De esta forma, la infraestructura de {{site.data.keyword.cloud_notm}} permite la cancelación del cargo inicialmente suministrado por la licencia de vSphere de la infraestructura de {{site.data.keyword.cloud_notm}}. Para sustituir la licencia de ESXi vSphere, consulte [Configuración de valores de licencia para un host ESXi](https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.vcenterhost.doc/GUID-1B128360-0060-40F2-A6F0-43CD2534B034.html){:new_window}.
-
 5. Complete los valores del servidor nativo:
    1. Seleccione el {{site.data.keyword.CloudDataCent_notm}} en el que se va a alojar el clúster.
    2. Seleccione el modelo de CPU y el tamaño de RAM.
    3. Especifique el número de Servidores nativos.
-6. Si ha seleccionado el componente **VMware vSAN**, indique los valores de almacenamiento vSAN seleccionando el **Tipo y tamaño de disco para discos de capacidad vSAN** y el **Número de discos de capacidad vSAN**.
+6. Si ha seleccionado el componente **VMware vSAN**, complete la configuración de almacenamiento de vSAN. Especifique los tipos de disco para la capacidad y los discos de memoria caché y el número de discos. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
 7. Complete los valores de interfaz de red:
    1. Especifique el prefijo de nombre de host, la etiqueta de subdominio y el nombre de dominio.
-   2. Seleccione la interfaz de red que desea utilizar.
+   2. Seleccione el valor de red de **Red pública y privada** o **Solo red privada**.
+   3. Seleccione la interfaz de red que desea utilizar.
     * Si desea solicitar nuevas VLAN públicas y privadas, pulse **Realizar pedido de nuevas VLAN**.
     * Si desea reutilizar las VLAN públicas y privadas existentes cuando estén disponibles, pulse **Seleccionar las VLAN existentes** y especifique las VLAN y opcionalmente las subredes.
-    3. Especifique si desea aplicar el par de alta disponibilidad de dispositivos físicos FortiGate serie 300 para proteger el entorno de nube.  
+    4. Especifique si desea aplicar el par de alta disponibilidad de dispositivos físicos FortiGate serie 300 para proteger el entorno de nube.  
 8. En el panel **Resumen del pedido**, verifique la configuración del clúster y el coste estimado.
    * Para guardar la configuración como una plantilla sin realizar un pedido, pulse **Guardar configuración**.
    * Para realizar el pedido, asegúrese de que la cuenta a la que se va a realizar el cobro es correcta; revise y acepte los términos y, a continuación, pulse **Suministro**.

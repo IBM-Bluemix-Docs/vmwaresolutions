@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-09-25"
 
 ---
 
 # Recursos adicionales
 
-Consulte más recursos que puedan ayudarle a empezar más rápido. Entre estos recursos se incluyen:
+Revise los recursos siguientes para empezar a acelerar el proceso.
 * Información de referencia de arquitectura
 * Vídeos
 * Demostraciones

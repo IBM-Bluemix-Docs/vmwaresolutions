@@ -10,13 +10,13 @@ lastupdated: "2017-11-20"
 
 # Notas del release para V2.0
 
-Este release incluye nuevas características, actualizaciones de componentes, mejoras en la usabilidad y correcciones de errores. Para ver una lista de los problemas solucionados en distintos releases, problemas conocidos del producto y sugerencias adicionales para utilizar {{site.data.keyword.vmwaresolutions_full}}, consulte [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Este release incluye nuevas características, actualizaciones de componentes, mejoras en la usabilidad y correcciones de errores. Para ver una lista de los problemas solucionados en distintos releases, problemas conocidos del producto y sugerencias para utilizar {{site.data.keyword.vmwaresolutions_full}}, consulte [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## FortiGate Virtual Appliance on IBM Cloud
 
 El servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} ya está disponible para la V2.0 y posteriores de instancias de VMware Cloud Foundation y para instancias de VMware vCenter Server. Este servicio despliega un par de alta disponibilidad (HA) de dispositivos virtuales FortiGate en el entorno, lo que le puede ayudar a reducir el riesgo mediante la implementación de controles de seguridad estrictos en la infraestructura virtual.
 
-Puede solicitar instancias con el servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} incluido al solicitar la instancia, o puede añadir este servicio a las instancias existentes más adelante desde el separador **Servicios** de la página de detalles de la instancia. Dependiendo de sus necesidades, puede seleccionar uno de los tres tamaños de despliegue y opciones de licencia para este servicio. Después de que se instale correctamente el servicio, podrá gestionar y configurar reglas de cortafuegos para los dispositivos virtuales FortiGate desde la consola de FortiGate.
+Solicite instancias con el servicio FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} incluido al solicitar la instancia, o puede añadir este servicio a las instancias existentes más adelante desde el separador **Servicios** de la página de detalles de la instancia. Dependiendo de sus necesidades, seleccione uno de los tres tamaños de despliegue y opciones de licencia para este servicio. Después de que se instale correctamente el servicio, gestione y configure reglas de cortafuegos para los dispositivos virtuales FortiGate desde la consola de FortiGate.
 
 Para obtener más información, consulte los temas siguientes:
 * [Componentes y consideraciones sobre FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../services/fortinetvm_considerations.html)
@@ -34,22 +34,22 @@ Para obtener más información, consulte los temas siguientes:
 
 ## Actualizaciones para FortiGate Security Appliance on IBM Cloud
 
-En este release, se ha cambiado el nombre del servicio Fortinet on {{site.data.keyword.cloud_notm}} por el de FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}, y el par de dispositivos de seguridad FortiGate (FSA) del servicio se configura de modo que esté protegido de forma predeterminada cuando se despliega en la instancia:
+En este release, se ha cambiado el nombre del servicio Fortinet on {{site.data.keyword.cloud_notm}} por el de FortiGate Security Appliance on {{site.data.keyword.cloud_notm}}. El par de dispositivos de seguridad FortiGate (FSA) del servicio se configura de modo que esté protegido de forma predeterminada cuando se despliega en la instancia.
 * Si despliega un par de FSA como parte de una nueva instancia de Cloud Foundation en vCenter Server, los FSA se configuran de modo que solo permitan las comunicaciones de salida necesarias entre su instancia y la red pública y denieguen todas las demás comunicaciones.
-* Si despliega un par de FSA como parte de una instancia de Cloud Foundation o de una instancia de vCenter Server existente, los FSA se configuran con una regla explícita que permite todas las comunicaciones de gestión de salida entre la instancia y la red pública, y los FSA también se configuran con una regla adicional que permite todas las demás comunicaciones para garantizar que no se interrumpe el tráfico de aplicaciones existente.
+* Si despliega un par de FSA como parte de una instancia de Cloud Foundation o de una instancia de vCenter Server existente, los FSA se configuran con una regla explícita que permite todas las comunicaciones de gestión de salida entre la instancia y la red pública, y los FSA también se configuran con una regla que permite todas las demás comunicaciones para garantizar que no se interrumpe el tráfico de aplicaciones existente.
 
 En cualquiera de los casos, debe gestionar la configuración de los FSA cuidadosamente para que solo se permitan las comunicaciones necesarias y se denieguen todas las demás comunicaciones.
 
 ## Coherencia del formato de los nombres de dominio completos
 
-Ahora el nombre de dominio completo (FQDN) se representa de forma coherente para todas las instancias. Cuando realiza un pedido, puede especificar su propio prefijo de subdominio y un prefijo de nombre de host. Esto garantiza que se sigue el convenio del sector para el formato de FQDN, como por ejemplo: `host-name-prefix<n>.subdomain-prefix.domain-name`.
+Ahora el nombre de dominio completo (FQDN) se representa de forma coherente para todas las instancias. Cuando realiza un pedido, puede especificar su propio prefijo de subdominio y un prefijo de nombre de host para asegurarse de que se sigue el convenio del sector para el formato FQDN. Por ejemplo, `host-name-prefix<n>.subdomain-prefix.domain-name`.
 
 Para obtener más información, consulte los temas siguientes:
 * [Pedido de instancias de Cloud Foundation](../sddc/sd_orderinginstance.html)
 * [Pedido de instancias de vCenter Server](../vcenter/vc_orderinginstance.html)
 * [Solicitud de clústeres nuevos de vSphere](../vsphere/vs_orderinginstances.html)
 
-## Estimaciones de carga de trabajo y de almacenamiento durante la solicitud de la instancia
+## Estimaciones de carga de trabajo y de almacenamiento durante una solicitud de la instancia
 
 * Durante una solicitud de VMware vSphere on {{site.data.keyword.cloud_notm}}, se le proporciona una estimación del número de máquinas virtuales que se pueden ejecutar en la instancia solicitada.
 * Durante una solicitud de Cloud Foundation y de vCenter Server, se le proporciona una estimación de la capacidad de almacenamiento utilizable para la instancia solicitada.
@@ -68,7 +68,7 @@ El release actual aplica las siguientes actualizaciones y mejoras de componentes
 * VMware vCenter Server 6.5U1a
 * VMware vSAN 6.6.1
 * VMware NSX for vSphere 6.3.4
-* VMware ESXi 6.5, Release de parche ESXi650-201710401-BG: actualiza los VIB esx-base, esx-tboot, vsan y vsanhealth (2151061). Para ver detalles del parche, consulte [Parches de seguridad del SO VMware vCenter Server Appliance Photon](https://docs.vmware.com/en/VMware-vSphere/6.5/rn/vcenter-server-appliance-photonos-security-patches.html){:new_window}.
+* VMware ESXi 6.5, Release de parche ESXi650-201710401-BG. Actualiza los VIB esx-base, esx-tboot, vsan y vsanhealth (2151061). Para obtener más información sobre los detalles del parche, consulte [Parches de seguridad del SO VMware vCenter Server Appliance Photon](https://docs.vmware.com/en/VMware-vSphere/6.5/rn/vcenter-server-appliance-photonos-security-patches.html){:new_window}.
 
 **Nota**: Las instancias existentes (de releases V1.9 y anteriores) no se pueden actualizar a las versiones de componentes de esta lista.
 
@@ -85,6 +85,7 @@ Puede ver los detalles del clúster o añadir hasta un total de cinco clústeres
 Ahora puede personalizar la configuración del almacenamiento vSAN seleccionando el número y el tamaño de las unidades de almacenamiento vSAN como parte del pedido de la instancia.
 
 Para obtener más información, consulte los temas siguientes:
+
 * [Visión general de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
 * [Pedido de instancias de Cloud Foundation](../sddc/sd_orderinginstance.html)
 
@@ -98,7 +99,7 @@ Dispone de los siguientes valores de configuración de servidor nativo (Bare Met
 * Pequeño (Dual Intel Xeon E5-2650 v4 / 24 núcleos en total, 2,2 GHz / 128 GB de RAM / 12 discos)
 * Grande (Dual Intel Xeon E5-2690 v4 / 28 núcleos en total, 2,6 GHz / 512 GB de RAM / 12 discos)
 
-**Nota**: el chasis tiene espacio para 12 discos, aunque no todas las ranuras están llenas. La configuración **Pequeño** proporciona dos unidades de 1,9 TB Micron 5100 MAX y la configuración **Grande** proporciona cuatro unidades de 3,8 TB Micron 5100 PRO.
+**Nota**: El chasis tiene espacio para 12 discos. No todas las ranuras están rellenadas. La configuración **Pequeño** proporciona dos unidades de 1,9 TB Micron 5100 MAX y la configuración **Grande** proporciona cuatro unidades de 3,8 TB Micron 5100 PRO.
 
 Para obtener más información, consulte los temas siguientes:
 * [Visión general de Cloud Foundation](../sddc/sd_cloudfoundationoverview.html)
@@ -113,13 +114,13 @@ El release actual aplica las siguientes actualizaciones de componentes para nuev
 * VMware vSAN 6.6.1
 * VMware NSX for vSphere 6.3.4
 
-**Nota:** los pedidos personalizados de vCenter Server con o sin el componente VMware vSAN siempre incluyen un servidor con un chasis para 12 discos que refleja un coste ligeramente superior para el {{site.data.keyword.baremetal_short}} para el pedido no vSAN en el PDF de estimación de precio.
+**Nota:** Los pedidos personalizados de vCenter Server con o sin el componente VMware vSAN siempre incluyen un servidor con un chasis para 12 discos. Este servidor da lugar a un coste ligeramente superior para el {{site.data.keyword.baremetal_short}} para el caso de pedido no vSAN en el PDF de estimación de precios.
 
 Para obtener más información sobre los componentes, consulte [Visión general de vCenter Server](../vcenter/vc_vcenterserveroverview.html).
 
 ### Soporte de la configuración de varios sitios para instancias de vCenter Server
 
-Ahora puede desplegar una sola instancia de vCenter Server, además de instancias secundarias que se conectan a una instancia primaria. El modelo de configuración de varios sitios utiliza una topología de estrella ("hub and spoke") con un sitio primario y un máximo de 7 sitios secundarios.
+Ahora puede desplegar una sola instancia de vCenter Server, además de instancias secundarias que se conectan a una instancia primaria. El modelo de configuración de varios sitios utiliza una topología de estrella ("hub and spoke") con un sitio primario y un máximo de siete sitios secundarios.
 
 Para obtener más información, consulte [Configuración de varios sitios para instancias de vCenter Server](../vcenter/vc_multisite.html).
 
@@ -131,7 +132,7 @@ Para obtener más información, consulte [Pedido de instancias de vCenter Server
 
 ### Traiga su propia licencia (BYOL) para instancias de VMware vCenter Server
 
-Ahora BYOL está disponible para instancias de vCenter Server. BYOL le permite utilizar una o varias de sus propias licencias de vCenter Server, vSphere, vSAN y NSX VMware cuando solicite instancias de vCenter Server.
+Ahora BYOL está disponible para instancias de vCenter Server. Utilice una o varias de sus propias licencias de vCenter Server, vSphere, vSAN y NSX VMware cuando solicite instancias de vCenter Server.
 
 Para obtener más información, consulte los temas siguientes:
 * [Pedido de instancias de Cloud Foundation](../sddc/sd_orderinginstance.html)
@@ -147,9 +148,9 @@ Para el componente VMware vSAN, ahora dispone de los siguientes tipos de discos 
 * SSD SED de 1,9 TB
 * SSD SED de 3,8 TB
 
-**Notas:**
-* Las unidades SSD SED de 3,8 TB recibirán soporte cuando estén disponibles a nivel general en un {{site.data.keyword.CloudDataCent_notm}}.
-* Los pedidos con o sin el componente VMware vSAN siempre incluyen un servidor con un chasis para 12 discos que refleja un coste ligeramente superior para el {{site.data.keyword.baremetal_short}} para el pedido no vSAN en el PDF de estimación de precio.
+**Notas**:
+* Las unidades SSD SED de 3,8 TB reciben soporte cuando estén disponibles a nivel general en un {{site.data.keyword.CloudDataCent_notm}}.
+* Los pedidos con o sin el componente VMware vSAN siempre incluyen un servidor con un chasis para 12 discos. Este servidor da lugar a un coste ligeramente superior para el {{site.data.keyword.baremetal_short}} para el caso de pedido no vSAN en el PDF de estimación de precios.
 
 Para obtener más información, consulte [Solicitud de clústeres nuevos de vSphere](../vsphere/vs_orderinginstances.html).
 
@@ -158,11 +159,11 @@ Para obtener más información, consulte [Solicitud de clústeres nuevos de vSph
 ### Nuevas opciones de servicio nativo
 
 Ahora dispone de las siguientes opciones de configuración de servidor nativo:
-* **Alto rendimiento (Medio)** – Licencia Premium / Dual Intel Xeon E5-2650 v4 (24 núcleos en total, 2,2 GHz) / 128 GB de RAM / Capacidad por nodo de veintidós unidades SSD de 1,9 TB / Capacidad efectiva de un clúster de 4 nodos – 59 TB
-* **Alto rendimiento (Medio)** – Licencia Premium / Dual Intel Xeon E5-2650 v4 (24 núcleos en total, 2,2 GHz) / 128 GB de RAM / Capacidad por nodo de veintidós unidades SSD de 3,8 TB / Capacidad efectiva de un clúster de 4 nodos – 118 TB
+* **Alto rendimiento (Medio)**: Licencia Premium / Dual Intel Xeon E5-2650 v4 (24 núcleos en total, 2,2 GHz) / 128 GB de RAM / Capacidad por nodo de 22 unidades SSD de 1,9 TB / Capacidad efectiva de un clúster de 4 nodos – 59 TB
+* **Alto rendimiento (Grande)**: Licencia Premium / Dual Intel Xeon E5-2650 v4 (24 núcleos en total, 2,2 GHz) / 128 GB de RAM / Capacidad por nodo de 22 unidades SSD de 3,8 TB / Capacidad efectiva de un clúster de 4 nodos – 118 TB
 * **Alta capacidad** – Licencia Estándar / Dual Intel Xeon E5-2650 v4 (24 núcleos en total, 2,2 GHz) / 64 GB de RAM / Capacidad por nodo de diez unidades SATA de 4 TB / Capacidad efectiva de un clúster de 4 nodos – 60 TB
 
-**Nota:** Las unidades SSD de 3,8 TB recibirán soporte cuando estén disponibles a un nivel general en un {{site.data.keyword.CloudDataCent_notm}}.
+**Nota:** Las unidades SSD de 3,8 TB reciben soporte cuando estén disponibles a un nivel general en un {{site.data.keyword.CloudDataCent_notm}}.
 
 Para obtener más información, consulte los temas siguientes:
 * [Visión general de NetApp ONTAP Select](../netapp/np_netappoverview.html)
@@ -170,11 +171,11 @@ Para obtener más información, consulte los temas siguientes:
 
 ## Documentación nueva y actualizada
 
-Los usuarios de VMware Cloud Foundation pueden seguir instrucciones paso a paso junto con la plataforma NSX VMware en {{site.data.keyword.cloud_notm}} para permitir que las máquinas virtuales se comuniquen entre sí y en Internet. Para obtener más información, consulte [Configuración de NSX para las máquinas virtuales de carga de trabajo en VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} (VCF)](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/){:new_window}.
+Los usuarios de VMware Cloud Foundation pueden seguir instrucciones paso a paso junto con la plataforma NSX VMware en {{site.data.keyword.cloud_notm}} para permitir que las máquinas virtuales se comuniquen entre sí y en internet. Para obtener más información, consulte [Configuración de NSX para las máquinas virtuales de carga de trabajo en VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} (VCF)](https://developer.ibm.com/recipes/tutorials/setting-up-nsx-for-workload-vms-on-vmware-cloud-foundation-on-ibm-cloud-vcf/){:new_window}.
 
 ## Actualizaciones y mejoras de la interfaz de usuario
 
 * El número máximo de servidores ESXi que se pueden añadir a un clúster se ha actualizado a 32 servidores. El número máximo de clústeres sigue siendo cinco.
 * En la página **Instancias desplegadas**, la columna **ESXi servers** de las tablas de resumen de instancia se ha sustituido por la columna **Versión**, en la que encontrará la versión del release en el que se han desplegado las instancias o al cual se han actualizado.
 * La versión de SDDC Manager para instancias de Cloud Foundation ahora está disponible en la página de detalles de la instancia.
-* Se han realizado mejoras en varios mensajes y sugerencias para ayudarle a seleccionar el valor adecuado en la interfaz de usuario.
+* Hay varios mensajes de error y mejoras de ayuda contextual disponibles para ayudarle a seleccionar el valor adecuado en la interfaz de usuario.

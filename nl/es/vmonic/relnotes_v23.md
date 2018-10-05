@@ -10,7 +10,7 @@ lastupdated: "2018-05-28"
 
 # Notas del release para V2.3
 
-Este release incluye nuevas características, actualizaciones de componentes, mejoras en la usabilidad y correcciones de errores. Para ver una lista de los problemas solucionados en distintos releases, problemas conocidos del producto y sugerencias adicionales para utilizar {{site.data.keyword.vmwaresolutions_full}}, consulte [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Este release incluye nuevas características, actualizaciones de componentes, mejoras en la usabilidad y correcciones de errores. Para ver una lista de los problemas solucionados en distintos releases, problemas conocidos del producto y sugerencias para utilizar {{site.data.keyword.vmwaresolutions_full}}, consulte [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Corrección de Spectre y Meltdown
 
@@ -73,7 +73,7 @@ Este release se aplica a las siguientes actualizaciones y mejoras:
 
 Ahora tiene la opción de seleccionar el despliegue de una sola instancia de servidor virtual (VSI) de Microsoft Windows Server Virtual para Microsoft Active Directory (AD) o dos máquinas virtuales Microsoft Windows de alta disponibilidad en el clúster de gestión. Para V2.2, se despliega de forma predeterminada y automáticamente una sola VSI Microsoft Windows para Microsoft AD. La nueva opción de seleccionar dos máquinas virtuales Microsoft Windows proporciona más privacidad y la opción de hacer copia de seguridad y restaurar las máquinas virtuales mediante el servicio Veeam.
 
-**Nota:** debe proporcionar dos licencias de Microsoft Windows Server 2012 R2 si configura la instancia de modo que utilice las dos máquinas virtuales Microsoft Windows. Utilice la licencia de Microsoft Windows Server 2012 R2 Standard Edition y/o la licencia de Microsoft Windows Server 2012 R2 Datacenter Edition. Tiene 30 días para activar las máquinas virtuales.
+**Nota:** Debe proporcionar 2 licencias de Microsoft Windows Server 2012 R2 si configura la instancia de modo que utilice las dos máquinas virtuales Microsoft Windows. Utilice la licencia de Microsoft Windows Server 2012 R2 Standard Edition y/o la licencia de Microsoft Windows Server 2012 R2 Datacenter Edition. Tiene 30 días para activar las máquinas virtuales.
 
 Para obtener más información, consulte la sección *Valores de interfaz de red* en [Solicitud de instancias de VMware Federal](../vcenter/vc_fed_orderinginstance.html#network-interface-settings)​.
 
@@ -122,4 +122,4 @@ La interfaz de usuario se actualiza y proporciona las mejoras siguientes:
 * **Facilidad de acceso**: Ahora puede acceder a las ofertas de VMware directamente desde el **Catálogo** de {{site.data.keyword.cloud_notm}}.
 * **Experiencia de pedidos optimizada y simplificada**: ahora puede realizar el pedido de una instancia de VMware y desplegar sus servicios complementarios en una sola interfaz. Además, el coste estimado se calcula y se muestra al instante en la misma interfaz, de modo que puede ajustar su configuración en función del plan de costes.
 * Al solicitar instancias o añadir clústeres, la opción de traer su propia licencia (BYOL) no está disponible para usuarios de Business Partners.
-* Se han realizado mejoras en varios mensajes y sugerencias para ayudarle a seleccionar el valor adecuado en la interfaz de usuario.
+* Hay varios mensajes de error y mejoras de ayuda contextual disponibles para ayudarle a seleccionar el valor adecuado en la interfaz de usuario.

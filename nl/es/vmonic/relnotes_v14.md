@@ -10,13 +10,13 @@ lastupdated: "2017-03-08"
 
 # Notas del release para V1.4
 
-Este release incluye nuevas características, actualizaciones de componentes, mejoras en la usabilidad y correcciones de errores. Para ver una lista de los problemas solucionados en distintos releases, problemas conocidos del producto y sugerencias adicionales para utilizar {{site.data.keyword.vmwaresolutions_full}}, consulte [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Este release incluye nuevas características, actualizaciones de componentes, mejoras en la usabilidad y correcciones de errores. Para ver una lista de los problemas solucionados en distintos releases, problemas conocidos del producto y sugerencias para utilizar {{site.data.keyword.vmwaresolutions_full}}, consulte [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Actualizaciones de componentes para instancias de Cloud Foundation
 
 Los siguientes componentes son nuevos o se han actualizado:
 
-* VC/PSC (vCenter/Platform Services Controller) 6.0U2a
+* VC y PSC (vCenter y Platform Services Controller) 6.0U2a
 * VMware Tools 10.1.0
 * SDDC Manager (SP) 2.2
 * VMware ESXi 6.0 u2 p04
@@ -77,7 +77,7 @@ Este release incluye las siguientes mejoras en la topología de las instancias:
 
 ## Soporte de la configuración de varios sitios para instancias de Cloud Foundation
 
-Ahora puede desplegar una instancia sola instancia de Cloud Foundation, al igual que en releases anteriores o, además, puede desplegar instancias secundarias que se conectan a una instancia primaria. El modelo de configuración de varios sitios utiliza una topología de estrella ("hub and spoke") con un sitio primario y un máximo de 7 sitios secundarios.
+Ahora puede desplegar una instancia sola instancia de Cloud Foundation, al igual que en releases anteriores o, además, puede desplegar instancias secundarias que se conectan a una instancia primaria. El modelo de configuración de varios sitios utiliza una topología de estrella ("hub and spoke") con un sitio primario y un máximo de siete sitios secundarios.
 
 Para obtener más información, consulte [Configuración de varios sitios para instancias de Cloud Foundation](../sddc/sd_multisite.html).
 

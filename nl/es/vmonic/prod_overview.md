@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-27"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -16,14 +16,22 @@ Puede desplegar fácilmente sus entornos virtuales de VMware y gestionar los rec
 
 ## Ventajas de IBM Cloud for VMware Solutions
 
-{{site.data.keyword.vmwaresolutions_short}} ofrece las siguientes ventajas principales:
-* **Alcance global**: Puede expandir el alcance de su nube híbrida hasta un máximo de 30 {{site.data.keyword.CloudDataCents_notm}} de nivel empresarial de todo el mundo.
-* **Integración perfecta**: permite una integración perfecta entre la nube híbrida y la infraestructura de {{site.data.keyword.cloud_notm}}.
-* **Suministro rápido**: automatiza el despliegue y la configuración del entorno VMware, lo que le permite desplegar rápidamente un entorno VMware de nivel de empresa con servidores virtuales y {{site.data.keyword.cloud_notm}}{{site.data.keyword.baremetal_short}} a petición.
-* **Simplificación**: Puede consumir una plataforma de nube VMware sin la necesidad de identificar, adquirir, desplegar y gestionar la infraestructura física subyacente (cálculo, almacenamiento y red) y las licencias de software.
-* **Flexibilidad en cuanto a ampliación y reducción**: le permite ampliar y reducir fácilmente las cargas de trabajo de VMware según los requisitos de la empresa.
-* **Una sola consola de gestión**: proporciona una sola consola para desplegar, acceder y gestionar los entornos de VMware en {{site.data.keyword.cloud_notm}}.
-
+{{site.data.keyword.vmwaresolutions_short}} proporciona las ventajas principales siguientes.
+<dl>
+  <dt>Alcance global</dt>
+  <dd>Expanda el alcance de su nube híbrida hasta un máximo de 30 {{site.data.keyword.CloudDataCents_notm}} de nivel empresarial de todo el mundo.</dd>
+  <dt>Perfecta integración</dt>
+  <dd>Permite una integración perfecta entre la nube híbrida y la infraestructura de {{site.data.keyword.cloud_notm}}.</dd>
+  <dt>Suministro rápido</dt>
+  <dd>Automatiza el despliegue y la configuración del entorno VMware, lo que le permite desplegar rápidamente un entorno VMware de nivel de empresa con servidores virtuales y {{site.data.keyword.cloud_notm}}{{site.data.keyword.baremetal_short}} a petición.</dd>
+  <dt>Simplificación</dt>
+  <dd>Puede consumir una plataforma de nube VMware sin la necesidad de identificar, adquirir, desplegar y gestionar la infraestructura física subyacente (cálculo, almacenamiento y red) y las licencias de software.</dd>
+  <dt>Flexibilidad en cuanto a ampliación y reducción</dt>
+  <dd>Le permite ampliar y reducir fácilmente las cargas de trabajo de VMware según los requisitos de la empresa.</dd>
+  <dt>Una sola consola de gestión</dt>
+  <dd>Proporciona una sola consola para desplegar, acceder y gestionar los entornos de VMware en {{site.data.keyword.cloud_notm}}.</dd>
+</dl>
+s
 ## Ofertas de despliegue
 
 {{site.data.keyword.vmwaresolutions_short}} proporciona opciones de despliegue estandarizados y personalizables de entornos virtuales VMware. Se ofrecen los siguientes tipos de despliegues:
@@ -98,6 +106,12 @@ El servicio HyTrust DataControl on {{site.data.keyword.cloud_notm}} ofrece un ci
 
 Para obtener más información, consulte [Visión general de HyTrust DataControl on {{site.data.keyword.cloud_notm}}](../services/htdc_considerations.html).
 
+### HyTrust KeyControl on IBM Cloud
+
+El servicio HyTrust KeyControl on {{site.data.keyword.cloud_notm}} simplifica la gestión de las cargas de trabajo cifradas automatizando y simplificando el ciclo de vida de las claves de cifrado. El servicio puede gestionar fácilmente las claves de cifrado a escala utilizando el cifrado compatible con FIPS 140-2. Al utilizar este servicio, puede gestionar las claves de cifrado para todas las máquinas virtuales y almacenes de datos cifrados, y escalarlo para dar soporte a miles de cargas de trabajo cifradas en despliegues grandes.
+
+Para obtener más información, consulte [Visión general de HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](../services/htkc_considerations.html).
+
 ### IBM Cloud Private Hosted
 
 {{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} incorpora la potencia de los microservicios y contenedores al entorno VMware en {{site.data.keyword.cloud_notm}}. Con este servicio, puede ampliar el mismo modelo operativo VMware y {{site.data.keyword.cloud_notm}} privado con el que está familiarizado y las herramientas del entorno local en {{site.data.keyword.cloud_notm}}.
@@ -118,7 +132,7 @@ Para obtener más información, consulte [Visión general de KMIP for VMware on 
 
 ### Veeam on IBM Cloud
 
-El servicio Veeam on {{site.data.keyword.cloud_notm}} se puede integrar de forma fácil y directa con sus hipervisores VMware para ayudar a la empresa a alcanzar un alto grado de disponibilidad. Este servicio puede proporcionar objetivos de puntos de recuperación y de tiempo para sus datos y aplicaciones. Los objetivos de puntos de recuperación y de tiempo se pueden proporcionar menos de 15 minutos después de finalizar la configuración. Con este servicio, puede controlar directamente las copias de seguridad y las operaciones de restauración de todas las máquinas virtuales de la infraestructura desde la consola de Veeam.
+El servicio Veeam on {{site.data.keyword.cloud_notm}} se puede integrar de forma fácil y directa con sus hipervisores VMware para ayudar a la empresa a alcanzar un alto grado de disponibilidad. Este servicio proporciona objetivos de puntos de recuperación y de tiempo para sus datos y aplicaciones. Los objetivos de puntos de recuperación y de tiempo se proporcionan menos de 15 minutos después de finalizar la configuración. Con este servicio, controle directamente las copias de seguridad y las operaciones de restauración de todas las máquinas virtuales de la infraestructura desde la consola de Veeam.
 
 Para obtener más información, consulte [Visión general de Veeam on {{site.data.keyword.cloud_notm}}](../services/veeam_considerations.html).
 

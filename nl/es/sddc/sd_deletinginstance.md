@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -38,10 +38,10 @@ Debido a las dependencias entre recursos, los componentes de la instancia no se 
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de Cloud Foundation**, pulse la instancia que desea suprimir.
-3. Pulse el icono de menú de desbordamiento a la derecha de **Consola de vCenter** y pulse **Suprimir instancia**.
+3. Pulse el icono de menú de desbordamiento junto a la **consola de vCenter** y pulse **Suprimir instancia**.
    El estado de la instancia pasa a ser **Suprimiendo**. Cuando la instancia se haya suprimido correctamente, los componentes de la instancia se liberarán y el estado de la instancia pasará a ser **Suprimido**.
 4. Si desea eliminar el registro de la instancia de la consola de {{site.data.keyword.vmwaresolutions_short}}, siga estos pasos:
-   1. Pulse el icono de menú de desbordamiento a la derecha de **Consola de vCenter** de nuevo y pulse **Suprimir instancia**.
+   1. Pulse el icono de menú de desbordamiento junto a **Consola de vCenter** de nuevo y pulse **Suprimir instancia**.
    2. En la ventana **Suprimir instancia**, pulse **Aceptar**.
 
 ### Enlaces relacionados

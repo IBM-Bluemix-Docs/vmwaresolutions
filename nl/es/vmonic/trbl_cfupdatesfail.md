@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-16"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-16"
 
 ## Problema
 
-Si ha añadido servidores ESXi a una instancia de la V1.5 o la V1.6 de VMware Cloud Foundation y la operación de adición ha fallado, el botón de actualización estará desactivado y no podrá aplicar la actualización V1.5 -> V1.6 o V1.6 -> V1.7 a la instancia.
+Si añade servidores ESXi a una instancia de la V1.5 o la V1.6 de VMware Cloud Foundation y la operación de adición falla, la opción de actualización se inhabilita y no puede aplicar la actualización V1.5 a la V1.6 ni la actualización V1.6 a la V1.7 a la instancia.
 
 ## Solución
 

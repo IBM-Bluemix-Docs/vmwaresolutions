@@ -11,6 +11,7 @@ IBM Cloud for VMware Solutions
 
     {: .topicgroup}
     Notas del release
+        vmonic/relnotes_v26.md
         vmonic/relnotes_v25.md
         vmonic/relnotes_v24.md
         vmonic/relnotes_v23.md
@@ -72,6 +73,7 @@ IBM Cloud for VMware Solutions
         vcenter/vc_hybrid_addingremovingservices.md
         vcenter/vc_hybrid_viewinginstances.md
         vcenter/vc_hybrid_addinstancetousraccount.md
+        vcenter/vc_hybrid_deletingbundle.md
         vcenter/vc_hybrid_deletinginstance.md
         vcenter/vc_hybrid_deletinginstance_multi.md
 
@@ -153,6 +155,12 @@ IBM Cloud for VMware Solutions
         services/htdc_considerations.md
         services/htdc_ordering.md
         services/managinghtdc.md
+
+    {: .topicgroup}
+    HyTrust KeyControl on IBM Cloud
+        services/htkc_considerations.md
+        services/htkc_ordering.md
+        services/managinghtkc.md
 
     {: .topicgroup}
     IBM Cloud Private Hosted
@@ -244,6 +252,7 @@ IBM Cloud for VMware Solutions
         archiref/solution/design_infrastructuremgmt.md
         archiref/solution/solution_scaling.md
         archiref/solution/solution_backingup.md
+        archiref/solution/solution_considerations.md
         archiref/solution/appendix.md
 
     {: .topicgroup}
@@ -253,4 +262,11 @@ IBM Cloud for VMware Solutions
         archiref/attached-storage/storage-infra-mgmt.md
         archiref/attached-storage/storage-settings.md
         archiref/attached-storage/cluster-settings.md
+
+    {: .topicgroup}
+    Arquitectura de soluciones de IBM Cloud for VMware Solutions NSX Edge Services Gateway
+        archiref/nsx/nsx_overview.md
+        archiref/nsx/nsx_design.md
+        archiref/nsx/networking_services.md
+        archiref/nsx/multi_site.md
     {: .navgroup-end}

@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-28"
 
 ---
 
 # Supresión de instancias de Cloud Foundation en una configuración de varios sitios
 
-Existen consideraciones especiales a tener en cuenta antes de suprimir instancias de Cloud Foundation que forman parte de una configuración de varios sitios.
+Antes de planificar la supresión de instancias de Cloud Foundation en una configuración de varios sitios, revise las consideraciones siguientes.
 
 Cuando suprima una instancia de Cloud Foundation, los siguientes componentes se liberarán en esta secuencia:
 1. Todos los servicios desplegados
@@ -31,8 +31,8 @@ Debido a las dependencias entre recursos, los componentes de la instancia no se 
 3. Suprima el vCenter secundario y el PSC (Platform Services Controller) del dominio SSO (inicio de sesión único) primario. Para obtener más información, consulte [Eliminación del registro de vCenter Server de un inicio de sesión único](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2106736){:new_window}.
 4. Disminuya el nivel de la VSI (instancia de servicio virtual) del controlador de dominio local. Para obtener más información, consulte [Disminución del nivel de controladores de dominio y de dominios](https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-ds/deploy/demoting-domain-controllers-and-domains--level-200-){:new_window}.
 5. Suprima la instancia secundaria de Cloud Foundation de la consola de {{site.data.keyword.vmwaresolutions_short}}.
-6. Repita los pasos 1 a 5 para todas las instancias secundarias de Cloud Foundation de la configuración de varios sitios.
-7. Después de suprimir todas las instancias secundarias, también puede suprimir la instancia primaria desde la consola de {{site.data.keyword.vmwaresolutions_short}}.
+6. Repita los pasos 1 a 5 para todas las instancias secundarias de Cloud Foundation en una configuración de varios sitios.
+7. Después de suprimir todas las instancias secundarias, también puede suprimir la instancia secundaria desde la consola de {{site.data.keyword.vmwaresolutions_short}}.
 
 ### Enlaces relacionados
 

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-08"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-08"
 
 El cambio de usuarios, recursos o subredes reservados para {{site.data.keyword.vmwaresolutions_full}} puede afectar a las operaciones de gestión de las instancias de VMware Cloud Foundation.
 
-**Importante:** No edite los permisos globales del grupo **ic4v-vCenter** en la página **Usuarios y grupos** del cliente web de VMware vSphere. Estos cambios incluyen: cambiar el nombre de usuario, suprimir el usuario o cambiar su contraseña.
+**Importante:** No cambie los permisos globales del grupo **ic4v-vCenter** en la página **Usuarios y grupos** en el cliente web de VMware vSphere. Los ejemplos siguientes son cambios de permiso global: cambiar el nombre de usuario, suprimir el usuario o cambiar su contraseña.
 
 ## Cuentas de usuario específicas de servicio
 

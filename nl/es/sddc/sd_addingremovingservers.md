@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-17"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-08-17"
 
 Puede ampliar o reducir la capacidad de la instancia de VMware Cloud Foundation según sus necesidades empresariales añadiendo o eliminando servidores ESXi.
 
-Una instancia de Cloud Foundation puede tener un máximo de cinco clústeres, uno de los cuales es el predeterminado. Cada clúster inicial puede tener un máximo de 51 servidores ESXi y los clústeres adicionales pueden tener hasta 59.
+Una instancia de Cloud Foundation puede tener un máximo de cinco clústeres, uno de los cuales es el predeterminado. Cada clúster inicial puede tener un máximo de 51 servidores ESXi y más clústeres pueden tener hasta 59.
 
 ## Adición de servidores ESXi a instancias de Cloud Foundation
 
@@ -34,7 +34,7 @@ Una instancia de Cloud Foundation puede tener un máximo de cinco clústeres, un
 
 ### Resultados después de añadir servidores ESXi
 
-1. Puede experimentar un ligero retardo en la consola mientras el estado de instancia pasa de **Listo para su uso** a **Modificando**. Deje que la operación finalice por completo antes de realizar otros cambios en la instancia.
+1. Puede experimentar un ligero retardo en la consola mientras el estado de instancia pasa de **Listo para su uso** a **Modificando**. Permita que la operación finalice por completo antes de realizar cambios adicionales en la instancia.
 2. Se le notificará mediante correo electrónico cuando se hayan añadido servidores ESXi.
 3. Si no ve que los nuevos servidores ESXi se han añadido a la lista del clúster, compruebe las notificaciones de correo electrónico o de la consola para ver más detalles sobre la anomalía.
 
@@ -44,8 +44,8 @@ Una instancia de Cloud Foundation puede tener un máximo de cinco clústeres, un
 
 * No elimine servidores ESXi desde el cliente web de VMware vSphere. Los cambios que realice en el cliente web de VMware vSphere no se sincronizan con la consola de {{site.data.keyword.vmwaresolutions_short}}.
 * La plataforma base que ha solicitado tiene 4 servidores ESXi de forma predeterminada. Puede eliminar los servidores ESXi que ha añadido. No puede eliminar los servidores ESXi predeterminados.
-* Antes de eliminar servidores ESXi con los servicios F5 on {{site.data.keyword.cloud_notm}} o FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} instalados, debe migrar el F5 BIG-IP y las VM de FortiGate a un servidor ESXi distinto al que está alojando en este momento las VM.
-* Antes de eliminar servidores ESXi con el servicio IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} instalado, asegúrese de que no haya operaciones de copia de seguridad o restauración activas (anómalas o en curso), porque estas operaciones activas podrían impedir que se eliminaran los servidores ESXi.
+* Antes de eliminar servidores ESXi con el servicio de F5 on {{site.data.keyword.cloud_notm}} o FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} instalado, debe migrar las máquinas virtuales de F5 BIG-IP y FortiGate a un servidor ESXi distinto al que está alojando las máquinas virtuales.
+* Antes de eliminar servidores ESXi con el servicio IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} instalado, asegúrese de que no haya operaciones de copia de seguridad o restauración activas. Las operaciones activas, ya hayan fallado o estén en curso, pueden impedir que se eliminen los servidores ESXi.
 
 ## Procedimiento para eliminar servidores ESXi
 
@@ -57,7 +57,7 @@ Una instancia de Cloud Foundation puede tener un máximo de cinco clústeres, un
 
 ### Resultados después de eliminar servidores ESXi
 
-1. Puede experimentar un ligero retardo en la consola mientras el estado de instancia pasa de **Listo para su uso** a **Modificando**. Deje que la operación finalice por completo antes de realizar otros cambios en la instancia.
+1. Puede experimentar un ligero retardo en la consola mientras el estado de instancia pasa de **Listo para su uso** a **Modificando**. Permita que la operación finalice por completo antes de realizar más cambios en la instancia.
 2. Se le notificará mediante correo electrónico cuando se hayan eliminado servidores ESXi.
 3. La infraestructura de {{site.data.keyword.cloud_notm}} reclama por completo los servidores ESXi al final del ciclo de facturación de {{site.data.keyword.cloud_notm}}, que suele ser de 30 días.
 

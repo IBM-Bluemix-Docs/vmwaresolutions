@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -30,7 +30,7 @@ lastupdated: "2018-08-15"
 
 ## Resultados
 
-Después de que los usuarios añadidos acepten la invitación, pueden iniciar sesión en la consola {{site.data.keyword.vmwaresolutions_short}} y conmutar a la cuenta. Para ello, en sus valores de perfil, los usuarios pulsan su avatar en la esquina superior derecha de la consola {{site.data.keyword.vmwaresolutions_short}}. A continuación, los usuarios añadidos pueden colaborar y compartir los servicios y los recursos disponibles en la cuenta especificada.
+Después de que los usuarios añadidos acepten la invitación, pueden iniciar sesión en la consola {{site.data.keyword.vmwaresolutions_short}} y conmutar a la cuenta. Para ello, en sus valores de perfil, los usuarios pulsan su icono de cuenta de usuario desde el banner de la consola de {{site.data.keyword.vmwaresolutions_short}}. A continuación, los usuarios añadidos pueden colaborar y compartir los servicios y los recursos disponibles en la cuenta especificada.
 
 ### Enlaces relacionados
 

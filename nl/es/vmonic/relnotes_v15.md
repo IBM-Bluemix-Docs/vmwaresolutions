@@ -10,7 +10,7 @@ lastupdated: "2017-03-30"
 
 # Notas del release para V1.5
 
-Este release incluye nuevas características, mejoras en la usabilidad y correcciones de errores. Para ver una lista de los problemas solucionados en distintos releases, problemas conocidos del producto y sugerencias adicionales para utilizar {{site.data.keyword.vmwaresolutions_full}}, consulte [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Este release incluye nuevas características, mejoras en la usabilidad y correcciones de errores. Para ver una lista de los problemas solucionados en distintos releases, problemas conocidos del producto y sugerencias para utilizar {{site.data.keyword.vmwaresolutions_full}}, consulte [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Requisitos de las cuentas de SoftLayer VRF frente a las clásicas
 
@@ -30,5 +30,5 @@ Para las instancias de Cloud Foundation, se ha incorporado una nueva licencia _S
 
 Se han realizado mejoras en la interfaz de usuario:
 
-* La disponibilidad de varios centros de datos y si tienen suficiente inventario para satisfacer el pedido se indican claramente en la interfaz de usuario para que pueda tomar una decisión informada sobre el centro de datos que va a seleccionar durante el pedido de la instancia. Para obtener más información, consulte [Requisitos y planificación de instancias de Cloud Foundation](../sddc/sd_planning.html) y [Requisitos y planificación de instancias de vCenter Server](../vcenter/vc_planning.html).
+* La disponibilidad de varios {{site.data.keyword.CloudDataCents_notm}} y si tienen suficiente inventario para satisfacer el pedido se indica claramente en la interfaz de usuario. Utilice estos detalles para tomar una decisión informada sobre el {{site.data.keyword.CloudDataCent_notm}} para seleccionar cuándo se solicita una instancia. Para obtener más información, consulte [Requisitos y planificación de instancias de Cloud Foundation](../sddc/sd_planning.html) y [Requisitos y planificación de instancias de vCenter Server](../vcenter/vc_planning.html).
 * Para instancias de Cloud Foundation, se muestra automáticamente información como el nombre de instancia, el nombre del dominio y del subdominio y la ubicación del centro de datos en formato gráfico mientras se especifica la información necesaria en los campos de entrada. Para obtener más información, consulte [Pedido de instancias de Cloud Foundation](../sddc/sd_orderinginstance.html).

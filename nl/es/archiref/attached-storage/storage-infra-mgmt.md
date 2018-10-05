@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-13"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -20,7 +20,7 @@ La virtualización de red que se utiliza en este diseño usa el conmutador distr
 
 ## Conmutador distribuido de vSphere
 
-Tal como se ha indicado anteriormente, se crea otra VLAN dentro de la solución vCenter Server y se utiliza para conectar el punto de montaje NFS a los hosts ESXi del clúster existente. Puesto que la solución de vCenter Server ya tiene un conmutador distribuido de vSphere (vDS) asociado a la red privada, se crea otro grupo de puertos y se etiqueta con el número de VLAN adicional, ya que esta VLAN adicional no es nativa.
+Tal como se ha indicado anteriormente, se crea otra VLAN dentro de la solución vCenter Server y se utiliza para conectar el punto de montaje NFS a los hosts ESXi del clúster existente. Puesto que la solución de vCenter Server ya tiene un vDS asociado con la red privada, se crea otro grupo de puertos y se etiqueta con el número de VLAN adicional, ya que esta VLAN adicional no es nativa.
 
 En la tabla siguiente se describen los valores predeterminados del nuevo grupo de puertos.
 
