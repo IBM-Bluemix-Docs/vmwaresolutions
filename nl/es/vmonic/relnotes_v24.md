@@ -10,7 +10,7 @@ lastupdated: "2018-06-22"
 
 # Notas del release para V2.4
 
-Este release incluye nuevas características, actualizaciones de componentes, mejoras en la usabilidad y correcciones de errores. Para ver una lista de los problemas solucionados en distintos releases, problemas conocidos del producto y sugerencias adicionales para utilizar {{site.data.keyword.vmwaresolutions_full}}, consulte [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Este release incluye nuevas características, actualizaciones de componentes, mejoras en la usabilidad y correcciones de errores. Para ver una lista de los problemas solucionados en distintos releases, problemas conocidos del producto y sugerencias para utilizar {{site.data.keyword.vmwaresolutions_full}}, consulte [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Corrección de Spectre y Meltdown
 
@@ -44,9 +44,9 @@ Están soportados los siguientes idiomas, además del inglés:
 
 A partir del release V2.4, están disponibles los siguientes modelos nuevos de CPU de servidor nativo para su despliegue para las instancias y clústeres de VMware Cloud Foundation on {{site.data.keyword.cloud_notm}}, VMware vSphere on {{site.data.keyword.cloud_notm}} y VMware Federal on {{site.data.keyword.cloud_notm}}:
 
-* Dual Intel Skylake Xeon Silver 4110 Processor / 16 núcleos en total, 2,1 GHz
-* Dual Intel Skylake Xeon Gold 5120 Processor / 28 núcleos en total, 2,2 GHz
-* Dual Intel Skylake Xeon Gold 6140 Processor / 36 núcleos en total, 2,3 GHz
+* Procesador Dual Intel Skylake Xeon Silver 4110 / 16 núcleos en total, 2,1 GHz
+* Procesador Dual Intel Skylake Xeon Gold 5120 / 28 núcleos en total, 2,2 GHz
+* Procesador Dual Intel Skylake Xeon Gold 6140 / 36 núcleos en total, 2,3 GHz
 
 Para obtener más información, consulte la sección *Valores de Servidor nativo* en:
 
@@ -84,7 +84,7 @@ El documento de arquitectura de {{site.data.keyword.vmwaresolutions_short}} ahor
 
 ### Documentación de servicios
 
-La información de servicios se ha reestructurado y la navegación se ha mejorado para localizar fácilmente información relevante al solicitar servicios.
+La información de servicios se reestructura y la navegación se mejora para localizar fácilmente la información relevante al solicitar servicios.
 
 Para obtener más información, consulte los temas siguientes:
 
@@ -103,6 +103,6 @@ Para obtener más información, consulte los temas siguientes:
 La interfaz de usuario se actualiza y proporciona las mejoras siguientes:
 
 * Los paneles Añadir clúster y Añadir servicio ahora utilizan un formato de página, con un diseño mejor organizado, que le permite completar tareas de forma más eficiente.
-* La funcionalidad de la página **Instancias desplegadas** se ha mejorado con características de búsqueda, paginación y clasificación. Estas mejoras le permiten localizar sus instancias muy rápidamente.
+* La funcionalidad de la página **Instancias desplegadas** se ha mejorado con características de búsqueda, paginación y clasificación. Estas mejoras le permiten localizar las instancias rápidamente.
 * La página de detalles de instancias ahora utiliza un menú de navegación izquierdo, que le permite acceder a la información de la instancia de forma sencilla y rápida.
-* Se han realizado mejoras en varios mensajes y sugerencias para ayudarle a seleccionar el valor adecuado en la interfaz de usuario.
+* Hay varios mensajes de error y mejoras de ayuda contextual disponibles para ayudarle a seleccionar el valor adecuado en la interfaz de usuario.

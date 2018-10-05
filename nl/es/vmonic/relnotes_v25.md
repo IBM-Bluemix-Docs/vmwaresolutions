@@ -10,7 +10,7 @@ lastupdated: "2018-08-30"
 
 # Notas del release para V2.5
 
-Este release incluye nuevas características, actualizaciones de componentes, mejoras en la usabilidad y correcciones de errores. Para ver una lista de los problemas solucionados en distintos releases, problemas conocidos del producto y más sugerencias para utilizar {{site.data.keyword.vmwaresolutions_full}}, consulte [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
+Este release incluye nuevas características, actualizaciones de componentes, mejoras en la usabilidad y correcciones de errores. Para ver una lista de los problemas solucionados en distintos releases, problemas conocidos del producto y sugerencias para utilizar {{site.data.keyword.vmwaresolutions_full}}, consulte [{{site.data.keyword.vmwaresolutions_short}} dW Answers](https://developer.ibm.com/answers/topics/cloudvmw/){:new_window}.
 
 ## Corrección de Spectre y Meltdown
 
@@ -114,4 +114,4 @@ La interfaz de usuario se actualiza y proporciona las mejoras siguientes:
 
 * Si tiene una cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer) enlazada a su cuenta de {{site.data.keyword.cloud_notm}}, ahora puede pulsar el botón **Recuperar** recién añadido en la página **Valores** para obtener el nombre de usuario y la clave de API para la cuenta de infraestructura de {{site.data.keyword.cloud_notm}} (SoftLayer) automáticamente.
 * Se añade un nuevo separador **Historial de despliegue** en el panel de navegación izquierdo de la página de detalles de la instancia para comprobar el historial de despliegue de una instancia.
-* Se han realizado mejoras en varios mensajes y sugerencias para ayudarle a seleccionar el valor adecuado en la interfaz de usuario.
+* Hay varios mensajes de error y mejoras de ayuda contextual disponibles para ayudarle a seleccionar el valor adecuado en la interfaz de usuario.
