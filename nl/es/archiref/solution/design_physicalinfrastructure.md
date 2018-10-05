@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-17"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -27,18 +27,19 @@ Para obtener más información sobre el almacenamiento, consulte [Arquitectura d
 
 ## Diseño de host físico
 
-El host físico hace referencia al {{site.data.keyword.baremetal_short}} del entorno que sirve recursos de cálculo. El {{site.data.keyword.baremetal_short}} aplicado en esta solución está certificado por VMware y aparece listado en el [HCG de VMware](http://www.vmware.com/resources/compatibility/search.php).
+El host físico hace referencia al {{site.data.keyword.baremetal_short}} en el entorno que sirve los recursos de cálculo. El {{site.data.keyword.baremetal_short}} aplicado en esta solución está certificado por VMware y aparece listado en el [HCG de VMware](http://www.vmware.com/resources/compatibility/search.php).
 
 Las configuraciones de servidor disponibles en la solución cumplen o exceden los requisitos mínimos para instalar, configurar y gestionar vSphere ESXi. Existen varias configuraciones disponibles para satisfacer diferentes requisitos. Para obtener una lista detallada de las especificaciones exactas utilizadas para la solución VMware on {{site.data.keyword.cloud_notm}}, consulte la Lista de materiales de la [instancia de Cloud Foundation](../../sddc/sd_bom.html) o de la [instancia de vCenter Server](../../vcenter/vc_bom.html). Tenga en cuenta que el 	{{site.data.keyword.baremetal_short}} reside en la {{site.data.keyword.cloud_notm}}.
 
 Cada instancia de Cloud Foundation empieza por un despliegue de 4 hosts, y cada instancia de vCenter Server empieza por un despliegue de 3 o 4 hosts en función de la opción de la solución de almacenamiento.
 
-El host físico emplea dos discos conectados localmente para asignarse al hipervisor de vSphere ESXi. Puede asignar discos adicionales utilizando vSAN tal como se describe en la sección _Diseño de almacenamiento físico_ de esta página o utilizando NetApp ONTAP tal como se describe en la [arquitectura de NetApp ONTAP Select](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf). Cada host físico tiene conexiones de red de 10 Gbps redundantes para el acceso de red público y privado.
+El host físico emplea dos discos conectados localmente para asignarse al hipervisor de vSphere ESXi. Puede asignar más discos utilizando vSAN tal como se describe en la sección _Diseño de almacenamiento físico_ de esta página o utilizando NetApp ONTAP, tal como se describe en [Arquitectura de selección de NetApp ONTAP](https://www.ibm.com/cloud/garage/files/IBM_Cloud_for_VMware_Solutions_NetApp_Architecture.pdf). Cada
+host físico tiene conexiones de red de 10 Gbps redundantes para el acceso de red público y privado.
 
 Las especificaciones técnicas del Servidor nativo son las siguientes:
 * CPU: Dual Intel Xeon, configuración de núcleo y velocidad variable
 * Memoria: configuración variable, 128 GB o más
-* Red: 4 × 10 Gbps
+* Red: 4 x 10 Gbps
 * Número de unidades: 2 o más
 
 ## Diseño de red física
@@ -49,13 +50,13 @@ La red física de {{site.data.keyword.cloud_notm}} está separada en tres redes 
 
 ### Red pública
 
-{{site.data.keyword.CloudDataCents_notm}} y los puntos de presencia de red (PoPs) tienen múltiples conexiones de 1 Gbps o 10 Gbps al tránsito de nivel superior y a los proveedores de red de peering.
+{{site.data.keyword.CloudDataCents_notm}} y los puntos de presencia de red (PoPs) tienen múltiples conexiones de 1 Gbps o 10 Gbps al tránsito de nivel superior y a los proveedores de red de interconexión.
 
 El tráfico de red externo de cualquier parte del mundo se conecta a la red más cercana de PoP, y viaja directamente a través de la red a su centro de datos, minimizando el número de saltos de red y de transferencias entre proveedores.
 
 Dentro del centro de datos, {{site.data.keyword.cloud_notm}} proporciona 1 Gbps o 10 Gbps de ancho de banda de red a servidores individuales a través de un par de conmutadores de cliente frontales (FCS) agregados, separados por pares. Estos conmutadores agregados están conectados a un par de direccionadores de clientes frontales (FCR) independientes para redes L3.
 
-Este diseño de varios niveles permite que la red se escale a través de bastidores, filas y pods dentro de un {{site.data.keyword.CloudDataCent_notm}}.
+Este diseño de varios niveles permite que la red se escale entre bastidores, filas y pods dentro de un {{site.data.keyword.CloudDataCent_notm}}.
 
 ### Red privada
 
@@ -83,13 +84,13 @@ Para permitir una conexión transparente entre varias subredes en las que reside
 
 ### Direccionamiento y reenvío virtual (VRF)
 
-También puede configurar la cuenta de {{site.data.keyword.slportal}} como una cuenta de VRF para proporcionar funcionalidad similar a la distribución de VLAN, habilitando así el direccionamiento automático entre los bloques de IP de subred. Todas las cuentas con las conexiones de Direct Link deben convertirse a, o crearse como, una cuenta de VRF.
+También puede configurar la cuenta de {{site.data.keyword.slportal}} como una cuenta de VRF para proporcionar funcionalidad similar a la distribución de VLAN, habilitando así el direccionamiento automático entre los bloques de IP de subred. Todas las cuentas con las conexiones de Direct-Link deben convertirse a, o crearse como, una cuenta de VRF.
 
 La consola de {{site.data.keyword.vmwaresolutions_short}} no puede detectar si VRF está habilitado en el {{site.data.keyword.slportal}}. Recibirá un aviso que le recordará que se asegure de que ha habilitado la **Distribución de VLAN** o VRF en su cuenta de {{site.data.keyword.slportal}}.
 
 ### Conexiones de host físico
 
-Cada host físico del diseño tiene dos pares redundantes de conexiones Ethernet de 10 Gbps en cada conmutador Top of Rack (ToR) de {{site.data.keyword.cloud_notm}} (público y privado). Los adaptadores se configuran como conexiones individuales (no enlazadas) para un total de conexiones de 4 × 10 Gbps. Esto permite que las conexiones de tarjeta de interfaz de red (NIC) funcionen de forma independiente entre sí.
+Cada host físico del diseño tiene dos pares redundantes de conexiones Ethernet de 10 Gbps en cada conmutador Top of Rack (ToR) de {{site.data.keyword.cloud_notm}} (público y privado). Los adaptadores se configuran como conexiones individuales (no enlazadas) para un total de conexiones de 4 x 10 Gbps. Esto permite que las conexiones de tarjeta de interfaz de red (NIC) funcionen de forma independiente entre sí.
 
 Figura 1. Conexiones de NIC de host físico
 
@@ -135,7 +136,7 @@ Las conexiones de red privada están configuradas para utilizar un tamaño de MT
 
 ## Diseño de almacenamiento físico
 
-El diseño de almacenamiento físico consiste de la configuración de los discos físicos instalados en los hosts físicos y en la configuración del almacenamiento de nivel de archivo compartido. Esto incluye los discos del sistema operativo del hipervisor vSphere ESXi y los que se utilizan para el almacenamiento de las máquinas virtuales (VM). El almacenamiento para las VM puede estar formado por discos locales virtualizados por la vSAN de VMware, o por el almacenamiento compartido a nivel de archivos.
+El diseño de almacenamiento físico consiste de la configuración de los discos físicos instalados en los hosts físicos y en la configuración del almacenamiento de nivel de archivo compartido. Esto incluye los discos del sistema operativo del hipervisor vSphere ESXi y los que se utilizan para el almacenamiento de las máquinas virtuales (VM). El almacenamiento para las VM puede constar de discos locales virtualizados por la vSAN de VMware, o por el almacenamiento compartido a nivel de archivos.
 
 ### Discos del sistema operativo
 
@@ -147,21 +148,21 @@ Este diseño permite la opción de utilizar el almacenamiento de nivel de archiv
 
 ### Discos vSAN
 
-Cuando se utiliza, VMware vSAN se configura utilizando una configuración all-flash. Este diseño permite varias opciones de configuración, incluidos el chasis 2U y 4U, una variedad de números de discos, y una variedad de tamaños de disco. Todas las configuraciones utilizan dos grupos de discos vSAN, con un disco de estado sólido (SSD) para la memoria caché y uno o más SSD para la capacidad. Todas las unidades asignadas para el consumo de vSAN se configuran en RAID-0 de un solo disco.
+Cuando se utiliza, VMware vSAN se configura utilizando una configuración all-flash. Este diseño permite varias opciones de configuración, incluyendo el chasis 2U y 4U, varios números de discos y varios tamaños de disco. Todas las configuraciones utilizan dos grupos de discos vSAN, con un disco de estado sólido (SSD) para la memoria caché y uno o más SSD para la capacidad. Todas las unidades asignadas para el consumo de vSAN se configuran en un RAID-0 de un solo disco.
 
-Para obtener información sobre las configuraciones soportadas, consulte la Lista de materiales de la [instancia de Cloud Foundation](../../sddc/sd_bom.html) o de la [instancia de vCenter Server](../../vcenter/vc_bom.html).
+Para obtener más información sobre las configuraciones soportadas, consulte la Lista de materiales para la [instancia de Cloud Foundation](../../sddc/sd_bom.html) o la [instancia de vCenter Server](../../vcenter/vc_bom.html).
 
 ### Almacenamiento de nivel de archivo compartido entre hosts
 
-Cuando se utiliza el almacenamiento a nivel de archivo compartido, se conecta una compartición NFS de 2 TB a los hosts que componen el clúster VMware inicial. Esta compartición, conocida como la compartición de gestión, se utiliza para los componentes de gestión como, por ejemplo, VMware vCenter Server, Platform Services Controller, y VMware NSX. El almacenamiento se adjunta a través del protocolo NFSv3 y puede dar soporte a hasta 4000 IOPS.
+Cuando se utiliza el almacenamiento a nivel de archivo compartido, se conecta una compartición NFS de 2 TB a los hosts que componen el clúster VMware inicial. Esta compartición, conocida como la compartición de gestión, se utiliza para los componentes de gestión como, por ejemplo, VMware vCenter Server, Platform Services Controller y VMware NSX. El almacenamiento se conecta mediante el protocolo NFSv3 y puede dar soporte a hasta 4000 IOPS.
 
 Figura 2. Comparticiones NFS adjuntas al despliegue de VMware
 
 ![Comparticiones NFS adjuntas al despliegue de VMware](physical_nfs.svg "Comparticiones NFS adjuntas al despliegue de VMware: compartición de gestión y compartición especificada por el cliente")
 
-Puede asignar y montar comparticiones de archivos adicionales para las cargas de trabajo en el momento de la compra o más tarde dentro de la consola. Puede seleccionar entre las opciones de capacidad de almacenamiento de archivos de Endurance {{site.data.keyword.cloud_notm}} disponibles y niveles de rendimiento en el {{site.data.keyword.CloudDataCent_notm}} correspondiente. Todas las comparticiones se adjuntan utilizando el protocolo NFSv3. Además, es posible adjuntar comparticiones de archivos NFSv3 aplicando la oferta de NetApp ONTAP Select.
+Puede asignar y montar más comparticiones de archivos para las cargas de trabajo en el momento de la compra o más tarde dentro de la consola. Puede seleccionar entre las opciones de capacidad de almacenamiento de archivos de Endurance {{site.data.keyword.cloud_notm}} disponibles y niveles de rendimiento en el {{site.data.keyword.CloudDataCent_notm}} correspondiente. Todas las comparticiones se adjuntan utilizando el protocolo NFSv3. Además, es posible adjuntar comparticiones de archivos NFSv3 aplicando la oferta de NetApp ONTAP Select.
 
-{{site.data.keyword.CloudDataCents_notm}} que ofrecen el nivel de rendimiento de 10 IOPS/GB también incluyen el cifrado gestionado por el proveedor de datos en reposo (cifrado AES-256), y están respaldados por almacenamiento all-flash. El nivel de rendimiento de 10 IOPS/GB está limitado a una capacidad máxima de 4 TB. Para obtener más información sobre el NAS compartido que se utiliza en esta solución, consulte la [Arquitectura de almacenamiento compartido](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
+{{site.data.keyword.CloudDataCents_notm}} que ofrecen el nivel de rendimiento de 10 IOPS/GB también incluyen el cifrado gestionado por el proveedor de datos en reposo (cifrado AES-256) y están respaldadas por almacenamiento all-flash. El nivel de rendimiento de 10 IOPS/GB está limitado a una capacidad máxima de 4 TB. Para obtener más información sobre el NAS compartido que se utiliza en esta solución, consulte [Arquitectura de almacenamiento compartido](https://www.ibm.com/cloud/garage/files/AttachedStorageSolutionArchitecture_v1.0.pdf).
 
 ### Enlaces relacionados
 

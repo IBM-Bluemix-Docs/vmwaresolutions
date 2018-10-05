@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -59,10 +59,10 @@ Este diseño integra los servicios DNS en los servidores de Active Directory con
 * El nombre de dominio DNS que especifique se utilizará como el nombre de dominio del grupo raíz de Active Directory. Por ejemplo, si el nombre de dominio DNS es `cloud.ibm.com`, la raíz del grupo del dominio de Active Directory será `cloud.ibm.com`. Este dominio DNS y el dominio Active Directory es el mismo en todas las instancias enlazadas de Cloud Foundation.
 * Adicionalmente, puede especificar un nombre de subdominio para la instancia. El nombre de subdominio debe ser exclusivo en todas las instancias enlazadas de Cloud Foundation.  
 * La configuración de DNS de SDDC Manager se modifica para que apunte a los servidores de Active Directory para todas las zonas, excepto para la zona de la que es responsable.
-* Los servidores DNS de Active Directory están configurados para ser autorizados para el espacio de dominio de DNS por encima del subdominio de instancia de SDDC Manager y Cloud Foundation.
+* Los servidores DNS de Active Directory se configuran para ser autorizados para el espacio de dominio de DNS sobre el subdominio de instancia de SDDC Manager y Cloud Foundation.
 * Los servidores DNS de Active Directory están configurados para que apunten a la dirección IP de SDDC Manager para la delegación de subdominio de la zona para la que el SDDC Manager está autorizado.
 * Los servidores DNS de Active Directory están configurados para que apunten a los servidores DNS de {{site.data.keyword.cloud_notm}} para todas las demás zonas.
-* Cualquier instancia secundaria que se va a integrar en la primera instancia o en la instancia de destino debe utilizar la misma estructura de nombres DNS por encima del subdominio de SDDC Manager.
+* Cualquier instancia secundaria que se va a integrar en la primera instancia o en la instancia de destino debe utilizar la misma estructura de nombres DNS sobre el subdominio de SDDC Manager.
 
 ## Servicios NTP
 

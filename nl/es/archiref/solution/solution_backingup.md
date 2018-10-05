@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-14"
+lastupdated: "2018-09-25"
 
 ---
 
@@ -14,9 +14,9 @@ Usted es responsable de la configuración, la gestión y la supervisión de todo
 
 Como parte de la solución, puede desplegar opcionalmente los servicios complementarios {{site.data.keyword.IBM}} Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} o Veeam on {{site.data.keyword.cloud_notm}}. Veeam e IBM Spectrum Protect Plus pueden ayudar a satisfacer el requisito de realizar copia de seguridad de los componentes de gestión.
 
-Estos servicios complementarios se despliegan junto con el almacenamiento de Resistencia de {{site.data.keyword.cloud_notm}}. Los servicios le ayudan a realizar copia de seguridad de las cargas de trabajo y de los componentes de gestión. La [Visión general de la arquitectura de Spectrum Protect Plus](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} y la [Visión general de la arquitectura de Veeam](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window} proporcionan una guía útil sobre la planificación y el dimensionamiento del despliegue. También puede solicitar [servicios gestionados](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed) para el despliegue de Veeam.
+Estos servicios complementarios se despliegan junto con el almacenamiento de Resistencia de {{site.data.keyword.cloud_notm}}. Los servicios le ayudan a realizar copia de seguridad de las cargas de trabajo y de los componentes de gestión. La [Visión general de la arquitectura de IBM Spectrum Protect Plus](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} y la [Visión general de la arquitectura de Veeam](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window} proporcionan una guía útil sobre la planificación y el dimensionamiento del despliegue. También puede solicitar [servicios gestionados](https://console.bluemix.net/infrastructure/vmware-solutions/console/gettingstarted/veeam/vcs/managed) para el despliegue de Veeam.
 
-Distintos componentes de solución requieren distintas estrategias para la copia de seguridad. Algunos componentes están protegidos mediante copia de seguridad a nivel de imagen, y otros componentes están protegidos mediante copias de seguridad basadas en archivos para su configuración y datos.
+Distintos componentes de solución requieren distintas estrategias para la copia de seguridad. Algunos componentes están protegidos mediante la copia de seguridad a nivel de imagen, y otros componentes están protegidos mediante la copia de seguridad basada en archivos para su configuración y datos.
 
 ## Servidor de archivos para copia de seguridad basada en archivos
 
@@ -28,7 +28,7 @@ Para alojar estas copias de seguridad, despliegue un servidor de archivos de Lin
 2. Suba una imagen del sistema operativo al almacén de datos de gestión de VMware, como por ejemplo [Ubuntu Server 18.04 LTS](http://mirrors.service.softlayer.com/ubuntu-releases/ubuntu-server/bionic/daily-live/current/){:new_window} desde el duplicado privado de {{site.data.keyword.cloud_notm}}.
 3. Despliegue esta máquina virtual (VM) en el clúster en el grupo de puertos de gestión utilizando una dirección IP portátil privada que se ha solicitado anteriormente. Asegúrese de que la máquina virtual esté configurada para apuntar a los servidores de AD/DNS y, opcionalmente, añadir la máquina virtual al DNS del subdominio.
 4. Cree un ID de usuario de copia de seguridad no root en este servidor y asegúrese de que todos los servicios necesarios estén configurados e iniciados para las transferencias de archivos. Por ejemplo, FTP o SSH.
-5. Asegúrese de que esta máquina virtual esté incluida en el trabajo de copia de seguridad de gestión de Veeam o IBM Spectrum Protect Plus (consulte a continuación).
+5. Asegúrese de que esta máquina virtual esté incluida en el trabajo de copia de seguridad de gestión de Veeam o IBM Spectrum Protect Plus.
 
 ## Copia de seguridad basada en archivos de vCenter
 
@@ -38,7 +38,7 @@ Debe realizar una copia de seguridad de vCenter Server Appliance y de PSC por se
 
 ## Copia de seguridad basada en archivos NSX
 
-La copia de seguridad adecuada de todos los componentes de NSX es crucial para restaurar el sistema a su estado de trabajo si se produce una anomalía. El diseño requiere que configure la copia de seguridad de NSX a través de la función de copia de seguridad del gestor de NSX. Con este fin, puede [configurar el gestor de NSX para realizar copias de seguridad de forma regular](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window} en el servidor de archivos. Asegúrese de que el servidor de archivos o sus datos están copiados correctamente, y de garantizar la rotación de las copias de seguridad de NSX antiguas.
+La copia de seguridad adecuada de todos los componentes de NSX es crucial para restaurar el sistema a su estado de trabajo si se produce una anomalía. El diseño requiere que configure la copia de seguridad de NSX a través de la función de copia de seguridad del gestor de NSX. Con este fin, puede [configurar el gestor de NSX para realizar copias de seguridad de forma regular](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-72EFCAB1-0B10-4007-A44C-09D38CD960D3.html){:new_window} en el servidor de archivos. Asegúrese de que el servidor de archivos o sus datos estén copiados correctamente, y de garantizar la rotación de las copias de seguridad de NSX antiguas.
 
 ## Copia de seguridad basada en imágenes de máquinas virtuales de gestión
 
@@ -46,7 +46,7 @@ Después de haber desplegado la instancia y de haber desplegado el servicio de I
 
 * Si está presente, VMware SDDC Manager
 * Si está presente, los servidores de Active Directory
-* Servidor de copia de seguridad de archivos (véase más arriba)
+* Servidor de copia de seguridad de archivos
 
 Planifique asignar suficientes licencias de Veeam o IBM Spectrum Protect Plus para realizar copia de seguridad de estas máquinas virtuales, y planifique al menos 2 TB de almacenamiento de copia de seguridad para las máquinas virtuales.
 
