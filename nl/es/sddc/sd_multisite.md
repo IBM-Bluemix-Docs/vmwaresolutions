@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -31,7 +31,7 @@ Un despliegue de varios sitios consta de los siguientes componentes.
    *  Subdominio DNS enlazado al dominio raíz en la instancia primaria
    *  Se configura la réplica de DNS y AD entre las máquinas virtuales AD en las instancias primaria y secundarias
    *  Se despliega y configura un PSC (Platform Services Controller) para realizar réplicas con el PSC en la instancia primaria
-   *  Se configura VMware vCenter en las instancias secundarias con la modalidad de enlace mejorado con el vCenter en la instancia primaria
+   *  VMware vCenter en las instancias secundarias se configura con la modalidad enlazada mejorada con el vCenter en la instancia primaria
 
 ## Despliegue de varios sitios de Cloud Foundation
 

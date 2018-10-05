@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -19,7 +19,7 @@ Una actualización disponible es un registro de la lista de actualizaciones de s
 ## Antes de empezar
 
 Antes de intentar aplicar una actualización, expanda la entrada de la actualización pulsando la flecha hacia abajo y verifique la información siguiente:
-* La versión de la actualización. Debe aplicar las actualizaciones en secuencia cronológica, es decir, desde la primera hasta la más reciente. Asegúrese de haber aplicado todas las actualizaciones anteriores antes de aplicar la más reciente. Por ejemplo, debe aplicar la actualización V2.3 antes de intentar aplicar la actualización V2.4.
+* La versión de la actualización. Debe aplicar las actualizaciones en secuencia cronológica, es decir, desde la primera hasta la más reciente. Asegúrese de haber aplicado todas las actualizaciones anteriores antes de aplicar la más reciente. Por ejemplo, debe aplicar la actualización de V2.4 antes de intentar aplicar la actualización de V2.5.
 * Si se requiere tiempo de inactividad.
 * El tiempo total estimado para completar la actualización.
 * El impacto de la actualización sobre el entorno virtual VMware. La Tabla 1 muestra cómo afectan al sistema distintos niveles de impacto.
@@ -50,18 +50,18 @@ Tabla 1. Niveles de actualización e impacto
 
 1. En la consola de {{site.data.keyword.vmwaresolutions_short}}, pulse **Instancias desplegadas** en el panel de navegación izquierdo.
 2. En la tabla **Instancias de Cloud Foundation**, pulse la instancia que desea actualizar.
-3. En la página **Resumen**, verifique que todos los detalles de la instancia se muestren correctamente. A continuación, pulse **Infraestructura** en el panel de navegación izquierdo para verificar los detalles en la página **Infraestructura**.
-   Si no se visualizan los detalles, esto podría indicar un problema de conectividad con la Instancia de servidor virtual (VSI) de IBM CloudDriver, como resultado de una regla de cortafuegos u otro problema de la red. Resuelva el problema antes de continuar con el siguiente paso; de lo contrario, la actualización puede fallar.
+3. En la página **Resumen**, verifique que todos los detalles de la instancia se muestren correctamente. A continuación, pulse **Infraestructura** en el panel de navegación de la izquierda para verificar los detalles en la página **Infraestructura**.
+   Si no se visualizan los detalles, esto podría indicar un problema de conectividad con la IBM CloudDriver Virtual Server Instance (VSI), como resultado de una regla de cortafuegos u otro problema de red. Resuelva el problema antes de continuar con el siguiente paso; de lo contrario, la actualización puede fallar.
 4. Pulse **Actualización y parche** en el panel de navegación izquierdo.
 5. Pulse la flecha hacia abajo para ampliar la actualización que desea aplicar y luego siga uno de los pasos siguientes:
    *  Para comenzar la actualización de inmediato, pulse el icono de menú de desbordamiento en la columna **Acciones** de la entrada de la actualización y pulse **Actualizar ahora**.
    *  Para planificar una actualización futura, pulse el icono de menú de desbordamiento en la columna **Acciones** de la entrada de la actualización y pulse **Planificar actualización**. Seleccione la fecha, la hora y el huso horario en que desea que comience la actualización. Pulse **Aceptar**.
-6. Si está aplicando actualizaciones a instancias de Cloud Foundation en una configuración de despliegue de varios sitios, aparecerá una sección llamada **Pasos necesarios para actualizar**. En esta sección se enumeran las operaciones de actualización necesarias para todas las instancias del despliegue de varios sitios. Debe completar los pasos en secuencia pulsando **Aplicar actualización** para cada paso. Debe esperar a que finalice el paso anterior antes de iniciar el paso siguiente.
+6. Si está aplicando actualizaciones a instancias de Cloud Foundation en la configuración de despliegue de varios sitios, aparecerá una sección titulada **Pasos necesarios para actualizar**, que lista las operaciones de actualización que son necesarias para todas las instancias en el despliegue de varios sitios. Debe completar los pasos en secuencia pulsando **Aplicar actualización** para cada paso. Debe esperar a que finalice el paso anterior antes de iniciar el paso siguiente.
 
 ## Resultados
 
 1. Antes de que se inicie una operación de actualización, se realiza una comprobación del estado de la instancia. Si la comprobación de estado falla, se le notificará para que pueda solucionar el problema antes de aplicar la actualización.
-2. Durante las actualizaciones que incluyen actualizaciones de componentes de VMware, es posible que tenga que migrar las VM de los servidores ESXi para que entren en modalidad de mantenimiento. Si una máquina virtual tiene un almacén de datos local o un CD-ROM montado, es posible que no se pueda realizar la migración de la VM.
+2. Durante las actualizaciones que incluyen actualizaciones de componentes de VMware, es posible que tenga que migrar las VM de los servidores ESXi para ir a la modalidad de mantenimiento. Es posible que la migración de VM se evite si una VM tiene un almacén de datos o un CD-ROM montado.
 3. Durante el suministro de un nuevo entorno, {{site.data.keyword.vmwaresolutions_short}} crea el ID **automationuser** que se utiliza para la gestión de la instancia, incluida la aplicación de actualizaciones. No cambie la contraseña de este ID de usuario. Si cambia la contraseña, la actualización podría fallar.
 
 4. Después de aplicar una actualización, aparece un registro en la lista de estado de actualización de software, donde puede ver el progreso detallado y el estado de la actualización. Cuando la actualización finaliza correctamente, aparece un registro en la lista de actualizaciones de software instaladas.
@@ -69,9 +69,9 @@ Tabla 1. Niveles de actualización e impacto
   Para recuperar el estado más reciente de un trabajo de actualización, pulse el icono de renovación de la parte superior derecha de la página.
   {:tip}
 
-5. Para ver detalles sobre los estados de una actualización, consulte la tabla siguiente.
+5. Para obtener más información sobre los estados de una actualización, consulte la tabla siguiente.
 
-   Tabla 2: Detalles de los estados de actualización
+   Tabla 2. Detalles de los estados de actualización
 
     <table>
       <tr>

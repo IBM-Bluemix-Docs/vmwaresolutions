@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-18"
+lastupdated: "2018-09-18"
 
 ---
 
@@ -35,9 +35,9 @@ Esta capa virtualiza la infraestructura física mediante diversos productos de V
 
 Esta capa consta de vCenter Server, que representa la capa de gestión del entorno virtualizado. Se pueden utilizar las herramientas y scripts compatibles con la API de vSphere con las que está familiarizado para gestionar el entorno VMware alojado por IBM.
 
-En la consola de {{site.data.keyword.vmwaresolutions_short}}, puede ampliar y reducir la capacidad de sus instancias mediante la función de adición y eliminación de un servidor ESXi. También están disponibles funciones de gestión de ciclo de vida, como la aplicación de actualizaciones y la actualización de componentes de VMware en el entorno alojado.
+En la consola de {{site.data.keyword.vmwaresolutions_short}}, puede expandir y contraer la capacidad de las instancias utilizando la función de adición y eliminación de un servidor ESXi. También están disponibles funciones de gestión de ciclo de vida, como la aplicación de actualizaciones y la actualización de componentes de VMware en el entorno alojado.
 
-Para conocer detalles sobre la arquitectura, consulte [Visión general de la solución](../archiref/solution/solution_overview.html).
+Para obtener más información sobre la arquitectura, consulte [Visión general de la solución](../archiref/solution/solution_overview.html).
 
 ## Especificaciones técnicas para instancias de Cloud Foundation
 
@@ -63,14 +63,14 @@ Se solicitan los siguientes componentes del sistema de redes:
 * Tres VLAN (LAN virtuales): una VLAN pública y dos VLAN privadas
 * Edge Services Gateway (ESG) de NSX de VMware de servicios de gestión segura para el tráfico de gestión de HTTPS saliente, desplegado por IBM como parte de la topología del sistema de redes de gestión. Las máquinas virtuales de gestión de IBM utilizan esta ESG para comunicarse con componentes externos específicos de gestión de IBM que están relacionados con la automatización. Para obtener más información, consulte [¿Representa NSX Edge de servicios de gestión un riesgo para la seguridad?](../vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
-  **Importante**: el usuario no puede acceder ni utilizar esta ESG. Si lo modifica, es posible que no pueda gestionar la instancia de Cloud Foundation desde la consola de {{site.data.keyword.vmwaresolutions_short}}. Además, tenga en cuenta que el uso de un cortafuegos o la inhabilitación de las comunicaciones ESG con componentes externos de gestión de IBM harán que {{site.data.keyword.vmwaresolutions_short}} quede inutilizable.
+  **Importante**: el usuario no puede acceder ni utilizar esta ESG. Si lo modifica, es posible que no pueda gestionar la instancia de Cloud Foundation desde la consola de {{site.data.keyword.vmwaresolutions_short}}. Además, el uso de un cortafuegos o la inhabilitación de las comunicaciones de ESG a los componentes de gestión externa de IBM hará que {{site.data.keyword.vmwaresolutions_short}} se convierta en inutilizable.
 
 * La característica EVC (Enhanced vMotion Compatibility) se habilita automáticamente si tiene un clúster existente con servidores ESXi que reciben soporte de la versión actual de VMware vSphere. EVC proporciona compatibilidad con vMotion para todos los servidores ESXi de un clúster, ya que se asegura de que todos los servidores ESXi del clúster expongan el mismo conjunto de características de CPU a las máquinas virtuales. Mediante EVC, las máquinas virtuales pueden migrar entre los servidores ESXi del clúster, aunque las CPU reales de los servidores ESXi sean diferentes.
 
 ### Instancias de servidor virtual
 
 Se solicitan las siguientes VSI (instancias de servidor virtual):
-* Una VSI para los servicios Microsoft Active Directory (AD) y Sistema de nombres de dominio (DNS), necesarios para el soporte de la configuración de varios sitios. Esta especificación de VSI es la siguiente: Windows 2012 R2 (8 GB de RAM / 2 núcleos de CPU / 100 GB de disco / enlaces ascendentes duales privados de 1 Gbps).
+* Una VSI para los servicios Microsoft Active Directory (AD) y Sistema de nombres de dominio (DNS). El VSI es necesario para el soporte de configuración de varios sitios. Esta especificación de VSI es la siguiente: Windows 2012 R2 (8 GB de RAM / 2 núcleos de CPU / 100 GB de disco / enlaces ascendentes duales privados de 1 Gbps).
 * Una VSI para IBM CloudBuilder, que se cierra una vez completado el despliegue de la instancia.
 * (Si se solicita Veeam on {{site.data.keyword.cloud_notm}}) Se solicita una VSI para el servicio de copia de seguridad de Veeam.
 
@@ -78,9 +78,9 @@ Se solicitan las siguientes VSI (instancias de servidor virtual):
 
 Se solicita el siguiente almacenamiento, en función de la configuración de {{site.data.keyword.baremetal_short}} que seleccione:
 * Dos discos de arranque SATA de 1-TB
-* Dos discos de memoria caché SSD (disco en estado sólido) de 960-GB
+* Dos discos de memoria caché SSD (Disco de estado sólido) de 960 GB
 * Un controlador de disco RAID
-* Solo para la configuración **Personalizado**, puede definir el número de unidades de disco y el tipo y la capacidad de los discos según sus requisitos.
+* Solo para la configuración **Personalizado**, puede definir el número de unidades de disco y el tipo y la capacidad de los discos según sus requisitos. Además, tiene la opción de Intel Optane de alto rendimiento, que proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad. La opción de Intel Optane de alto rendimiento depende del modelo de CPU.
 * Solo para la configuración **Preconfigurado**, **Pequeño**: dos discos SSD de 1,9 TB de capacidad
 * Solo para la configuración **Preconfigurado**, **Grande**: cuatro discos SSD de 3,8 TB de capacidad
 

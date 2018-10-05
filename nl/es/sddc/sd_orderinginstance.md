@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-26"
 
 ---
 
@@ -18,11 +18,11 @@ Asegúrese de haber realizado las tareas siguientes:
 *  Ha configurado las credenciales de la infraestructura de {{site.data.keyword.cloud_notm}} en la página **Configuración**. Para obtener más información, consulte [Gestión de cuentas y valores de usuario](../vmonic/useraccount.html).
 *  Ha revisado los requisitos y las consideraciones del apartado [Requisitos y planificación de instancias de Cloud Foundation](sd_planning.html).
 
-**Importante:** no modifique ningún valor definido durante la solicitud y el despliegue de la instancia. Si lo hace, la instancia podría quedar inutilizable. Tampoco cambie el nombre de la instancia, el nombre del dominio raíz, la etiqueta de subdominio ni el prefijo de nombre de host después de que se haya desplegado la instancia.
+**Importante**: No modifique ningún valor definido durante la solicitud o el despliegue de la instancia. Hacerlo puede hacer que la instancia se vuelva inutilizable. Por ejemplo, si se cierra la red pública, si los servidores y las Instancias de servidor virtual (VSI) se mueven detrás de una media disposición de Vyatta, o si el VSI de IBM CloudBuilder se detiene o se suprime. Tampoco cambie el nombre de la instancia, el nombre del dominio raíz, la etiqueta de subdominio ni el prefijo de nombre de host después de que se haya desplegado la instancia.
 
 ## Valores del sistema
 
-Debe especificar los siguientes valores de sistema cuando solicite una instancia de Cloud Foundation.
+Debe especificar los valores del sistema siguientes cuando solicite una instancia de Cloud Foundation.
 
 ### Nombre de instancia
 
@@ -85,17 +85,22 @@ Una instancia de Cloud Foundation consta de cuatro servidores nativos en el desp
 
 ## Valores de almacenamiento
 
-Las instancias de Cloud Foundation solo admiten el almacenamiento vSAN.
+Para las instancias de Cloud Foundation, solo puede solicitar almacenamiento VMware vSAN.
 * Cuando selecciona una configuración de servidor nativo **Preconfigurado**, los valores de almacenamiento están estandarizados y no se pueden cambiar:
-  * Para la configuración de servidor nativo **Pequeño**, se solicitan 2 unidades de disco de 1,9 TB SSD SED.
-  * Para la configuración de servidor nativo **Grande**, se solicitan 4 unidades de disco de 3,8 TB SSD SED.
-* Cuando selecciona la configuración de servidor nativo **Personalizado**, puede personalizar el almacenamiento VMware vSAN de su instancia especificando los valores siguientes en **Almacenamiento vSAN**:
-  * **Tipo y tamaño de disco para discos de capacidad vSAN**: seleccione la capacidad que se ajuste a sus requisitos de almacenamiento compartido.
-  * **Número de discos de capacidad vSAN**: especifique el número de discos para el almacenamiento compartido vSAN que desea añadir. Las cantidades de disco deben ser 2, 4, 6 u 8.
+  * Para la configuración de servidor nativo **Pequeño**, se solicitan dos unidades de disco de 1,9 TB SSD SED.
+  * Para la configuración de servidor nativo **Grande**, se solicitan cuatro unidades de disco de 3,8 TB SSD SED.
+* Cuando selecciona la configuración de servidor nativo **Personalizado**, puede personalizar el almacenamiento vSAN para la instancia. Especifique los siguientes valores de vSAN:
+
+* **Tipo y tamaño de disco para discos de capacidad vSAN**: Seleccione una opción para los discos de capacidad que necesite.
+* **Número de discos de capacidad de vSAN**: Especifique el número de discos de capacidad que desea añadir.
+* **Tipo de disco para discos de memoria caché vSAN**: Seleccione una opción para los discos de memoria caché que necesite.
+
+    **Nota**: Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto. La opción **Intel Optane de alto rendimiento** solo está disponible para los procesadores Dual Intel Xeon Gold 5120 y 6140.
+* **Número de discos de memoria caché de vSAN**: Especifique el número de discos de memoria caché que desea añadir.
 
 ## Valores de interfaz de red
 
-Debe especificar los siguientes valores de interfaz de red cuando solicite una instancia de Cloud Foundation.
+Debe especificar los siguientes valores de la interfaz de red cuando solicite una instancia de Cloud Foundation.
 
 ### Prefijo de nombre de host
 
@@ -147,10 +152,10 @@ Los valores del sistema de redes dependen de si ha seleccionado **Realizar pedid
 
 Se necesita una VLAN pública y dos VLAN privadas para el pedido de la instancia. Las dos VLAN privadas se conectan en modalidad troncal en cada servidor nativo.
 
-**Realizar pedido de nuevas VLAN**  
+#### Realizar pedido de nuevas VLAN
 Seleccione esta opción para solicitar una VLAN pública nueva y dos VLAN privadas nuevas.
 
-**Seleccionar las VLAN existentes**  
+#### Seleccionar las VLAN existentes  
 En función del {{site.data.keyword.CloudDataCent_notm}} que haya seleccionado, puede que haya VLAN públicas y privadas existentes disponibles.
 
 Cuando seleccione reutilizar las VLAN públicas y privadas existentes, especifique las VLAN y las subredes:
@@ -162,7 +167,7 @@ Cuando seleccione reutilizar las VLAN públicas y privadas existentes, especifiq
 
 **Importante:**
 * Asegúrese de que la configuración del cortafuegos en las VLAN seleccionadas no bloquee el tráfico de datos de gestión.
-* Asegúrese de que todas las VLAN que seleccione estén en el mismo pod, porque no se pueden suministrar servidores ESXi en VLAN en pods mixtos.
+* Asegúrese de que todas las VLAN que seleccione estén en el mismo pod, porque los servidores ESXi no se pueden suministrar en VLAN de pod mixtos.
 
 ## Servicios
 
@@ -170,21 +175,19 @@ Cuando solicite una instancia de Cloud Foundation, también puede solicitar serv
 
 ## Resumen del pedido
 
-En función de la configuración seleccionada para la instancia y los servicios complementarios, el coste estimado se genera y se muestra al instante en el panel derecho. Pulse **Detalles sobre precios** en la parte inferior del panel derecho para generar un documento PDF que proporcione la información estimada.
+En función de la configuración seleccionada para la instancia y los servicios complementarios, el coste estimado se genera y se muestra al instante en el panel derecho. Pulse **Detalles sobre precios** en el panel de la derecha para generar un documento PDF que proporcione los detalles de la estimación.
 
-## Procedimiento
+## Procedimiento para solicitar instancias de Cloud Foundation
 
-1. Desde el catálogo de {{site.data.keyword.cloud_notm}}, pulse **VMware** en el panel de navegación izquierdo y pulse **Cloud Foundation** en la sección **Centros de datos virtuales**.
+1. Desde el catálogo de {{site.data.keyword.cloud_notm}}, pulse **VMware** desde el panel de navegación de la izquierda y, a continuación, pulse **Cloud Foundation** en la sección **Centros de datos virtuales**.
 2. En la página **VMware Cloud Foundation on IBM Cloud**, pulse **Crear**.
 3. En la página **Cloud Foundation**, escriba el nombre de la instancia.
 4. Seleccione el tipo de instancia:
    * Pulse **Instancia primaria** para desplegar una sola instancia en el entorno o para desplegar la primera instancia en una topología de varios sitios.
-   * Pulse **Instancia secundaria** para conectar la instancia con una instancia existente (primaria) en el entorno para conseguir alta disponibilidad y siga estos pasos:
+   * Pulse **Instancia secundaria** para conectar la instancia con una instancia existente (primaria) en el entorno para obtener una alta disponibilidad. Siga estos pasos:
      1. Seleccione la instancia primaria a la que desea conectar la instancia secundaria.
-     2. Si la instancia primaria que ha seleccionado se actualiza al release V2.5, o la instancia primaria se despliega en o se actualiza a V2.4 y releases anteriores, compruebe la **Contraseña de administrador del PSC de la instancia primaria** para asegurarse de que sea correcta.
-     
-         **Nota:** El campo **Contraseña de administrador del PSC de la instancia primaria** no está disponible para las instancias primarias que se
-       despliegan en V2.5 y releases posteriores.     
+     2. Para las instancias primarias V2.5 o posteriores, especifique el valor para la **Contraseña de administrador del PSC de la instancia primaria**.
+     3. Para las instancias primarias V2.4 o anteriores, verifique que el valor prerrellenado para el campo **Contraseña del administrador para el PSC de instancia primaria** es correcto.
 5. Complete los valores de licencia de los componentes de la instancia:
    *  Para utilizar licencias proporcionadas por IBM, seleccione **Incluir con la compra**.
    *  Para utilizar su propia licencia, seleccione **Proporcionaré** y escriba la clave de la licencia.  
@@ -193,16 +196,16 @@ En función de la configuración seleccionada para la instancia y los servicios 
    2. Seleccione la configuración del servidor nativo.
       * Si selecciona **Preconfigurado**, elija una configuración de **Pequeño** y **Grande**.
       * Si seleccione **Personalizado**, especifique el modelo de CPU y el tamaño de RAM.
-7. Complete los valores de almacenamiento:
-   * Si ha seleccionado **Preconfigurado** como configuración de servidor nativo, tenga en cuenta que los valores de almacenamiento correspondientes a las configuraciones estandarizadas de servidor nativo **Pequeño** y **Grande** no se pueden modificar.
-   * Si ha seleccionado **Personalizado** como configuración de servidor nativo, especifique el **Tipo y tamaño de disco para discos de capacidad vSAN** y el **Número de discos de capacidad vSAN**.
+7. Complete la configuración del almacenamiento.
+   * Si ha seleccionado **Preconfigurado** para la configuración de servidor nativo, los valores de almacenamiento para las configuraciones de servidor nativo **Pequeño** y **Grande** estandarizados no se pueden cambiar.
+   * Si ha seleccionado **Personalizado** para la configuración de servidor nativo, especifique los tipos de disco para la capacidad vSAN y los discos de memoria caché, y el número de discos. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
 8. Complete los valores de interfaz de red:
    1. Especifique el prefijo de nombre de host, la etiqueta de subdominio y el nombre de dominio raíz. Para una instancia secundaria, el nombre de dominio se rellena automáticamente.
    2. Seleccione los valores de VLAN:
       * Si desea solicitar nuevas VLAN públicas y privadas, pulse **Realizar pedido de nuevas VLAN**.
       * Si desea reutilizar las VLAN públicas y privadas existentes cuando estén disponibles, pulse **Seleccionar las VLAN existentes** y especifique las VLAN y las subredes.
 
-9. Seleccione los servicios complementarios que desea desplegar en la instancia pulsando la tarjeta del servicio correspondiente. Si un servicio requiere configuración, complete los valores específicos del servicio y pulse **Añadir servicio** en la ventana de emergente de configuración. Para obtener información sobre cómo proporcionar valores para un servicio, consulte el tema de solicitud de servicio correspondiente.
+9. Seleccione los servicios complementarios que desea desplegar en la instancia pulsando la tarjeta del servicio correspondiente. Si un servicio requiere configuración, complete los valores específicos del servicio y pulse **Añadir servicio** en la ventana de emergente de configuración. Para obtener más información sobre cómo proporcionar valores para un servicio, consulte el tema de servicios de ordenación correspondiente.
 
 10. En el panel **Resumen del pedido**, verifique la configuración de la instancia antes de realizar el pedido.
     1. Revise los valores de la instancia.
@@ -225,7 +228,7 @@ Cuando se solicita una instancia secundaria, es posible que el cliente web de VM
 
 Puede ver y gestionar la instancia de Cloud Foundation que ha solicitado.
 
-**Importante**: solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no desde el {{site.data.keyword.slportal}} ni mediante ningún otro método fuera de la consola. Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
+**Importante**: Solo debe gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} que se crean en la cuenta de {{site.data.keyword.cloud_notm}} desde la consola de {{site.data.keyword.vmwaresolutions_short}}, no desde el {{site.data.keyword.slportal}} ni mediante ningún otro método fuera de la consola. Si cambia estos componentes fuera de la consola de {{site.data.keyword.vmwaresolutions_short}}, los cambios no se sincronizan con la consola.
 
 **ATENCIÓN**: el hecho de gestionar los componentes de {{site.data.keyword.vmwaresolutions_short}} (que se instalaron en la cuenta de {{site.data.keyword.cloud_notm}} al solicitar la instancia) desde fuera de la consola de {{site.data.keyword.vmwaresolutions_short}} podría hacer que el entorno quedara inestable. Estas actividades de gestión incluyen:
 

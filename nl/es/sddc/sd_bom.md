@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -32,18 +32,17 @@ Tabla 2. Lista de materiales para los componentes de software de instancias de C
 
 | Fabricante | Componente                                | Versión      |
 |:-------------|:-----------------------------------------|:-------------|
-| VMware       | vSphere ESXi                             | 6.5 U1g (ESXi 6.5u1 con nivel de parche ESXi650-201803001 aplicado) |
-| VMware       | vCenter Server Appliance                 | 6.5 Act. 1g |
-| VMware       | Platform Services Controller             | 6.5 Act. 1g |
+| VMware       | vSphere ESXi                             | 6.5 Actualización 2c (hasta el nivel de parche ESXi650-201808001) |
+| VMware       | vCenter Server Appliance                 | 6.5 Actualización 2c |
+| VMware       | Platform Services Controller             | 6.5 Actualización 2c |
 | VMware       | vSAN                                     | 6.6.1        |
-| VMware       | NSX for vSphere                          | 6.3.5        |
+| VMware       | NSX for vSphere                          | 6.4.1        |
 | VMware       | SDDC Manager                             | 2.4          |
-| IBM          | CloudDriver                              | 2.5          |
 | Microsoft    | Windows Server Standard Edition (64 bits) | 2012R2       |
 
 ## Valores de configuración avanzada para servidores ESXi
 
-Revise la siguiente lista para obtener una visión general de los valores de configuración avanzada que se aplican a servidores ESXi en función de si la instancia de Cloud Foundation se ha desplegado en V2.2 o posterior o si se ha actualizado a V2.2 o posterior desde una versión V2.1 o release anterior.
+Revise la tabla siguiente para obtener una visión general de los valores de configuración avanzada que se aplican en los servidores ESXi. Los valores son diferentes en función de si la instancia de Cloud Foundation se ha desplegado en (o actualizado a) V2.2 o posterior a partir de un release anterior (V2.1 o anterior).
 
 Tabla 3. Valores de configuración avanzada de servidores ESXi para clústeres e instancias de Cloud Foundation
 
@@ -61,7 +60,7 @@ Tabla 3. Valores de configuración avanzada de servidores ESXi para clústeres e
 
 **Notas**:
 * El valor **MaxVolumes** es obligatorio para el servicio IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} porque el servicio puede utilizar más del número predeterminado de montajes de NFS en el servidor ESXi.
-* El valor **No definido** para un valor de configuración indica que el nuevo valor no se aplica automáticamente porque requiere que se rearranquen los servidores ESXi, lo que puede suponer una interrupción.
+* Un valor de **No definido** para un valor de configuración indica que el nuevo valor no se aplica automáticamente porque requiere que se rearranquen los servidores ESXi, lo que puede suponer una interrupción.
 
   Se recomienda cambiar los valores de configuración **No definido** por los nuevos valores para mantener la coherencia entre todas las instancias y permitir un soporte adecuado para la ampliación de almacenamiento. IBM tiene intención de realizar pruebas solo con estos nuevos valores para {{site.data.keyword.vmwaresolutions_short}} V2.2 y releases posteriores.
 

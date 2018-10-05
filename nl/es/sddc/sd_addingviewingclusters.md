@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-08-02"
+lastupdated: "2018-09-14"
 
 ---
 
@@ -40,11 +40,11 @@ El nombre del clúster debe cumplir los siguientes requisitos:
 
 La ubicación del {{site.data.keyword.CloudDataCent}} del clúster está definido en {{site.data.keyword.CloudDataCent_notm}} en la instancia de Cloud Foundation de forma predeterminada. Puede desplegar el clúster en un {{site.data.keyword.CloudDataCent_notm}} distinto del de la instancia desplegada, pero debe asegurarse de que la latencia de red entre los dos {{site.data.keyword.CloudDataCents_notm}} sea inferior a 150 ms. Para comprobar la latencia de red, puede utilizar una herramienta como [SoftLayer IP Backbone Looking Glass](http://lg.softlayer.com/){:new_window}.
 
-Los centros de datos de los que dispone dependen de la configuración de servidor nativo seleccionada para el despliegue. Si selecciona la configuración **Personalizado**, también puede desplegar el clúster en otro pod de infraestructura de {{site.data.keyword.cloud}}, si el centro de datos seleccionado contiene pods adicionales. Esto resulta útil cuando el pod predeterminado de infraestructura de {{site.data.keyword.cloud_notm}} en el que se ha desplegado la instancia inicial ha alcanzado su capacidad máxima.
+Los centros de datos de los que dispone dependen de la configuración del servidor nativo seleccionada para el despliegue. Si selecciona la configuración **Personalizada**, también puede desplegar el clúster en un pod de infraestructura de {{site.data.keyword.cloud}} diferente, si el centro de datos seleccionado contiene más pods. Esta configuración es útil cuando el pod de infraestructura de {{site.data.keyword.cloud_notm}} predeterminado en el que se ha desplegado la instancia inicial ha alcanzado su capacidad máxima.
 
 **Nota:** las configuraciones nativas estandarizadas **Pequeño** y **Grande** utilizan un pod predeterminado que no se puede modificar.
 
-Si despliega el clúster en otro pod o centro de datos, se solicitan tres VLAN adicionales para que las utilice con el {{site.data.keyword.baremetal_short}} solicitado.
+Si despliega el clúster en un centro de datos o pod diferente, se solicitan otras tres VLAN para que se utilicen con el {{site.data.keyword.baremetal_short}} solicitado.
 
 ### Valores de Servidor nativo
 
@@ -77,7 +77,14 @@ En la configuración de servidor nativo **Preconfigurado**, no puede modificar l
 * Para la configuración **Pequeño**, se solicitan dos unidades de disco de 1,9 TB SSD SED.
 * Para la configuración **Grande**, se solicitan cuatro unidades de disco de 3,8 TB SSD SED.
 
-Para la configuración de servidor nativo **Personalizado**, puede personalizar el almacenamiento vSAN especificando el número de discos de capacidad vSAN, y el tipo de disco y el tamaño que satisfagan sus necesidades de almacenamiento.
+Para la configuración del servidor nativo **Personalizado**, puede personalizar el almacenamiento vSAN especificando los valores siguientes:
+
+* **Tipo y tamaño de disco para discos de capacidad vSAN**: Seleccione una opción para los discos de capacidad que necesite.
+* **Número de discos de capacidad de vSAN**: Especifique el número de discos de capacidad que desea añadir.
+* **Tipo de disco para discos de memoria caché vSAN**: Seleccione una opción para los discos de memoria caché que necesite.
+
+    **Nota**: Si desea añadir discos de capacidad por encima del límite de ocho, marque el recuadro **Intel Optane de alto rendimiento**. Esta opción proporciona dos bahías de disco de capacidad adicional para un total de 10 discos de capacidad y es útil para cargas de trabajo que requieren menos latencia y un rendimiento de IOPS más alto. La opción **Intel Optane de alto rendimiento** solo está disponible para los procesadores Dual Intel Xeon Gold 5120 y 6140.
+* **Número de discos de memoria caché de vSAN**: Especifique el número de discos de memoria caché que desea añadir.
 
 ### Valores de licencia
 
@@ -99,8 +106,8 @@ Puede especificar las opciones de licencia para los componentes de VMware en el 
    * Si ha seleccionado **Personalizado**, seleccione el **Modelo de CPU** y el tamaño de **RAM**.
    * Si ha seleccionado **Preconfigurado**, seleccione el valor de **Configuración de servidor nativo**.
 7. Complete la configuración de almacenamiento:
-   * Si ha seleccionado **Personalizado** como configuración de servidor nativo, especifique el valor de **Número de discos de capacidad vSAN** y **Tipo y tamaño de disco para discos de capacidad vSAN**.
-   * Si ha seleccionado **Preconfigurado** como configuración de servidor nativo, tenga en cuenta que los valores de almacenamiento correspondientes a las configuraciones de servidor nativo **Pequeño** y **Grande** no se pueden modificar.
+   * Si ha seleccionado **Preconfigurado** para la configuración de servidor nativo, los valores de almacenamiento para las configuraciones de servidor nativo **Pequeño** y **Grande** no se pueden cambiar.
+   * Si ha seleccionado **Personalizado** para la configuración de servidor nativo, especifique los tipos de disco para la capacidad vSAN y los discos de memoria caché, y el número de discos. Si desea más almacenamiento, marque el recuadro **Intel Optane de alto rendimiento**.
 8. Especifique cómo se proporcionan las claves de licencia:
    * Para los usuarios de Business Partners, se incluyen y se adquieren en su nombre la licencia de vSphere (edición Enterprise Plus) y la licencia de vSAN. Sin embargo, debe especificar la edición para la licencia de vSAN.
    * Para los usuarios que no son Business Partners, puede seleccionar una de las siguientes opciones:
@@ -166,13 +173,13 @@ Puede especificar las opciones de licencia para los componentes de VMware en el 
         <dt class="dt dlterm">Suprimiendo</dt>
         <dd class="dd">El servidor ESXi se está suprimiendo.</dd>
         </dl>
-   * Los detalles de la licencia de vSAN y la licencia de vSphere. Los detalles de licencia de vSphere están disponibles sólo cuando se selecciona el uso de su propia licencia de VMware (BYOL) al realizar el pedido del clúster:
+   * Los detalles de la licencia de vSAN y la licencia de vSphere. Los detalles de licencia de vSphere solo están disponibles cuando se han seleccionado para utilizar su propia licencia de VMware (BYOL) al realizar el pedido del clúster.
        * **Tipo de licencia**: la licencia de vSAN o la licencia de vSphere.
        * **Tipo de pedido**: la licencia la proporciona el usuario (BYOL) o se adquiere en nombre del usuario.
        * **Edición de licencia**: la edición de la licencia.
        * **Clave de licencia**: la clave de licencia.
        * **Capacidad total (CPU)**: la capacidad total o el número de CPU que proporciona la licencia.
-       * **Capacidad libre (CPU)**: la capacidad que actualmente está disponible en la licencia.
+       * **Capacidad libre (CPU)**: La capacidad que está disponible en la licencia.
 
 ## Supresión de clústeres de instancias de Cloud Foundation
 
@@ -183,8 +190,8 @@ Puede que desee suprimir un clúster de una instancia cuando ya no sea necesario
 * Utilice este procedimiento para suprimir clústeres de instancias que se han desplegado en V2.3 o releases posteriores.
 * Para los clústeres desplegados en V2.2 o instancias anteriores, debe actualizar la instancia a V2.3 para poder suprimir los clústeres que ha añadido a la instancia.
 * Puede suprimir un único clúster al mismo tiempo. Para suprimir varios clústeres, debe hacerlo de forma secuencial: esperando a que el clúster anterior se suprima antes de intentar suprimir el clúster siguiente.
-* Asegúrese de que todos los nodos de un clúster están encendidos y en funcionamiento antes de suprimir el clúster.
-* Cuando suprime un clúster, todas las máquinas virtuales (VM) del clúster también se suprimen y no pueden recuperarse. Si desea mantener las VM, mígrelas a otros clústeres.
+* Asegúrese de que todos los nodos de un clúster estén encendidos y operativos antes de suprimir el clúster.
+* Cuando se suprime un clúster, todas las VM (máquinas virtuales) del clúster también se suprimen y no se pueden recuperar. Si desea mantener las VM, mígrelas a otros clústeres.
 * El clúster predeterminado no se puede suprimir.
 
 ## Procedimiento para suprimir clústeres de instancias de Cloud Foundation

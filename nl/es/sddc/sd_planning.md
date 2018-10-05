@@ -4,13 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-08-28"
 
 ---
 
 # Requisitos y planificación de instancias de Cloud Foundation
 
-Revise los siguientes requisitos antes de solicitar sus instancias de VMware Cloud Foundation. Planifique la instancia en función de la ubicación del {{site.data.keyword.CloudDataCent}}, de sus requisitos de capacidad de carga de trabajo y de los requisitos de servicios adicionales.
+Revise los siguientes requisitos antes de solicitar sus instancias de VMware Cloud Foundation. Planifique la instancia en función de la ubicación del {{site.data.keyword.CloudDataCent}}, de sus requisitos de capacidad de carga de trabajo y de los requisitos de servicio.
 
 ## Requisitos de la cuenta de IBM Cloud
 
@@ -62,12 +62,12 @@ Tabla 2. Indicadores de estado para {{site.data.keyword.CloudDataCents_notm}} cu
 | Estado | Detalles del estado |
 |:------------------------------|:--------------------------------------------------|
 | Coming Soon                   | El {{site.data.keyword.CloudDataCent_notm}} no está disponible actualmente. |
-| Temporarily Out of Inventory  | El {{site.data.keyword.CloudDataCent_notm}} no ofrece disponibilidad en este momento. |
+| Temporarily Out of Inventory  | El {{site.data.keyword.CloudDataCent_notm}} no tiene disponibilidad actualmente. |
 | Limited Inventory             | El {{site.data.keyword.CloudDataCent_notm}} ofrece disponibilidad limitada y es posible que el pedido no se complete. |
 
 ## Copia de seguridad de los componentes de gestión
 
-El usuario es responsable de mantener y garantizar la disponibilidad de todos los componentes de instancia. Se recomienda encarecidamente que planee la copia de seguridad o la alta disponibilidad de todos los componentes de gestión. Para obtener más información, consulte [Copia de seguridad de componentes](../archiref/solution/solution_backingup.html).
+El usuario es responsable de mantener y garantizar la disponibilidad de todos los componentes de instancia. Se recomienda planificar la copia de seguridad o la alta disponibilidad de todos los componentes de gestión. Para obtener más información, consulte [Copia de seguridad de componentes](../archiref/solution/solution_backingup.html).
 
 ## Servicios para instancias de Cloud Foundation
 
@@ -75,7 +75,7 @@ Puede solicitar servicios complementarios para su instancia en función de sus n
 
 ## Consideraciones de capacidad
 
-Para obtener información sobre la capacidad y las consideraciones, consulte [Capacidad de escalado](../archiref/solution/solution_scaling.html).
+Para obtener más información sobre la capacidad, consulte [Capacidad de escalado](../archiref/solution/solution_scaling.html).
 
 ### Enlaces relacionados
 
