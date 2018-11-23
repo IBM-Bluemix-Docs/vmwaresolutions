@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-10-29"
 
 vCenter ha una funzione denominata Profili host. Questa funzione crea un profilo che cattura una configurazione dell'host di riferimento preconfigurata e convalidata e aiuta un amministratore di sistema a gestire le configurazioni host in un cluster. I profili host forniscono un meccanismo automatizzato e gestito centralmente per la configurazione dell'host e la conformità della configurazione. I profili host consentono di considerare la configurazione come un oggetto gestito, che contiene un catalogo di parametri da configurare, come rete, archiviazione, sicurezza e altri parametri a livello di host. Questi profili host possono essere applicati a singoli host, a un cluster o a tutti gli host e i cluster associati a un profilo host.
 
-Poiché più host vSphere ESXi VCS vengono distribuiti dall'automazione IC4VS che ha distribuito il cluster iniziale, ci sarà meno deviazione di configurazione rispetto ai metodi manuali di aggiunta degli host. Tuttavia, le azioni dell'amministratore di sistema, al di fuori dell'automazione, possono rendere diversa la configurazione degli host. Ad esempio, è stato aggiunto più spazio di archiviazione NFS o sono state aggiunte altre VLAN. Pertanto, l'utilizzo dei profili host per convalidare la configurazione di un nuovo host mediante il controllo della conformità di questo host rispetto a un host esistente è un caso di utilizzo valido di questo strumento all'interno di IBM Cloud.
+Poiché più host VMware vCenter Server on {{site.data.keyword.cloud}} vSphere ESXi vengono distribuiti dall'automazione IC4VS che ha distribuito il cluster iniziale, ci sarà meno deviazione di configurazione rispetto ai metodi manuali di aggiunta degli host. Tuttavia, le azioni dell'amministratore di sistema, al di fuori dell'automazione, possono rendere diversa la configurazione degli host. Ad esempio, è stato aggiunto più spazio di archiviazione NFS o sono state aggiunte altre VLAN. Pertanto, l'utilizzo dei profili host per convalidare la configurazione di un nuovo host mediante il controllo della conformità di questo host rispetto a un host esistente è un caso di utilizzo valido di questo strumento all'interno di {{site.data.keyword.cloud_notm}}.
 
 Per aggiungere altri host al tuo cluster vCenter Server, vedi [Espansione e contrazione della capacità per le istanze vCenter Server](../../vcenter/vc_addingremovingservers.html).
 
@@ -62,5 +62,5 @@ Per verificare la conformità è necessaria la seguente sequenza di operazioni:
 
 ### Link correlati
 
-* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demo)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demo)

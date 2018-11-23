@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-01"
 
 ---
 
@@ -15,7 +15,7 @@ Quando metti un host vSphere ESXi in modalità di manutenzione su un cluster vSA
 * La modalità **ensure accessibility data evacuation** è l'opzione predefinita e quando l'host vSphere ESXi viene messo in modalità di manutenzione, vSAN garantisce che tutte le macchine o dispositivi virtuali accessibili sull'host rimangano accessibili. Poiché si verifica solo la rimozione parziale dei dati, la macchina o il dispositivo virtuale potrebbe non essere più pienamente conforme a una politica di archiviazione della VM durante la rimozione e potrebbe non avere accesso a tutte le sue repliche. Se si verifica un errore mentre l'host è in modalità di manutenzione e il livello primario di errori da tollerare è impostato su 1, si verificherà una perdita di dati e la macchina o il dispositivo virtuale potrebbe non essere disponibile.
 * Nella modalità **no data migration**, vSAN non rimuove alcun dato dall'host quando entra in modalità di manutenzione. Mentre questo riduce il tempo per entrare in modalità di manutenzione e quindi riduce la durata della finestra di manutenzione, alcune macchine o dispositivi virtuali potrebbero diventare inaccessibili.
 
-Questa sezione crea una nuova politica di archiviazione della macchina virtuale che consente di selezionare la modalità **ensure accessibility data evacuation** per ridurre le finestre di manutenzione, ma riduce il rischio che un errore di un host mentre un altro è un modalità di manutenzione renda inaccessibile una macchina o un dispositivo virtuale. Per qualsiasi macchina o dispositivo virtuale, laddove non sia accettabile che diventi non ridondante quando un host vSAN viene messo in modalità di manutenzione, completa il seguente processo prima di eseguire eventuali azioni di correzione. Sarà richiesto un cluster con almeno 6 host.
+Questa sezione crea una nuova politica di archiviazione della VM che consente di selezionare la modalità **ensure accessibility data evacuation** per ridurre le finestre di manutenzione, ma riduce il rischio che un errore di un host mentre un altro è un modalità di manutenzione renda inaccessibile una macchina o un dispositivo virtuale. Per qualsiasi macchina o dispositivo virtuale, laddove non sia accettabile che diventi non ridondante quando un host vSAN viene messo in modalità di manutenzione, completa il seguente processo prima di eseguire eventuali azioni di correzione. Sarà richiesto un cluster con almeno 6 host.
 
 1. Crea un nuovo profilo vSAN con le impostazioni di RAID 5/6 e FTT =2 (RAID 6) e applica quindi questa politica sulle macchine o sui dispositivi virtuali.
 
@@ -23,5 +23,5 @@ Questa sezione crea una nuova politica di archiviazione della macchina virtuale 
 
 ### Link correlati
 
-* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demo)
+* [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demo)

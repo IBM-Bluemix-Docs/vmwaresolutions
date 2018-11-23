@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-01"
 
 ---
 
@@ -14,7 +14,7 @@ ESXi 6.5 contiene molti nuovi driver nativi che sostituiscono i driver vmklinux 
 
 ixgben è un driver nativo che sostituisce il driver vmklinux net-ixgbe ma non supporta SR-IOV e SW FcOE. L'automazione di ICVS non ha abilitato questo driver quando è stato eseguito il provisioning del tuo host vSphere ESXi. Si consiglia di abilitare questo driver per i benefici prestazionali che offre. La seguente procedura descritta in questa appendice ti mostra come abilitare e disabilitare i driver nativi utilizzando la riga di comando vSphere (vCLI).
 
-Prima di iniziare questa attività, recupera tutti gli indirizzi IP degli host fisici, gli ID di accesso e le password dal [portale dell'infrastruttura IBM Cloud](https://control.softlayer.com/devices). Ciò è necessario in caso di ripristino o per controllare l'avanzamento di un aggiornamento, in cui non esiste un accesso di rete diretto all'host.
+Prima di iniziare questa attività, recupera tutti gli indirizzi IP degli host fisici, gli ID di accesso e le password dal [{{site.data.keyword.cloud}}portale dell'infrastruttura](https://control.softlayer.com/devices). Ciò è necessario in caso di ripristino o per controllare l'avanzamento di un aggiornamento, in cui non esiste un accesso di rete diretto all'host.
 
 Per ogni host, effettua le seguenti operazioni in successione:
 1. Utilizza il client web vSphere per mettere l'host vSphere ESXi in modalità di manutenzione selezionando **Home** > **Hosts and Clusters**. Nel riquadro di navigazione, seleziona l'host vSphere ESXi, fai clic con il tasto destro del mouse sull'host e seleziona **Maintenance Mode** > **Enter Maintenance Mode**. Poiché l'host fa parte di un cluster DRS automatizzato, le macchine virtuali vengono migrate su host diversi quando l'host entra in modalità di manutenzione.
@@ -29,12 +29,12 @@ Per ogni host, effettua le seguenti operazioni in successione:
 7. Se la modifica non funziona, per annullare l'operazione, immetti il seguente comando:
   `esxcli system module set --enabled=false --module=ixgben`
 
-8. Se non riesci a connetterti all'host tramite la rete, esegui il comando precedente dalla console IPMI utilizzando la finestra di controllo di IBM Cloud.
+8. Se non riesci a connetterti all'host tramite la rete, esegui il comando precedente dalla console IPMI utilizzando la finestra di controllo di {{site.data.keyword.cloud_notm}}.
 9. Dopo aver riavviato l'host vSphere ESXi, puoi ora vedere che il driver ixgbe predefinito è stato caricato e abilitato.
 
-Se hai bisogno di ripristinare e non puoi eseguire l'SSH nell'host vSphere ESXi, devi accedere alla console KVM per l'host che richiede il ripristino tramite la finestra di controllo di IBM Cloud.
+Se hai bisogno di ripristinare e non puoi eseguire l'SSH nell'host vSphere ESXi, devi accedere alla console KVM per l'host che richiede il ripristino tramite la finestra di controllo di {{site.data.keyword.cloud_notm}}.
 
-Utilizza l'ID e la password elencati nella finestra di controllo di IBM Cloud con l'indirizzo IP IPMI per accedere all'interfaccia web IPMI. Devi essere connesso al data center in cui si trova l'host tramite VPN. Per ulteriori informazioni, vedi [Introduzione a VPN](../../../../infrastructure/iaas-vpn/getting-started.html).
+Utilizza l'ID e la password elencati nella finestra di controllo di {{site.data.keyword.cloud_notm}} con l'indirizzo IP IPMI per accedere all'interfaccia web IPMI. Devi essere connesso al data center in cui si trova l'host tramite VPN. Per ulteriori informazioni, vedi [Introduzione a VPN](../../../../infrastructure/iaas-vpn/getting-started.html).
 
 1. Vai alla pagina Device Details, Remote Mgmt per l'host vSphere ESXi e seleziona **Actions** > **KVM Console**. Si aprirà un'altra finestra in cui dovrai immettere utente e password IPMI.
 2. Seleziona **Remote Control** > **iKVM/HTML5** e fai clic su **iKVM/HTML5** per riavviare. Potrai ora accedere alla console dell'host vSphere ESXi.
@@ -47,5 +47,5 @@ Utilizza l'ID e la password elencati nella finestra di controllo di IBM Cloud co
 
 ### Link correlati
 
-* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demo)
+* [VMware HCX on {{site.data.keyword.cloud_notm}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demo)

@@ -4,17 +4,17 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-01"
 
 ---
 
 # Scansione e revisione
 
-Quando esegui la scansione di host, macchine virtuali e dispositivi virtuali, li valuti rispetto alle baseline e ai gruppi di baseline per determinarne il livello di conformità. Gli oggetti di inventario vengono sottoposti a scansione e i risultati vengono esaminati per determinare la loro conformità alle baseline e ai gruppi di baseline. I risultati della scansione possono essere filtrati mediante ricerca di testo, selezione del gruppo, selezione della baseline e selezione dello stato di conformità. Puoi avviare le seguenti scansioni:
+Quando esegui la scansione di host, macchine virtuali (VM) e dispositivi virtuali, li valuti rispetto alle baseline e ai gruppi di baseline per determinarne il livello di conformità. Gli oggetti di inventario vengono sottoposti a scansione e i risultati vengono esaminati per determinare la loro conformità alle baseline e ai gruppi di baseline. I risultati della scansione possono essere filtrati mediante ricerca di testo, selezione del gruppo, selezione della baseline e selezione dello stato di conformità. Puoi avviare le seguenti scansioni:
 *	**Avviare manualmente una scansione di host vSphere ESXi** - Puoi eseguire la scansione degli host vSphere ESXi nell'inventario di vSphere in base alle baseline e ai gruppi di baseline collegati.
 *	**Avviare manualmente una scansione di macchine virtuali e dispositivi virtuali** - Puoi eseguire la scansione di macchine e dispositivi virtuali nell'inventario di vSphere in base alle baseline e ai gruppi di baseline collegati.
-*	**Avviare manualmente una scansione di un oggetto contenitore** - Avvia una scansione simultanea di host, macchine virtuali e dispositivi virtuali, eseguendo la scansione di un oggetto contenitore che sia un data center o una cartella del data center.
-*	**Pianificare una scansione** - Puoi configurare il client web vSphere per eseguire la scansione di macchine virtuali, dispositivi virtuali e host ESXi in momenti specifici o a intervalli appropriati.
+*	**Avviare manualmente una scansione di un oggetto contenitore** - Avvia una scansione simultanea di host, VM e dispositivi virtuali, eseguendo la scansione di un oggetto contenitore che sia un data center o una cartella del data center.
+*	**Pianificare una scansione** - Puoi configurare il client web vSphere per eseguire la scansione di VM, dispositivi virtuali e host ESXi in momenti specifici o a intervalli appropriati.
 
 ## Avvio manuale di una scansione degli host vSphere ESXi
 
@@ -26,7 +26,7 @@ Quando esegui la scansione di host, macchine virtuali e dispositivi virtuali, li
 
 ## Avvio manuale di una scansione di macchine virtuali e dispositivi virtuali
 
-Puoi eseguire la scansione di macchine virtuali e dispositivi virtuali nell'inventario di vSphere in base alle baseline e ai gruppi di baseline collegati. Le macchine e i dispositivi virtuali selezionati vengono scansionati rispetto alle baseline collegate, a seconda delle opzioni che selezioni. Vengono scansionati anche tutti gli oggetti figlio, quindi quanto più grande è l'infrastruttura virtuale e più in alto nella gerarchia di oggetti di cui avvii la scansione, tanto più tempo impiegherà la scansione e più accurata sarà la vista di conformità.
+Puoi eseguire la scansione di VM e dispositivi virtuali nell'inventario di vSphere in base alle baseline e ai gruppi di baseline collegati. Le macchine e i dispositivi virtuali selezionati vengono scansionati rispetto alle baseline collegate, a seconda delle opzioni che selezioni. Vengono scansionati anche tutti gli oggetti figlio, quindi quanto più grande è l'infrastruttura virtuale e più in alto nella gerarchia di oggetti di cui avvii la scansione, tanto più tempo impiegherà la scansione e più accurata sarà la vista di conformità.
 
 1.	Utilizzando il client web vSphere, seleziona **Home** > **VMs and Templates**.
 2.	Fai clic con il tasto destro su una _macchina virtuale_, un _dispositivo virtuale_ o una _cartella di macchine e dispositivi virtuali_ e fai clic su **Scan for Updates**.
@@ -35,7 +35,7 @@ Puoi eseguire la scansione di macchine virtuali e dispositivi virtuali nell'inve
 
 ##	Avvio manuale di una scansione di un oggetto contenitore
 
-Avvia una scansione simultanea di host, macchine virtuali e dispositivi virtuali, eseguendo la scansione di un oggetto contenitore che sia un data center o una cartella del data center.
+Avvia una scansione simultanea di host, VM e dispositivi virtuali, eseguendo la scansione di un oggetto contenitore che sia un data center o una cartella del data center.
 1.	Utilizzando il client web vSphere, seleziona **Home** > **VMs and Templates**.
 2.	Fai clic con il tasto destro su un _datacenter_ o una _cartella del datacenter_ e fai clic su **Scan for Updates**.
 3.	Seleziona i tipi di aggiornamenti da sottoporre a scansione. Le opzioni sono: _aggiornamenti dispositivo virtuale, aggiornamenti hardware VM_ e _aggiornamenti VMware Tools_.
@@ -43,7 +43,7 @@ Avvia una scansione simultanea di host, macchine virtuali e dispositivi virtuali
 
 ##	Pianificazione di una scansione
 
-Puoi configurare il client web vSphere per eseguire la scansione di macchine virtuali, dispositivi virtuali e host vSphere ESXi in momenti specifici o a intervalli appropriati.
+Puoi configurare il client web vSphere per eseguire la scansione di VM, dispositivi virtuali e host vSphere ESXi in momenti specifici o a intervalli appropriati.
 
 1.	Utilizzando il client web vSphere, seleziona un oggetto dall'inventario. Vengono scansionati anche tutti gli oggetti figlio dell'oggetto selezionato.
 2.	Seleziona la **scheda Monitor** e fai clic su **Task & Events**.
@@ -55,5 +55,5 @@ Puoi configurare il client web vSphere per eseguire la scansione di macchine vir
 
 ### Link correlati
 
-* [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
-* [VMware Solutions on IBM Cloud Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demo)
+* [VMware HCX on {{site.data.keyword.cloud}} Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf)
+* [VMware Solutions on {{site.data.keyword.cloud_notm}} Digital Technical Engagement](https://ibm-dte.mybluemix.net/ibm-vmware) (Demo)
