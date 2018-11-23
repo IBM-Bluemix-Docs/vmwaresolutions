@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -114,22 +114,11 @@ Tabella 3. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon E5-2650 v4 / 24 core totali, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 core totali, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 
-### Preconfigurato
-
-Se selezioni **Preconfigurato**, non puoi modificare le impostazioni di CPU o RAM.
-
-In base ai tuoi requisiti, seleziona una configurazione di Bare Metal Server:
-  * Small (Dual Intel Xeon E5-2620 v4 / 16 core totali, 2,1 GHz / 128 GB di RAM / 2 unità)
-  * Medium (Dual Intel Xeon E5-2650 v4 / 24 core totali, 2,2 GHz / 256 GB di RAM / 2 unità)
-  * Large (Dual Intel Xeon E5-2690 v4 / 28 core totali, 2,6 GHz / 512 GB di RAM / 2 unità)
-
 ### Numero di server Bare Metal
 
-Per il cluster iniziale nell'istanza, puoi configurare il numero di server ESXi nel seguente modo:
-* Se hai selezionato **Skylake** o **Broadwell**, puoi configurare il numero di server ESXi nell'intervallo 2 - 20.
-* Se hai selezionato **Preconfigurato**, puoi configurare il numero di server ESXi nell'intervallo 2 - 10.
+Per il cluster iniziale nell'istanza, puoi configurare il numero di server ESXi nell'intervallo 2 - 20. Tutti i server ESXi condividono la configurazione impostata. 
 
-Tutti i server ESXi condividono la configurazione impostata. Dopo la distribuzione iniziale, puoi aggiungere altri quattro cluster. Se hai selezionato la configurazione **Skylake** o **Broadwell** per VMware vSAN, sono richiesti 4 server ESXi per i cluster iniziali e di post-distribuzione. Per ulteriori informazioni sul numero minimo di server ESXi, vedi [Un'istanza vCenter Server a due nodi è altamente disponibile?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-).
+Dopo la distribuzione iniziale, puoi aggiungere altri quattro cluster. Se hai selezionato la configurazione **Skylake** o **Broadwell** per VMware vSAN, sono richiesti 4 server ESXi per i cluster iniziali e di post-distribuzione. Per ulteriori informazioni sul numero minimo di server ESXi, vedi [Un'istanza vCenter Server a due nodi è altamente disponibile?](../vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-).
 
 ## Impostazioni di archiviazione
 
@@ -271,7 +260,6 @@ In base alla configurazione che hai selezionato per l'istanza e i servizi aggiun
     2. Seleziona la configurazione di Bare Metal Server.
        * Se selezioni **Skylake** o **Broadwell**, specifica il modello di CPU e la dimensione della RAM.
        * Se selezioni **Certificato SAP**, scegli il modello CPU.
-       * Se selezioni **Preconfigurato**, scegli **Small**, **Medium** o **Large** per la configurazione.
     3. Specifica il numero di {{site.data.keyword.baremetal_short}}. Se intendi utilizzare vSAN come soluzione di archiviazione, sono richiesti almeno 4 {{site.data.keyword.baremetal_short}}.  
 7. Completa la configurazione di archiviazione.
   * Se selezioni **Storage vSAN**, specifica i tipi di disco per i dischi di capacità e cache, il numero di dischi e l'edizione della licenza vSAN. Se vuoi più spazio di archiviazione, seleziona la casella **Alte prestazioni con Intel Optane**.

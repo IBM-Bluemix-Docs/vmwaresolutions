@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -24,8 +24,11 @@ Il downgrade della tua licenza potrebbe causare errori nell'istanza vCenter Serv
 Esamina le seguenti considerazioni prima di rimuovere Hybridity Bundle da un ambiente multisito:
 
 * Devi applicare le licenze BYOL a tutte le distribuzioni multisito prima di rimuovere le licenze a noleggio.
-* Devi combinare le licenze NSX e avere una capacità sufficiente da utilizzare in tutte le distribuzioni multisito.
+* Devi combinare le licenze VMware NSX e avere una capacità sufficiente da utilizzare in tutte le distribuzioni multisito.
 * Devi creare un unico ticket di supporto per rimuovere Hybridity Bundle da tutte le distribuzioni multisito.
+
+Mentre si rimuove Hybridity Bundle da un ambiente multisito, vengono applicate le licenze BYOL. Per tutti i siti in una configurazione multisito, la licenza NSX viene automaticamente ripristinata nell'edizione di licenza più bassa tra tutti i siti. Devi assicurarti che le edizioni di licenza siano coerenti su tutti i siti nella configurazione multisito.
+{:note}
 
 ## Prima di rimuovere Hybridity Bundle
 
@@ -48,7 +51,9 @@ Verifica i seguenti requisiti prima di rimuovere Hybridity Bundle:
    3. Fai clic sull'icona **Add** e immetti la chiave di licenza. Fai clic su **Avanti**.
    4. Digita il nome per la licenza e fai clic su **Next**. Fai clic su **Finish** per aggiungere la licenza.
    5. Seleziona la nuova chiave di licenza.
-   6. Annota le chiavi di licenza complete per la licenza che viene applicata e la licenza che viene sostituita. Devi avere a disposizione i dettagli della licenza da utilizzare in seguito in questa procedura.
+   6. Annota le chiavi di licenza complete per la licenza che viene applicata e la licenza che viene sostituita.
+
+   Devi avere a disposizione i dettagli della licenza da utilizzare in seguito in questa procedura.
    {:important}
    7. Fai clic su **OK** per assegnare la licenza.
 5. Completa la seguente procedura per installare una BYOL VMware vSAN:
@@ -59,6 +64,7 @@ Verifica i seguenti requisiti prima di rimuovere Hybridity Bundle:
     3. Digita il nome per la licenza e fai clic su **Next**. Fai clic su **Finish** per aggiungere la licenza.
     4. Seleziona la nuova chiave di licenza.
     5. Annota il nome del cluster e le chiavi di licenza complete per la licenza che viene applicata e la licenza che viene sostituita.
+
     Devi avere a disposizione i dettagli della licenza da utilizzare in seguito in questa procedura.
     {:important}
     6. Fai clic su **OK** per assegnare la licenza.
@@ -68,8 +74,11 @@ Verifica i seguenti requisiti prima di rimuovere Hybridity Bundle:
    3. Fai clic sull'icona **Add** e immetti la chiave di licenza. Fai clic su **Avanti**.
    4. Digita il nome per la licenza e fai clic su **Next**. Fai clic su **Finish** per aggiungere la licenza.
    5. Seleziona la nuova chiave di licenza.
-   6. Annota le chiavi di licenza complete per la licenza che viene applicata e la licenza che viene sostituita. Devi avere a disposizione i dettagli della licenza da utilizzare in seguito in questa procedura.
+   6. Annota le chiavi di licenza complete per la licenza che viene applicata e la licenza che viene sostituita.
+
+   Devi avere a disposizione i dettagli della licenza da utilizzare in seguito in questa procedura.
    {:important}
+
    7. Fai clic su **OK** per assegnare la licenza.
 7. Facoltativamente, completa la seguente procedura per installare una BYOL VMware vSphere Enterprise Plus:
   1. Fai clic sulla scheda **Hosts**.
@@ -79,8 +88,10 @@ Verifica i seguenti requisiti prima di rimuovere Hybridity Bundle:
     3. Digita il nome per la licenza e fai clic su **Next**. Fai clic su **Finish** per aggiungere la licenza.
     4. Seleziona la nuova chiave di licenza.
     5. Annota il nome del cluster e le chiavi di licenza complete per la licenza che viene applicata e la licenza che viene sostituita.
+
     Devi avere a disposizione i dettagli della licenza da utilizzare in seguito in questa procedura. Se le chiavi di licenza non sono uguali per tutti i cluster, assicurati di annotare il nome del cluster associato a ogni chiave di licenza.
     {:important}
+
     6. Fai clic su **OK** per assegnare la licenza.
 8. Rimuovi le licenze a noleggio.
    1. Fai clic sulla scheda **Licenses**.

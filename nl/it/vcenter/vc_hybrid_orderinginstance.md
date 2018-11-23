@@ -68,7 +68,7 @@ Con il tuo ordine dell'istanza vCenter Server with Hybridity Bundle sono incluse
 
 ## Impostazioni di Bare Metal Server
 
-Le impostazioni di Bare Metal sono basate sulla tua selezione del {{site.data.keyword.CloudDataCent_notm}} e sulla configurazione del server bare metal. 
+Le impostazioni di Bare Metal sono basate sulla tua selezione del {{site.data.keyword.CloudDataCent_notm}} e sulla configurazione del server bare metal.
 
 Per le configurazioni vSAN, sono richiesti quattro server ESXi per i cluster iniziali e di post-distribuzione. Tutti i server ESXi condividono la stessa configurazione. Nella post distribuzione, puoi aggiungere altri quattro cluster.
 

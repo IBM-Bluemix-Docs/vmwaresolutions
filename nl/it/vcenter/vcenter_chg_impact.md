@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -51,13 +51,16 @@ Tabella 1. Operazioni interessate dalla modifica delle risorse VMware
 | Modifica del nome dell'archivio dati vSAN nell'istanza che utilizza vSAN. | L'aggiunta di un server ESXi potrebbe non riuscire.<br><br>L'aggiornamento dell'istanza potrebbe non riuscire. | Importante | Modifica di nuovo il nome dell'archivio dati vSAN con il nome originale, **vsanDatastore**.
 | Modifica del nome dell'archivio dati NFS di gestione nell'istanza che utilizza NFS. | L'aggiunta di un server ESXi potrebbe non riuscire.<br><br>L'aggiornamento dell'istanza potrebbe non riuscire. | Importante | Modifica di nuovo il nome dell'archivio dati di gestione NFS con il nome originale, **management-share** e rimonta l'archivio dati NFS in modalità di sola lettura sul server ESXi.
 
-La seguente tabella elenca le operazioni che potrebbero essere interessate se l'utente root VC/PSC modifica le risorse vCenter Server all'esterno della console {{site.data.keyword.vmwaresolutions_short}}.
+La seguente tabella elenca le operazioni che potrebbero essere interessate se viene disabilitato l'accesso shell o SSH per molte risorse.
 
-Tabella 2. Operazioni interessate dall'accesso root VC/PSC (locale)
+Tabella 2. Operazioni interessate dall'accesso shell e SSH (locale)
 
 | Tentativo di modifica  | Operazioni interessate  | Severità  | Metodo di recupero  |
 |:------------- |:------------- |:--------------|:--------------|
-| Abilita o disabilita l'accesso alla shell.    | L'applicazione di patch e aggiornamenti per PSC e vCenter Server potrebbe non riuscire.    | Importante    | N/A    |
+| Disabilita l'accesso SSH o shell per vCenter Server o PSC.    | L'accoppiamento di un istanza primaria e secondaria potrebbe non riuscire.    | Importante    | N/A    |
+| Disabilita l'accesso SSH o shell per ESXi.    | L'aggiunta e la rimozione degli host, dei servizi e della memoria di rete per l'istanza potrebbe non riuscire.    | Importante    | N/A    |
+
+Se scegli di disabilitare l'accesso shell o SSH, puoi riabilitarlo temporaneamente prima di eseguire le operazioni indicate.
 
 ## Sottoreti di gestione per le istanze vCenter Server
 

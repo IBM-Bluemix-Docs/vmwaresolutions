@@ -63,7 +63,7 @@ Tabella 3. Proprietà delle istanze vCenter Server with Hybridity Bundle
 | ID | L'ID dell'istanza. |
 | Ubicazione | Il {{site.data.keyword.CloudDataCent_notm}} in cui è ospitata l'istanza. |
 | Versione corrente | La versione corrente di {{site.data.keyword.vmwaresolutions_short}}. |
-| Versione vCenter | La versione di VMware vCenter Server with Hybridity Bundle.<br><br>Esiste una leggera variazione tra la versione di vCenter Server visualizzata nella console {{site.data.keyword.vmwaresolutions_short}} e nel client web VMware vSphere. Entrambe sono corrette.{:note} |
+| Versione vCenter | La versione di VMware vCenter Server with Hybridity Bundle.<br><br>**Nota:** esiste una leggera variazione tra la versione di vCenter Server visualizzata nella console {{site.data.keyword.vmwaresolutions_short}} e nel client web VMware vSphere. Entrambe sono corrette. |
 | NSX per vSphere | La versione del prodotto VMware NSX per vSphere. |
 | Edizione licenza NSX | La versione e l'edizione della licenza di VMware NSX. |
 | DNS, Dominio root | Il nome del dominio root è il nome del dominio DNS (Domain Name System) e il nome root dell'insieme di strutture Microsoft Active Directory (AD). |

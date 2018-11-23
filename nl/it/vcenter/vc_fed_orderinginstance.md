@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Ordine di istanze VMware Federal
 
 Per distribuire una piattaforma virtualizzata VMware flessibile e personalizzabile che soddisfi al meglio le tue esigenze del carico di lavoro, ordina un'istanza VMware Federal. Le istanze VMware Federal ti aiutano a disconnettere la connessione di gestione aperta e a proteggere la tua istanza distribuita.
 
-**Nota:** attualmente, solo le istanze vCenter Server supportano VMware Federal on {{site.data.keyword.cloud}}.
+Attualmente, solo le istanze vCenter Server supportano VMware Federal on {{site.data.keyword.cloud}}.
+{:note}
 
 ## Requisiti per ordinare le istanze VMware Federal
 
@@ -32,7 +37,8 @@ Tabella 1. Formato del valore per i nomi di istanza e di dominio
   | Nome completo server ESXi | `<host_prefix><n>.<subdomain_label>.<root_domain>`, dove `<n>` è la sequenza del server ESXi. La lunghezza massima è di 50 caratteri. |  
   | Nome di dominio completo PSC | `psc-<subdomain_label>.<subdomain_label>.<root_domain>`. La lunghezza massima è di 50 caratteri. |
 
-**Importante:** non modificare alcun valore impostato durante l'ordine o la distribuzione dell'istanza. La modifica può rendere inutilizzabile la tua istanza. Ad esempio, se la rete pubblica si interrompe, se i server e le VSI (Virtual Server Instance) vanno dietro una fornitura media di Vyatta o se la VSI di IBM CloudBuilder si arresta o viene eliminata.
+Non modificare alcun valore impostato durante l'ordine o la distribuzione dell'istanza. La modifica può rendere inutilizzabile la tua istanza. Ad esempio, se la rete pubblica si interrompe, se i server e le VSI (Virtual Server Instance) vanno dietro una fornitura media di Vyatta o se la VSI di IBM CloudBuilder si arresta o viene eliminata.
+{:important}
 
 ## Impostazioni di sistema
 
@@ -66,7 +72,7 @@ Licenze fornite da IBM per i seguenti componenti VMware:
 
 ## Impostazioni di Bare Metal Server
 
-Le impostazioni di Bare Metal sono basate sulla tua selezione del data center e sulla configurazione del server bare metal. L'opzione per selezionare una configurazione preconfigurata non è attualmente supportata.
+Le impostazioni di Bare Metal sono basate sulla tua selezione del data center e sulla configurazione del server bare metal.
 
 ### Ubicazione data center
 
@@ -76,7 +82,7 @@ Seleziona il {{site.data.keyword.CloudDataCent_notm}} in cui deve essere ospitat
 
 Specifica il modello di CPU e la RAM per il Bare Metal Server.
 
-Tabella 2. Opzioni per Skylake {{site.data.keyword.baremetal_short}} 
+Tabella 2. Opzioni per Skylake {{site.data.keyword.baremetal_short}}
 
 | Opzioni del modello CPU        | Opzioni RAM       |
 |:------------- |:------------- |
@@ -88,7 +94,7 @@ Tabella 2. Opzioni per Skylake {{site.data.keyword.baremetal_short}}
 
 Specifica il modello di CPU e la RAM per il Bare Metal Server.
 
-Tabella 3. Opzioni per Broadwell {{site.data.keyword.baremetal_short}} 
+Tabella 3. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}
 
 | Opzioni del modello CPU        | Opzioni RAM       |
 |:------------- |:------------- |
@@ -119,7 +125,8 @@ Specifica le seguenti opzioni vSAN:
 
 Se selezioni **Storage NFS**, puoi aggiungere l'archiviazione condivisa a livello di file per la tua istanza in cui tutte le condivisioni utilizzano le stesse impostazioni o puoi specificare impostazioni di configurazione diverse per ogni condivisione file. Specifica le seguenti opzioni NFS:
 
-**Nota:** il numero di condivisioni file deve essere compreso tra 1 e 32.
+Il numero di condivisioni file deve essere compreso tra 1 e 32.
+{:note}
 
 * **Configura le condivisioni singolarmente**: seleziona questa opzione per specificare diverse impostazioni di configurazione per ogni condivisione file.
 * **Numero di condivisioni**: quando utilizzi la stessa impostazione di configurazione per ogni condivisione file, specifica il numero di condivisioni file per l'archiviazione condivisa NFS che vuoi aggiungere.
@@ -161,7 +168,8 @@ Il nome del dominio root deve rispettare i seguenti requisiti:
 * L'ultima stringa può contenere solo caratteri alfabetici.
 * La lunghezza dell'ultima stringa deve essere compresa tra 2 e 24 caratteri.
 
-**Nota:** la lunghezza massima del nome di dominio completo (FQDN) per gli host e le VM (macchine virtuali) è di 50 caratteri. I nomi di dominio devono essere adattati a questa lunghezza massima.
+La lunghezza massima del nome di dominio completo (FQDN) per gli host e le VM (macchine virtuali) è di 50 caratteri. I nomi di dominio devono essere adattati a questa lunghezza massima.
+{:note}
 
 ### Configurazione DNS
 
@@ -170,7 +178,8 @@ Seleziona la configurazione DNS (Domain Name System) per la tua istanza:
 * **Singola VSI Windows pubblica per Active Directory/DNS**: viene distribuita una singola VSI di Microsoft Windows Server per Microsoft Active Directory (AD) consultabile, che funziona come DNS per l'istanza in cui sono registrati gli host e le macchine virtuali.
 * **Due VM di Windows Server dedicate e altamente disponibili sul cluster di gestione**: per le release della V2.3 e versioni future, vengono distribuite due macchine virtuali di Microsoft Windows, che aiutano a migliorare la sicurezza e la solidità.
 
-**Importante:** se configuri la tua istanza per utilizzare le due macchine virtuali Microsoft Windows, devi fornire due licenze di Microsoft Windows Server 2012 R2. Utilizza la licenza Microsoft Windows Server 2012 R2 Standard Edition o la licenza Microsoft Windows Server 2012 R2 Datacenter Edition o entrambe.
+Se configuri la tua istanza per utilizzare le due macchine virtuali Microsoft Windows, devi fornire due licenze di Microsoft Windows Server 2012 R2. Utilizza la licenza Microsoft Windows Server 2012 R2 Standard Edition o la licenza Microsoft Windows Server 2012 R2 Datacenter Edition o entrambe.
+{:important}
 
 Attualmente, ciascuna licenza può essere assegnata a un solo server fisico e comprende fino a due processori fisici. Utilizzando una licenza Standard Edition, puoi eseguire due macchine virtuali Microsoft Windows virtualizzate per ogni server con 2 processori. Pertanto, sono necessarie due licenze poiché due macchine virtuali Microsoft Windows sono distribuite in due host diversi.
 
@@ -217,8 +226,9 @@ Quando l'istanza è pronta per l'uso, lo stato dell'istanza viene modificato in 
 
 Visualizza, gestisci o proteggi l'istanza VMware Federal che hai ordinato.
 
-**Importante:** devi gestire i componenti {{site.data.keyword.vmwaresolutions_short}} creati nel tuo account {{site.data.keyword.cloud_notm}} solo dalla console {{site.data.keyword.vmwaresolutions_short}}, non dal {{site.data.keyword.slportal}} o da qualsiasi altro mezzo al di fuori della console.
+Devi gestire i componenti {{site.data.keyword.vmwaresolutions_short}} creati nel tuo account {{site.data.keyword.cloud_notm}} solo attraverso la console {{site.data.keyword.vmwaresolutions_short}}, non il {{site.data.keyword.slportal}} o qualsiasi altro mezzo all'esterno della console.
 Se modifichi questi componenti al di fuori della console {{site.data.keyword.vmwaresolutions_short}}, le modifiche non saranno sincronizzate con la console.
+{:important}
 
 **ATTENZIONE:** la gestione di un qualsiasi componente {{site.data.keyword.vmwaresolutions_short}} (installato nel tuo account {{site.data.keyword.cloud_notm}} nel momento in cui hai ordinato l'istanza) dall'esterno della console {{site.data.keyword.vmwaresolutions_short}} può rendere instabile il tuo ambiente. Queste attività di gestione includono:
 *  Aggiunta, modifica, restituzione o rimozione dei componenti

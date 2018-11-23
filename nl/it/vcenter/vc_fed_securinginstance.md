@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Protezione di istanze VMware Federal
 
@@ -27,7 +31,8 @@ Consulta le seguenti informazioni per comprendere i risultati della protezione d
 4. Fai clic su **Proteggi istanza**.
 5. Fai clic su **OK** per confermare che vuoi disconnettere l'istanza dall'automazione.
 
-  **Nota:** prima di completare questo passo, assicurati di esaminare le informazioni riportate nella sezione **Prima di iniziare**.
+  Prima di completare questo passo, assicurati di esaminare le informazioni riportate nella sezione **Prima di iniziare**.
+  {:note}
 
 6. Rimuovi il gateway dei servizi edge (ESG) VMware NSX dei servizi di gestione rivolti al pubblico dal tuo ambiente e, facoltativamente, rimuovi il tuo ESG gestito dal client distribuito durante l'automazione.
 7. Reimposta le password o le chiavi di tutti gli account utilizzate dall'automazione IBM. Per ulteriori informazioni, vedi [How can I secure my environment to remove access by IBM automation and support?](https://developer.ibm.com/answers/questions/452354/how-can-i-secure-my-environment-to-remove-access-b/)

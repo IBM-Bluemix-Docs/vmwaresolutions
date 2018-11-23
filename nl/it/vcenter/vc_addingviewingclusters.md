@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -47,7 +47,7 @@ Se distribuisci il cluster in un diverso {{site.data.keyword.CloudDataCent_notm}
 
 ### Impostazioni di Bare Metal Server
 
-Puoi scegliere **Skylake**, **Certificato SAP**, **Broadwell** o **Preconfigurato**.
+Puoi scegliere **Skylake**, **Certificato SAP** o **Broadwell**.
 
 #### Skylake
 
@@ -82,22 +82,13 @@ Tabella 2. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}
 | Dual Intel Xeon E5-2650 v4 / 24 core totali, 2,2 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 | Dual Intel Xeon E5-2690 v4 / 28 core totali, 2,6 GHz | 64 GB, 128 GB, 256 GB, 512 GB, 768 GB, 1,5 TB |
 
-#### Preconfigurato
-
-Per l'impostazione **Preconfigurato**, puoi scegliere una **Configurazione Bare Metal Server** in base ai tuoi requisiti:
-* Small (Dual Intel Xeon E5-2620 v4 / 16 core totali, 2,1 GHz / 128 GB di RAM / 2 dischi)
-* Medium (Dual Intel Xeon E5-2650 v4 / 24 core totali, 2,2 GHz / 256 GB di RAM / 2 dischi)
-* Large (Dual Intel Xeon E5-2690 v4 / 28 core totali, 2,6 GHz / 512 GB di RAM / 2 dischi)
-
 #### Numero di server Bare Metal
 
 I cluster richiedono almeno due {{site.data.keyword.baremetal_short}}.
 
 Per le istanze vCenter Server distribuite nella V2.1 o successive, puoi aggiungere fino a 59 {{site.data.keyword.baremetal_short}} per un cluster. Puoi aggiungere da 1 a 59 server ESXi alla volta.
 
-Per le istanze vCenter Server distribuite nella V2.0 o precedenti, puoi aggiungere fino a 32 {{site.data.keyword.baremetal_short}} per un cluster. Il numero di {{site.data.keyword.baremetal_short}} che puoi aggiungere alla volta è il seguente:
-* Per le configurazioni **Small**, **Medium** e **Large** di Bare Metal Server, puoi aggiungere da 1 a 10 server ESXi alla volta.
-* Per le configurazioni **Skylake** o **Broadwell** Bare Metal Server, puoi aggiungere da 1 a 20 server ESXi alla volta.
+Per le istanze vCenter Server distribuite nella V2.0 o precedenti, puoi aggiungere fino a 32 {{site.data.keyword.baremetal_short}} per un cluster. Puoi aggiungere da 1 a 20 server ESXi alla volta per la configurazione **Skylake**, **Certificata SAP** e **Broadwell** Bare Metal Server.
 
 Dopo la distribuzione, puoi creare fino a quattro ulteriori cluster. Se selezioni la configurazione **Skylake** o **Broadwell** di Bare Metal Server con l'archiviazione VMware vSAN, sono richiesti quattro server sia per il cluster iniziale che per i cluster di post-distribuzione.
 
@@ -169,7 +160,6 @@ In base alla configurazione che hai selezionato per il cluster, il costo stimato
 6. Completa la configurazione Bare Metal.
    * Se hai selezionato **Skylake** o **Broadwell**, specifica il **Modello CPU**, la quantità di **RAM** e il **Numero di {{site.data.keyword.baremetal_short}}**.
    * Se hai selezionato **Certificato SAP**, specifica il modello CPU.
-   * Se hai selezionato **Preconfigurato**, specifica la **Configurazione Bare Metal Server** e il **Numero di {{site.data.keyword.baremetal_short}}**. Se intendi utilizzare vSAN come soluzione di archiviazione, sono richiesti almeno quattro {{site.data.keyword.baremetal_short}}.
 7. Completa la configurazione di archiviazione.
   * Se selezioni **Storage vSAN**, specifica i tipi di disco per i dischi di capacità e cache, il numero di dischi e l'edizione della licenza vSAN. Se vuoi più spazio di archiviazione, seleziona la casella **Alte prestazioni con Intel Optane**.
   * Se selezioni **Storage NFS** e vuoi aggiungere e configurare le stesse impostazioni in tutte le condivisioni file, specifica il **Numero di condivisioni**, la **Dimensione** e le **Prestazioni**.

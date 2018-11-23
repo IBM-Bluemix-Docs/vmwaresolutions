@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Aggiunta, visualizzazione ed eliminazione di cluster per le istanze VMware Federal
 
@@ -89,7 +93,8 @@ Se il tuo cluster iniziale è stato aggiunto come cluster vSAN, tutti gli ulteri
 
 Se selezioni **Storage NFS**, puoi aggiungere l'archiviazione condivisa a livello di file per la tua istanza in cui tutte le condivisioni utilizzano le stesse impostazioni o puoi specificare impostazioni di configurazione diverse per ogni condivisione file. Specifica le seguenti opzioni NFS:
 
-**Nota:** il numero di condivisioni file deve essere compreso tra 1 e 32.
+Il numero di condivisioni file deve essere compreso tra 1 e 32.
+{:note}
 
 * **Configura le condivisioni singolarmente**: seleziona questa opzione per specificare diverse impostazioni di configurazione per ogni condivisione file.
 * **Numero di condivisioni**: quando utilizzi la stessa impostazione di configurazione per ogni condivisione file, specifica il numero di condivisioni file per l'archiviazione condivisa NFS che vuoi aggiungere.
@@ -122,7 +127,8 @@ In base alla configurazione che hai selezionato per il cluster, il costo stimato
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanza vCenter Server**, fai clic sull'istanza a cui vuoi aggiungere i cluster.
 
-   **Nota:** assicurati che l'istanza sia nello stato **Pronto per l'utilizzo**. In caso contrario, non potrai aggiungere i cluster all'istanza.
+   Assicurati che l'istanza sia nello stato **Pronto per l'utilizzo**. In caso contrario, non potrai aggiungere i cluster all'istanza.
+   {:note}
 3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra e quindi su **Aggiungi** nell'angolo superiore destro della tabella **CLUSTER**.
 4. Nella pagina **Aggiungi cluster**, immetti il nome del cluster.
 5. Seleziona il **Modello CPU**, la quantità di **RAM** e il **Numero di server Bare Metal** per la configurazione Bare Metal.
@@ -142,7 +148,8 @@ In base alla configurazione che hai selezionato per il cluster, il costo stimato
 1. La distribuzione del cluster viene avviata automaticamente e lo stato del cluster viene modificato in **Inizializzazione**. Puoi controllare lo stato della distribuzione visualizzando la cronologia di distribuzione dalla pagina di riepilogo dell'istanza.
 2. Quando il cluster è pronto per l'uso, il suo stato viene modificato in **Pronto per l'utilizzo**. Il cluster appena aggiunto viene abilitato con vSphere High Availability (HA) e vSphere Distributed Resource Scheduler (DRS).
 
-**Importante:** non puoi modificare il nome del cluster. La modifica del nome del cluster potrebbe comportare errori nelle operazioni di aggiunta o rimozione dei server ESXi nel cluster.
+Non puoi modificare il nome del cluster. La modifica del nome del cluster potrebbe comportare errori nelle operazioni di aggiunta o rimozione dei server ESXi nel cluster.
+{:important}
 
 ## Procedura per visualizzare i cluster nelle istanze VMware Federal
 
@@ -223,7 +230,8 @@ In base alla configurazione che hai selezionato per il cluster, il costo stimato
 
 Potresti voler eliminare un cluster da un'istanza quando non è più necessario.
 
-**Nota:** utilizza questa procedura per rimuovere i cluster dalle istanze che sono state distribuite o aggiornate alle release della V2.3 e successive.
+Utilizza questa procedura per rimuovere i cluster dalle istanze che sono state distribuite o aggiornate alle release della V2.3 e successive.
+{:note}
 
 ### Prima di eliminare
 
@@ -239,7 +247,8 @@ Potresti voler eliminare un cluster da un'istanza quando non è più necessario.
 1. Dalla console {{site.data.keyword.vmwaresolutions_short}}, fai clic su **Istanze distribuite** nel riquadro di navigazione a sinistra.
 2. Nella tabella **Istanze vCenter Server**, fai clic sull'istanza da cui vuoi eliminare i cluster.
 
-   **Nota:** assicurati che l'istanza sia nello stato **Pronto per l'utilizzo**. Altrimenti, non potrai eliminare i cluster dall'istanza.
+   Assicurati che l'istanza sia nello stato **Pronto per l'utilizzo**. Altrimenti, non potrai eliminare i cluster dall'istanza.
+   {:note}
 
 3. Fai clic su **Infrastruttura** nel riquadro di navigazione a sinistra. Nella tabella **CLUSTER**, individua il cluster che vuoi eliminare e fai clic sull'icona **Elimina** nella colonna **Azioni**.
 

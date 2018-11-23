@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -25,37 +25,37 @@ Tabella 1. {{site.data.keyword.CloudDataCents_notm}} disponibili per le istanze 
 | {{site.data.keyword.CloudDataCent_notm}} | Ubicazione | Regione | Opzioni server |
 |:----------------------|:---------|:-------|:---------------|
 | AMS03 | Amsterdam | Europa | Skylake, Broadwell |
-| CHE01 | Chennai | Asia Pacifico | Skylake, Broadwell |
-| DAL09 | Dallas | Nord America meridionale | Skylake, Broadwell |
-| DAL10 | Dallas | Nord America meridionale | Skylake, Broadwell, Small, Medium, Large |
-| DAL12 | Dallas | Nord America meridionale | Skylake, Broadwell |
-| DAL13 | Dallas | Nord America meridionale | Skylake, Broadwell |
-| FRA02 | Francoforte | Europa | Skylake, Broadwell, Small, Medium, Large |
-| FRA04 | Francoforte | Europa | Skylake, Broadwell |
+| CHE01 | Chennai | Asia Pacifico | Skylake, Certificato SAP, Broadwell |
+| DAL09 | Dallas | Nord America meridionale | Skylake, Certificato SAP, Broadwell |
+| DAL10 | Dallas | Nord America meridionale | Skylake, Certificato SAP, Broadwell |
+| DAL12 | Dallas | Nord America meridionale | Skylake, Certificato SAP, Broadwell |
+| DAL13 | Dallas | Nord America meridionale | Skylake, Certificato SAP, Broadwell |
+| FRA02 | Francoforte | Europa | Skylake, Certificato SAP, Broadwell |
+| FRA04 | Francoforte | Europa | Skylake, Certificato SAP, Broadwell |
 | HKG02 | Hong Kong | Asia Pacifico | Skylake, Broadwell |
 | LON02 | Londra | Europa | Skylake, Broadwell |
-| LON04 | Londra | Europa | Skylake, Broadwell |
-| LON06 | Londra | Europa | Skylake, Broadwell, Small, Medium, Large |
-| MEL01 | Melbourne | Asia Pacifico | Skylake, Broadwell |
-| MEX01 | Queretaro | Nord America meridionale | Skylake, Broadwell |
-| MIL01 | Milano | Europa | Skylake, Broadwell |
-| MON01 | Montreal | Nord America orientale | Skylake, Broadwell |
+| LON04 | Londra | Europa | Skylake, Certificato SAP, Broadwell |
+| LON06 | Londra | Europa | Skylake, Certificato SAP, Broadwell |
+| MEL01 | Melbourne | Asia Pacifico | Skylake, Certificato SAP, Broadwell |
+| MEX01 | Queretaro | Nord America meridionale | Skylake, Certificato SAP, Broadwell |
+| MIL01 | Milano | Europa | Skylake, Certificato SAP, Broadwell |
+| MON01 | Montreal | Nord America orientale | Skylake, Certificato SAP, Broadwell |
 | OSL01 | Oslo | Europa | Skylake, Broadwell |
 | PAR01 | Parigi | Europa | Skylake, Broadwell |
-| SAO01 | San Paolo | Sud America | Skylake, Broadwell |
-| SEO01 | Seul | Asia Pacifico | Skylake, Broadwell |
-| SJC03 | San Jose | Nord America occidentale | Skylake, Broadwell, Small, Medium, Large |
+| SAO01 | San Paolo | Sud America | Skylake, Certificato SAP, Broadwell |
+| SEO01 | Seul | Asia Pacifico | Skylake, Certificato SAP, Broadwell |
+| SJC03 | San Jose | Nord America occidentale | Skylake, Broadwell |
 | SJC04 | San Jose | Nord America occidentale | Skylake, Broadwell |
 | SNG01 | Singapore | Asia Pacifico | Skylake, Broadwell |
 | SYD01 | Sydney | Asia Pacifico | Skylake, Broadwell |
-| SYD04 | Sydney | Asia Pacifico | Skylake, Broadwell |
-| TOK02 | Tokyo | Asia Pacifico | Skylake, Broadwell |
-| TOR01 | Toronto | Nord America orientale | Skylake, Broadwell, Small, Medium, Large |
-| WDC04 | Washington, DC | Nord America orientale | Skylake, Broadwell, Small, Medium, Large |
-| WDC06 | Washington, DC | Nord America orientale | Skylake, Broadwell |
-| WDC07 | Washington, DC | Nord America orientale | Skylake, Broadwell |
+| SYD04 | Sydney | Asia Pacifico | Skylake, Certificato SAP, Broadwell |
+| TOK02 | Tokyo | Asia Pacifico | Skylake, Certificato SAP, Broadwell |
+| TOR01 | Toronto | Nord America orientale | Skylake, Certificato SAP, Broadwell |
+| WDC04 | Washington, DC | Nord America orientale | Skylake, Certificato SAP, Broadwell |
+| WDC06 | Washington, DC | Nord America orientale | Skylake, Certificato SAP, Broadwell |
+| WDC07 | Washington, DC | Nord America orientale | Skylake, Certificato SAP, Broadwell |
 
-Un piccolo sottoinsieme di {{site.data.keyword.CloudDataCents_notm}} offre le opzioni **Small**, **Medium** e **Large** preconfigurate per Bare Metal Server. A seconda della disponibilità e della fornitura di inventario, i {{site.data.keyword.CloudDataCents_notm}} potrebbero visualizzare un indicatore di stato nella console {{site.data.keyword.vmwaresolutions_short}} per aiutarti a pianificare le tue distribuzioni.
+A seconda della disponibilità e della fornitura di inventario, i {{site.data.keyword.CloudDataCents_notm}} potrebbero visualizzare un indicatore di stato nella console {{site.data.keyword.vmwaresolutions_short}} per aiutarti a pianificare le tue distribuzioni.
 
 Tabella 2. Indicatori di stato per i {{site.data.keyword.CloudDataCents_notm}} quando ordini le istanze vCenter Server
 

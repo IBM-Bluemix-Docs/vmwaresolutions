@@ -40,7 +40,7 @@ Per usufruire di NSX per le tue VM del carico di lavoro, devi configurare una se
    è **vxw-dvs-17-virtualwire-1-sid-6000-Workload**.
 
    Assicurati di non selezionare lo switch **Workload Transit**.
-{:important}
+   {:important}
 
 2. Identifica un indirizzo IP disponibile per la VM:
    *  L'indirizzo IP deve essere compreso nell'intervallo `192.168.10.0/24`. Nota che l'indirizzo IP `192.168.10.1` è riservato (vedi il **Passo 3**).

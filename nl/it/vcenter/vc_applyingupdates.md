@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-26"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -22,6 +22,9 @@ Quando aggiorni un'istanza vCenter Server a un'istanza vCenter Server with Hybri
 {:important}
 
 Gli utenti Business Partner non hanno l'opzione di aggiornare un'istanza vCenter Server esistente a un'istanza vCenter Server with Hybridity Bundle.
+
+A partire dalla V2.5, gli aggiornamenti di IBM CloudDriver non sono più elencati perché sono abilitati gli aggiornamenti automatici. Azioni come l'aggiunta di un host, l'aggiunta di un cluster e l'ordine di un servizio aggiornano automaticamente l'istanza all'ultima versione. Per ulteriori informazioni sugli aggiornamenti automatici, consulta la sezione *Resilienza di IBM CloudDriver* in [Note sulla release per la V2.5](../vmonic/relnotes_v25.html).
+{:note}
 
 Prima di tentare di applicare un aggiornamento, espandi la voce di aggiornamento facendo clic sulla freccia in giù e verifica le seguenti informazioni:
 * La versione dell'aggiornamento. Devi applicare gli aggiornamenti in sequenza cronologica, dalla più antica alla più recente. Assicurati di aver applicato tutti gli aggiornamenti precedenti prima di applicare quello più recente. Ad esempio, devi applicare l'aggiornamento alla V2.3 prima di tentare di applicare l'aggiornamento alla V2.4.
@@ -53,7 +56,7 @@ Tabella 1. Livelli di aggiornamento e impatto
   </tr>
 </table>
 
-## Procedura per applicare aggiornamenti e patch alle istanze vCenter Server
+## Procedura per applicare aggiornamenti e patch alle istanze vCenter Server (V2.1 o successive) 
 
 Questa procedura si applica alle istanze distribuite nella V2.1 o successive. Per le istanze distribuite nella V2.0 e precedenti, devi applicare gli aggiornamenti VMware manualmente.
 
@@ -63,13 +66,11 @@ Questa procedura si applica alle istanze distribuite nella V2.1 o successive. Pe
    Se i dettagli non vengono visualizzati, ciò potrebbe indicare un problema di connettività con la VSI (Virtual Server Instance) IBM CloudDriver, a causa di una regola del firewall o di altri problemi di rete. Risolvi il problema prima di continuare con il passo successivo, altrimenti l'aggiornamento potrebbe non riuscire.
 4. Fai clic su **Aggiorna e applica patch** nel riquadro di navigazione a sinistra.
 
-   La pagina **Aggiorna e applica patch** per un'istanza contiene solo i pacchetti per l'aggiornamento dei componenti di gestione IBM e non gli aggiornamenti di VMware. Gli aggiornamenti di VMware devono essere applicati manualmente.
-   {:note}
-
-   {{site.data.keyword.vmwaresolutions_short}} applica gli aggiornamenti di VMware per le seguenti operazioni:
+   La pagina **Aggiorna e applica patch** per un'istanza contiene solo i pacchetti per l'aggiornamento dei componenti di gestione IBM e non gli aggiornamenti di VMware. Gli aggiornamenti di VMware devono essere applicati manualmente.   {{site.data.keyword.vmwaresolutions_short}} applica gli aggiornamenti di VMware per le seguenti operazioni:
    * Quando viene distribuita una nuova istanza vCenter Server.
-   * Quando vengono aggiunti nuovi server ESXi.
-   * Quando vengono aggiunti nuovi cluster.
+   * Quando vengono aggiunti nuovi server ESXi, viene eseguito il provisioning dei nuovi server ESXi con gli aggiornamenti VMware, ma i server ESXi esistenti non vengono aggiornati.
+   * Quando vengono aggiunti nuovi cluster, viene eseguito il provisioning dei nuovi cluster con gli aggiornamenti VMware, ma i cluster esistenti non vengono aggiornati.
+   {:note}
 
 5. Per gli aggiornamenti della licenza NSX, fai clic su **Aggiorna**. Nella finestra **Aggiorna edizione licenza NSX**, seleziona l'edizione a cui vuoi aggiornare e fai clic su **Aggiorna**. I downgrade dell'edizione della licenza non sono disponibili.
 

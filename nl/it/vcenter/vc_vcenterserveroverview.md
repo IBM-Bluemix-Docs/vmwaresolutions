@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -63,21 +63,15 @@ La disponibilità e il prezzo delle configurazioni hardware standardizzate posso
 ### Bare Metal Server
 
 Puoi ordinare tre o più {{site.data.keyword.baremetal_short}} con una delle seguenti configurazioni:
-* **Skylake** o **Broadwell**: {{site.data.keyword.baremetal_short}} con il modello CPU e la dimensione della RAM da te selezionati.  
-  * 2-CPU Intel Skylake (Intel Xeon 4100/5100/6100 series)
-  * 2-CPU Intel Broadwell (Intel Xeon E5-2600 v4 series)
-
-     Se intendi utilizzare l'archiviazione vSAN, la configurazione richiede quattro {{site.data.keyword.baremetal_short}}.
-     {:note}
+* **Skylake**: server di generazione 2-CPU Intel Skylake (Intel Xeon 4100/5100/6100 series) con i tuoi modello CPU e dimensione RAM selezionati.  
 * **Certificato SAP**: {{site.data.keyword.baremetal_short}} con il modello CPU da te selezionato.
   * Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 192 GB RAM
   * Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 384 GB RAM
   * Processore Dual Intel Xeon Gold 6140 / 36 core totali, 2.3 GHz / 768 GB RAM
-* **Preconfigurato**: 2-CPU Intel Broadwell (Intel Xeon E5-2600 v4 series)
-  * **Small** (Dual Intel Xeon E5-2620 v4 / 16 core totali, 2,1 GHz / 128 GB di RAM / 2 dischi)
-  * **Medium** (Dual Intel Xeon E5-2650 v4 / 24 core totali, 2,2 GHz / 256 GB di RAM / 2 dischi)
-  * **Large** (Dual Intel Xeon E5-2690 v4 / 28 core totali, 2,6 GHz / 512 GB di RAM / 2 dischi).
-
+* **Broadwell**: server di generazione 2-CPU Intel Broadwell (Intel Xeon E5-2600 v4 series) con i tuoi modello CPU e dimensione RAM selezionati.  
+     Se intendi utilizzare l'archiviazione vSAN, la configurazione richiede quattro {{site.data.keyword.baremetal_short}}.
+     {:note}
+     
 ### Rete
 
 Vengono ordinati i seguenti componenti di rete:
@@ -112,7 +106,7 @@ L'opzione vSAN offre configurazioni personalizzate, con varie opzioni per tipo, 
   Inoltre, vengono ordinati anche due dischi di cache di 960 GB per ciascun host.
 
   Le unità SSD (Solid State Disk) da 3,8 TB saranno supportate una volta rese generalmente disponibili in un data center.
-{:note}
+  {:note}
 * Opzione Alte prestazioni con Intel Optane, che fornisce due alloggiamenti per dischi di capacità supplementari per un totale di 10 dischi di capacità. Questa opzione dipende dal modello di CPU.
 
 #### Archiviazione NFS

@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -17,6 +17,9 @@ lastupdated: "2018-10-29"
 Il processo di applicazione di patch e aggiornamenti alle istanze vCenter Server with Hybridity Bundle è automatizzato solo per i componenti di gestione. Gli aggiornamenti di VMware devono essere applicati manualmente.
 
 ## Prima di iniziare
+
+A partire dalla V2.5, gli aggiornamenti di IBM CloudDriver non sono più elencati perché sono abilitati gli aggiornamenti automatici. Azioni come l'aggiunta di un host, l'aggiunta di un cluster e l'ordine di un servizio aggiornano automaticamente l'istanza all'ultima versione. Per ulteriori informazioni sugli aggiornamenti automatici, consulta la sezione *Resilienza di IBM CloudDriver* in [Note sulla release per la V2.5](../vmonic/relnotes_v25.html).
+{:note}
 
 Prima di tentare di applicare un aggiornamento, espandi la voce di aggiornamento facendo clic sulla freccia in giù e verifica le seguenti informazioni:
 * La versione dell'aggiornamento. Devi applicare gli aggiornamenti in sequenza cronologica, dalla più antica alla più recente. Assicurati di aver applicato tutti gli aggiornamenti precedenti prima di applicare quello più recente. Ad esempio, devi applicare l'aggiornamento alla V2.3 prima di tentare di applicare l'aggiornamento alla V2.4.
@@ -33,7 +36,7 @@ Tabella 1. Livelli di aggiornamento e impatto
 |:------------- |:------------- |
 | Basso    | Questo aggiornamento non influisce su alcun sistema. Non devi applicarlo durante i tempi di inattività
     pianificati. |  
-| Medio | Questo aggiornamento potrebbe influire su alcuni sistemi. Si consiglia di applicarlo durante i tempi di inattività
+| Medium | Questo aggiornamento potrebbe influire su alcuni sistemi. Si consiglia di applicarlo durante i tempi di inattività
     pianificati. |  
 | Maggiore  | Questo aggiornamento influisce su alcuni o tutti i sistemi. Devi applicarlo durante i tempi di inattività pianificati. |  
 
@@ -47,8 +50,8 @@ Tabella 1. Livelli di aggiornamento e impatto
 
    La pagina **Aggiorna e applica patch** contiene solo i pacchetti per l'aggiornamento dei componenti di gestione IBM e non gli aggiornamenti di VMware. {{site.data.keyword.vmwaresolutions_short}} applica gli aggiornamenti di VMware per le seguenti operazioni:
    * Quando viene distribuita una nuova istanza vCenter Server.
-   * Quando vengono aggiunti nuovi server ESXi.
-   * Quando vengono aggiunti nuovi cluster.
+   * Quando vengono aggiunti nuovi server ESXi, viene eseguito il provisioning dei nuovi server ESXi con gli aggiornamenti VMware, ma i server ESXi esistenti non vengono aggiornati.
+   * Quando vengono aggiunti nuovi cluster, viene eseguito il provisioning dei nuovi cluster con gli aggiornamenti VMware, ma i cluster esistenti non vengono aggiornati.
    {:note}
 
 5. Per gli aggiornamenti della licenza, fai clic su **Aggiorna**. Dall'elenco, seleziona l'edizione a cui vuoi aggiornare e fai clic su **Aggiorna**. I downgrade dell'edizione della licenza non sono disponibili.
