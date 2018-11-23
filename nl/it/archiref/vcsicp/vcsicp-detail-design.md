@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-10"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -21,10 +21,10 @@ Figura 1. Servizi comuni ICP
 Come parte dell'automazione VCS, viene utilizzato una Microsoft Active Directory (AD) per la gestione dell'identità. Viene distribuita una sola VSI (Virtual Server Instance) AD. Il vCenter è configurato per utilizzare l'autenticazione MS AD e anche ICP può essere configurato per l'autenticazione LDAP.
 
 ###	DNS (Domain Name Services)
-La distribuzione VCS utilizza il le VSI Microsoft Active Directory (AD) distribuite come server DNS per l'istanza. Tutti i componenti distribuiti (vCenter, PSC, NSX, host ESXi) sono configurati in modo da puntare a MS AD come proprio server DNS predefinito. 
+La distribuzione VCS utilizza il le VSI Microsoft Active Directory (AD) distribuite come server DNS per l'istanza. Tutti i componenti distribuiti (vCenter, PSC, NSX, host ESXi) sono configurati in modo da puntare a MS AD come proprio server DNS predefinito.
 
 ###	Servizi NTP
-La distribuzione VCS utilizza i server NTP dell'infrastruttura IBM Cloud. Tutti i componenti distribuiti saranno configurati per utilizzare questi server NTP. Per il corretto funzionamento dei certificati e dell'autenticazione MS AD è fondamentale che tutti i componenti all'interno della progettazione utilizzino gli stessi server NTP.
+La distribuzione VCS utilizza i server NTP dell'infrastruttura {{site.data.keyword.cloud}}. Tutti i componenti distribuiti saranno configurati per utilizzare questi server NTP. Per il corretto funzionamento dei certificati e dell'autenticazione MS AD è fondamentale che tutti i componenti all'interno della progettazione utilizzino gli stessi server NTP.
 
 ## Rete
 
@@ -40,7 +40,7 @@ Figura 2. ICP con rete NSX-V
 
 ![ICP con rete NSX-V](vcsicp-nsxv-networking.svg)
 
-Per ulteriori informazioni, consulta [Architettura di riferimento di rete IBM Cloud VCS](../vcsnsxt/vcsnsxt-intro.html)
+For more information, see [Guida di rete di vCenter Server](../vcsnsxt/vcsnsxt-intro.html).
 
 ### Rete NSX-T
 
@@ -54,4 +54,4 @@ Figura 3. ICP con rete NSX-T
 
 ### Link correlati
 
-* [VMware vCenter Server on IBM Cloud with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Panoramica di VCS Hybridity Bundle](../vcs/vcs-hybridity-intro.html)

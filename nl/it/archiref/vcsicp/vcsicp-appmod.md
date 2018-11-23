@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-10"
+lastupdated: "2018-10-30"
 
 ---
 
@@ -13,7 +13,6 @@ lastupdated: "2018-10-10"
 Il seguente diagramma mostra l'architettura di riferimento di modernizzazione dell'applicazione che Acme Skateboards distribuirà ed è descritta approfonditamente in questa serie di documenti.
 
 Figura 1. Diagramma panoramica architettura
-
 ![Diagramma panoramica architettura](vcsicp-arch-overview.svg)
 
 Questa architettura ibrida permetterà a Acme Skateboards di:
@@ -22,7 +21,7 @@ Questa architettura ibrida permetterà a Acme Skateboards di:
 - Utilizzare CAM (Cloud Automation Manager) per eseguire lo script dell'infrastruttura come codice (IaC) per creare e orchestrare i servizi creati sia dalle VM che dai contenitori con le relative toolchain DevOps e soluzioni ITSM.
 
 L'infrastruttura di riferimento dispone dei seguenti componenti chiave:
-- **Virtualizzazione in loco** - Questo è un cluster VMware che attualmente ospita le VM Acme Skateboards. Sono queste VM che attualmente ospitano le applicazioni che saranno modernizzate. Questo cluster è necessario per soddisfare i prerequisiti dell'architettura [IBM Cloud vCenter Server with Hybridity Bundle](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf) in modo da poter eseguire HCX. HCX estende le reti in loco in IBM Cloud consentendo ai clienti di migrare le VM nell'istanza VMware vCenter Server on IBM Cloud (VCS) in esecuzione su IBM Cloud e annullarla se necessario.
+- **Virtualizzazione in loco** - Questo è un cluster VMware che attualmente ospita le VM Acme Skateboards. Sono queste VM che attualmente ospitano le applicazioni che saranno modernizzate. Questo cluster è necessario per soddisfare i prerequisiti dell'architettura [VMware HCX on IBM Cloud Solution Architecture](https://www.ibm.com/cloud/garage/files/HCX_Architecture_Design.pdf) in modo da poter eseguire HCX. HCX estende le reti in loco in IBM Cloud consentendo ai clienti di migrare le VM nell'istanza VMware vCenter Server on IBM Cloud (VCS) in esecuzione su IBM Cloud e annullarla se necessario.
 
 - **IBM Cloud for VMware Solutions** - L'istanza VCS fornisce i blocchi di generazione VMware fondamentali, come vSphere, vCenter Server, NSX-V e le opzioni di archiviazione che includono vSAN o IBM Cloud Endurance Storage, necessarie per distribuire automaticamente una soluzione VMware Software Defined Data Center (SDDC). Il cluster VMware è la destinazione delle VM migrate così come di alcune applicazioni modernizzate nei contenitori ospitati in ICP. I componenti chiave in VCS sono i seguenti:
     - **NSX-V** - NSX-V fornisce il livello di virtualizzazione di rete in VCS che fornisce una sovrapposizione di rete per le VM Acme Skateboards. NSX-V consente BYOIP e isola le reti del carico di lavoro dalle reti di IBM Cloud. NSX-V è programmato da HCX per creare le reti che Acme Skateboards estenderà dal locale.
@@ -53,6 +52,6 @@ In sintesi, l'offerta IBM Cloud for VMware:
 
 I clienti che passano a piattaforme dell'applicazione native cloud come ICP e IKS che sono incentrate sulla velocità e l'innovazione e non sempre tengono conto della rete e della sicurezza. In attesa che i team di rete o di sicurezza forniscano servizi come programmi di bilanciamento del carico, firewall, interruttori e router diminuisce il time-to-value dell'applicazione. Questa architettura di riferimento mostra come VCS, ICP e IKS passino in modo sicuro Acme Skateboards insieme al percorso di modernizzazione dell'applicazione.
 
-## Link correlati 
+## Link correlati
 
-* [VMware vCenter Server on IBM Cloud with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Panoramica di VCS Hybridity Bundle](../vcs/vcs-hybridity-intro.html)

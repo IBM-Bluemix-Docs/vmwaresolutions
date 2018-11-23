@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-10"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-10-10"
 
 ###	Backup VCS
 
-Come parte di IBM Cloud for VMware Solutions, il software di backup Veeam viene facoltativamente distribuito su una VSI (Virtual Server Instance) IBM Cloud utilizzando IBM Cloud Endurance Storage al di fuori del cluster VMware. Lo scopo di questo software è di eseguire il backup dei componenti di gestione in questa soluzione.
+Come parte di {{site.data.keyword.vmwaresolutions_full}}, il software di backup Veeam viene facoltativamente distribuito su una VSI (Virtual Server Instance) {{site.data.keyword.cloud_notm}} utilizzando {{site.data.keyword.cloud_notm}} Endurance Storage al di fuori del cluster VMware. Lo scopo di questo software è di eseguire il backup dei componenti di gestione in questa soluzione.
 
 ### Backup NSX
 
@@ -25,7 +25,7 @@ Il backup NSX Manager contiene tutta la configurazione NSX, inclusi i controller
 
 I backup per una distribuzione ICP sono cruciali per ripristinare il sistema al suo stato di lavoro se si verifica un errore. In un backup VM tradizionale, c'è un punto critico, ogni nodo master ICP esegue etcd e la documentazione etcd indica chiaramente di non utilizzare il backup VM tradizionale per il ripristino.
 
-IBM Cloud Private al livello di piattaforma, devi eseguire il backup di questi componenti:
+{{site.data.keyword.cloud_notm}} Private al livello di piattaforma, devi eseguire il backup di questi componenti:
 
 -	**Etcd** — viene utilizzato per archiviare le risorse Kubernetes così come le informazioni di stato di Calico.
 -	**Docker Registry** — registro di immagini private utilizzato per archiviare i file dell'immagine contenitore in un repository di immagini.
@@ -44,11 +44,11 @@ Il backup per una distribuzione CAM è cruciale per ripristinare il sistema al s
 ### Backup e DR per IKS
 I backup del database etcd vengono forniti al cliente come parte del servizio gestito, devi eseguire il backup di tutti i dati dell'applicazione.
 
-## Scalabilità  
+## Scalabilità
 
 ### Scalabilità VCS
 
-Dopo la distribuzione degli host iniziali, l'utente ha la capacità di ridimensionare la capacità di calcolo dall'interno del portale IBM Cloud for VMware.
+Dopo la distribuzione degli host iniziali, l'utente ha la capacità di ridimensionare la capacità di calcolo dall'interno del portale {{site.data.keyword.cloud_notm}} for VMware.
 
 Questo ridimensionamento al di fuori dell'ambiente segue uno di questi tre percorsi:
 - Aggiunta di nuovi siti gestiti da vCenter Server separati.
@@ -56,7 +56,7 @@ Questo ridimensionamento al di fuori dell'ambiente segue uno di questi tre perco
 - Aggiunta di nuovi host a un cluster esistente.
 
 ####	Distribuzioni multisito
-VMware on IBM Cloud può utilizzare i data center in tutto il mondo di IBM Cloud e il backbone di rete integrato per consentire la distribuzione e il funzionamento di vari casi di utilizzo di più aree geografiche in solo una frazione del tempo necessario a costruire da zero un'infrastruttura di questo tipo.
+VMware on {{site.data.keyword.cloud_notm}} può utilizzare i data center in tutto il mondo di IBM Cloud e il backbone di rete integrato per consentire la distribuzione e il funzionamento di vari casi di utilizzo di più aree geografiche in solo una frazione del tempo necessario a costruire da zero un'infrastruttura di questo tipo.
 
 ####	Ridimensionamento con il nuovo cluster
 L'utente ha anche l'opzione di ridimensionare la capacità di calcolo creando un nuovo cluster dall'interno della console, ordinando gli host e i nuovi host che vengono automaticamente aggiunti al nuovo cluster. Questa opzione creerà un cluster separato nell'ambiente e fornirà agli utenti la possibilità di suddividere in modo logico e fisico i carichi di lavoro di gestione e di applicazione, la capacità di suddividere i carichi di lavoro in base ad altre caratteristiche (ad esempio, il cluster di database Microsoft SQL) e la capacità di distribuire le applicazioni in topologie ad elevata disponibilità.
@@ -79,7 +79,7 @@ I nodi di lavoro della macchina virtuale ICP vengono ridimensionati per espander
 
 
 ###  Espansione IKS
-Gli utenti possono fornire un ambiente IKS tramite il portale IBM Cloud per estendere/utilizzare un ambiente contenitore.
+Gli utenti possono fornire un ambiente IKS tramite il portale {{site.data.keyword.cloud_notm}} per estendere/utilizzare un ambiente contenitore.
 
 Le distribuzioni dell'applicazione in IKS possono essere eseguite tramite:
 - I collegamenti/servizi IKS sono sviluppati in CAM e pubblicati nel catalogo ICP.
@@ -88,8 +88,8 @@ Le distribuzioni dell'applicazione in IKS possono essere eseguite tramite:
 - Utilizza i cluster a più zone per incrementare l'elevata disponibilità.
 
 ### Link correlati
-* [Adding or Removing Cluster Nodes](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_2.1.0.3/installing/modify_cluster.html)
-* [Aggiunta di nodi di lavoro ridimensionando un pool di nodi di lavoro esistente](https://console.bluemix.net/docs/containers/cs_clusters.html#add_workers)
-* [How to back up and restore IBM Cloud Private](https://medium.com/ibm-cloud/how-to-backup-and-restore-ibm-cloud-private-part-1-b6300dc1d7d8)
-* [ICP backup](https://github.com/ibm-cloud-architecture/icp-backup/)
-* [VMware vCenter Server on IBM Cloud with Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
+* [Adding or removing cluster nodes](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_2.1.0.3/installing/modify_cluster.html)
+* [Aggiunta di nodi di lavoro ridimensionando un pool di nodi di lavoro esistente](../../../../containers/cs_clusters.html#resize_pool)
+* [How to back up and restore {{site.data.keyword.cloud_notm}} Private](https://medium.com/ibm-cloud/how-to-backup-and-restore-ibm-cloud-private-part-1-b6300dc1d7d8)
+* [ICP backup GitHub](https://github.com/ibm-cloud-architecture/icp-backup/)
+* [Panoramica di VCS Hybridity Bundle](../vcs/vcs-hybridity-intro.html)
