@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -15,7 +15,7 @@ Puoi controllare le notifiche per verificare lo stato delle operazioni di sistem
 ## Visualizzazione delle notifiche
 
 1. Dalla console {{site.data.keyword.vmwaresolutions_full}}, fai clic su **Notifiche** nel riquadro di navigazione a sinistra.
-2. Nella tabella **Cronologia delle notifiche**, visualizza il riepilogo di tutte le notifiche.
+2. Visualizza il riepilogo su tutte le notifiche.
 
    Tabella 1. Cronologia delle notifiche
 

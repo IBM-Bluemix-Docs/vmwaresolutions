@@ -22,7 +22,7 @@ La nuova versione di VMware ESXi è vSphere 6.0 u2 p03, aggiornata da ESXi 6.0 u
 
 Per ulteriori informazioni, consulta i seguenti argomenti:
 * [Introduzione](../index.html)
-* [Risoluzione dei problemi relativi all'accesso a Bluemix](https://console.bluemix.net/docs/troubleshoot/ts_accessing.html){:new_window}
+* [Risoluzione dei problemi relativi all'accesso a Bluemix](../../../account/ts_accessing.html){:new_window}
 
 ## Ripristino di emergenza Zerto
 

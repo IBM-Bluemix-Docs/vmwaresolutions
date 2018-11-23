@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-28"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -56,7 +56,7 @@ Tabella 2. Descrizione delle azioni e ruoli richiesti
 
 Puoi aggiungere nuovi utenti all'account {{site.data.keyword.cloud_notm}} in modo che questi utenti possano condividere i servizi e le risorse forniti per l'account. Per ulteriori informazioni, vedi [Come invitare gli utenti ad accedere a servizi e risorse](../vmonic/iamuserinvite.html).
 
-Puoi anche gestire l'accesso per gli utenti esistenti, inclusa la modifica dell'accesso esistente, l'assegnazione di un nuovo accesso e la revisione dell'accesso assegnato. Per gestire l'accesso per gli utenti, devi essere il proprietario dell'account o avere il ruolo di gestione della piattaforma di **Amministratore**. Per ulteriori informazioni, vedi [Gestione dell'accesso IAM](../../../iam/mngiam.html).
+Puoi anche gestire l'accesso per gli utenti esistenti, inclusa la modifica dell'accesso esistente, l'assegnazione di un nuovo accesso e la revisione dell'accesso assegnato. Per gestire l'accesso per gli utenti, devi essere il proprietario dell'account o avere il ruolo di gestione della piattaforma di **Amministratore**. Per ulteriori informazioni, vedi [Gestione dell'accesso alle risorse](../../../iam/mngiam.html).
 
 ## Migrazione di istanze esistenti agli account IBM Cloud
 

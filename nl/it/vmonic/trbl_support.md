@@ -17,7 +17,7 @@ Se ti serve aiuto con {{site.data.keyword.vmwaresolutions_full}}, crea un ticket
 Per contattare il supporto IBM dalla console {{site.data.keyword.vmwaresolutions_short}}, completa la seguente procedura:
 
 1. Vai a
-   https://console.ng.bluemix.net/infrastructure/vmware-solutions/console.
+   https://console.cloud.ibm.com/infrastructure/vmware-solutions/console.
 2. Accedi alla console con il tuo account **ID IBM**.
 3. Sul lato sinistro del banner, fai clic su **Supporto > Aggiungi ticket**.
 4. Nella pagina {{site.data.keyword.slportal_short}}, fai clic su **Accedi con ID IBM** e verrai connesso automaticamente al portale.
