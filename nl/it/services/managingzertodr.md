@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-11-07"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Gestione di Zerto on IBM Cloud
 
@@ -24,7 +28,8 @@ Se esegui la replica tra istanze {{site.data.keyword.cloud_notm}} Zerto diverse,
 
 La replica di Zerto non supporta l'attraversamento NAT (Network Address Translation). Stabilire la connettività tra l'istanza di {{site.data.keyword.cloud_notm}} Zerto e il tuo data center potrebbe richiedere la personalizzazione delle rotte sui dispositivi Zerto Virtual Manager (ZVM) o Zerto Virtual Replication Appliance (VRA) su entrambi i lati. Stabilire la connettività potrebbe richiedere anche un tunneling sicuro tra i siti. Quando configuri o riconfiguri le rotte sui dispositivi ZVM, devi assicurarti che tutti questi dispositivi possano connettersi correttamente a `zerto.com` per la segnalazione di utilizzo. Puoi verificare questa connessione aprendo una sessione del browser in `https://www.zerto.com` dal dispositivo ZVM.
 
-**Nota**: l'ESG (Edge Services Gateway) VMware NSX di gestione delle istanze Cloud Foundation e vCenter Server on {{site.data.keyword.cloud_notm}} è preconfigurato per consentire le comunicazioni HTTPS in uscita (porta TCP 443) originate da ZVM.
+L'ESG (Edge Services Gateway) VMware NSX di gestione delle istanze Cloud Foundation e vCenter Server on {{site.data.keyword.cloud_notm}} è preconfigurato per consentire le comunicazioni HTTPS in uscita (porta TCP 443) originate da ZVM.
+{:note}
 
 ## Aggiornamento di Zerto Virtual Replication
 

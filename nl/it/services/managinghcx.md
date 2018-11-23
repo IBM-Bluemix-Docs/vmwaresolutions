@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-07-19"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -32,4 +32,4 @@ Se non vedi un aggiornamento di build previsto, hai problemi con HCX o vuoi che 
 * [Panoramica di HCX on {{site.data.keyword.cloud_notm}}](hcx_considerations.html)
 * [Glossario dei termini HCX](hcx_glossary.html)
 * [Panoramica di VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx)
-* [Documentazione di VMware Hybrid Cloud Extension](https://hcx.vmware.com/#vm-documentation)
+* [Documentazione di VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

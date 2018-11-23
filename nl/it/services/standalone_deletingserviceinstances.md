@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -29,4 +29,4 @@ Assicurati di aver esaminato tutte le considerazioni in [Considerazioni sull'eli
 * [Ordine di istanze HCX on {{site.data.keyword.cloud_notm}} in loco](standalone_orderingserviceinstances.html)
 * [Visualizzazione delle istanze HCX on {{site.data.keyword.cloud_notm}} in loco](standalone_viewingserviceinstances.html)
 * [Glossario dei termini HCX](hcx_glossary.html)
-* [Documentazione di VMware Hybrid Cloud Extension](https://hcx.vmware.com/#vm-documentation)
+* [Documentazione di VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

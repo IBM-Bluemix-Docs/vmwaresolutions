@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-26"
+lastupdated: "2018-11-08"
 
 ---
 
@@ -22,4 +22,4 @@ Questo glossario fornisce le definizioni dei termini associati al servizio VMwar
 
 ### Link correlati
 
-* [Documentazione di VMware Hybrid Cloud Extension](https://hcx.vmware.com/#vm-documentation)
+* [Documentazione di VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

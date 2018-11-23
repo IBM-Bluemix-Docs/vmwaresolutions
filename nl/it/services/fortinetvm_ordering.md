@@ -65,7 +65,7 @@ Il modello di licenza per FortiGate Virtual Appliance on {{site.data.keyword.clo
         <dd class="dd">Questo bundle include tutti i servizi firewall standard e i servizi UTM oltre ai seguenti servizi:<ul><li>Cloud Access Security Broker (CASB): Questo servizio fornisce visibilità, conformità, sicurezza dei dati e protezione delle minacce per i servizi basati sul cloud.</li><li>Industrial Security: Questo servizio fornisce firme per i protocolli ICS/SCADA comuni.</li><li>Security Rating: Questo servizio fornisce funzionalità di controllo per identificare le vulnerabilità critiche e le debolezze della configurazione e implementare i suggerimenti delle procedure consigliate.</li></ul></dd>
 </dl>
 
-In 3Q 2018, Fortinet ha aggiunto tre nuovi servizi (CASB, Industrial Security, e Security Rating) al proprio bundle aziendale. Questi servizi sono disponibili solo su FortiGate 6.0.
+Nel terzo quadrimestre del 2018, Fortinet ha aggiunto tre nuovi servizi (CASB, Industrial Security, e Security Rating) al proprio bundle aziendale. Questi servizi sono disponibili solo su FortiGate 6.0.
 {:note}
 
 Non puoi modificare il modello di licenza dopo l'installazione del servizio. Per modificare il modello di licenza, devi rimuovere il servizio esistente e reinstallare il servizio selezionando un'opzione di licenza diversa.

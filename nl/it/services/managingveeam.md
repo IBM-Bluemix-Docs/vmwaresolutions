@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -37,7 +37,7 @@ Quando si verificano errori nei componenti di gestione, puoi ripristinare tali c
 
 ## Applicazione degli aggiornamenti a Veeam on IBM Cloud
 
-Sei responsabile di mantenere il software Veeam aggiornato alla versione più recente. 
+Sei responsabile di mantenere il software Veeam aggiornato alla versione più recente.
 
 ### Per le istanze distribuite con rete pubblica e privata
 
@@ -45,7 +45,7 @@ Se il servizio Veeam viene installato su un'istanza con la rete pubblica e priva
 
 ### Per le istanze distribuite solo con rete privata
 
-Se il servizio Veeam viene installato su un'istanza solo con la rete privata, poiché la macchina virtuale (VM) Veeam è configurata senza accesso alla rete pubblica, non puoi controllare o scaricare gli aggiornamenti utilizzando il software Veeam. Invece, devi scaricare gli aggiornamenti dal sito web Veeam, trasferirli alla VM Veeam e poi installarli.
+Se il servizio Veeam viene installato su un'istanza solo con la rete privata, poiché la VSI Veeam è configurata senza accesso alla rete pubblica, non puoi controllare o scaricare gli aggiornamenti utilizzando il software Veeam. Invece, devi scaricare gli aggiornamenti dal sito web Veeam, trasferirli alla VM Veeam e poi installarli.
 
 ## Aggiornamento delle licenze Veeam
 

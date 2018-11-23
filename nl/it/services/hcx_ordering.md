@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-08"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Ordine di VMware HCX on IBM Cloud
 
@@ -50,7 +54,8 @@ La distribuzione di HCX on {{site.data.keyword.cloud_notm}} è automatizzata. Si
    * Una sottorete portatile privata per le interconnessioni HCX. Questa sottorete viene utilizzata se per **Tipo di interconnessione HCX** si seleziona l'opzione **Rete privata**.
    * Una sottorete portatile pubblica per l'attivazione e la manutenzione con VMware. Se per **Tipo di interconnessione HCX** si seleziona l'opzione **Rete pubblica**, questa sottorete viene utilizzata anche per le interconnessioni HCX.
 
-   **Importante:** gli indirizzi IP nelle sottoreti ordinate per HCX devono essere gestiti dall'automazione di VMware on {{site.data.keyword.cloud_notm}}. Questi indirizzi IP non possono essere assegnati alle risorse VMware, come VM ed Edge NSX, create da te. Se hai bisogno di ulteriori indirizzi IP per le tue risorse VMware, devi ordinare le tue proprie sottoreti da {{site.data.keyword.cloud_notm}}.
+   Gli indirizzi IP nelle sottoreti ordinate per HCX devono essere gestiti dall'automazione di VMware on {{site.data.keyword.cloud_notm}}. Questi indirizzi IP non possono essere assegnati alle risorse VMware, come VM ed Edge NSX, create da te. Se hai bisogno di ulteriori indirizzi IP per le tue risorse VMware, devi ordinare le tue proprie sottoreti da {{site.data.keyword.cloud_notm}}.
+   {:important}
 2. Se per il **Tipo di interconnessione HCX** è stata selezionata la **Rete privata**, viene creato un gruppo di porte denominato **SDDC-DPortGroup-HCX-Private** sul DVS (Distributed Virtual Switch) privato.
 3. Viene ordinata una chiave di attivazione HCX da VMware.
 4. Vengono creati tre pool di risorse e cartelle VM per HCX, necessari per interconnessioni HCX, componenti HCX locali e componenti HCX remoti.
@@ -61,7 +66,8 @@ La distribuzione di HCX on {{site.data.keyword.cloud_notm}} è automatizzata. Si
    * Vengono configurate le regole di bilanciamento del carico e i pool di risorse. Le regole e i pool di risorse sono utilizzati per inoltrare il traffico in entrata correlato a HCX ai dispositivi virtuali appropriati di HCX Manager, vCenter Server e PSC (Platform Services Controller).
    * Viene applicato un certificato SSL per crittografare il traffico HTTPS in entrata correlato a HCX che arriva tramite gli ESG.
 
-   **Importante:** l'edge di gestione HCX è dedicato al traffico di gestione HCX tra i componenti HCX in loco e i componenti HCX lato cloud. Non modificare l'edge di gestione HCX o utilizzarlo per le estensioni di rete HCX. Crea, invece, edge separati per le estensioni di rete. Inoltre, l'utilizzo di un firewall o la disabilitazione delle comunicazioni dell'edge di gestione HCX ai componenti di gestione IBM privati o all'Internet pubblico potrebbe influire negativamente sulla funzionalità di HCX.
+   L'edge di gestione HCX è dedicato al traffico di gestione HCX tra i componenti HCX in loco e i componenti HCX lato cloud. Non modificare l'edge di gestione HCX o utilizzarlo per le estensioni di rete HCX. Crea, invece, edge separati per le estensioni di rete. Inoltre, l'utilizzo di un firewall o la disabilitazione delle comunicazioni dell'edge di gestione HCX ai componenti di gestione IBM privati o all'Internet pubblico potrebbe influire negativamente sulla funzionalità di HCX.
+   {:important}
 
 6. HCX Manager on {{site.data.keyword.cloud_notm}} viene distribuito, attivato, e configurato:
    * HCX Manager viene registrato con vCenter Server.
@@ -78,4 +84,4 @@ La distribuzione di HCX on {{site.data.keyword.cloud_notm}} è automatizzata. Si
 * [Glossario dei termini HCX](hcx_glossary.html)
 * [Come contattare il supporto IBM](../vmonic/trbl_support.html)
 * [Panoramica di VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx)
-* [Documentazione di VMware Hybrid Cloud Extension](https://hcx.vmware.com/#vm-documentation)
+* [Documentazione di VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)

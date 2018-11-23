@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-25"
+lastupdated: "2018-11-07"
 
 ---
 
@@ -23,7 +23,8 @@ Questo servizio è disponibile solo per le istanze distribuite nella V1.2 o succ
 
 Nel servizio Zerto on {{site.data.keyword.cloud_notm}} vengono ordinati e inclusi i seguenti componenti.
 
-**Nota:** i componenti di Zerto Virtual Manager vengono distribuiti solo nel cluster predefinito.
+I componenti Zerto Virtual Replication Appliance (VRA) vengono distribuiti solo nel cluster predefinito.
+{:note}
 
 ### VSI
 

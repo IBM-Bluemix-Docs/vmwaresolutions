@@ -8,7 +8,7 @@ lastupdated: "2018-10-26"
 
 ---
 
-# Panoramica di Mission Critical VMware on IBM Cloud 
+# Panoramica di Mission Critical VMware on IBM Cloud
 
 Mission Critical VMware on {{site.data.keyword.cloud}} offre un'architettura a più zone per aiutare le aziende ad evitare il tempo di inattività delle applicazioni cloud e ad automatizzare i failover in una regione cloud.
 

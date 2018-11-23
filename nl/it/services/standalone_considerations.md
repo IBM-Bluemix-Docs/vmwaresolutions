@@ -4,15 +4,20 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-08"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Considerazioni sulle istanze VMware HCX on IBM Cloud in loco
 
 Esamina le seguenti considerazioni prima di installare o eliminare le istanze HCX on {{site.data.keyword.cloud}} che hai ordinato per l'utilizzo in loco.
 
-**Nota:** un'istanza vCenter Server con HCX on {{site.data.keyword.cloud_notm}} è limitata a tre connessioni simultanee dai siti in loco.
+Un'istanza vCenter Server con HCX on {{site.data.keyword.cloud_notm}} è limitata a tre connessioni simultanee dai siti in loco.
+{:note}
 
 ## Considerazioni sull'istallazione delle istanze HCX on IBM Cloud in loco
 
@@ -32,7 +37,8 @@ Per una corretta installazione dell'istanza HCX on {{site.data.keyword.cloud_not
     3. Fai clic su **COPIA LINK** e utilizza quindi questo link per scaricare HCX Enterprise Client in un ambiente in loco con accesso al tuo ambiente vSphere in loco.
 3. Nel client web VMware vSphere, distribuisci HCX Enterprise Client come dispositivo virtuale HCX Manager nel tuo ambiente in loco.
 
-   **Nota:** devi distribuire l'HCX Manager in loco su una rete privata e consentirgli l'accesso alla rete pubblica. Puoi utilizzare un gateway Edge NSX, Vyatta o simile per consentire l'accesso Internet all'HCX Manager in loco. Se i gateway utilizzati per l'accesso alla rete privata e l'accesso alla rete pubblica sono diversi, si consiglia di utilizzare il gateway predefinito per consentire l'accesso alla rete pubblica e la **Console di gestione HCX Manager** per creare una rotta statica per l'accesso alla rete privata.
+   Devi distribuire l'HCX Manager in loco su una rete privata e consentirgli l'accesso alla rete pubblica. Puoi utilizzare un gateway Edge NSX, Vyatta o simile per consentire l'accesso Internet all'HCX Manager in loco. Se i gateway utilizzati per l'accesso alla rete privata e l'accesso alla rete pubblica sono diversi, si consiglia di utilizzare il gateway predefinito per consentire l'accesso alla rete pubblica e la **Console di gestione HCX Manager** per creare una rotta statica per l'accesso alla rete privata.
+   {:note}
 4. Una volta completata la distribuzione di HCX Manager, utilizza la **Console di gestione HCX Manager** per attivare HCX Manager in loco. Per ottenere una chiave di attivazione per l'HCX Manager in loco, ordina un'istanza HCX on {{site.data.keyword.cloud_notm}} in loco nella console {{site.data.keyword.vmwaresolutions_short}}. Per ulteriori informazioni, vedi [Ordine di istanze HCX in loco](../services/standalone_orderingserviceinstances.html).
 5. Se hai utilizzato un certificato SSL autofirmato al momento dell'ordine del servizio HCX on {{site.data.keyword.cloud_notm}}, devi importare il certificato nell'HCX Manager in loco completando la seguente procedura:
     1. Nella **Console di gestione HCX Manager** in loco, fai clic sulla scheda **Amministrazione**.
@@ -52,7 +58,8 @@ Esamina le seguenti considerazioni prima di eliminare un'istanza HCX on {{site.d
     2. Assicurati che tutte le reti estese siano state rimosse.
     3. Assicurati che tutti i componenti di interconnessione con i siti cloud abbinati siano stati rimossi.
 
-   **Importante:** devi completare tutte le considerazioni prima di procedere al passo successivo. In caso contrario, la licenza per l'istanza HCX on {{site.data.keyword.cloud_notm}} in loco viene annullata, per cui non è possibile eseguire migrazioni e potrebbero verificarsi errori nei componenti HCX.  
+   Devi completare tutte le considerazioni prima di procedere al passo successivo. In caso contrario, la licenza per l'istanza HCX on {{site.data.keyword.cloud_notm}} in loco viene annullata, per cui non è possibile eseguire migrazioni e potrebbero verificarsi errori nei componenti HCX.  
+   {:important}
 2. Nella console {{site.data.keyword.vmwaresolutions_short}}, elimina l'istanza HCX on {{site.data.keyword.cloud_notm}} in loco che era stata ordinata per ottenere la chiave di attivazione per l'HCX Manager in loco. Assicurati che l'istanza eliminata non sia più disponibile nella console prima di procedere al passo successivo.
 
    Per ulteriori informazioni, vedi [Eliminazione di istanze HCX on {{site.data.keyword.cloud_notm}} in loco](../services/standalone_deletingserviceinstances.html).
@@ -62,6 +69,5 @@ Esamina le seguenti considerazioni prima di eliminare un'istanza HCX on {{site.d
 
 * [Visualizzazione delle istanze HCX on {{site.data.keyword.cloud_notm}} in loco](../services/standalone_viewingserviceinstances.html)
 * [Glossario dei termini HCX](hcx_glossary.html)
-* [Documentazione di VMware Hybrid Cloud Extension](https://hcx.vmware.com/#vm-documentation)
-* [Risorse VMware HCX](https://hcx.vmware.com/#/docs)
+* [Documentazione di VMware Hybrid Cloud Extension](https://cloud.vmware.com/vmware-hcx/resources)
 * [Come contattare il supporto IBM](../vmonic/trbl_support.html)
