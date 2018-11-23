@@ -51,6 +51,7 @@ IBM Cloud for VMware Solutions
         vcenter/vc_networkingonvcenterserver.md
         vcenter/vc_esg_config.md
         vcenter/vc_multisite.md
+        vcenter/vc_compl_info.md
         vcenter/vc_orderinginstance.md
         vcenter/vc_addingviewingclusters.md
         vcenter/vc_addingremovingservers.md
@@ -67,6 +68,7 @@ IBM Cloud for VMware Solutions
         vcenter/vc_hybrid_planning.md
         vcenter/vc_hybrid_networkingonvcenterserver.md
         vcenter/vc_hybrid_multisite.md
+        vcenter/vc_compl_info.md
         vcenter/vc_hybrid_orderinginstance.md
         vcenter/vc_hybrid_addingviewingclusters.md
         vcenter/vc_hybrid_addingremovingservers.md
@@ -339,8 +341,8 @@ IBM Cloud for VMware Solutions
 
     {: .topicgroup}
     Guida di VMware e Skate Advisor Concept Car
-        archiref/vcscar/vcscar-preface.md
         archiref/vcs/vcs-hybridity-intro.md
+        archiref/vcscar/vcscar-preface.md
         archiref/vcscar/vcscar-intro.md
         archiref/vcscar/vcscar-syscontext.md
         archiref/vcscar/vcscar-concepts.md
