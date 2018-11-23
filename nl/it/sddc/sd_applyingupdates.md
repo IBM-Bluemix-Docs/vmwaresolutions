@@ -4,11 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-17"
+lastupdated: "2018-11-05"
 
 ---
 
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Applicazione di aggiornamenti alle istanze Cloud Foundation
 
@@ -16,7 +18,8 @@ La console {{site.data.keyword.vmwaresolutions_full}} rileva ed elenca periodica
 
 Un aggiornamento disponibile è un record nell'elenco di aggiornamenti software dell'istanza, che può essere applicato immediatamente o pianificato per un secondo momento. L'aggiornamento è un bundle che contiene uno o più pacchetti per l'aggiornamento dei componenti di gestione IBM e dei componenti VMware.
 
-A partire dalla V2.5, gli aggiornamenti di IBM CloudDriver non sono più elencati perché sono abilitati gli aggiornamenti automatici. 
+A partire dalla V2.5, gli aggiornamenti di IBM CloudDriver non sono più elencati perché sono abilitati gli aggiornamenti automatici. Azioni come l'aggiunta di un host, l'aggiunta di un cluster e l'ordine di un servizio aggiornano automaticamente l'istanza all'ultima versione. Per ulteriori informazioni sugli aggiornamenti automatici, consulta la sezione *Resilienza di IBM CloudDriver* in [Note sulla release per la V2.5](../vmonic/relnotes_v25.html).
+{:note}
 
 ## Prima di iniziare
 

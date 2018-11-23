@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -38,6 +38,17 @@ Tabella 1. Operazioni interessate per l'amministratore SSO (cliente)
 | Modifica del nome del DVS (Distributed Virtual Switch) pubblico o privato. | L'aggiunta di un server ESXi potrebbe non riuscire. | Importante | Modifica di nuovo il nome del DVS con il nome originale.
 | Modifica del nome dell'archivio dati VSAN. | L'aggiunta di un server ESXi potrebbe non riuscire.<br><br>L'aggiornamento dell'istanza potrebbe non riuscire. | Importante | Modifica di nuovo il nome dell'archivio dati VSAN con il nome originale, **vsanDatastore**.
 | Modifica del nome di istanza o del nome di dominio. | L'istanza è inutilizzabile. | Critico | N/A
+
+La seguente tabella elenca le operazioni che potrebbero essere interessate se viene disabilitato l'accesso shell o SSH per molte risorse.
+
+Tabella 2. Operazioni interessate dall'accesso shell e SSH (locale)
+
+| Tentativo di modifica  | Operazioni interessate  | Severità  | Metodo di recupero  |
+|:------------- |:------------- |:--------------|:--------------|
+| Disabilita l'accesso SSH o shell per vCenter Server o PSC.    | L'accoppiamento di un istanza primaria e secondaria potrebbe non riuscire. Applicare le patch alle risorse potrebbe non riuscire.    | Importante    | N/A    |
+| Disabilita l'accesso SSH o shell per ESXi.    | L'aggiunta e la rimozione degli host, dei servizi e della memoria di rete per l'istanza potrebbe non riuscire. Applicare le patch alle risorse potrebbe non riuscire.    | Importante    | N/A    |
+
+Se scegli di disabilitare l'accesso shell o SSH, puoi riabilitarlo temporaneamente prima di eseguire le operazioni indicate.
 
 ## Sottoreti di gestione per le istanze Cloud Foundation
 
