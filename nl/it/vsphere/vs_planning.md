@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -42,9 +42,11 @@ Tabella 1. {{site.data.keyword.CloudDataCents_notm}} disponibili per i cluster v
 | DAL13 | Dallas | Nord America meridionale |
 | FRA02 | Francoforte | Europa |
 | FRA04 | Francoforte | Europa |
+| FRA05 | Francoforte | Europa |
 | HKG02 | Hong Kong | Asia Pacifico |
 | LON02 | Londra | Europa |
 | LON04 | Londra | Europa |
+| LON05 | Londra | Europa |
 | LON06 | Londra | Europa |
 | MEL01 | Melbourne | Asia Pacifico |
 | MEX01 | Queretaro | Nord America meridionale |

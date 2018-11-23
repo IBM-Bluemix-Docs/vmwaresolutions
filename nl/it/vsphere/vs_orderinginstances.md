@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-10-29"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -89,12 +89,14 @@ L'utilizzo di singole chiavi di licenza insieme alle chiavi di licenza combinate
 
 Seleziona il {{site.data.keyword.CloudDataCent_notm}} in cui deve essere ospitato il cluster.
 
-Se selezioni un componente vSAN, l'elenco di ubicazioni viene filtrato in base alla disponibilità SSD.
-{:note}
+**Note:**
+* Se selezioni un componente vSAN, l'elenco di ubicazioni viene filtrato in base alla disponibilità SSD.
+* Il data center FRA05 non supporta il server bare metal Broadwell.
+* Il data center FRA05 non supporta il server bare metal Broadwell o Certificato SAP.
 
 ### Skylake
 
-Se selezioni **Skylake**, puoi scegliere la combinazione di CPU e RAM del Bare Metal Server in base alle tue esigenze.Le opzioni disponibili variano a seconda che tu abbia selezionato o meno il componente VMware vSAN.
+Se selezioni **Skylake**, puoi scegliere la combinazione di CPU e RAM del Bare Metal Server in base alle tue esigenze. Le opzioni disponibili variano a seconda che tu abbia selezionato o meno il componente VMware vSAN.
 
 Tabella 2. Opzioni per Skylake {{site.data.keyword.baremetal_short}}
 
@@ -115,7 +117,7 @@ In base ai tuoi requisiti, seleziona una configurazione di Bare Metal Server:
 
 ### Broadwell
 
-Se selezioni **Broadwell**, puoi scegliere la combinazione di CPU e RAM del Bare Metal Server in base alle tue esigenze.Le opzioni disponibili variano a seconda che tu abbia selezionato o meno il componente VMware vSAN.
+Se selezioni **Broadwell**, puoi scegliere la combinazione di CPU e RAM del Bare Metal Server in base alle tue esigenze. Le opzioni disponibili variano a seconda che tu abbia selezionato o meno il componente VMware vSAN.
 
 Tabella 3. Opzioni per Broadwell {{site.data.keyword.baremetal_short}}
 
