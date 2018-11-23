@@ -4,9 +4,13 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-09-27"
+lastupdated: "2018-10-30"
 
 ---
+
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Visualizzazione delle istanze NetApp ONTAP Select
 
@@ -163,7 +167,8 @@ Tabella 6. Dettagli del server ESXi di un cluster NetApp ONTAP Select
 
 Gestisci le tue istanze dalla console {{site.data.keyword.vmwaresolutions_short}}, dal client web VMware vSphere o dalla console NetApp.
 
-**Importante:** prima di fare clic su **Console vCenter** nella pagina di riepilogo dell'istanza per passare al client web vSphere e iniziare a gestire i tuoi server ESXi, devi accedere al portale VPN del {{site.data.keyword.CloudDataCent_notm}}. Passa con il mouse sul pulsante **Console vCenter** e segui le istruzioni per assicurarti di soddisfare tutti i requisiti e di aver completato i passi necessari prima di accedere al client web vSphere.
+Prima di fare clic su **Console vCenter** nella pagina di riepilogo dell'istanza per passare al client web vSphere e iniziare a gestire i tuoi server ESXi, devi accedere al portale VPN del {{site.data.keyword.CloudDataCent_notm}}. Passa con il mouse sul pulsante **Console vCenter** e segui le istruzioni per assicurarti di soddisfare tutti i requisiti e di aver completato i passi necessari prima di accedere al client web vSphere.
+{:important}
 
 Per ulteriori informazioni che ti consentono di completare le istruzioni di accesso, consulta i seguenti argomenti:
 
