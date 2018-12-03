@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-19"
+lastupdated: "2018-11-30"
 
 ---
 
@@ -57,7 +57,7 @@ Figure 1. Container network traffic types
 - **Inter-pod networking** – Also known as “pod-to-pod” communications. The following are the three types of east–west traffic:
   - Pods can directly communicate with other pods on the same subnet. In IKS, each pod has an IP address that is assigned from an IKS provided range. Each worker node is assigned a subnet on provisioning. Pod to pod communication without proxies, tunneling, or NAT occurs with pods in the same subnet and host.
   - Pods can directly communicate with other pods on different subnets. IP-in-IP encapsulation is automatically configured in IKS to encapsulate only packets that are traveling across subnets. This encapsulation hides the pod network address space from the {{site.data.keyword.cloud_notm}} network. The encapsulation uses the IP address from the {{site.data.keyword.cloud_notm}} primary private subnet.
-  - Pods can use services to communicate with other pods, which are known as pod to service communications. However, pods can directly communicate with other pods as per the two points above pods are mortal. They are born and when they die they aren't resurrected. Replica sets create and destroy pods dynamically such as when scaling up or down. While each pod gets its own IP address, even those IP addresses cannot be relied upon to be stable over time. Preferably, Developers use a service construct for communication, where, a stable virtual IP address is used that can be discovered via DNS.
+  - Pods can use services to communicate with other pods, which are known as pod to service communications. However, pods that can directly communicate with other pods as per the two previous points pods are mortal. They are born and when they die they aren't resurrected. Replica sets create and destroy pods dynamically such as when scaling up or down. While each pod gets its own IP address, even those IP addresses cannot be relied upon to be stable over time. Preferably, Developers use a service construct for communication, where, a stable virtual IP address is used that can be discovered via DNS.
 
 - **Ingress** - Refers to routing traffic from external users or apps to pods. A service provides a stable virtual IP (vIP) address for a set of pods. While pods are ephemeral, services allow clients to reliably discover and connect to the containers running in the pods by using the vIP. This vIP is not an actual IP address that is connected to a network interface. Its purpose is purely to act as the stable endpoint to forward traffic to one or more pods. Accessing a pod from outside the cluster is a bit more challenging. Kubernetes aims to provide highly available, high-performance load balancing for services.
 There are three options for North-South traffic in IKS:
@@ -93,7 +93,7 @@ From a network perspective the following components are deployed on the worker n
 
 IKS uses Calico as its network provider. Calico uses a Layer 3 approach rather than overlay networks. Through the CNI plug-ins, Calico integrates with Kubernetes to provide a networking that users that use an approach of using a pure IP network combined with Border Gateway Protocol for route distribution.
 
-Calico provides a L3 fabric solution and instead of a vSwitch, Calico uses a vRouter function in each compute node. The vusesverages the existing L3 forwarding capabilities of the Linux kernel. Calico connects each workload via the vRouter directly to the infrastructure network. The vRouter function makes use of BGP to advertise the routes to pods hosted in each worker node. Each vRouter announces all the endpoints that it's attached to, to all the other vRouters using BGP.
+Calico provides a L3 fabric solution and instead of a vSwitch, Calico uses a vRouter function in each compute node. The vRouter leverages the existing L3 forwarding capabilities of the Linux kernel. Calico connects each workload via the vRouter directly to the infrastructure network. The vRouter function makes use of BGP to advertise the routes to pods hosted in each worker node. Each vRouter announces all the endpoints that it's attached to, to all the other vRouters using BGP.
 
 In Calico, IP packets to or from a pod are routed and firewalled by the Linux routing table and iptables infrastructure on the worker node.
 
@@ -103,7 +103,7 @@ In Calico, IP packets to or from a pod are routed and firewalled by the Linux ro
 Figure 2. Calico CNI
 ![Calico CNI](vcsnsxt-calico-cni.svg)
 
-The diagram above shows the following Calico components:
+The previous diagram shows the following Calico components:
 -	**calicoctl** - command-line interface.
 -	**CNI plug-in**
 -	**key/value store** - holds Calico’s policy and network configuration state. Calico uses etcd to provide the communication between components and as a consistent data store, which ensures Calico can always build an accurate network. The etcd component is distributed across the entire deployment. It is divided into two groups of machines: the core cluster, and the proxies.
