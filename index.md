@@ -4,13 +4,15 @@ copyright:
 
   years: 2016, 2018
 
-lastupdated: "2018-11-12"
+lastupdated: "2018-12-03"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
+{:note: .note}
+{:important: .important}
 {:new_window: target="_blank"}
 {:pre: .pre}
 {:tip: .tip}
@@ -33,7 +35,8 @@ The following browsers are supported:
   *  Google Chrome
   *  Apple Safari
 
-**Note**: Microsoft Internet Explorer is not supported.
+Microsoft Internet Explorer is not supported.
+{:note}
 
 For optimal viewing and working on the {{site.data.keyword.vmwaresolutions_short}} console, set the screen resolution to at least 1024 px width by 500 px height.
 
@@ -49,7 +52,7 @@ You need an {{site.data.keyword.cloud_notm}} account and an {{site.data.keyword.
    </tr>
    <tr>
       <td>IBMid</td>
-      <td>By using the **IBMid**, you can have a single login user name for all IBM products and services that you use, including {{site.data.keyword.cloud_notm}}. {{site.data.keyword.vmwaresolutions_short}} is provided as an infrastructure solution in the {{site.data.keyword.cloud_notm}} catalog. To access the {{site.data.keyword.vmwaresolutions_short}} console, you must have an **IBMid**.<br><br>To use your **IBMid** to log in to the {{site.data.keyword.vmwaresolutions_short}} console, you must associate the **IBMid** with an {{site.data.keyword.cloud_notm}} account. When you log in to the console for the first time, you are guided to either associate your existing **IBMid** with an {{site.data.keyword.cloud_notm}} account, or to sign up for a new {{site.data.keyword.cloud_notm}} account. The new {{site.data.keyword.cloud_notm}} account is automatically associated with your **IBMid**. You need to go through this process only once.<br><br>If you have problems when you associate your **IBMid** with an {{site.data.keyword.cloud_notm}} account, see [Troubleshooting for accessing {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/docs/troubleshoot/ts_accessing.html).</td>
+      <td>By using the **IBMid**, you can have a single login user name for all IBM products and services that you use, including {{site.data.keyword.cloud_notm}}. {{site.data.keyword.vmwaresolutions_short}} is provided as an infrastructure solution in the {{site.data.keyword.cloud_notm}} catalog. To access the {{site.data.keyword.vmwaresolutions_short}} console, you must have an **IBMid**.<br><br>To use your **IBMid** to log in to the {{site.data.keyword.vmwaresolutions_short}} console, you must associate the **IBMid** with an {{site.data.keyword.cloud_notm}} account. When you log in to the console for the first time, you are guided to either associate your existing **IBMid** with an {{site.data.keyword.cloud_notm}} account, or to sign up for a new {{site.data.keyword.cloud_notm}} account. The new {{site.data.keyword.cloud_notm}} account is automatically associated with your **IBMid**. You need to go through this process only once.<br><br>If you have problems when you associate your **IBMid** with an {{site.data.keyword.cloud_notm}} account, see [Troubleshooting for accessing {{site.data.keyword.cloud_notm}}](https://console.cloud.ibm.com/docs/account/ts_accessing.html).</td>
    </tr>
    <tr>
       <td>IBM Cloud account</td>
@@ -57,7 +60,7 @@ You need an {{site.data.keyword.cloud_notm}} account and an {{site.data.keyword.
    </tr>
    <tr>
       <td>IBM Cloud infrastructure (SoftLayer) account</td>
-      <td>The {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account was previously known as the IBM SoftLayer account.  For more information about the requirements that the account must meet, see [Requirements for the {{site.data.keyword.cloud_notm}} infrastructure account](vmonic/slaccountrequirement.html).<br><br>You can link {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) accounts with {{site.data.keyword.cloud_notm}} accounts to use combined infrastructure as a service (IaaS) and platform as a service (PaaS) resources. Then, you can access IaaS resources and PaaS resources from a single login. Linking your accounts also provides you with a single invoice for all the PaaS and IaaS resources that you use.<ul><li>If you do not have an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account, request one by following the procedure in [Signing up for an IBM Cloud infrastructure (SoftLayer) account](vmonic/signing_softlayer_account.html), and then link your {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account with your {{site.data.keyword.cloud_notm}} account by following the procedure in [Linking IBMid accounts](https://console.bluemix.net/docs/account/softlayerlink.html).</li><li>If you have an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account, you can link it with your {{site.data.keyword.cloud_notm}} account by following the procedure in [Linking IBMid accounts](https://console.bluemix.net/docs/account/softlayerlink.html).</li></ul></td>
+      <td>The {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account was previously known as the IBM SoftLayer account.  For more information about the requirements that the account must meet, see [Requirements for the {{site.data.keyword.cloud_notm}} infrastructure account](vmonic/slaccountrequirement.html).<br><br>You can link {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) accounts with {{site.data.keyword.cloud_notm}} accounts to use combined infrastructure as a service (IaaS) and platform as a service (PaaS) resources. Then, you can access IaaS resources and PaaS resources from a single login. Linking your accounts also provides you with a single invoice for all the PaaS and IaaS resources that you use.<ul><li>If you do not have an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account, request one by following the procedure in [Signing up for an IBM Cloud infrastructure (SoftLayer) account](vmonic/signing_softlayer_account.html), and then link your {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account with your {{site.data.keyword.cloud_notm}} account by following the procedure in [Linking IBMid accounts](https://console.cloud.ibm.com/docs/account/softlayerlink.html).</li><li>If you have an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account, you can link it with your {{site.data.keyword.cloud_notm}} account by following the procedure in [Linking IBMid accounts](https://console.cloud.ibm.com/docs/account/softlayerlink.html).</li></ul></td>
    </tr>
    </table>
 
@@ -166,7 +169,7 @@ Review and choose add-on services for your deployment offering.
 The {{site.data.keyword.vmwaresolutions_short}} console is the interface where you order and manage your deployments. Each deployment is managed as an instance in the console. The console is a stand-alone user interface that is separate from the {{site.data.keyword.cloud_notm}} infrastructure customer portal.
 
 To access the {{site.data.keyword.vmwaresolutions_short}} console:
-1. Go to https://console.ng.bluemix.net/infrastructure/vmware-solutions/console.
+1. Go to https://console.cloud.ibm.com/infrastructure/vmware-solutions/console.
 2. Log in to the console with your **IBMid**.
 
 ## Step 2: Configuring your user account and settings

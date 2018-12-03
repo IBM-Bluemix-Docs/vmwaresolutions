@@ -250,6 +250,8 @@ IBM Cloud for VMware Solutions
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
+    vmonic/at-events.md
+
     {: .topicgroup}
     IBM Cloud for VMware Solutions architecture
         archiref/solution/solution_overview.md
