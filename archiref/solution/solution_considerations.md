@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2018
 
-lastupdated: "2018-11-12"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -39,7 +39,7 @@ Complete the following steps to manage access to your {{site.data.keyword.cloud_
 
 - Access instance management endpoints by using the [{{site.data.keyword.cloud_notm}} VPN](https://www.softlayer.com/vpn-access) or your [{{site.data.keyword.cloud_notm}} Direct-Link connection](https://www.ibm.com/cloud/direct-link).
 - Devise a strategy for public network connectivity from within your instance. Your options include: the sample customer VMware NSX Edge Services Gateway (ESG), gateway appliances such as Vyatta and FortiGate, and proxy servers deployed in the {{site.data.keyword.cloud_notm}} network or on your own network accessed through DirectLink.
-- Plan whether to deploy your workload on {{site.data.keyword.cloud_notm}} VLANs with [{{site.data.keyword.cloud_notm}} portable IP addresses](https://console.bluemix.net/docs/infrastructure/subnets/getting-started.html) or [on NSX logical switches (VXLANs) using your own IP addresses](../nsx/nsx_overview.html). Note that using NSX software-defined networking (SDN) gives you the greatest flexibility to manage and secure your workload network in the {{site.data.keyword.cloud_notm}}.
+- Plan whether to deploy your workload on {{site.data.keyword.cloud_notm}} VLANs with [{{site.data.keyword.cloud_notm}} portable IP addresses](https://console.cloud.ibm.com/docs/infrastructure/subnets/getting-started.html) or [on NSX logical switches (VXLANs) using your own IP addresses](../nsx/nsx_overview.html). Note that using NSX software-defined networking (SDN) gives you the greatest flexibility to manage and secure your workload network in the {{site.data.keyword.cloud_notm}}.
 - Use NSX ESGs, [IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance), and DirectLink peering to plan for connectivity to workloads (Network Address Translation, Virtual Private Network, routing).
 - If implementing Cross-vCenter NSX, ensure that your local segment ID ranges are not overlapping before deploying any local workloads.
 
@@ -50,7 +50,7 @@ You are responsible for securing, encrypting, and monitoring your VMware instanc
 - Change all passwords displayed in the {{site.data.keyword.vmwaresolutions_short}} console and use your own password management system. Note that IBM retains distinct user IDs needed for ongoing automation and support.
 - Review password policies, such as complexity and expiration period, across all components.
 - Review encryption settings across all components.
-- Plan and implement appropriate physical or virtual firewall solutions, such as NSX Distributed Firewall (DFW), NSX ESGs, [Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../../services/fortinetvm_considerations.html), and [IBM Cloud Vyatta](https://console.bluemix.net/catalog/infrastructure/virtual-router-appliance).
+- Plan and implement appropriate physical or virtual firewall solutions, such as NSX Distributed Firewall (DFW), NSX ESGs, [Fortigate Virtual Appliance on {{site.data.keyword.cloud_notm}}](../../services/fortinetvm_considerations.html), and [IBM Cloud Vyatta](https://console.cloud.ibm.com/catalog/infrastructure/virtual-router-appliance).
 - Plan and implement appropriate application load balancing and security solutions, such as [F5 on {{site.data.keyword.cloud_notm}}](../../services/f5_considerations.html).
 - Plan and implement appropriate security information and event management (SIEM) solutions, such as [IBM QRadar](https://www.ibm.com/us-en/marketplace/hosted-security-intelligence).
 - Plan and implement appropriate vulnerability scanning.
@@ -119,7 +119,9 @@ In addition to capacity planning, complete the following to ensure that your sto
   - RAID-1 provides better performance and smaller windows of susceptibility to sequential failure, such as shorter rebuild time, than RAID-5. However, RAID-5 has less storage overhead.
   - RAID-6 provides protection against dual failures, but requires a minimum of six hosts compared to four hosts for RAID-5.
 - To add more storage to your vSAN cluster, you must add new hosts to the cluster or add {{site.data.keyword.cloud_notm}} Endurance NFS storage instead. Adding disks to the existing hosts is not currently supported.
-- If you mount additional {{site.data.keyword.cloud_notm}} Endurance NFS storage to your cluster, ensure that you follow the architecture guidance and configure host routes to the storage using the `SDDC-DPortGroup-NFS` port group addresses. You must authorize these addresses, rather than the hosts themselves, to the storage. For more information, see [Attached storage infrastructure management](../attached-storage/storage-infra-mgmt.html#vsphere-host-static-routing). See also the developerWorks recipe showing how to [add more endurance storage to your VMware cluster](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/) using IBM Spectrum Protect Plus as an example.
+- If you mount additional {{site.data.keyword.cloud_notm}} Endurance NFS storage to your cluster, ensure that you follow the architecture guidance and configure host routes to the storage using the `SDDC-DPortGroup-NFS` port group addresses. You must authorize these addresses, rather than the hosts themselves, to the storage. For more information, see [Attached storage infrastructure management](../attached-storage/storage-infra-mgmt.html#vsphere-host-static-routing).
+
+In addition, see the developerWorks recipe showing how to [add more endurance storage to your VMware cluster](https://developer.ibm.com/recipes/tutorials/how-to-increase-vsnap-storage-for-ibm-spectrum-protect-plus-on-ibm-cloud-post-deployment/) using IBM Spectrum Protect Plus as an example.
 
 ### Related links
 
