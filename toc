@@ -11,6 +11,7 @@ IBM Cloud for VMware Solutions
 
     {: .topicgroup}
     Release notes
+        vmonic/relnotes_v28.md
         vmonic/relnotes_v27.md
         vmonic/relnotes_v26.md
         vmonic/relnotes_v25.md
@@ -177,7 +178,7 @@ IBM Cloud for VMware Solutions
         services/managingspp.md
 
     {: .topicgroup}
-    KMIP for VMware on IBM Cloud
+    KMIP for VMware on IBM Cloud - Deprecated
         services/kmip_considerations.md
         services/kmip_ordering.md
 
@@ -250,6 +251,8 @@ IBM Cloud for VMware Solutions
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
+    vmonic/at-events.md
+
     {: .topicgroup}
     IBM Cloud for VMware Solutions architecture
         archiref/solution/solution_overview.md
@@ -361,5 +364,18 @@ IBM Cloud for VMware Solutions
         archiref/vcscontent/vcscontent-aianalytics.md
         archiref/vcscontent/vcscontent-iks.md
         archiref/vcscontent/vcscontent-summary.md
+
+    {: .topicgroup}
+    VMware HCX on IBM Cloud solution architecture
+        archiref/hcx-archi/hcx-archi-intro.md
+        archiref/hcx-archi/hcx-archi-source.md
+        archiref/hcx-archi/hcx-archi-port-req.md
+        archiref/hcx-archi/hcx-archi-prep-install.md
+        archiref/hcx-archi/hcx-archi-install-cfg-src.md
+        archiref/hcx-archi/hcx-archi-reg-vcenter.md
+        archiref/hcx-archi/hcx-archi-install-cfg-hybrid.md
+        archiref/hcx-archi/hcx-archi-migrate-vm.md
+        archiref/hcx-archi/hcx-archi-mod-uninstall.md
+        archiref/hcx-archi/hcx-archi-trbl.md
 
     {: .navgroup-end}
