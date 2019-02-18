@@ -89,4 +89,4 @@ Table 2. NFS advanced configuration parameters
 
 ### Related links
 
-* [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [Solution overview](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-overview-of-ibm-cloud-for-vmware-solutions)

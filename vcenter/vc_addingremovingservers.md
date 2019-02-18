@@ -30,7 +30,7 @@ If your initial cluster has vSAN as its storage, adding one or more ESXi servers
 * A vCenter Server instance with vSAN storage must have at least 4 ESXi servers.
 * For vCenter Server instances that were deployed in V2.0 or earlier, you can expand each cluster to have up to 32 ESXi servers. The number of {{site.data.keyword.baremetal_short}} that you can add at a time is as follows:
    * For the **Small**, **Medium**, and **Large** configurations, you can add 1 - 10 ESXi servers at a time.
-   * For the **Skylake** and **Broadwell** configurations, you can add 1 - 20 ESXi servers at a time. For more information about minimum of ESXi servers, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions/vmonic/faq.html#is-a-two-node-vcenter-server-instance-highly-available-)
+   * For the **Skylake** and **Broadwell** configurations, you can add 1 - 20 ESXi servers at a time. For more information about minimum of ESXi servers, see [Is a two-node vCenter Server instance highly available?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-general-faq-about-ibm-cloud-for-vmware-solutions#is-a-two-node-vcenter-server-instance-highly-available-)
 
 ### Procedure to add ESXi servers
 
@@ -128,9 +128,9 @@ Do not add NFS storage from the VMware vSphere Web Client. The changes that you 
 
 ### Related links
 
-* [vCenter Server Bill of Materials](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
-* [Requirements and planning for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
-* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [vCenter Server Bill of Materials](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter-server-bill-of-materials)
+* [Requirements and planning for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-requirements-and-planning-for-vcenter-server-instances)
+* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-vcenter-server-instances)
+* [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-viewing-and-deleting-clusters-for-vcenter-server-instances)
 * [Place a host in maintenance mode](http://pubs.vmware.com/vsphere-60/index.jsp?topic=%2Fcom.vmware.vsphere.resmgmt.doc%2FGUID-8F705E83-6788-42D4-93DF-63A2B892367F.html){:new_window}
 * [Enhanced vMotion Compatibility (EVC) processor support](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1003212){:new_window}

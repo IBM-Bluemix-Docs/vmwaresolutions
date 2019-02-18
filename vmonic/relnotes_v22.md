@@ -24,7 +24,7 @@ This release includes new features, component updates, usability enhancements, a
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-For more information, see [Addressing Spectre and Meltdown vulnerabilities](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html).
+For more information, see [Addressing Spectre and Meltdown vulnerabilities](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-addressing-spectre-and-meltdown-vulnerabilities).
 
 ## IBM CloudDriver virtual machine upgrade
 
@@ -36,22 +36,22 @@ During the V2.2 upgrade process, the IBM CloudDriver virtual machine is redeploy
 * Before you upgrade to V2.2, ensure that you replace the Legacy Veeam VSI with the Veeam on {{site.data.keyword.cloud_notm}} service. Legacy Veeam is no longer supported in V2.2 and future releases, therefore the management component backups that are associated with Legacy Veeam are not available for a restore.
 
 For more information about using the Veeam on {{site.data.keyword.cloud_notm}} service, see the following topics:
-* [Components and considerations for Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/veeam_considerations.html)
-* [Managing Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingveeam.html)
+* [Components and considerations for Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam-on-ibm-cloud-overview)
+* [Managing Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing-veeam-on-ibm-cloud)
 
 ## Support for VMware Federal on IBM Cloud
 
 VMware Federal on {{site.data.keyword.cloud_notm}} provides the option to order a base vCenter Server instance in the WDC03 Federal on {{site.data.keyword.CloudDataCent_notm}}. In addition to supporting a subset of vCenter Server instance offerings, VMware Federal on {{site.data.keyword.cloud_notm}} provides US Federal Government agencies with the option to secure deployed VMware vCenter Server instances. Selecting the option to secure the deployed instances removes sensitive information that is stored about the instance and removes the open management connection for ongoing access to the instance for management functions, such as adding and removing hosts and clusters. After you select the secure option, all management functions are unavailable except for a full instance delete.
 
-For important considerations before you secure a VMware Federal instance, see [Securing VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html).
+For important considerations before you secure a VMware Federal instance, see [Securing VMware Federal instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-securing-vmware-federal-instances).
 
 (Updated on 2 April 2018) You can now expand or contract the capacity of your VMware Federal instance by adding or removing ESXi servers. This option is available only to VMware Federal instances that have not been secured.
 
 For more information, see the following topics:
 
-* [VMware Federal on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html)
-* [Adding, viewing, and deleting clusters for VMware Federal instances](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)
-* [Expanding and contracting capacity for VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_addingremovingservers.html)
+* [VMware Federal on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vmware-federal-on-ibm-cloud-overview)
+* [Adding, viewing, and deleting clusters for VMware Federal instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-viewing-and-deleting-clusters-for-vmware-federal-instances)
+* [Expanding and contracting capacity for VMware Federal instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-expanding-and-contracting-capacity-for-vmware-federal-instances)
 
 ## Advanced configuration settings on ESXi servers
 
@@ -61,14 +61,14 @@ For instances that are upgraded from a previous release to V2.2 or later release
 It is recommended that you change the remaining configuration settings to the new values for consistency across all instances and to allow adequate support for storage expansion. IBM plans to test only with these new settings for all {{site.data.keyword.cloud_notm}} for VMware Solutions future releases.
 
 For more information, see _Advanced configuration settings for ESXi servers_ in:
-* [vCenter Server Bill of Materials](/docs/services/vmwaresolutions/vcenter/vc_bom.html#advanced-configuration-settings-for-esxi-servers)
-* [Cloud Foundation Bill of Materials](/docs/services/vmwaresolutions/sddc/sd_bom.html#advanced-configuration-settings-for-esxi-servers)
+* [vCenter Server Bill of Materials](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter-server-bill-of-materials#advanced-configuration-settings-for-esxi-servers)
+* [Cloud Foundation Bill of Materials](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-cloud-foundation-bill-of-materials#advanced-configuration-settings-for-esxi-servers)
 
 ## Support for up to 51 ESXi servers for an initial cluster and up to 59 ESXi servers for additional clusters
 
 For V2.2 and later releases, you can now increase the number of ESXi servers to a maximum of 51 for an initial cluster and up to 59 for additional clusters.
 
-For instances deployed in V2.1 or earlier releases, you must enable necessary vSAN support to increase the cluster size beyond 32. For more information about steps to increase the number of ESXi servers, see _How many ESXi servers can I add to a cluster?_ in [FAQ about ESXi servers](/docs/services/vmwaresolutions/vmonic/faq_esxi.html#how-many-esxi-servers-can-i-add-to-a-cluster-).
+For instances deployed in V2.1 or earlier releases, you must enable necessary vSAN support to increase the cluster size beyond 32. For more information about steps to increase the number of ESXi servers, see _How many ESXi servers can I add to a cluster?_ in [FAQ about ESXi servers](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq-about-esxi-servers#how-many-esxi-servers-can-i-add-to-a-cluster-).
 {:important}
 
 ## More network configuration options for vCenter Server and Cloud Foundation instances
@@ -76,16 +76,16 @@ For instances deployed in V2.1 or earlier releases, you must enable necessary vS
 For vCenter Server and Cloud Foundation instance orders, you can now reuse existing public and private VLANs for your network configuration. When existing VLANs are not available, you can order one new public and two new private VLANs.
 
 For important considerations before you select existing VLANs, see the *Network interface settings* sections in:
-* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
+* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-vcenter-server-instances)
+* [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-ordering-cloud-foundation-instances)
 
 ## Updates for VMware vCenter Server instances
 
 ### NSX component and port group configuration setting updates
 
-The current release applies the VMware NSX for vSphere 6.3.5 component update. For more information about components, see [vCenter Server Bill of Materials](/docs/services/vmwaresolutions/vcenter/vc_bom.html).
+The current release applies the VMware NSX for vSphere 6.3.5 component update. For more information about components, see [vCenter Server Bill of Materials](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter-server-bill-of-materials).
 
-For VMware vCenter Server instances that are deployed in V2.2 or later releases, the NSX and port group configuration settings have changed. For more information, see the *NSX and port group configuration settings* section in [vCenter Server Software Bill of Materials](/docs/services/vmwaresolutions/vcenter/vc_bom.html#nsx-and-port-group-configuration-settings).
+For VMware vCenter Server instances that are deployed in V2.2 or later releases, the NSX and port group configuration settings have changed. For more information, see the *NSX and port group configuration settings* section in [vCenter Server Software Bill of Materials](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter-server-bill-of-materials#nsx-and-port-group-configuration-settings).
 
 ### New option for DNS configuration
 
@@ -94,11 +94,11 @@ You can now select the deployment of a single Microsoft Windows Server Virtual S
 You must provide 2 Microsoft Windows Server 2012 R2 licenses if you configure your instance to use the two Microsoft Windows virtual machines. Use the Microsoft Windows Server 2012 R2 Standard edition license and/or the Microsoft Windows Server 2012 R2 Datacenter edition license. You have 30 days to activate the virtual machines.
 {:note}
 
-For more information, see the *System settings* section in [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html#system-settings)​.
+For more information, see the *System settings* section in [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-vcenter-server-instances#system-settings)​.
 
 ### Increased number of clusters per instance
 
-You can now add up to 10 clusters to VMware vCenter Server instances that are deployed in or upgraded to V2.2. and later releases. For more information, see [Adding and viewing clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)​.
+You can now add up to 10 clusters to VMware vCenter Server instances that are deployed in or upgraded to V2.2. and later releases. For more information, see [Adding and viewing clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-viewing-and-deleting-clusters-for-vcenter-server-instances)​.
 
 ## Updates for VMware vSphere clusters
 
@@ -106,7 +106,7 @@ You can now add up to 10 clusters to VMware vCenter Server instances that are de
 
 Business Partner users can now select from four component license bundles when ordering a new vSphere cluster. Choose from Standard with Management, Advanced, Advanced with Networking, or Advanced with Networking and Management. You can also include additional VMware components to your order. However, the option to Bring Your Own License is not available.
 
-For more information, see the *Licensing settings* section in [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html).
+For more information, see the *Licensing settings* section in [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-ordering-new-vsphere-clusters).
 
 ## Updates for NetApp ONTAP Select instances
 
@@ -114,13 +114,13 @@ The current release applies the update of NetApp ONTAP Select 9.3.
 
 ### Increased number of SATA drives for high capacity IBM Cloud Bare Metal Servers
 
-Thirty Four SATA drives are now available for NetApp ONTAP Select high capacity {{site.data.keyword.baremetal_short}}. For more information, see [Technical specifications for NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp/np_netappoverview.html#technical-specifications-for-netapp-ontap-select-instances).
+Thirty Four SATA drives are now available for NetApp ONTAP Select high capacity {{site.data.keyword.baremetal_short}}. For more information, see [Technical specifications for NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-netapp-ontap-select-overview#technical-specifications-for-netapp-ontap-select-instances).
 
 ## Updates for add-on services
 
 ### Increased bandwidth option for F5 on IBM Cloud
 
-You can now select a maximum bandwidth of 10 Gbps when you install the F5 on {{site.data.keyword.cloud_notm}} service for Cloud Foundation and vCenter Server instances. For more information, see [Considerations for F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/f5_considerations.html).
+You can now select a maximum bandwidth of 10 Gbps when you install the F5 on {{site.data.keyword.cloud_notm}} service for Cloud Foundation and vCenter Server instances. For more information, see [Considerations for F5 on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5-on-ibm-cloud-overview).
 
 ### KMIP for VMware on IBM Cloud
 
@@ -138,7 +138,7 @@ This service provides an efficient and scalable solution for data protection, da
 
 The IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}} service provides data protection for the workload VMs only.
 
-For more information, see [Managing IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingspp.html).
+For more information, see [Managing IBM Spectrum Protect Plus on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing-ibm-spectrum-protect-plus-on-ibm-cloud).
 
 ### Managed Services
 
@@ -151,20 +151,20 @@ The Zerto on {{site.data.keyword.cloud_notm}} service provides replication and d
 You can request managed services for your instances from the **Getting Started** page, either by placing a new instance order, or by adding the service to an existing instance.
 
 For more information, see the following topics:
-* [Requesting services for Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managing_veeam_services.html)
-* [Requesting services for Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managing_zerto_services.html)
+* [Requesting services for Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-requesting-managed-services-for-veeam-on-ibm-cloud)
+* [Requesting services for Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-requesting-managed-services-for-zerto-on-ibm-cloud)
 
 ## New and updated documentation
 
-* A comparison table with the supported functions for Cloud Foundation and vCenter Server instances, as well as VMware vSphere clusters, is now available in the documentation. You can see, at a glance, the differences between the functions that each type of instance provides. For more information, see [Offering comparison chart](/docs/services/vmwaresolutions/vmonic/inst_comp_chart.html).
+* A comparison table with the supported functions for Cloud Foundation and vCenter Server instances, as well as VMware vSphere clusters, is now available in the documentation. You can see, at a glance, the differences between the functions that each type of instance provides. For more information, see [Offering comparison chart](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-offering-comparison-chart).
 
 * The VLANs and software Bill of Materials (BOM) is now provided in the documentation for Cloud Foundation, vCenter Server, and VMware vSphere clusters.
 
   For more information, see the following topics:
 
-  * [vCenter Server Bill of Materials](/docs/services/vmwaresolutions/vcenter/vc_bom.html)
-  * [Cloud Foundation Bill of Materials](/docs/services/vmwaresolutions/sddc/sd_bom.html)
-  * [VMware vSphere Bill of Materials](/docs/services/vmwaresolutions/vsphere/vs_bom.html)
+  * [vCenter Server Bill of Materials](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter-server-bill-of-materials)
+  * [Cloud Foundation Bill of Materials](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-cloud-foundation-bill-of-materials)
+  * [VMware vSphere Bill of Materials](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vmware-vsphere-bill-of-materials)
 
 ## User interface updates and enhancements
 

@@ -41,4 +41,4 @@ Table 1. Port access requirements
 
 ### Related links
 
-* [Installing and configuring HCX on the source](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-install-cfg-src.html)
+* [Installing and configuring HCX on the source](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-installing-and-configuring-hcx-on-the-source)

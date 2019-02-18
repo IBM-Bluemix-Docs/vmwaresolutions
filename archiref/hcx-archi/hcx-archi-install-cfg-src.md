@@ -55,4 +55,4 @@ Table 1. Sample values for network properties
 
 ### Related links
 
-* [Preparing the installation environment](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-prep-install.html)
+* [Preparing the installation environment](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-preparing-the-installation-environment)

@@ -23,7 +23,7 @@ The {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account was prev
 
 The {{site.data.keyword.cloud_notm}} infrastructure account that you are using must have certain permissions to be able to order the components in your instances and perform operations on your behalf. The permission requirements are applicable to all types of instances and services you are ordering from the {{site.data.keyword.vmwaresolutions_short}} console.
 
-Authorized users can verify and update the permissions for an {{site.data.keyword.cloud_notm}} infrastructure account in the {{site.data.keyword.slportal}}. For more information, see [Editing a user's customer portal permissions](/docs/customer-portal/cpmanuserprof.html#cp_editusercpperm){:new_window}.
+Authorized users can verify and update the permissions for an {{site.data.keyword.cloud_notm}} infrastructure account in the {{site.data.keyword.slportal}}. For more information, see [Editing a user's customer portal permissions](/docs/customer-portal?topic=customer-portal-customerportal_accuserprof#cp_editusercpperm){:new_window}.
 
 Table 1. Required permissions for the {{site.data.keyword.cloud_notm}} infrastructure account
 
@@ -47,17 +47,17 @@ Table 1. Required permissions for the {{site.data.keyword.cloud_notm}} infrastru
 
 ## Virtual Routing and Forwarding (VRF) requirement
 
-The {{site.data.keyword.cloud_notm}} infrastructure account must either be a VRF account or, if a non-VRF account, must have VLAN spanning enabled. For more information about converting your account from non-VRF to VRF, see [Overview of VRF on IBM Cloud](/docs/infrastructure/direct-link/vrf-on-ibm-cloud.html).
+The {{site.data.keyword.cloud_notm}} infrastructure account must either be a VRF account or, if a non-VRF account, must have VLAN spanning enabled. For more information about converting your account from non-VRF to VRF, see [Overview of VRF on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud).
 
 ## VLAN spanning for non-VRF accounts
 
 If you are using a non-VRF {{site.data.keyword.cloud_notm}} infrastructure account, VLAN spanning must be enabled. If VLAN spanning is not enabled for non-VRF accounts, the various components of the VMware virtualization environment might not be able to communicate with each other.
 
-To enable VLAN spanning in your account, see [VLAN Spanning](/docs/infrastructure/vlans/vlan-spanning.html){:new_window}.
+To enable VLAN spanning in your account, see [VLAN Spanning](/docs/infrastructure/vlans?topic=vlans-vlan-spanning){:new_window}.
 
 ### Related links
 
-* [Requirements for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_planning.html)
-* [Requirements for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
-* [User account and settings](/docs/services/vmwaresolutions/vmonic/useraccount.html)
-* [Overview of VRF on IBM Cloud](/docs/infrastructure/direct-link/vrf-on-ibm-cloud.html)
+* [Requirements for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-requirements-and-planning-for-cloud-foundation-instances)
+* [Requirements for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-requirements-and-planning-for-vcenter-server-instances)
+* [User account and settings](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-accounts-and-settings)
+* [Overview of VRF on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)

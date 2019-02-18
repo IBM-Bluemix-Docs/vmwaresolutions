@@ -187,7 +187,7 @@ Table 9. DLR and Workload ESG IP configuration
 
 NAT is employed on the Workload ESG for the means of allowing network traffic to traverse between one IP address space and another. For the workload ESG, NAT is required not only to allow for communication to internet destinations, but also to communicate to any {{site.data.keyword.cloud_notm}} sourced IP ranges. For this design, workload traffic is allowed to exit to the internet, but not to the management or any {{site.data.keyword.cloud_notm}} networks. As such, only a SNAT need be defined on the Workload ESG. The entire workload portable subnet is configured to traverse through the SNAT.
 
-While it is possible to use NAT to allow for workload communication across multiple instances of Cloud Foundation or vCenter Server, doing this becomes impractical when many workloads need to be connected across instances. For examples of using advanced NSX capabilities to create an L2 overly transit network across Cloud Foundation or vCeter Server instances, see [Multi-site architecture](/docs/services/vmwaresolutions/archiref/nsx/multi_site.html).
+While it is possible to use NAT to allow for workload communication across multiple instances of Cloud Foundation or vCenter Server, doing this becomes impractical when many workloads need to be connected across instances. For examples of using advanced NSX capabilities to create an L2 overly transit network across Cloud Foundation or vCeter Server instances, see [Multi-site architecture](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-multi-site-architecture).
 
 Table 10. Workload ESG NAT rules
 
@@ -240,5 +240,5 @@ By default, logging is enabled on all new NSX Edge appliances. The default loggi
 
 ### Related links
 
-* [NSX Edge Services Gateway design](/docs/services/vmwaresolutions/archiref/nsx/nsx_design.html)
-* [Multi-site architecture](/docs/services/vmwaresolutions/archiref/nsx/multi_site.html)
+* [NSX Edge Services Gateway design](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-nsx-edge-services-gateway-design)
+* [Multi-site architecture](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-multi-site-architecture)

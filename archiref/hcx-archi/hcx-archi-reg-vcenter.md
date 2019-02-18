@@ -40,4 +40,4 @@ Notice the existing **Hybrid Cloud** icon and the **Hybrid Cloud Services** menu
 
 ### Related links
 
-* [Installing and configuring hybrid services](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-install-cfg-hybrid.html)
+* [Installing and configuring hybrid services](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-installing-and-configuring-hybrid-services)

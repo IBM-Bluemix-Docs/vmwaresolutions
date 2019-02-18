@@ -72,5 +72,5 @@ Table 3. ESXi servers advanced configuration settings for Cloud Foundation insta
 * [Build numbers and versions of VMware ESXi/ESX (2143832)](https://kb.vmware.com/s/article/2143832)
 * [Build numbers and versions of VMware vCenter Server (2143838)](https://kb.vmware.com/s/article/2143838)
 * [VMware Cloud Foundation on {{site.data.keyword.cloud_notm}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=C87A0EC07E7311E6BA51E79BE9476040)
-* [Cloud Foundation overview](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)
-* [Planning Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_planning.html)
+* [Cloud Foundation overview](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-cloud-foundation-overview)
+* [Planning Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-requirements-and-planning-for-cloud-foundation-instances)

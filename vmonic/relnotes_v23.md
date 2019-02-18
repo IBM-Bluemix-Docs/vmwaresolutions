@@ -24,19 +24,19 @@ This release includes new features, component updates, usability enhancements, a
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-For more information, see [Addressing Spectre and Meltdown vulnerabilities](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html).
+For more information, see [Addressing Spectre and Meltdown vulnerabilities](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-addressing-spectre-and-meltdown-vulnerabilities).
 
 ## VMware vCenter Server on IBM Cloud with Hybridity Bundle
 
 This release introduces the VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle offering. The vCenter Server with Hybridity Bundle is a hosted private cloud that helps quickly and easily extend your on-premises infrastructure into the cloud. The VMware environment is based on IBM-provided VMware Software Defined Data Center licenses and includes the VMware HCX on {{site.data.keyword.cloud_notm}} service that easily and securely connects a vSphere 5.0+ environment on-premises with {{site.data.keyword.cloud_notm}} sites for seamless infrastructure hybridity and true application mobility.
 
-The HCX on {{site.data.keyword.cloud_notm}} service is available only through the vCenter Server with Hybridity Bundle instance. You can upgrade your existing vCenter Server instance to a vCenter Server with Hybridity Bundle instance after first applying the base vCenter Server V2.3 software update. For more information, see [Applying updates to vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_applyingupdates.html).
+The HCX on {{site.data.keyword.cloud_notm}} service is available only through the vCenter Server with Hybridity Bundle instance. You can upgrade your existing vCenter Server instance to a vCenter Server with Hybridity Bundle instance after first applying the base vCenter Server V2.3 software update. For more information, see [Applying updates to vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-applying-updates-to-vcenter-server-instances).
 
 For more information about the vCenter Server with Hybridity Bundle, see the following topics:
 
-* [vCenter Server with Hybridity Bundle overview](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
-* [Requirements and planning for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html)
-* [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [vCenter Server with Hybridity Bundle overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter-server-with-hybridity-bundle-overview)
+* [Requirements and planning for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-requirements-and-planning-for-vcenter-server-with-hybridity-bundle-instances)
+* [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-vcenter-server-with-hybridity-bundle-instances)
 
 ## Delete cluster support for vCenter Server and Cloud Foundation instances
 
@@ -44,8 +44,8 @@ You can now delete clusters from an instance without having to delete the entire
 
 For more information, see the following topics:
 
-* [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html#deleting-clusters-from-vcenter-server-instances)
-* [Adding, viewing, and deleting clusters for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_addingviewingclusters.html#deleting-clusters-from-cloud-foundation-instances)
+* [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-viewing-and-deleting-clusters-for-vcenter-server-instances#deleting-clusters-from-vcenter-server-instances)
+* [Adding, viewing, and deleting clusters for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-adding-viewing-and-deleting-clusters-for-cloud-foundation-instances#deleting-clusters-from-cloud-foundation-instances)
 
 ## Updates for VMware vCenter Server instances
 
@@ -61,8 +61,8 @@ Starting with the V2.3 release, the following new CPU models are available for d
 
 For more information, see the following topics:
 
-* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-vcenter-server-instances)
+* [Adding, viewing, and deleting clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-viewing-and-deleting-clusters-for-vcenter-server-instances)
 
 ## Updates for VMware Cloud Foundation instances
 
@@ -80,7 +80,7 @@ You now have the option to select the deployment of a single Microsoft Windows S
 You must provide 2 Microsoft Windows Server 2012 R2 licenses if you configure your instance to use the two Microsoft Windows virtual machines. Use the Microsoft Windows Server 2012 R2 Standard edition license and/or the Microsoft Windows Server 2012 R2 Datacenter edition license. You have 30 days to activate the virtual machines.
 {:note}
 
-For more information, see the *Network interface settings* section in [Ordering VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html#network-interface-settings)​.
+For more information, see the *Network interface settings* section in [Ordering VMware Federal instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-vmware-federal-instances#network-interface-settings)​.
 
 ### Add and delete cluster support for VMware Federal Instances
 
@@ -88,7 +88,7 @@ You can now use clusters to manage ESXi servers in VMware Federal instances that
 
 You also have the option to delete one or more clusters from the instance without deleting the entire instance.
 
-For more information, see [Adding, viewing, and deleting clusters for VMware Federal instances](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html).
+For more information, see [Adding, viewing, and deleting clusters for VMware Federal instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-viewing-and-deleting-clusters-for-vmware-federal-instances).
 
 ## Updates for add-on services
 
@@ -99,8 +99,8 @@ The HyTrust CloudControl on {{site.data.keyword.cloud_notm}} service is now avai
 You can order instances with the service included when you order your instance, or add this service to your existing instances later.
 
 For more information, see the following topics:
-* [Components and considerations for HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htcc_considerations.html)
-* [Managing HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghtcc.html)
+* [Components and considerations for HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hytrust-cloudcontrol-on-ibm-cloud-overview)
+* [Managing HyTrust CloudControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing-hytrust-cloudcontrol-on-ibm-cloud)
 
 ### HyTrust DataControl on IBM Cloud
 
@@ -109,8 +109,8 @@ The HyTrust DataControl on {{site.data.keyword.cloud_notm}} service is now avail
 You can order instances with the service included when you order your instance, or add this service to your existing instances later.
 
 For more information, see the following topics:
-* [Components and considerations for HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htdc_considerations.html)
-* [Managing HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghtdc.html)
+* [Components and considerations for HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hytrust-datacontrol-on-ibm-cloud-overview)
+* [Managing HyTrust DataControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing-hytrust-datacontrol-on-ibm-cloud)
 
 ### IBM Spectrum Protect Plus on IBM Cloud
 

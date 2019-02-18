@@ -14,7 +14,7 @@ Use this procedure to delete the on-premises HCX on {{site.data.keyword.cloud}} 
 
 ## Before you begin
 
-Ensure that you reviewed all the considerations in [Considerations when deleting on-premises HCX on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/standalone_considerations.html).
+Ensure that you reviewed all the considerations in [Considerations when deleting on-premises HCX on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-considerations-for-on-premises-vmware-hcx-on-ibm-cloud-instances).
 
 ## Procedure to delete on-premises VMware HCX on IBM Cloud instances
 
@@ -26,7 +26,7 @@ Ensure that you reviewed all the considerations in [Considerations when deleting
 
 ### Related links
 
-* [Ordering on-premises HCX on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/standalone_orderingserviceinstances.html)
-* [Viewing on-premises HCX on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/standalone_viewingserviceinstances.html)
-* [Glossary of HCX terms](/docs/services/vmwaresolutions/services/hcx_glossary.html)
+* [Ordering on-premises HCX on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-ordering-on-premises-vmware-hcx-on-ibm-cloud-instances)
+* [Viewing on-premises HCX on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-viewing-on-premises-vmware-hcx-on-ibm-cloud-instances)
+* [Glossary of HCX terms](/docs/services/vmwaresolutions/services?topic=vmware-solutions-glossary-of-hcx-terms)
 * [VMware Hybrid Cloud Extension documentation](https://cloud.vmware.com/vmware-hcx/resources)

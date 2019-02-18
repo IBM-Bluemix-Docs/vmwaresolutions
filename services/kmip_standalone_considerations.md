@@ -32,8 +32,8 @@ The following specifications are included with the KMIP for VMware on {{site.dat
 Review the following considerations before you install a KMIP for VMware on {{site.data.keyword.cloud_notm}} instance:
 
 * KMIP for VMware on {{site.data.keyword.cloud_notm}} uses the IBM Key Protect for {{site.data.keyword.cloud_notm}} service to create, encrypt, and decrypt encryption keys. Therefore, before you install KMIP for VMware on {{site.data.keyword.cloud_notm}}, ensure that:
-   * You ordered a usable Key Protect service in the {{site.data.keyword.cloud_notm}} region where your KMIP for VMware on {{site.data.keyword.cloud_notm}} instance is to be hosted. For more information, see [Provisioning the service](/docs/services/key-protect/provision.html).
-   * An {{site.data.keyword.cloud_notm}} service ID was created by following the steps in [Creating a service ID](/docs/iam/serviceid.html). This service ID is used to access the Key Protect service instance that you created.
+   * You ordered a usable Key Protect service in the {{site.data.keyword.cloud_notm}} region where your KMIP for VMware on {{site.data.keyword.cloud_notm}} instance is to be hosted. For more information, see [Provisioning the service](/docs/services/key-protect?topic=key-protect-provision).
+   * An {{site.data.keyword.cloud_notm}} service ID was created by following the steps in [Creating a service ID](/docs/iam?topic=iam-serviceids). This service ID is used to access the Key Protect service instance that you created.
    * You granted the following access levels for the service ID:
       * At the platform access level: Viewer authority to your IBM Key Protect instance
       * At the service access level: Manager authority to your IBM Key Protect instance
@@ -42,11 +42,11 @@ Review the following considerations before you install a KMIP for VMware on {{si
 
      **Important:** You cannot order the service without CRKs. It is highly recommended that you use the method to create a CRK using existing key material, and back up the key material that you are creating. By doing so, you ensure that you can recover your keys if a failure of the data center where IBM Key Protect is applied to store your CRKs.
 * Ensure that your {{site.data.keyword.cloud_notm}} infrastructure account is enabled for Virtual Routing and Forwarding (VRF) and for connectivity to Service Endpoints. For more information, see:
-   * [Overview of Virtual Routing and Forwarding (VRF) on IBM Cloud](/docs/infrastructure/direct-link/vrf-on-ibm-cloud.html)
-   * [Enabling your account for using Service Endpoints by using IBM Cloud CLI](/docs/services/service-endpoint/enable-servicepoint.html#getting-started)
+   * [Overview of Virtual Routing and Forwarding (VRF) on IBM Cloud](/docs/infrastructure/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud)
+   * [Enabling your account for using Service Endpoints by using IBM Cloud CLI](/docs/services/service-endpoint?topic=services/service-endpoint-getting-started#getting-started)
 * Because only private connection is supported, you do not need to configure any firewall or SNAT rules in vCenter Server for the network connectivity from the vCenter Server to the endpoint of the KMIP for VMware on {{site.data.keyword.cloud_notm}} instance.
 
-For more information, see [KMIP for VMware on IBM Cloud solution architecture](/docs/services/vmwaresolutions/archiref/kmip/overview.html).
+For more information, see [KMIP for VMware on IBM Cloud solution architecture](/docs/services/vmwaresolutions/archiref/kmip?topic=vmware-solutions-kmip-for-vmware-overview).
 
 ## Considerations when deleting KMIP for VMware on IBM Cloud instances
 
@@ -54,9 +54,9 @@ All data protected by the KMIP for VMware on IBM Cloud service, including encryp
 
 ### Related links
 
-* [Ordering KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/kmip_standalone_ordering.html)
-* [Adding, viewing, and deleting certificates for KMIP for VMware on IBM Cloud instances](/docs/services/vmwaresolutions/services/kmip_standalone_addingdeletingcert.html)
-* [Viewing KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/kmip_standalone_viewing.html)
-* [Deleting KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/kmip_standalone_deleting.html)
-* [Activity Tracker events](/docs/services/vmwaresolutions/vmonic/at-events.html)
-* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Ordering KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-ordering-kmip-for-vmware-on-ibm-cloud-instances)
+* [Adding, viewing, and deleting certificates for KMIP for VMware on IBM Cloud instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-adding-viewing-and-deleting-certificates-for-kmip-for-vmware-on-ibm-cloud-instances)
+* [Viewing KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-viewing-kmip-for-vmware-on-ibm-cloud-instances)
+* [Deleting KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-deleting-kmip-for-vmware-on-ibm-cloud-instances)
+* [Activity Tracker events](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-activity-tracker-events)
+* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-contacting-ibm-support)

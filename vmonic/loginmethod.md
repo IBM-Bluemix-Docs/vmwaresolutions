@@ -40,5 +40,5 @@ To access the console from the ibm.com website, complete the following steps:
 
 ### Related links
 
-* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
-* [Troubleshooting for accessing {{site.data.keyword.cloud_notm}}](/docs/account/ts_accessing.html){:new_window}
+* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-general-faq-about-ibm-cloud-for-vmware-solutions)
+* [Troubleshooting for accessing {{site.data.keyword.cloud_notm}}](/docs/account?topic=account-accessing){:new_window}

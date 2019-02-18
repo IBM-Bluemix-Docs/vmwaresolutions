@@ -60,13 +60,13 @@ You need an {{site.data.keyword.cloud_notm}} account and an {{site.data.keyword.
    </tr>
    <tr>
       <td>IBM Cloud infrastructure (SoftLayer) account</td>
-      <td>The {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account was previously known as the IBM SoftLayer account.  For more information about the requirements that the account must meet, see [Requirements for the {{site.data.keyword.cloud_notm}} infrastructure account](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).<br><br>You can link {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) accounts with {{site.data.keyword.cloud_notm}} accounts to use combined infrastructure as a service (IaaS) and platform as a service (PaaS) resources. Then, you can access IaaS resources and PaaS resources from a single login. Linking your accounts also provides you with a single invoice for all the PaaS and IaaS resources that you use.<ul><li>If you do not have an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account, request one by following the procedure in [Signing up for an IBM Cloud infrastructure (SoftLayer) account](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html), and then link your {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account with your {{site.data.keyword.cloud_notm}} account by following the procedure in [Linking IBMid accounts](https://console.cloud.ibm.com/docs/account/softlayerlink.html).</li><li>If you have an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account, you can link it with your {{site.data.keyword.cloud_notm}} account by following the procedure in [Linking IBMid accounts](https://console.cloud.ibm.com/docs/account/softlayerlink.html).</li></ul></td>
+      <td>The {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account was previously known as the IBM SoftLayer account.  For more information about the requirements that the account must meet, see [Requirements for the {{site.data.keyword.cloud_notm}} infrastructure account](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-requirements-for-the-ibm-cloud-infrastructure-account).<br><br>You can link {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) accounts with {{site.data.keyword.cloud_notm}} accounts to use combined infrastructure as a service (IaaS) and platform as a service (PaaS) resources. Then, you can access IaaS resources and PaaS resources from a single login. Linking your accounts also provides you with a single invoice for all the PaaS and IaaS resources that you use.<ul><li>If you do not have an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account, request one by following the procedure in [Signing up for an IBM Cloud infrastructure (SoftLayer) account](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing-up-for-required-accounts), and then link your {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account with your {{site.data.keyword.cloud_notm}} account by following the procedure in [Linking IBMid accounts](https://console.cloud.ibm.com/docs/account/softlayerlink.html).</li><li>If you have an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account, you can link it with your {{site.data.keyword.cloud_notm}} account by following the procedure in [Linking IBMid accounts](https://console.cloud.ibm.com/docs/account/softlayerlink.html).</li></ul></td>
    </tr>
    </table>
 
 For more information, see the following topics:
-* [Signing up for required accounts](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
-* [Requirements for the {{site.data.keyword.cloud_notm}} infrastructure account](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html)
+* [Signing up for required accounts](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing-up-for-required-accounts)
+* [Requirements for the {{site.data.keyword.cloud_notm}} infrastructure account](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-requirements-for-the-ibm-cloud-infrastructure-account)
 
 ### Deployment offerings
 
@@ -79,27 +79,27 @@ Review and choose your deployment offering.
        <th>Description</th>
     </tr>
     <tr>
-       <td>[VMware vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)</td>
+       <td>[VMware vCenter Server on IBM Cloud](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter-server-overview)</td>
        <td>With the vCenter Server offering, you can deploy a VMware virtual environment by using custom compute, storage, and network resources to best fit your business needs.</td>
     </tr>
     <tr>
-       <td>[VMware vCenter Server on IBM Cloud with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)</td>
+       <td>[VMware vCenter Server on IBM Cloud with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter-server-with-hybridity-bundle-overview)</td>
        <td>The vCenter Server with Hybridity offering is a hosted private cloud that helps quickly and easily extend your on-premises infrastructure into the cloud. The VMware environment is based on IBM-provided VMware Software Defined Data Center licenses and it includes VMware Hybrid Cloud Extension (HCX). Using HCX, you can securely connect a vSphere 5.0+ environment on-premises with {{site.data.keyword.cloud_notm}} sites for seamless infrastructure hybridity and true application mobility.</td>
     </tr>
     <tr>
-       <td>[VMware Cloud Foundation on IBM Cloud](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html)</td>
+       <td>[VMware Cloud Foundation on IBM Cloud](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-cloud-foundation-overview)</td>
        <td>The Cloud Foundation offering provides a unified VMware virtual environment by using standard {{site.data.keyword.cloud_notm}} compute, storage, and network resources, which are dedicated to each user deployment.</td>
     </tr>
     <tr>
-       <td>[VMware vSphere on IBM Cloud](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html)</td>
+       <td>[VMware vSphere on IBM Cloud](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vmware-vsphere-on-ibm-cloud-overview)</td>
        <td>The vSphere on {{site.data.keyword.cloud_notm}} offering provides a customizable virtualization service that combines VMware-compatible {{site.data.keyword.baremetal_short}}, hardware components, and licenses, to build your own IBM-hosted VMware environment.</td>
     </tr>
     <tr>
-       <td>[NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp/np_netappoverview.html)</td>
+       <td>[NetApp ONTAP Select](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-netapp-ontap-select-overview)</td>
        <td>The NetApp ONTAP Select offering allows you to deploy a software-defined storage cluster that addresses your needs for a dedicated and highly available storage appliance based on NetApp ONTAP Select.</td>
     </tr>
     <tr>
-       <td>[VMware Federal on IBM Cloud](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html)</td>
+       <td>[VMware Federal on IBM Cloud](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vmware-federal-on-ibm-cloud-overview)</td>
        <td>The VMware Federal on {{site.data.keyword.cloud_notm}} offering provides support for ordering a base vCenter Server instance in addition to providing the option to secure the deployed instances, removing sensitive information, and the open management connection for ongoing access to the instance for management functions.</td>
     </tr>
   </table>
@@ -115,51 +115,51 @@ Review and choose add-on services for your deployment offering.
        <th>Description</th>
     </tr>
     <tr>
-       <td>[F5 on IBM Cloud](/docs/services/vmwaresolutions/services/f5_considerations.html)</td>
+       <td>[F5 on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-f5-on-ibm-cloud-overview)</td>
        <td>The F5 on {{site.data.keyword.cloud_notm}} service (F5 BIG-IP® Virtual Edition) provides intelligent L4-L7 load balancing and traffic management services at a local and global scale, robust network and web application firewall protection, and secure and federated application access.</td>
     </tr>
     <tr>
-       <td>[FortiGate Security Appliance on IBM Cloud](/docs/services/vmwaresolutions/services/fsa_considerations.html)</td>
+       <td>[FortiGate Security Appliance on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortigate-security-appliance-on-ibm-cloud-overview)</td>
        <td>The FortiGate Security Appliance on {{site.data.keyword.cloud_notm}} service deploys a pair of FortiGate Security Appliance (FSA) 300 series devices in a highly available mode to provide firewall, routing, NAT, and VPN services to protect all the servers and virtual machines on the public VLAN of your instances.</td>
     </tr>
     <tr>
-       <td>[FortiGate Virtual Appliance on IBM Cloud](/docs/services/vmwaresolutions/services/fortinetvm_considerations.html)</td>
+       <td>[FortiGate Virtual Appliance on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortigate-virtual-appliance-on-ibm-cloud-overview)</td>
        <td>The FortiGate Virtual Appliance on {{site.data.keyword.cloud_notm}} service deploys a pair of FortiGate Virtual Appliances to your environment, which can help you reduce risk by implementing critical security controls within your virtual infrastructure.</td>
     </tr>
     <tr>
-       <td>[HyTrust CloudControl on IBM Cloud](/docs/services/vmwaresolutions/services/htcc_considerations.html)</td>
+       <td>[HyTrust CloudControl on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hytrust-cloudcontrol-on-ibm-cloud-overview)</td>
        <td>The HyTrust CloudControl on {{site.data.keyword.cloud_notm}} service enforces and controls compliance against security standards, and provides detailed role-based access control (RBAC), approval, and auditing capabilities. When combined with HyTrust DataControl, the service can ensure that virtual machines and workload data do not leave a particular region, cluster, or ESXi server within the {{site.data.keyword.CloudDataCent_notm}}.</td>
     </tr>
     <tr>
-       <td>[HyTrust DataControl on IBM Cloud](/docs/services/vmwaresolutions/services/htdc_considerations.html)</td>
+       <td>[HyTrust DataControl on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hytrust-datacontrol-on-ibm-cloud-overview)</td>
        <td>The HyTrust DataControl on {{site.data.keyword.cloud_notm}} service offers strong encryption with integrated key management to secure workloads throughout their lifecycle. The service can provide encryption at both the operating system level and at the data level, which means that any directory, folder, or file within a workload can be encrypted and decrypted.</td>
     </tr>
     <tr>
-       <td>[HyTrust KeyControl on IBM Cloud](/docs/services/vmwaresolutions/services/htkc_considerations.html)</td>
+       <td>[HyTrust KeyControl on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hytrust-keycontrol-on-ibm-cloud-overview)</td>
        <td>The HyTrust KeyControl on {{site.data.keyword.cloud_notm}} service simplifies the management of encrypted workloads by automating and simplifying the lifecycle of encryption keys. The service can easily manage encryption keys at scale by using FIPS 140-2 compliant encryption.</td>
     </tr>
     <tr>
-       <td>[IBM Cloud Private Hosted](/docs/services/vmwaresolutions/services/icp_overview.html)</td>
+       <td>[IBM Cloud Private Hosted](/docs/services/vmwaresolutions/services?topic=vmware-solutions-ibm-cloud-private-hosted-overview)</td>
        <td>The {{site.data.keyword.cloud_notm}} Private Hosted on vCenter Server on {{site.data.keyword.cloud_notm}} service brings the power of microservices and containers to your VMware environment on {{site.data.keyword.cloud_notm}}. With this service, you can extend the same familiar VMware and {{site.data.keyword.cloud_notm}} Private operational model and tools from on-premises into the {{site.data.keyword.cloud_notm}}.</td>
     </tr>
     <tr>
-       <td>[IBM Spectrum Protect Plus on IBM Cloud](/docs/services/vmwaresolutions/services/spp_considerations.html)</td>
+       <td>[IBM Spectrum Protect Plus on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-ibm-spectrum-protect-plus-on-ibm-cloud-overview)</td>
        <td>The IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} service provides an efficient and scalable solution for data protection, data reuse, and data recovery for virtual environments. You can implement the service as a stand-alone solution or you can integrate it with your IBM Spectrum Protect environment to offload copies for long-term storage and data governance.</td>
     </tr>
     <tr>
-       <td>[KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/services/kmip_standalone_considerations.html)</td>
+       <td>[KMIP for VMware on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip-for-vmware-on-ibm-cloud-overview)</td>
        <td>The KMIP for VMware on {{site.data.keyword.cloud_notm}} service provides a highly available service to manage encryption keys that are used by VMware in the {{site.data.keyword.cloud_notm}}. This service offers runtime capability to allow customers to create, retrieve, activate, revoke, and destroy the encryption keys. It also provides management capability to maintain the associations between the client credentials and the encryption keys.</td>
     </tr>
     <tr>
-       <td>[Veeam on IBM Cloud](/docs/services/vmwaresolutions/services/veeam_considerations.html)</td>
+       <td>[Veeam on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam-on-ibm-cloud-overview)</td>
        <td>The Veeam on {{site.data.keyword.cloud_notm}} service seamlessly integrates directly with your VMware hypervisors to help your enterprise achieve high availability. This service can provide recovery points and time objectives for your applications and data. The recovery points and time objectives can be provided in less than 15 minutes after configuration is completed. By using this service, you can directly control both the backup and restore of all virtual machines for your infrastructure from the Veeam console.</td>
     </tr>
     <tr>
-       <td>[VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services/hcx_considerations.html)</td>
+       <td>[VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-specifications-and-considerations)</td>
        <td>The HCX on {{site.data.keyword.cloud_notm}} service can seamlessly extend the networks of on-premises data centers into {{site.data.keyword.cloud_notm}}, which allows virtual machines (VMs) to be migrated to and from the {{site.data.keyword.cloud_notm}} without any conversion or change.</td>
     </tr>
     <tr>
-       <td>[Zerto on IBM Cloud](/docs/services/vmwaresolutions/services/addingzertodr.html)</td>
+       <td>[Zerto on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-zerto-on-ibm-cloud-overview)</td>
        <td>The Zerto on {{site.data.keyword.cloud_notm}} service provides replication and disaster recovery capabilities, which can be integrated into the deployment offerings to protect and recover data in your VMware virtual environment on {{site.data.keyword.cloud_notm}}.</td>
     </tr>
    </table>
@@ -176,39 +176,39 @@ To access the {{site.data.keyword.vmwaresolutions_short}} console:
 
 Before you order an instance, you must enter the user name and API key of your {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account on the **Settings** page of the console.
 
-For information about how to configure your user account and settings, see [Managing user accounts and settings](/docs/services/vmwaresolutions/vmonic/useraccount.html).
+For information about how to configure your user account and settings, see [Managing user accounts and settings](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-accounts-and-settings).
 
 ## Step 3: Ordering an instance
 
 After you decide upon a deployment offering, which is managed as an instance in the console, begin the ordering process.
 
 For information about how to order an instance, see the following topics based on your selection of deployment offering:
-* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
-* [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
-* [Ordering NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)  
-* [Ordering VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html)
+* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-vcenter-server-instances)
+* [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-vcenter-server-with-hybridity-bundle-instances)
+* [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-ordering-cloud-foundation-instances)
+* [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-ordering-new-vsphere-clusters)
+* [Ordering NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-ordering-netapp-ontap-select-instances)  
+* [Ordering VMware Federal instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-vmware-federal-instances)
 
 ## Step 4: Viewing the instance
 
 After you place an instance order in **Step 3**, the deployment of the instance starts automatically. You can track the status of the deployment by viewing the instance details. When the instance deployment is completed, you can view the summary and detailed information of the instance and its add-on services on the instance details page too.
 
 For information about how to view the instance you ordered, see the following topics:
-* [Viewing vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html)
-* [Viewing vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
-* [Viewing Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
-* [Viewing NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
-* [Viewing VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_viewinginstance.html)
+* [Viewing vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-viewing-vcenter-server-instances)
+* [Viewing vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-viewing-vcenter-server-with-hybridity-bundle-instances)
+* [Viewing Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-viewing-cloud-foundation-instances)
+* [Viewing NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-viewing-netapp-ontap-select-instances)
+* [Viewing VMware Federal instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-viewing-vmware-federal-instances)
 
 ## Step 5: Managing add-on services for the instance
 
 If you ordered add-on services for your instance, you can manage the services as well.
 
 For information about how to manage the services, see the following topics:
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
-* [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
-* [Ordering, viewing, and removing services for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-viewing-and-removing-services-for-vcenter-server-instances)
+* [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-viewing-and-removing-services-for-vcenter-server-with-hybridity-bundle-instances)
+* [Ordering, viewing, and removing services for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-ordering-viewing-and-removing-services-for-cloud-foundation-instances)
 
 ## Next step
 

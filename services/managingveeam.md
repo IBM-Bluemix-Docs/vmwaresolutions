@@ -24,12 +24,12 @@ To manage the Veeam on {{site.data.keyword.cloud_notm}} service, access the Veea
 You can find the Windows IP address and the Administrator credentials on the Veeam on {{site.data.keyword.cloud_notm}} service details page.
 
 For more information, see the following topics:
-* [Ordering, viewing, and removing services for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html)
-* [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [Ordering, viewing, and removing services for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-ordering-viewing-and-removing-services-for-cloud-foundation-instances)
+* [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-viewing-and-removing-services-for-vcenter-server-instances)
 
 ## Backing up and restoring management components for instances that have Veeam on IBM Cloud installed
 
-The Veeam on {{site.data.keyword.cloud_notm}} service can be configured to back up the management components by using the Veeam console. For more information, see [Backing up components](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html).
+The Veeam on {{site.data.keyword.cloud_notm}} service can be configured to back up the management components by using the Veeam console. For more information, see [Backing up components](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-backing-up-components).
 
 For instances deployed in (or upgraded to) V1.8 or later releases, the configuration changes to your environment are not automatically backed up. Therefore, before you change the configuration of your environment, it is recommended that you back up the management components manually by running the management backup job in the Veeam console. For more information about backing up manually, see the [Veeam technical instructions](https://helpcenter.veeam.com/backup/vsphere/scheduing_manual.html){:new_window}.
 
@@ -55,7 +55,7 @@ If the Veeam service is installed on an instance with public and private network
 
 ### Updating Veeam licenses for instances deployed with private network only
 
-If the Veeam service is installed on an instance with private network only, you must take note of the expiration date for your license and [contact IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html) to get assistance with updating the license key when the renewal is needed.
+If the Veeam service is installed on an instance with private network only, you must take note of the expiration date for your license and [contact IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-contacting-ibm-support) to get assistance with updating the license key when the renewal is needed.
 
 ## Replacing the Veeam VSI of pre-V1.8 instances with Veeam on IBM Cloud
 
@@ -75,8 +75,8 @@ After the new Veeam on {{site.data.keyword.cloud_notm}} service is deployed and 
 
 ### Related links
 
-* [Veeam on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services/veeam_considerations.html)
-* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam-on-ibm-cloud-overview)
+* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-contacting-ibm-support)
+* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-general-faq-about-ibm-cloud-for-vmware-solutions)
 * [Veeam.com website](https://www.veeam.com/)
 * [Veeam technical documentation](https://www.veeam.com/documentation-guides-datasheets.html)

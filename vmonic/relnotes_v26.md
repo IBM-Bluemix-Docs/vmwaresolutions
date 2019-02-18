@@ -20,7 +20,7 @@ This release includes new features, component updates, usability enhancements, a
 * CVEID: [CVE-2017-5715](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
 * CVEID: [CVE-2017-5754](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
 
-For more information, see [Addressing Spectre and Meltdown vulnerabilities](/docs/services/vmwaresolutions/vmonic/trbl_fix_spectre.html).
+For more information, see [Addressing Spectre and Meltdown vulnerabilities](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-addressing-spectre-and-meltdown-vulnerabilities).
 
 ## High Performance with Intel Optane option
 
@@ -40,9 +40,9 @@ Some add-on services require public NICs and are not available if you select to 
 
 For more information, see the _Network interface settings_ section in the following topics:
 
-* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html#network-interface-settings)
-* [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html#network-interface-settings)
-* [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html#network-interface-settings)
+* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-vcenter-server-instances#network-interface-settings)
+* [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-vcenter-server-with-hybridity-bundle-instances#network-interface-settings)
+* [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-ordering-new-vsphere-clusters#network-interface-settings)
 
 ## Deleting ESXi servers
 
@@ -50,9 +50,9 @@ You can now delete any ESXi server from your vCenter Server, vCenter Server with
 
 For more information on ESXi server requirements, see the following topics:
 
-* [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html)
-* [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
-* [Expanding and contracting capacity for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-expanding-and-contracting-capacity-for-vcenter-server-instances)
+* [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-expanding-and-contracting-capacity-for-vcenter-server-with-hybridity-bundle-instances)
+* [Expanding and contracting capacity for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-expanding-and-contracting-capacity-for-cloud-foundation-instances)
 
 ## Updates for VMware vCenter Server instances
 
@@ -69,7 +69,7 @@ This release applies the following upgrades and improvements:
 
 You can now remove the Hybridity Bundle license from your vCenter Server instance. To do so, you are required to replace the VMware NSX and VMware vSAN rental license keys with Bring Your Own License (BYOL) keys and open a support ticket to cancel charges for the rental licenses.
 
-For more information, see [Removing the Hybridity Bundle from a vCenter Server instance](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletingbundle.html).
+For more information, see [Removing the Hybridity Bundle from a vCenter Server instance](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-removing-the-hybridity-bundle-from-a-vcenter-server-instance).
 
 ### vCenter Server with Hybridity Bundle availability
 
@@ -77,8 +77,8 @@ Business Partners can now order a vCenter Server with Hybridity Bundle instance.
 
 For more information, see the following topics:
 
-* [vCenter Server with Hybridity Bundle overview](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
-* [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
+* [vCenter Server with Hybridity Bundle overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter-server-with-hybridity-bundle-overview)
+* [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-vcenter-server-with-hybridity-bundle-instances)
 
 ## Updates for VMware Cloud Foundation instances
 
@@ -98,8 +98,8 @@ The HyTrust KeyControl on {{site.data.keyword.cloud_notm}} service is now availa
 You can order instances with the service included when you order your instance, or add this service to your existing instances later.
 
 For more information, see the following topics:
-* [Components and considerations for HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/htkc_considerations.html)
-* [Managing HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managinghtkc.html)
+* [Components and considerations for HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-hytrust-keycontrol-on-ibm-cloud-overview)
+* [Managing HyTrust KeyControl on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing-hytrust-keycontrol-on-ibm-cloud)
 
 ### HyTrust CloudControl on IBM Cloud
 
@@ -115,7 +115,7 @@ Beginning in V2.6, new instances and new hosts are provisioned using the vSphere
 
 It is recommended that existing Cloud Foundation instances that have Veeam on {{site.data.keyword.cloud_notm}} installed also update to V9.5u3a or later.
 
-For more information on Veeam on {{site.data.keyword.cloud_notm}}, see [Veeam on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services/veeam_considerations.html).
+For more information on Veeam on {{site.data.keyword.cloud_notm}}, see [Veeam on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam-on-ibm-cloud-overview).
 
 ### VMware HCX on IBM Cloud
 
@@ -136,7 +136,7 @@ For more information about how to resolve this warning message, see:
 ### Reference architecture documentation
 The {{site.data.keyword.vmwaresolutions_short}} architecture document is updated to include important considerations to understand your responsibilities for managing and operating your VMware instance.
 
-For more information, see [Post-deployment considerations for your VMware instance](/docs/services/vmwaresolutions/archiref/solution/solution_considerations.html).
+For more information, see [Post-deployment considerations for your VMware instance](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-post-deployment-considerations-for-your-vmware-instance).
 
 ## User interface updates and enhancements
 

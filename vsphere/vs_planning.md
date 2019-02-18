@@ -21,7 +21,7 @@ You are responsible for setting up the environment, installing, and configuring 
 
 ## IBM Cloud account requirements
 
-The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
+The {{site.data.keyword.cloud_notm}} account that you are using must meet certain requirements. For more information, see [Requirements for the {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-requirements-for-the-ibm-cloud-infrastructure-account).
 
 ## IBM Cloud Data Center availability
 
@@ -69,6 +69,6 @@ Table 1. Available {{site.data.keyword.CloudDataCents_notm}} for vSphere cluster
 
 ### Related links
 
-* [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
-* [Scaling existing clusters](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
-* [Scaling existing clusters created outside of the console](/docs/services/vmwaresolutions/vsphere/vs_orderingforclustersoutside.html)
+* [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-ordering-new-vsphere-clusters)
+* [Scaling existing clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-scaling-existing-vsphere-clusters)
+* [Scaling existing clusters created outside of the console](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-scaling-clusters-created-outside-of-the-console)

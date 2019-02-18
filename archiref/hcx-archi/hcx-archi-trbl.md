@@ -44,5 +44,5 @@ To resolve the problem, follow these steps:
 
 ### Related links
 
-* [Registering HCX Manager with vCenter](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-reg-vcenter.html)
-* [Modifying or uninstalling HCX](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-mod-uninstall.html)
+* [Registering HCX Manager with vCenter](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-registering-hcx-manager-with-vcenter)
+* [Modifying or uninstalling HCX](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-modifying-or-uninstalling-hcx)

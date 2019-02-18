@@ -16,7 +16,7 @@ Use this procedure to delete the KMIP for VMware on {{site.data.keyword.cloud}} 
 
 ## Before you begin
 
-Ensure that you reviewed all the considerations in [Considerations when deleting KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/kmip_standalone_considerations.html).
+Ensure that you reviewed all the considerations in [Considerations when deleting KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip-for-vmware-on-ibm-cloud-overview).
 
 ## Procedure to delete KMIP for VMware on IBM Cloud instances
 
@@ -29,8 +29,8 @@ Ensure that you reviewed all the considerations in [Considerations when deleting
 
 ### Related links
 
-* [Ordering KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/kmip_standalone_ordering.html)
-* [Adding, viewing, and deleting certificates for KMIP for VMware on IBM Cloud instances](/docs/services/vmwaresolutions/services/kmip_standalone_addingdeletingcert.html)
-* [Viewing KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/kmip_standalone_viewing.html)
-* [KMIP for VMware on IBM Cloud solution architecture](/docs/services/vmwaresolutions/archiref/kmip/overview.html)
-* [Activity Tracker events](/docs/services/vmwaresolutions/vmonic/at-events.html)
+* [Ordering KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-ordering-kmip-for-vmware-on-ibm-cloud-instances)
+* [Adding, viewing, and deleting certificates for KMIP for VMware on IBM Cloud instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-adding-viewing-and-deleting-certificates-for-kmip-for-vmware-on-ibm-cloud-instances)
+* [Viewing KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-viewing-kmip-for-vmware-on-ibm-cloud-instances)
+* [KMIP for VMware on IBM Cloud solution architecture](/docs/services/vmwaresolutions/archiref/kmip?topic=vmware-solutions-kmip-for-vmware-overview)
+* [Activity Tracker events](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-activity-tracker-events)

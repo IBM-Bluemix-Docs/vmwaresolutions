@@ -41,5 +41,5 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
 
 ### Related links
 
-* [Deleting vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_deletinginstance.html)
-* [Ordering, viewing, and removing services from vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html)
+* [Deleting vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-deleting-vcenter-server-instances)
+* [Ordering, viewing, and removing services from vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-viewing-and-removing-services-for-vcenter-server-instances)

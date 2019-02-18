@@ -17,7 +17,7 @@ If you need to upgrade both NSX and vSphere, VMware recommends completing the NS
 1. **Upgrade ESXi** - After the ESXi upgrade completes, the host exits maintenance mode, however, you cannot move VMs connected to logical switches to the host until the next step is complete.
 2. **Upgrade NSX VIBs** - After the VIBs are upgraded and the host is removed from maintenance mode, you can move VMs connected to logical switches to the host.
 
-NSX is updated by updating NSX Manager by using a download from _my.vmware.com_. Therefore, you need an account to the download the update. If you are consuming {{site.data.keyword.cloud}} subscription licensing with your VMware vCenter Server on {{site.data.keyword.cloud_notm}} instance, you will not be able to download the updates with your **my.vmware.com** account. Therefore, you need to [contact IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
+NSX is updated by updating NSX Manager by using a download from _my.vmware.com_. Therefore, you need an account to the download the update. If you are consuming {{site.data.keyword.cloud}} subscription licensing with your VMware vCenter Server on {{site.data.keyword.cloud_notm}} instance, you will not be able to download the updates with your **my.vmware.com** account. Therefore, you need to [contact IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-contacting-ibm-support).
 
 Before you begin the upgrade, check the NSX notes for upgrade issues and workarounds. Using the release notes, verify that vCenter meets the new system requirements for NSX.
 

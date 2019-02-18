@@ -49,6 +49,6 @@ You are billed until the end of the billing cycle for the deleted instance.
 
 ### Related links
 
-* [Ordering NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
-* [Viewing NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp/np_viewinginstances.html)
-* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Ordering NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-ordering-netapp-ontap-select-instances)
+* [Viewing NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-viewing-netapp-ontap-select-instances)
+* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-contacting-ibm-support)

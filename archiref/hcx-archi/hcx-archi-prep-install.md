@@ -17,7 +17,7 @@ The installation of VMware HCX on IBM Cloud has the following software requireme
 ## Configuring network connectivity
 
 HCX must traverse the public internet and private lines, and connect to data center components, such as networks, switches, and port groups.
-* [Port access requirements](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-port-req.html) lists ports that must be opened so that HCX virtual appliances can install successfully.
+* [Port access requirements](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-port-access-requirements) lists ports that must be opened so that HCX virtual appliances can install successfully.
 * Both the on-premises vSphere environment and the VCF/VCS HCX Cloud environment must permit Network Time Protocol (NTP) clock synchronization among vSphere on-premises devices and the VCF/VCS HCX devices. UDP port 123 must be accessible to HCX virtual appliances and networks.
 
 ## On-premises environment
@@ -47,5 +47,5 @@ Layer 2 network stretching has the following requirements:
 
 ### Related links
 
-* [Installing and configuring HCX on the source](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-install-cfg-src.html)
+* [Installing and configuring HCX on the source](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-installing-and-configuring-hcx-on-the-source)
 * [VMware EVC and CPU Compatibility FAQ](http://bit.ly/2vK6Sp5)

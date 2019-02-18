@@ -41,7 +41,7 @@ Figure 2. {{site.data.keyword.icpfull_notm}} with NSX-V networking
 
 ![{{site.data.keyword.icpfull_notm}} with NSX-V Networking](vcsicp-nsxv-networking.svg)
 
-For more information, see [vCenter Server networking guide](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-intro.html).
+For more information, see [vCenter Server networking guide](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-vcenter-server-networking-introduction).
 
 ### NSX-T networking
 
@@ -55,4 +55,4 @@ Figure 3. {{site.data.keyword.icpfull_notm}} with NSX-T networking
 
 ### Related links
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcenter-server-on-ibm-cloud-with-hybridity-bundle-overview)

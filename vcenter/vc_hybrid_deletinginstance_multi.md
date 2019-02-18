@@ -41,5 +41,5 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} infrastruct
 
 ### Related links
 
-* [Deleting vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance.html)
-* [Ordering, viewing, and removing services from vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
+* [Deleting vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-deleting-vcenter-server-with-hybridity-bundle-instances)
+* [Ordering, viewing, and removing services from vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-viewing-and-removing-services-for-vcenter-server-with-hybridity-bundle-instances)

@@ -262,5 +262,5 @@ Use this procedure to remove clusters from instances that are deployed in (or up
 
 ### Related links
 
-* [Viewing VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_viewinginstance.html)
-* [Expanding and contracting capacity for VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_addingremovingservers.html)
+* [Viewing VMware Federal instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-viewing-vmware-federal-instances)
+* [Expanding and contracting capacity for VMware Federal instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-expanding-and-contracting-capacity-for-vmware-federal-instances)

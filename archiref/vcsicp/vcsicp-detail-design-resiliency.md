@@ -96,7 +96,7 @@ Use the folloiwng for application deployments into {{site.data.keyword.container
 ### Related links
 
 * [Adding or removing cluster nodes](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_2.1.0.3/installing/modify_cluster.html)
-* [Adding worker nodes by resizing an existing worker pool](/docs/containers/cs_clusters.html)
+* [Adding worker nodes by resizing an existing worker pool](/docs/containers?topic=containers-clusters)
 * [How to back up and restore {{site.data.keyword.cloud_notm}} Private](https://medium.com/ibm-cloud/how-to-backup-and-restore-ibm-cloud-private-part-1-b6300dc1d7d8)
 * [{{site.data.keyword.icpfull_notm}} backup GitHub](https://github.com/ibm-cloud-architecture/icp-backup/)
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcenter-server-on-ibm-cloud-with-hybridity-bundle-overview)

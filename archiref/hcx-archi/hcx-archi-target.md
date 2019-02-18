@@ -162,4 +162,4 @@ Figure 4. L2 Concentrator deployment
 
 ### Related links
 
-* [Installing and configuring on the source](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-source.html)
+* [Installing and configuring on the source](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-vmware-hcx-on-ibm-cloud-source-side-architecture)

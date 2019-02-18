@@ -36,4 +36,4 @@ Figure 1. Multi-site topology
 
 ### Related links
 
-* [Networking services on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/nsx/networking_services.html)
+* [Networking services on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/archiref/nsx?topic=vmware-solutions-networking-services-on-ibm-cloud)

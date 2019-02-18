@@ -59,4 +59,4 @@ Few if any issues have been experienced with the operation of the L2 concentrato
 ## Related links
 
 * [vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle
-overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)   
+overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcenter-server-on-ibm-cloud-with-hybridity-bundle-overview)   

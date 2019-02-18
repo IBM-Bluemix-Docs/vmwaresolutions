@@ -14,7 +14,7 @@ lastupdated: "2019-02-05"
 
 # KMIP for VMware design
 
-KMIP for VMware on {{site.data.keyword.cloud}} provides a key management service compatible with VMware vSAN encryption and VMware vSphere encryption, by using [IBM Key Protect](/docs/services/key-protect/index.html) to provide root key and data key storage.
+KMIP for VMware on {{site.data.keyword.cloud}} provides a key management service compatible with VMware vSAN encryption and VMware vSphere encryption, by using [IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial) to provide root key and data key storage.
 
 ## Storage encryption options
 
@@ -89,16 +89,16 @@ Your KMIP for VMware instance is authorized to your Key Protect instance by usin
 Figure 1. Components of KMIP for VMware on {{site.data.keyword.cloud_notm}}
 ![Components of KMIP for VMware on {{site.data.keyword.cloud_notm}}](kmip-key-protect.svg "The solution enables VMware vSphere encryption and vSAN encryption by using root keys that are stored in IBM Key Protect.")
 
-KMIP for VMware is available in a number of IBM Cloud multi&ndash;zone regions (MZRs). For the complete list, see the [Ordering KMIP for VMware](/docs/services/vmwaresolutions/services/kmip_standalone_ordering.html).
+KMIP for VMware is available in a number of IBM Cloud multi&ndash;zone regions (MZRs). For the complete list, see the [Ordering KMIP for VMware](/docs/services/vmwaresolutions/services?topic=vmware-solutions-ordering-kmip-for-vmware-on-ibm-cloud-instances).
 
-Within each MZR, KMIP for VMware provides two service endpoints on the IBM Cloud Private network for high availability. Configure both of these endpoints in your vCenter key management server (KMS) configuration as a KMS cluster. For a list of the endpoints in each MZR and the KMIP server certificate signatures, see the [KMIP for VMware service documentation](/docs/services/vmwaresolutions/services/kmip_standalone_ordering.html).
+Within each MZR, KMIP for VMware provides two service endpoints on the IBM Cloud Private network for high availability. Configure both of these endpoints in your vCenter key management server (KMS) configuration as a KMS cluster. For a list of the endpoints in each MZR and the KMIP server certificate signatures, see the [KMIP for VMware service documentation](/docs/services/vmwaresolutions/services?topic=vmware-solutions-ordering-kmip-for-vmware-on-ibm-cloud-instances).
 
 KMIP for VMware also connects to IBM Cloud Key Protect by using the IBM Cloud Private network rather than the public internet.
 
-To access KMIP for VMware over the private network, your IBM Cloud infrastructure account must be enabled for virtual routing and forwarding (VRF) and the IBM Cloud service endpoint routes must be added to the VRF routes of your account. For more information, see [enabling your account for service endpoints](/docs/services/service-endpoint/enable-servicepoint.html#cs_cli_install_steps).
+To access KMIP for VMware over the private network, your IBM Cloud infrastructure account must be enabled for virtual routing and forwarding (VRF) and the IBM Cloud service endpoint routes must be added to the VRF routes of your account. For more information, see [enabling your account for service endpoints](/docs/services/service-endpoint?topic=services/service-endpoint-getting-started#cs_cli_install_steps).
 
 ### Related links
 
-* [Solution overview](/docs/services/vmwaresolutions/archiref/kmip/overview.html)
-* [Implementation and management](/docs/services/vmwaresolutions/archiref/kmip/implementation.html)
-* [IBM Key Protect](/docs/services/key-protect/index.html)
+* [Solution overview](/docs/services/vmwaresolutions/archiref/kmip?topic=vmware-solutions-kmip-for-vmware-overview)
+* [Implementation and management](/docs/services/vmwaresolutions/archiref/kmip?topic=vmware-solutions-kmip-for-vmware-implementation-and-management)
+* [IBM Key Protect](/docs/services/key-protect?topic=key-protect-getting-started-tutorial)

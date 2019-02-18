@@ -35,6 +35,6 @@ For more information about how to link your Iaas-only account to your PaaS accou
 
 ### Related links
 
-* [Managing user access with IAM](/docs/services/vmwaresolutions/vmonic/iam.html)
-* [Inviting users to access services and resources](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html)
-* [What is IBM Cloud IAM](/docs/iam/index.html)
+* [Managing user access with IAM](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-access-with-iam)
+* [Inviting users to access services and resources](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-inviting-users-to-access-services-and-resources)
+* [What is IBM Cloud IAM](/docs/iam?topic=iam-iamoverview)

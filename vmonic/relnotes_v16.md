@@ -21,7 +21,7 @@ The following components are new or updated:
 *  New hardware specifications: **Small** or **Standard**, depending on your requirements.
 *  New data centers available for deployment: **HKG02 - Hong Kong**, **OSL01 - Oslo**, **SEO01 - Seoul**, **SNG01 - Singapore**, and **SYD04 - Sydney**.
 
-For the complete list of components, see [VMware Cloud Foundation overview](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html).
+For the complete list of components, see [VMware Cloud Foundation overview](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-cloud-foundation-overview).
 
 ## Updates for VMware vCenter Server instances
 
@@ -66,7 +66,7 @@ All other actions on pre-V1.6 instances are no longer available.
 
    This ESG is deployed for all instance hardware types, and customers can modify the configuration. For more information, see the
    following topics:
-   *  [Configuring your network to use the customer-managed NSX Edge Services Gateway with your VMs](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html)
+   *  [Configuring your network to use the customer-managed NSX Edge Services Gateway with your VMs](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms)
    *  [VMware NSX Documentation](https://pubs.vmware.com/NSX-6/index.jsp?topic=%2Fcom.vmware.nsx.admin.doc%2FGUID-3F96DECE-33FB-43EE-88D7-124A730830A4.html){:new_window}
 
 ## Usability enhancements
@@ -76,4 +76,4 @@ Improvements are made throughout the user interface:
 *  The main navigation on the console is greatly improved through the introduction of the left navigation pane with access to all areas of the user interface. You can quickly order a new instance, view your deployed instances, review system notifications, change settings, and access the online documentation.
 *  The new **Getting Started** page accessible from the left navigation pane provides you enough details directly on the console to help you make an informed decision about the components of the instance you are ordering. On the **Getting Started** page, you are also guided step-by-step through the process of ordering an instance, starting with meeting all prerequisites for ordering an instance, such as required user accounts, and ending with placing an order.
 *  The summary details for both Cloud Foundation instances and vCenter Server instances are consolidated onto a single page, which is accessible from the **Deployed Instances** menu on the left navigation pane. From that page, you can select the appropriate tab to filter either Cloud Foundation instances or vCenter Server instances.
-* If you have Zerto disaster recovery that is installed on your instance, you can access the Zerto console from the service details page directly with a single click. For more information, see [Ordering, viewing, and removing services for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_addingremovingservices.html) and [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservices.html).
+* If you have Zerto disaster recovery that is installed on your instance, you can access the Zerto console from the service details page directly with a single click. For more information, see [Ordering, viewing, and removing services for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-ordering-viewing-and-removing-services-for-cloud-foundation-instances) and [Ordering, viewing, and removing services for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-viewing-and-removing-services-for-vcenter-server-instances).

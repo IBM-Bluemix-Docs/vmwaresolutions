@@ -16,7 +16,7 @@ lastupdated: "2019-01-23"
 
 To remove the Hybridity Bundle license from your vCenter Server instance, you must replace the VMware NSX and VMware vSAN rental license keys with Bring Your Own License (BYOL) keys in the VMware vSphere Web Client. Additionally, you must open a support ticket to cancel charges for the rental licenses.
 
-Downgrading your license might cause your vCenter Server instance to fail. You can choose to downgrade a license at your own risk, but first consider the functions that are not available when you downgrade. For more information, see [Comparison chart for VMware component editions](/docs/services/vmwaresolutions/archiref/solution/appendix.html).
+Downgrading your license might cause your vCenter Server instance to fail. You can choose to downgrade a license at your own risk, but first consider the functions that are not available when you downgrade. For more information, see [Comparison chart for VMware component editions](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-comparison-chart-for-vmware-component-editions).
 {:important}
 
 ## Important considerations before you remove the Hybridity Bundle from a multi-site environment
@@ -108,6 +108,6 @@ Verify the following requirements before you remove the Hybridity Bundle:
 
 ### Related links
 
-* [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html)
-* [Viewing vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
-* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-vcenter-server-with-hybridity-bundle-instances)
+* [Viewing vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-viewing-vcenter-server-with-hybridity-bundle-instances)
+* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-contacting-ibm-support)

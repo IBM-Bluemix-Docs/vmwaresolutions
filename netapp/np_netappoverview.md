@@ -122,7 +122,7 @@ If you're using firewalls, you must configure rules for all communications from 
 
 ### Related links
 
-* [Planning NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp/np_planning.html#requirements-and-planning-for-netapp-ontap-select-instances)
-* [Ordering NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp/np_orderinginstances.html)
-* [vCenter Server overview](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
+* [Planning NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-requirements-and-planning-for-netapp-ontap-select-instances#requirements-and-planning-for-netapp-ontap-select-instances)
+* [Ordering NetApp ONTAP Select instances](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-ordering-netapp-ontap-select-instances)
+* [vCenter Server overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter-server-overview)
 * [NetApp ONTAP Documentation Center](http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.exp-clus-peer%2Fhome.html){:new_window}

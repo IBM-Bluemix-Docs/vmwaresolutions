@@ -14,13 +14,13 @@ lastupdated: "2019-01-25"
 
 # Ordering vCenter Server with Hybridity Bundle instances
 
-To deploy a flexible and customizable VMware virtualized platform that best fits your workload needs, order a VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle instance. Your vCenter Server with Hybridity Bundle instance order includes the VMware Hybrid Cloud Extension (HCX) licensing and entitles you to the VMware HCX on {{site.data.keyword.cloud_notm}} service. You can also add services, such as [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/addingzertodr.html) for disaster recovery.
+To deploy a flexible and customizable VMware virtualized platform that best fits your workload needs, order a VMware vCenter Server on {{site.data.keyword.cloud}} with Hybridity Bundle instance. Your vCenter Server with Hybridity Bundle instance order includes the VMware Hybrid Cloud Extension (HCX) licensing and entitles you to the VMware HCX on {{site.data.keyword.cloud_notm}} service. You can also add services, such as [Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-zerto-on-ibm-cloud-overview) for disaster recovery.
 
 ## Requirements for ordering vCenter Server with Hybridity Bundle instances
 
 Ensure that you completed the following tasks:
-*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/services/vmwaresolutions/vmonic/useraccount.html).
-*  You reviewed the information in [Requirements and planning for vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter/vc_hybrid_planning.html).
+*  You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [Managing user accounts and settings](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-accounts-and-settings).
+*  You reviewed the information in [Requirements and planning for vCenter Server with Hybridity Bundle](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-requirements-and-planning-for-vcenter-server-with-hybridity-bundle-instances).
 * You reviewed the instance and domain name format. The domain name and subdomain label are used to generate the user name and server names of the instance.
 
 Table 1. Value format for instance and domain names
@@ -195,7 +195,7 @@ For more information on ordering Windows licensing, see [Windows Server 2012 R2 
 
 ## Services settings
 
-When you order a vCenter Server with Hybridity Bundle instance, you can also order additional services. For more information about the services, see [Available services for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html#available-services-for-vcenter-server-with-hybridity-bundle-instances).
+When you order a vCenter Server with Hybridity Bundle instance, you can also order additional services. For more information about the services, see [Available services for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-viewing-and-removing-services-for-vcenter-server-with-hybridity-bundle-instances#available-services-for-vcenter-server-with-hybridity-bundle-instances).
 
 ## Order summary
 
@@ -227,7 +227,7 @@ Based on your selected configuration for the instance and add-on services, the e
      *  If you want to order new public and private VLANs, click **Order New VLANs**.
      *  If you want to reuse the existing public and private VLANs when they are available, click **Select Existing VLANs**, and then select the public VLAN, the primary subnet, the private VLAN, the private primary subnet, and the secondary private VLAN.
   4. Select the DNS configuration.
-9. Complete the configuration for the included HCX on {{site.data.keyword.cloud_notm}} service. For more information about how to provide settings for the service, see the _VMware HCX on IBM Cloud configuration_ section in [Ordering VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services/hcx_ordering.html#vmware-hcx-on-ibm-cloud-configuration).
+9. Complete the configuration for the included HCX on {{site.data.keyword.cloud_notm}} service. For more information about how to provide settings for the service, see the _VMware HCX on IBM Cloud configuration_ section in [Ordering VMware HCX on IBM Cloud](/docs/services/vmwaresolutions/services?topic=vmware-solutions-ordering-vmware-hcx-on-ibm-cloud#vmware-hcx-on-ibm-cloud-configuration).
 10. Select the add-on services to deploy into the instance by clicking the corresponding service card. If a service requires configuration, complete the service-specific settings and click **Add Service** on the card.  
 For more information about how to provide settings for a service, see the corresponding service ordering topic.
 
@@ -241,7 +241,7 @@ For more information about how to provide settings for a service, see the corres
 
 The deployment of the instance starts automatically. You receive confirmation that the order is being processed and you can check the status of the deployment by viewing the instance details.
 
-When the instance is successfully deployed, the components that are described in [Technical specifications for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **cluster1** by default. If you ordered add-on services, the deployment of the services starts after your order is completed.
+When the instance is successfully deployed, the components that are described in [Technical specifications for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter-server-with-hybridity-bundle-overview#technical-specifications-for-vcenter-server-with-hybridity-bundle-instances) are installed on your VMware virtual platform. The ESXi servers that you ordered are grouped as **cluster1** by default. If you ordered add-on services, the deployment of the services starts after your order is completed.
 
 When the instance is ready to use, the status of the instance is changed to **Ready to Use** and you receive a notification by email.
 
@@ -265,10 +265,10 @@ If you change these components outside of the {{site.data.keyword.vmwaresolution
 
 ### Related links
 
-* [Signing up for an {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html)
-* [Viewing vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_viewinginstances.html)
-* [Multi-site configuration for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_multisite.html)
-* [Adding and viewing clusters for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingviewingclusters.html)
-* [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservers.html)
-* [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addingremovingservices.html)
-* [Deleting vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_deletinginstance.html)
+* [Signing up for an {{site.data.keyword.cloud_notm}} account](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing-up-for-required-accounts)
+* [Viewing vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-viewing-vcenter-server-with-hybridity-bundle-instances)
+* [Multi-site configuration for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-multi-site-configuration-for-vcenter-server-with-hybridity-bundle-instances)
+* [Adding and viewing clusters for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-viewing-and-deleting-clusters-for-vcenter-server-with-hybridity-bundle-instances)
+* [Expanding and contracting capacity for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-expanding-and-contracting-capacity-for-vcenter-server-with-hybridity-bundle-instances)
+* [Ordering, viewing, and removing services for vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-viewing-and-removing-services-for-vcenter-server-with-hybridity-bundle-instances)
+* [Deleting vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-deleting-vcenter-server-with-hybridity-bundle-instances)

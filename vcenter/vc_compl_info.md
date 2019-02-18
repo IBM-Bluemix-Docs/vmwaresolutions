@@ -62,7 +62,7 @@ VMware Cloud Foundation and vCenter Server environments, which are delivered as 
 * Due to the level of specialization that is required to maintain superior technical expertise at the team level, it is sometimes necessary to involve more than one support team in resolving a particular software problem. This is easily handled, as our support teams are all networked together and work as one to resolve whatever problems or issues arise.
 * In order to investigate the issue, IBM may need to access information on your system relative to the failure or may need to re-create the failure to get additional information.
 * A client–generated support ticket serves as acknowledgment that IBM Support may access the VMware management layer for investigation, debugging, and triage. If maintenance outage or changes to the environment are required, IBM Support will request additional documented confirmation from the client via tickets as part of our change management process.
-* For more information about support tickets, see [Software Support Handbook](https://www-304.ibm.com/support/customercare/sas/f/handbook/getsupport.html) and [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
+* For more information about support tickets, see [Software Support Handbook](https://www-304.ibm.com/support/customercare/sas/f/handbook/getsupport.html) and [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-contacting-ibm-support).
 
 ## Client responsibilities
 
@@ -72,7 +72,7 @@ VMware Cloud Foundation and vCenter Server environments, which are delivered as 
 * Upon initial deployment, the offering’s automation and client’s account are separate. The client is allowed and encouraged to change all passwords that IBM provides in the portal.
 * vCenter access and credentials are created during initial deployments and provided to the client. As part of the requirement of our offering, IBM Support must retain full access to the management layer to provide life–cycle management as well as support to our clients.
 * If credentials such as passwords are changed at any time, IBM Support may no longer be able to help the client recover lost or forgotten credentials or even troubleshoot client environments.
-* For more information regarding the importance of this issue and related concerns, see [Considerations when changing passwords for NSX components](/docs/services/vmwaresolutions/vcenter/vc_networkingonvcenterserver.html#considerations-when-changing-passwords-for-nsx-components) and [Considerations about changing vCenter Server artifacts](/docs/services/vmwaresolutions/vcenter/vcenter_chg_impact.html).
+* For more information regarding the importance of this issue and related concerns, see [Considerations when changing passwords for NSX components](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-networking-considerations-for-vcenter-server-instances#considerations-when-changing-passwords-for-nsx-components) and [Considerations about changing vCenter Server artifacts](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-considerations-about-changing-vcenter-server-artifacts).
 
 ### Communication and troubleshooting
 
@@ -117,6 +117,6 @@ If the client has not granted consent to proactive support for an instance in th
 
 ### Related links
 
-* [vCenter Server overview](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html)
-* [vCenter Server with Hybridity Bundle overview](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
-* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [vCenter Server overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter-server-overview)
+* [vCenter Server with Hybridity Bundle overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter-server-with-hybridity-bundle-overview)
+* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-contacting-ibm-support)

@@ -34,7 +34,7 @@ Physical networking is handled by {{site.data.keyword.cloud_notm}}. The followin
 
 ### IBM Cloud network overview
 
-The physical network of {{site.data.keyword.cloud_notm}} is separated into three distinct networks: Public, Private, and Management. For more information about the public, private, and management networks, see [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
+The physical network of {{site.data.keyword.cloud_notm}} is separated into three distinct networks: Public, Private, and Management. For more information about the public, private, and management networks, see [Solution overview](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-overview-of-ibm-cloud-for-vmware-solutions).
 
 For more information about the {{site.data.keyword.cloud_notm}} network, see [The {{site.data.keyword.cloud_notm}} network](https://www.ibm.com/cloud-computing/bluemix/our-network){:new_window}.
 
@@ -46,7 +46,7 @@ Review the following information for a description of the services network that 
 
 ### VLANs
 
-For more information about the VLANs, see the _Physical network design_ section in [Physical infrastructure design](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html).
+For more information about the VLANs, see the _Physical network design_ section in [Physical infrastructure design](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-physical-infrastructure-design).
 
 ## Physical storage design
 
@@ -65,10 +65,10 @@ Endurance is available in three IOPS performance tiers to support varying applic
 After an NFS share is ordered, it can be resized or reconfigured to allow for more or less IOPS.
 {:note}
 
-For detailed IOPS options, see the _Storage settings_ section in [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html).
+For detailed IOPS options, see the _Storage settings_ section in [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-vcenter-server-instances).
 
 In addition to the tiers of storage, {{site.data.keyword.cloud_notm}} Endurance storage supports a wide selection of application needs, including snapshots and replication, and encryption at rest in the {{site.data.keyword.CloudDataCent_notm}} locations.
 
 ### Related links
 
-* [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [Solution overview](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-overview-of-ibm-cloud-for-vmware-solutions)

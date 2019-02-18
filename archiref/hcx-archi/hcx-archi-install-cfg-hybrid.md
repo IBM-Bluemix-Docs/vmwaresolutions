@@ -140,4 +140,4 @@ Extend a Layer 2 network from the on-premises data center to VCF/VCS HCX enabled
 
 ### Related links
 
-* [Modifying or uninstalling HCX](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-mod-uninstall.html)
+* [Modifying or uninstalling HCX](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-modifying-or-uninstalling-hcx)

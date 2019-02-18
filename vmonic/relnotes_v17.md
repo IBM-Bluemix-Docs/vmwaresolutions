@@ -29,27 +29,27 @@ This update applies the following upgrades and improvements:
   EVC mode is not enabled for any existing or new deployments on V4 servers.
   {:note}
 
-* VMware Cloud Foundation deployments that were deployed before 22 May and are therefore using V3 servers will now order V4 servers when adding a new node to the instance. These servers have 256 GB of memory; if you require 512 GB of memory, after adding the servers, open a support ticket to request a server upgrade to 512 GB of memory. For more information about contacting IBM Support, see [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
+* VMware Cloud Foundation deployments that were deployed before 22 May and are therefore using V3 servers will now order V4 servers when adding a new node to the instance. These servers have 256 GB of memory; if you require 512 GB of memory, after adding the servers, open a support ticket to request a server upgrade to 512 GB of memory. For more information about contacting IBM Support, see [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-contacting-ibm-support).
 
-For more information about components, see [Technical specifications for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_cloudfoundationoverview.html#technical-specifications-for-cloud-foundation-instances).
+For more information about components, see [Technical specifications for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-cloud-foundation-overview#technical-specifications-for-cloud-foundation-instances).
 
 ### Update process requirements
 
-Depending on the complexity of your Cloud Foundation instance deployment and whether you have a multi-site configuration, the update process might require a sequence of steps that you must complete as displayed on the **Update and Patch** tab on the console. For more information, see [Applying updates to Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_applyingupdates.html#applying-updates-to-cloud-foundation-instances).
+Depending on the complexity of your Cloud Foundation instance deployment and whether you have a multi-site configuration, the update process might require a sequence of steps that you must complete as displayed on the **Update and Patch** tab on the console. For more information, see [Applying updates to Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-applying-updates-to-cloud-foundation-instances#applying-updates-to-cloud-foundation-instances).
 
 ## Updates for VMware vCenter Server instances
 
 ### Cluster support
 
-Starting with the V1.7 release, you can use clusters to manage ESXi servers in vCenter Server instances for better resources management and high availability. The ESXi servers that you configured when you ordered an instance are grouped as **cluster1** by default. You can view the cluster details or add up to a total of five clusters to an instance from the newly introduced **Infrastructure** tab on the instance details page. When you are expanding or contracting capacity for an instance, you can select which cluster to add ESXi servers to or to remove ESXi servers from. For more information, see [Adding and viewing clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html).
+Starting with the V1.7 release, you can use clusters to manage ESXi servers in vCenter Server instances for better resources management and high availability. The ESXi servers that you configured when you ordered an instance are grouped as **cluster1** by default. You can view the cluster details or add up to a total of five clusters to an instance from the newly introduced **Infrastructure** tab on the instance details page. When you are expanding or contracting capacity for an instance, you can select which cluster to add ESXi servers to or to remove ESXi servers from. For more information, see [Adding and viewing clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-viewing-and-deleting-clusters-for-vcenter-server-instances).
 
 ### Enhancements to the deployment of Zerto disaster recovery
 
-The deployment of Zerto disaster recovery is now automated rather than handled through a support ticket. All Zerto components, such as a private portable subnet, a Windows VSI (Virtual Service Instance), and the Zerto license charges are listed on the estimated cost, so you can review before you place your order. For more information, see [Deployment process of Zerto disaster recovery](/docs/services/vmwaresolutions/services/addingzertodr.html).
+The deployment of Zerto disaster recovery is now automated rather than handled through a support ticket. All Zerto components, such as a private portable subnet, a Windows VSI (Virtual Service Instance), and the Zerto license charges are listed on the estimated cost, so you can review before you place your order. For more information, see [Deployment process of Zerto disaster recovery](/docs/services/vmwaresolutions/services?topic=vmware-solutions-zerto-on-ibm-cloud-overview).
 
 ### NSX license upgrade capabilities
 
-You can upgrade your NSX license edition from the **Summary** tab of your vCenter Server instance. The license upgrade replaces all existing NSX SoftLayer licenses in your account with the new license. For more information, see [Viewing vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_viewinginstances.html).
+You can upgrade your NSX license edition from the **Summary** tab of your vCenter Server instance. The license upgrade replaces all existing NSX SoftLayer licenses in your account with the new license. For more information, see [Viewing vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-viewing-vcenter-server-instances).
 
 ## Usability enhancements
 

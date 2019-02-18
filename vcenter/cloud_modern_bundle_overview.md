@@ -116,11 +116,11 @@ Additional HCX appliances are deployed during configuration as necessary for L2 
 
 ## Technical specifications for IBM Cloud Private Hosted
 
-IBM Cloud Private Hosted V3.1 is installed using the Development/Test topology on all Single-node Trial for Migration and App Modernization instances. For more information about IBM Cloud Private Hosted, see [IBM Cloud Private Hosted overview](/docs/services/vmwaresolutions/services/icp_overview.html).
+IBM Cloud Private Hosted V3.1 is installed using the Development/Test topology on all Single-node Trial for Migration and App Modernization instances. For more information about IBM Cloud Private Hosted, see [IBM Cloud Private Hosted overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-ibm-cloud-private-hosted-overview).
 
 ### Related links
 
-* [vCenter Server and IBM Cloud Private guide](/docs/services/vmwaresolutions/archiref/vcsicp/vcsicp-intro.html)
+* [vCenter Server and IBM Cloud Private guide](/docs/services/vmwaresolutions/archiref/vcsicp?topic=vmware-solutions-vmware-vcenter-server-on-ibm-cloud-and-ibm-cloud-private-introduction)
 * [Open a Ticket for IBM Cloud Private](https://www.ibm.com/mysupport/s/?language=en_US)
 * [VMware Hybrid Cloud Extension documentation](https://hcx.vmware.com/#/vm-documentation)
 * [Obtaining the HCX OVA](https://docs.vmware.com/en/VMware-NSX-Hybrid-Connect/3.5.1/user-guide/GUID-B0471D10-6EB0-4587-9205-11BF0C78EC1C.html)

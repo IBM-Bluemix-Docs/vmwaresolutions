@@ -14,7 +14,7 @@ lastupdated: "2019-01-23"
 
 # Configuring your network to use the customer-managed NSX ESG with your VMs
 
-Configure the network for your virtual machines so you can take advantage of the VMware NSX Edge Services Gateway (ESG) that is deployed in your VMware vCenter Server instances. For more information about the security measures that are in place to help minimize security risk, see [Does the management services NSX Edge pose a security risk?](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-management-services-nsx-edge-pose-a-security-risk-)
+Configure the network for your virtual machines so you can take advantage of the VMware NSX Edge Services Gateway (ESG) that is deployed in your VMware vCenter Server instances. For more information about the security measures that are in place to help minimize security risk, see [Does the management services NSX Edge pose a security risk?](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-general-faq-about-ibm-cloud-for-vmware-solutions#does-the-management-services-nsx-edge-pose-a-security-risk-)
 
 VMware NSX is a network virtualization platform that allows the virtualization of isolated networks and provides several networking
 services such as switches, routing, and firewalls. For more information about NSX, see [Overview of NSX](https://pubs.vmware.com/NSX-62/topic/com.vmware.nsx-cross-vcenter-install.doc/GUID-10944155-28FF-46AA-AF56-7357E2F20AF4.html){:new_window}.
@@ -30,7 +30,7 @@ As part of the ordering process for your vCenter Server instance, the following 
   The NXS edge is not deployed for instances that are private only.
   {:note}
 
-* If you installed the Veeam on {{site.data.keyword.cloud_notm}} service, the NSX Manager is configured to do a daily backup of the NSX configurations. For more information, see [Considerations when installing Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/veeam_considerations.html#considerations-when-you-install-veeam-on-ibm-cloud).
+* If you installed the Veeam on {{site.data.keyword.cloud_notm}} service, the NSX Manager is configured to do a daily backup of the NSX configurations. For more information, see [Considerations when installing Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam-on-ibm-cloud-overview#considerations-when-you-install-veeam-on-ibm-cloud).
 
 ## Procedure to configure the networking settings for your VMs
 
@@ -89,5 +89,5 @@ Additionally, you can find more details about the customer subnets by completing
 ### Related links
 
 * [Troubleshooting](/docs/services/vmwaresolutions/vcenter//vcenter_chg_impact.html)
-* [FAQs](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [FAQs](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-general-faq-about-ibm-cloud-for-vmware-solutions)
 * [NSX Edge Services Gateway](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_nsx){:new_window}

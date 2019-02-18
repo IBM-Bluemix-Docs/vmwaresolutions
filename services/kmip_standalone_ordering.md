@@ -15,8 +15,8 @@ You can order a KMIP for VMware on {{site.data.keyword.cloud}} instance without 
 ## Before you begin
 
 Ensure that you completed the following tasks:
-* You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](/docs/services/vmwaresolutions/vmonic/useraccount.html).
-* You reviewed all the considerations in [Considerations when installing KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/kmip_standalone_considerations.html).
+* You configured the {{site.data.keyword.cloud_notm}} infrastructure credentials on the **Settings** page. For more information, see [User accounts and settings](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-accounts-and-settings).
+* You reviewed all the considerations in [Considerations when installing KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip-for-vmware-on-ibm-cloud-overview).
 
 ## Procedure to order KMIP for VMware on IBM Cloud instances
 
@@ -67,10 +67,10 @@ When the instance is ready to use, the status of the instance is changed to **In
 
 ## What to do next
 
-Add client certificates for the KMIP for VMware on {{site.data.keyword.cloud_notm}} instance that you ordered. For more information, see [Adding, viewing, and deleting certificates for KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/kmip_standalone_addingdeletingcert.html).
+Add client certificates for the KMIP for VMware on {{site.data.keyword.cloud_notm}} instance that you ordered. For more information, see [Adding, viewing, and deleting certificates for KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-adding-viewing-and-deleting-certificates-for-kmip-for-vmware-on-ibm-cloud-instances).
 
 ## Related links
 
-* [Viewing KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/kmip_standalone_viewing.html)
-* [Deleting KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services/kmip_standalone_deleting.html)
-* [Activity Tracker events](/docs/services/vmwaresolutions/vmonic/at-events.html)
+* [Viewing KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-viewing-kmip-for-vmware-on-ibm-cloud-instances)
+* [Deleting KMIP for VMware on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/services?topic=vmware-solutions-deleting-kmip-for-vmware-on-ibm-cloud-instances)
+* [Activity Tracker events](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-activity-tracker-events)

@@ -48,4 +48,4 @@ To move your pre-V1.4 instances to new instances, complete the following steps i
 
 For more information about exporting and importing VMs, see your VMware vSphere documentation.
 
-If you need assistance with {{site.data.keyword.vmwaresolutions_short}}, [contact IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html) through one of the support channels.
+If you need assistance with {{site.data.keyword.vmwaresolutions_short}}, [contact IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-contacting-ibm-support) through one of the support channels.

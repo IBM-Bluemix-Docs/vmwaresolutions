@@ -38,6 +38,6 @@ The VMware on {{site.data.keyword.cloud_notm}} offerings bring the following ben
 
 ### Related links
 
-* [Design overview](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
-* [Scaling capacity](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)
-* [Backing up components](/docs/services/vmwaresolutions/archiref/solution/solution_backingup.html)
+* [Design overview](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design-overview)
+* [Scaling capacity](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-scaling-capacity)
+* [Backing up components](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-backing-up-components)

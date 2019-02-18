@@ -19,8 +19,8 @@ The Fortinet on {{site.data.keyword.cloud_notm}} service is now available to bot
 After the Fortinet service is installed successfully, you can manage and configure firewall rules for the FSA from the FortiGate console. You must ensure that the FSA firewall rules are defined to allow outbound HTTPS communications that are initiated by management components such as the IBM CloudDriver virtual machine or Zerto Virtual Manager to communicate with the external management database on IBM Bluemix® over the internet. The outbound HTTPS communications originate from the public IP address of the management services VMware NSX Edge Services Gateway (ESG) in your instance.
 
 For more information, see the following topics:
-* [Fortinet on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services/fsa_considerations.html)
-* [Managing Fortinet on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingfsa.html)
+* [Fortinet on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-fortigate-security-appliance-on-ibm-cloud-overview)
+* [Managing Fortinet on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing-fortigate-security-appliance-on-ibm-cloud)
 
 ## Veeam on IBM Cloud service
 
@@ -31,8 +31,8 @@ Because of this change, although the Veeam VSI in the pre-V1.8 instances keeps w
 In addition, the license of the Veeam VSI in pre-V1.8 instances expires on 14 October 2017. Therefore, you must replace the previous Veeam VSI with the new Veeam service at your earliest convenience.
 
 For more information, see the following topics:
-* [Veeam on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services/veeam_considerations.html)
-* [Managing Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managingveeam.html)
+* [Veeam on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-veeam-on-ibm-cloud-overview)
+* [Managing Veeam on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-managing-veeam-on-ibm-cloud)
 
 ## Updates for VMware Cloud Foundation instances
 
@@ -43,8 +43,8 @@ Starting with the V1.8 release, when you are ordering a Cloud Foundation instanc
 You can also choose to use your own VMware license for a component, in which case you are required to provide the license keys. In this case, support for the VMware components that you provide licenses for will be provided by VMware, not by IBM Support.
 
 For more information, see the following topics:
-* [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [FAQ about BYOL](/docs/services/vmwaresolutions/vmonic/faq_byol.html)
+* [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-ordering-cloud-foundation-instances)
+* [FAQ about BYOL](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-faq-about-licensing-and-byol)
 
 ## Updates for VMware vCenter Server instances
 
@@ -53,22 +53,22 @@ For more information, see the following topics:
 A customizable server option is available alongside the pre-built and tested Small, Medium, and Large options. You can select from a list of VMware HCL-compatible servers based on dual-CPUs and the number of total cores, in addition to the amount of RAM. Local storage is not customizable.
 
 For more information, see the following topics:
-* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [Adding and viewing clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-vcenter-server-instances)
+* [Adding and viewing clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-viewing-and-deleting-clusters-for-vcenter-server-instances)
 
 ### Support to add more than 7 NFS file shares
 
  You can attach up to a maximum of 32 file shares across all ESXi servers in a cluster.
 
  For more information, see the following topics:
-* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [Adding and viewing clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingviewingclusters.html)
+* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-vcenter-server-instances)
+* [Adding and viewing clusters for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-viewing-and-deleting-clusters-for-vcenter-server-instances)
 
 ### Updates to data centers
 
 The following new data centers are available for deployment: **DAL-09, DAL-12, DAL-13 - Dallas**; **LON-04, LON-06 - London**; **SJC-04 - San Jose**; **WDC-06, WDC-07 - Washington, DC**
 
-For more information, see [Requirements and planning for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_planning.html)
+For more information, see [Requirements and planning for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-requirements-and-planning-for-vcenter-server-instances)
 
 ## Usability enhancements
 

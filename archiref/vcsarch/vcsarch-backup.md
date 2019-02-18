@@ -14,7 +14,7 @@ You’re responsible for the configuration, management, and monitoring of all so
 
 As part of the solution, you can optionally deploy the IBM Spectrum Protect&trade; Plus on {{site.data.keyword.cloud_notm}} or Veeam on {{site.data.keyword.cloud_notm}} add-on services. Veeam and IBM Spectrum Protect Plus can help satisfy the requirement to back up your management components.
 
-These add-on services are deployed together with {{site.data.keyword.cloud_notm}} Endurance storage. The services help you back up your workloads and the management components. The [IBM Spectrum Protect Plus architecture overview](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} and [Veeam architecture overview](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window} provide helpful guidance on planning and sizing your deployment. You can also request [managed services](/docs/services/vmwaresolutions/services/managing_veeam_services.html) for your Veeam deployment.
+These add-on services are deployed together with {{site.data.keyword.cloud_notm}} Endurance storage. The services help you back up your workloads and the management components. The [IBM Spectrum Protect Plus architecture overview](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_spplus){:new_window} and [Veeam architecture overview](https://www.ibm.com/cloud/garage/architectures/implementation/virtualization_backup_veeam){:new_window} provide helpful guidance on planning and sizing your deployment. You can also request [managed services](/docs/services/vmwaresolutions/services?topic=vmware-solutions-requesting-managed-services-for-veeam-on-ibm-cloud) for your Veeam deployment.
 
 Different solution components require different strategies for backup. Some components are protected by using image-level backup, and other components are protected by using file-based backup for their configuration and data.
 
@@ -85,6 +85,6 @@ With proper planning, you can ensure that your VMware instance can suffer the lo
 
 ### Related links
 
-* [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
-* [Design overview](/docs/services/vmwaresolutions/archiref/solution/design_overview.html)
-* [Scaling capacity](/docs/services/vmwaresolutions/archiref/solution/solution_scaling.html)
+* [Solution overview](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-overview-of-ibm-cloud-for-vmware-solutions)
+* [Design overview](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-design-overview)
+* [Scaling capacity](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-scaling-capacity)

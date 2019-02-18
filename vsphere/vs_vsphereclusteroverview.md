@@ -78,23 +78,23 @@ Each vSphere cluster expansion node deploys and incurs charges for the following
 
 ### Hardware for expansion nodes
 
-One {{site.data.keyword.cloud_notm}} Bare Metal Server with the hardware configuration presented in [Technical specifications for VMware vSphere on {{site.data.keyword.cloud_notm}} clusters](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
+One {{site.data.keyword.cloud_notm}} Bare Metal Server with the hardware configuration presented in [Technical specifications for VMware vSphere on {{site.data.keyword.cloud_notm}} clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vmware-vsphere-on-ibm-cloud-overview#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
 
 ### Networking for expansion nodes
 
-One {{site.data.keyword.cloud_notm}} Bare Metal Server with the networking configuration presented in [Technical specifications for VMware vSphere on {{site.data.keyword.cloud_notm}} clusters](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
+One {{site.data.keyword.cloud_notm}} Bare Metal Server with the networking configuration presented in [Technical specifications for VMware vSphere on {{site.data.keyword.cloud_notm}} clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vmware-vsphere-on-ibm-cloud-overview#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
 
 ### VMware components for expansion nodes
 
 * One {{site.data.keyword.cloud_notm}} Bare Metal Server with VMware vSphere Enterprise Plus 6.0u2 or 6.5u1  
-* Optional VMware components presented in [Technical specifications for VMware vSphere on {{site.data.keyword.cloud_notm}} clusters](/docs/services/vmwaresolutions/vsphere/vs_vsphereclusteroverview.html#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
+* Optional VMware components presented in [Technical specifications for VMware vSphere on {{site.data.keyword.cloud_notm}} clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vmware-vsphere-on-ibm-cloud-overview#technical-specifications-for-vmware-vsphere-on-ibm-cloud-clusters).
 
-You must manage the ESXi servers, optional VMware components, and additional hardware that are ordered and delivered to your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.slportal}}. After creating a new cluster in the {{site.data.keyword.vmwaresolutions_short}} console, you can return to the console and use the saved information to scale the new cluster. For more information, see [Scaling existing vSphere clusters](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html).
+You must manage the ESXi servers, optional VMware components, and additional hardware that are ordered and delivered to your {{site.data.keyword.cloud_notm}} account only from the {{site.data.keyword.slportal}}. After creating a new cluster in the {{site.data.keyword.vmwaresolutions_short}} console, you can return to the console and use the saved information to scale the new cluster. For more information, see [Scaling existing vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-scaling-existing-vsphere-clusters).
 {:important}
 
 ### Related links
 
-* [VMware vSphere Software Bill of Materials](/docs/services/vmwaresolutions/vsphere/vs_bom.html)
-* [Planning vSphere clusters](/docs/services/vmwaresolutions/vsphere/vs_planning.html)
-* [Ordering vSphere clusters](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html)
-* [Scaling existing vSphere clusters](/docs/services/vmwaresolutions/vsphere/vs_scalingexistingclusters.html)
+* [VMware vSphere Software Bill of Materials](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vmware-vsphere-bill-of-materials)
+* [Planning vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-requirements-and-planning-for-vmware-vsphere-on-ibm-cloud)
+* [Ordering vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-ordering-new-vsphere-clusters)
+* [Scaling existing vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-scaling-existing-vsphere-clusters)

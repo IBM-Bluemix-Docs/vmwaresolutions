@@ -75,4 +75,4 @@ The Hybrid Cloud Services deployment can be administered from the Management Por
 
 ### Related links
 
-* [Troubleshooting HCX on IBM Cloud](/docs/services/vmwaresolutions/archiref/hcx-archi/hcx-archi-trbl.html)
+* [Troubleshooting HCX on IBM Cloud](/docs/services/vmwaresolutions/archiref/hcx-archi?topic=vmware-solutions-troubleshooting-hcx-on-ibm-cloud)

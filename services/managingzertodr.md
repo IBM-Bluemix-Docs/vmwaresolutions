@@ -41,8 +41,8 @@ When you add or remove ESXi servers for the primary cluster of your instance, VR
 
 ### Related links
 
-* [Zerto on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services/addingzertodr.html)
-* [Requesting managed services for Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services/managing_zerto_services.html)
+* [Zerto on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-zerto-on-ibm-cloud-overview)
+* [Requesting managed services for Zerto on {{site.data.keyword.cloud_notm}}](/docs/services/vmwaresolutions/services?topic=vmware-solutions-requesting-managed-services-for-zerto-on-ibm-cloud)
 * [zerto.com website](https://www.zerto.com){:new_window}
 * [Zerto technical documentation](https://www.zerto.com/myzerto/technical-documentation/){:new_window}
 * [Zerto disaster recovery](https://www.ibm.com/cloud/garage/architectures/virtualizationArchitecture/zerto){:new_window}

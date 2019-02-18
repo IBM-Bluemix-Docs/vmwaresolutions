@@ -45,4 +45,4 @@ While this makes it simple to set up a worldwide connected infrastructure within
 
 ### Related links
 
-* [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [Solution overview](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-overview-of-ibm-cloud-for-vmware-solutions)

@@ -18,7 +18,7 @@ The process of applying patches and updates to vCenter Server with Hybridity Bun
 
 ## Before you begin
 
-Beginning with V2.5, IBM CloudDriver updates are no longer listed because automatic updates are enabled. Actions such as adding a host, adding a cluster, and ordering a service automatically updates the instance to the latest version. For more information about automatic updates, see the *IBM CloudDriver resiliency* section in [Release notes for V2.5](/docs/services/vmwaresolutions/vmonic/relnotes_v25.html).
+Beginning with V2.5, IBM CloudDriver updates are no longer listed because automatic updates are enabled. Actions such as adding a host, adding a cluster, and ordering a service automatically updates the instance to the latest version. For more information about automatic updates, see the *IBM CloudDriver resiliency* section in [Release notes for V2.5](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-release-notes-for-v2-5).
 {:note}
 
 Before you attempt to apply an update, expand the update entry by clicking the down arrow and verify the following information:
@@ -88,10 +88,10 @@ before you reapply the update.</dd>
 <dd class="dd">The status of the update job cannot be obtained. Contact IBM Support for assistance.</dd>
 </dl>
 
-4. If the update process fails at a specific step, [contact IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html) for assistance. You will be advised how to resolve the problem and guided to attempt the upgrade again from the step that failed.
+4. If the update process fails at a specific step, [contact IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-contacting-ibm-support) for assistance. You will be advised how to resolve the problem and guided to attempt the upgrade again from the step that failed.
 
 ### Related links
 
-* [vCenter Server with Hybridity Bundle overview](/docs/services/vmwaresolutions/vcenter/vc_hybrid_overview.html)
-* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
-* [FAQs](/docs/services/vmwaresolutions/vmonic/faq.html)
+* [vCenter Server with Hybridity Bundle overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter-server-with-hybridity-bundle-overview)
+* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-contacting-ibm-support)
+* [FAQs](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-general-faq-about-ibm-cloud-for-vmware-solutions)

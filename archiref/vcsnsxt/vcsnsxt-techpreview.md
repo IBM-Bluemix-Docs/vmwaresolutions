@@ -95,7 +95,7 @@ What is NOT configured:
 
 ### vCenter Server with NSX-V and NSX-T
 
-The original vCenter Server cluster contains all the management components for NSX-V and NSX-T along with the vCenter Server appliances. The hosts in this cluster are prepared for NSX-V as described in [NSX-V overview](/docs/services/vmwaresolutions/archiref/vcsnsxt/vcsnsxt-overview-ic4vnsxv.html). The hosts in the second cluster are prepared for NSX-T and configured as transport nodes. This configuration gives customers the ability to migrate from NSX-V to NSX-T if they choose to do so.
+The original vCenter Server cluster contains all the management components for NSX-V and NSX-T along with the vCenter Server appliances. The hosts in this cluster are prepared for NSX-V as described in [NSX-V overview](/docs/services/vmwaresolutions/archiref/vcsnsxt?topic=vmware-solutions-nsx-v-overview). The hosts in the second cluster are prepared for NSX-T and configured as transport nodes. This configuration gives customers the ability to migrate from NSX-V to NSX-T if they choose to do so.
 
 ### NSX-T versus NSX-V
 

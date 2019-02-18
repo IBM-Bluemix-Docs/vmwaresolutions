@@ -50,5 +50,5 @@ Figure 2. Caveonix RiskForesight zones
 
 ### Related Links
 
-*   [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
-*   [Caveonix Detailed Design](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-detailed.html)
+*   [VMware vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcenter-server-on-ibm-cloud-with-hybridity-bundle-overview)
+*   [Caveonix Detailed Design](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-detailed-design)

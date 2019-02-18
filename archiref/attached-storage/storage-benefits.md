@@ -12,7 +12,7 @@ lastupdated: "2019-01-23"
 
 Attached storage is an extension of the VMware vCenter Server on {{site.data.keyword.cloud}} offering. The attached storage solution architecture for the VMware vCenter Server on {{site.data.keyword.cloud_notm}} details the components of the solution and the high-level configuration of each component in the design.
 
-For more information about the vCenter Server design, see [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
+For more information about the vCenter Server design, see [Solution overview](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-overview-of-ibm-cloud-for-vmware-solutions).
 
 ## Key benefits of attached storage for vCenter Server
 
@@ -29,4 +29,4 @@ Table 1. Functions description for attached storage for vCenter Server
 
 ### Related links
 
-* [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [Solution overview](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-overview-of-ibm-cloud-for-vmware-solutions)

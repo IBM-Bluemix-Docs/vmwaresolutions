@@ -16,7 +16,7 @@ lastupdated: "2019-01-23"
 
 With VMware Federal on {{site.data.keyword.cloud}}, you can order a base vCenter Server instance in addition to providing US Federal Government agencies with the option to secure the deployed vCenter Server instances. When you secure a deployed instance, the sensitive information that is stored about the instance is removed. Also, the open connection for instance access is removed, which means that management functions, such as adding and removing hosts and clusters are no longer available. After you select the secure option, the only available function is instance delete.
 
-For more information about vCenter Server on {{site.data.keyword.cloud_notm}} and the vCenter Server architecture, see [vCenter Server overview](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html).
+For more information about vCenter Server on {{site.data.keyword.cloud_notm}} and the vCenter Server architecture, see [vCenter Server overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter-server-overview).
 
 VMware Federal on {{site.data.keyword.cloud_notm}} offers only a subset of the vCenter Server offerings. Multi-site configuration, Bring Your Own License, and the option to order add-on services are not supported.
 {:note}
@@ -43,13 +43,13 @@ The following networking components are ordered:
 *  Three VLANs (Virtual LANs): one public VLAN and two private VLANs
 *  One VXLAN (Virtual eXtensible LAN) with DLR (Distributed Logical Router) for potential east-west communication between local workloads that are connected to layer 2 (L2) networks. The VXLAN is deployed as a sample routing topology, which you can modify, build on it, or remove it. You can also add security zones by attaching more VXLANs to new logical interfaces on the DLR.
 *  Two VMware NSX Edge Services Gateways:
-  * A secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management virtual machines to communicate with specific external IBM management components that are related to automation. For more information, see [Configuring your network to use the customer-managed ESG](/docs/services/vmwaresolutions/vcenter/vc_esg_config.html#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
+  * A secure management services VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic, which is deployed by IBM as part of the management networking typology. This ESG is used by the IBM management virtual machines to communicate with specific external IBM management components that are related to automation. For more information, see [Configuring your network to use the customer-managed ESG](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms#configuring-your-network-to-use-the-customer-managed-nsx-esg-with-your-vms).
 
     This ESG is not accessible to you and you cannot use it. If you modify it, you might not be able to manage the vCenter Server instance from the {{site.data.keyword.vmwaresolutions_short}} console. In addition, using a firewall or disabling the ESG communications to the external IBM management components will cause {{site.data.keyword.vmwaresolutions_short}} to become unusable.
     {:important}
-  * A secure customer-managed VMware NSX Edge Services Gateway for outbound and inbound HTTPS workload traffic, which is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For more information, see [Does the customer-managed NSX Edge pose a security risk](/docs/services/vmwaresolutions/vmonic/faq.html#does-the-customer-managed-nsx-edge-pose-a-security-risk-).
+  * A secure customer-managed VMware NSX Edge Services Gateway for outbound and inbound HTTPS workload traffic, which is deployed by IBM as a template that can be modified by you to provide VPN access or public access. For more information, see [Does the customer-managed NSX Edge pose a security risk](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-general-faq-about-ibm-cloud-for-vmware-solutions#does-the-customer-managed-nsx-edge-pose-a-security-risk-).
 
-  The VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic is removed as part of the action to secure your deployed VMware Federal instance. For more information, see [Securing VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html).
+  The VMware NSX Edge Services Gateway (ESG) for outbound HTTPS management traffic is removed as part of the action to secure your deployed VMware Federal instance. For more information, see [Securing VMware Federal instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-securing-vmware-federal-instances).
   {:note}
 
 ### Virtual Server Instances
@@ -94,7 +94,7 @@ Each vCenter Server expansion node will deploy and incur charges for the followi
 
 ### Hardware for expansion nodes
 
-One Bare Metal Server with the configuration presented in [Technical specifications for VMware Federal on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/vcenter/vc_fed_overview.html#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
+One Bare Metal Server with the configuration presented in [Technical specifications for VMware Federal on {{site.data.keyword.cloud_notm}} instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vmware-federal-on-ibm-cloud-overview#technical-specifications-for-vmware-federal-on-ibm-cloud-instances).
 
 ### Licenses and fees for expansion nodes
 
@@ -114,9 +114,9 @@ You must manage the {{site.data.keyword.vmwaresolutions_short}} components that 
 
 ### Related links
 
-* [Requirements and planning for VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_planning.html)
-* [Ordering VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_orderinginstance.html)
-* [Adding, viewing, and deleting clusters for VMware Federal instances](/docs/services/vmwaresolutions/vcenter/fed_addviewdeleteclusters.html)
-* [Expanding and contracting capacity for VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_addingremovingservers.html)
-* [Securing VMware Federal instances](/docs/services/vmwaresolutions/vcenter/vc_fed_securinginstance.html)
+* [Requirements and planning for VMware Federal instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-requirements-and-planning-for-vmware-federal-instances)
+* [Ordering VMware Federal instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-vmware-federal-instances)
+* [Adding, viewing, and deleting clusters for VMware Federal instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-adding-viewing-and-deleting-clusters-for-vmware-federal-instances)
+* [Expanding and contracting capacity for VMware Federal instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-expanding-and-contracting-capacity-for-vmware-federal-instances)
+* [Securing VMware Federal instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-securing-vmware-federal-instances)
 * [{{site.data.keyword.cloud_notm}} file and block storage](https://www.ibm.com/cloud/garage/content/architecture/virtualizationArchitecture/shared-storage){:new_window}

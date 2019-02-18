@@ -28,7 +28,7 @@ Figure 1. Components of VMware on {{site.data.keyword.cloud_notm}}
 
 ### Related links
 
-* [Physical infrastructure design](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
-* [Virtual infrastructure design](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
-* [Common services design](/docs/services/vmwaresolutions/archiref/solution/design_commonservice.html)
-* [Infrastructure management design](/docs/services/vmwaresolutions/archiref/solution/design_infrastructuremgmt.html)
+* [Physical infrastructure design](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-physical-infrastructure-design)
+* [Virtual infrastructure design](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-virtual-infrastructure-design)
+* [Common services design](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-common-services-design)
+* [Infrastructure management design](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-infrastructure-management-design)

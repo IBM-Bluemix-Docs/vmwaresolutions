@@ -16,7 +16,7 @@ This release includes new features, component updates, usability enhancements, a
 
 The Single-node Trial for Migration and App Modernization is a quick way to test drive {{site.data.keyword.cloud_notm}} to migrate VMware workloads into the {{site.data.keyword.cloud_notm}} and then modernize workloads using containers. This trial is a version of {{site.data.keyword.icpfull_notm}} Hosted on VMware vCenter Server on {{site.data.keyword.cloud_notm}} that provides the Kubernetes management platform for containers and the single-tenant VMware platform that can be managed using the same familiar tools as on-premises environments.
 
-For more information, see [Single-node Trial for Migration and App Modernization overview](/docs/services/vmwaresolutions/vcenter/cloud_modern_bundle_overview.html).
+For more information, see [Single-node Trial for Migration and App Modernization overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-single-node-trial-for-migration-and-app-modernization-overview).
 
 ## Adding and removing network file system storage
 
@@ -27,7 +27,7 @@ The following options for customized shared file-level storage are now available
 * NFS share sizes starting at 20GB up to 12TB at single GB increments
 * 0.25 IOPS/GB
 
-For more information, see the *Adding NFS storage to vCenter Server instances* and *Removing NFS storage from vCenter Server instances* sections in [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_addingremovingservers.html#adding-nfs-storage-to-vcenter-server-instances).
+For more information, see the *Adding NFS storage to vCenter Server instances* and *Removing NFS storage from vCenter Server instances* sections in [Expanding and contracting capacity for vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-expanding-and-contracting-capacity-for-vcenter-server-instances#adding-nfs-storage-to-vcenter-server-instances).
 
 ## SAP-certified Broadwell E5-2690 and E7-8890 server support
 
@@ -39,8 +39,8 @@ Starting with the V2.8 release, the following new {{site.data.keyword.cloud_notm
 * Quad Intel Xeon E7-8890 v4 processor / 96 cores total, 2.20 GHz / 4096 GB RAM
 
 For more information, see the *{{site.data.keyword.baremetal_short_sing}} settings* section in:
-* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html#bare-metal-server-settings)
-* [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html#bare-metal-server-settings)
+* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-vcenter-server-instances#bare-metal-server-settings)
+* [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-ordering-new-vsphere-clusters#bare-metal-server-settings)
 
 ## Broadwell E7-4820 and E7-4850 server support
 
@@ -50,10 +50,10 @@ Starting with the V2.8 release, the following new {{site.data.keyword.cloud_notm
 * Quad Intel Xeon E7-4850 v4 / 64 cores total, 2.1 GHz
 
 For more information, see the *{{site.data.keyword.baremetal_short_sing}} settings* section in:
-* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html#bare-metal-server-settings)
-* [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter/vc_hybrid_orderinginstance.html#bare-metal-server-settings)
-* [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html#bare-metal-server-settings)
-* [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere/vs_orderinginstances.html#bare-metal-server-settings)
+* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-vcenter-server-instances#bare-metal-server-settings)
+* [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-vcenter-server-with-hybridity-bundle-instances#bare-metal-server-settings)
+* [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-ordering-cloud-foundation-instances#bare-metal-server-settings)
+* [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-ordering-new-vsphere-clusters#bare-metal-server-settings)
 
 ## Embedded Platform Services Controller
 
@@ -63,7 +63,7 @@ For instances that are upgraded from an earlier release to V2.8, the PSC is not 
 
 In a multi-site configuration where the primary instance is an upgraded instance for which the PSC was manually converted from external to embedded, any newly deployed V2.8 secondary instances will have embedded PSC.
 
-For more information, see the *vCenter Server architecture* section in [vCenter Server overview](/docs/services/vmwaresolutions/vcenter/vc_vcenterserveroverview.html#vcenter-server-architecture).
+For more information, see the *vCenter Server architecture* section in [vCenter Server overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vcenter-server-overview#vcenter-server-architecture).
 
 ## Updates for VMware vCenter Server instances
 
@@ -93,15 +93,15 @@ Previously, you could order a Cloud Foundation or vCenter Server instance with t
 
 Starting with the V2.8 release, the service is available as a standalone service without being associated to a VMware instance. Each instance of the service can serve one or more Cloud Foundation instances, vCenter Server instances, or vSphere clusters.
 
-For more information, see [KMIP for VMware on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services/kmip_standalone_considerations.html).
+For more information, see [KMIP for VMware on {{site.data.keyword.cloud_notm}} overview](/docs/services/vmwaresolutions/services?topic=vmware-solutions-kmip-for-vmware-on-ibm-cloud-overview).
 
 ## Reference architecture documentation
 
 (Updated on February 08, 2019) The following technical documents are now available in the *Reference* section of the user documentation:
 
-* [{{site.data.keyword.vmwaresolutions_short}} with NSX-T architecture](/docs/services/vmwaresolutions/archiref/vcsarch/vcsarch-overview.html)
-* [Caveonix RiskForesight reference architecture](/docs/services/vmwaresolutions/archiref/caveonix/caveonix-on-vcs.html)
-* [HCX on {{site.data.keyword.cloud_notm}} deployment and operations guide](/docs/services/vmwaresolutions/archiref/vcshcx/vcshcx-intro.html)
+* [{{site.data.keyword.vmwaresolutions_short}} with NSX-T architecture](/docs/services/vmwaresolutions/archiref/vcsarch?topic=vmware-solutions-overview-of-ibm-cloud-for-vmware-solutions-with-nsx-t)
+* [Caveonix RiskForesight reference architecture](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-riskforesight-on-ibm-cloud-for-vmware-solutions)
+* [HCX on {{site.data.keyword.cloud_notm}} deployment and operations guide](/docs/services/vmwaresolutions/archiref/vcshcx?topic=vmware-solutions-vmware-hybrid-cloud-services-introduction)
 
 ## User interface updates and enhancements
 

@@ -191,11 +191,11 @@ can be done via:
   - Helm command line interface.
   - Use Multizone clusters to increase high availability.
 
-[Planning your cluster and worker node setup](/docs/containers/cs_clusters_planning.html#plan_clusters) explains the options and process to design a solution to meet your requirements.
+[Planning your cluster and worker node setup](/docs/containers?topic=containers-plan_clusters#plan_clusters) explains the options and process to design a solution to meet your requirements.
 
 ## Security and compliance
-When it comes to meeting strict industry guidelines, {{site.data.keyword.cloud_notm}} has done the work for you, fostering true compliance. [Compliance on the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/compliance) provides details on the specific compliance certifications, global regulations, alignments, and frameworks for security and privacy. [Security for {{site.data.keyword.containerlong_notm}}](/docs/containers/cs_secure.html#security) details {{site.data.keyword.containerlong_notm}} security features.
+When it comes to meeting strict industry guidelines, {{site.data.keyword.cloud_notm}} has done the work for you, fostering true compliance. [Compliance on the {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/compliance) provides details on the specific compliance certifications, global regulations, alignments, and frameworks for security and privacy. [Security for {{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-security#security) details {{site.data.keyword.containerlong_notm}} security features.
 
 ### Related links
 
-* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs/vcs-hybridity-intro.html)
+* [vCenter Server on {{site.data.keyword.cloud_notm}} with Hybridity Bundle overview](/docs/services/vmwaresolutions/archiref/vcs?topic=vmware-solutions-vcenter-server-on-ibm-cloud-with-hybridity-bundle-overview)

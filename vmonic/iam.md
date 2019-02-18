@@ -54,23 +54,23 @@ Table 2. Action descriptions and required roles
 
 ## Managing access for users
 
-You can add new users to the {{site.data.keyword.cloud_notm}} account so that these users can share the services and resources that are provisioned for the account. For more information, see [Inviting users to access services and resources](/docs/services/vmwaresolutions/vmonic/iamuserinvite.html).
+You can add new users to the {{site.data.keyword.cloud_notm}} account so that these users can share the services and resources that are provisioned for the account. For more information, see [Inviting users to access services and resources](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-inviting-users-to-access-services-and-resources).
 
-You can also manage the access for existing users, including modifying existing access, assigning new access, and reviewing assigned access. To manage access for users, you must be the account owner or you must have the **Administrator** platform management role. For more information, see [Managing access to resources](/docs/iam/mngiam.html).
+You can also manage the access for existing users, including modifying existing access, assigning new access, and reviewing assigned access. To manage access for users, you must be the account owner or you must have the **Administrator** platform management role. For more information, see [Managing access to resources](/docs/iam?topic=iam-iammanidaccser).
 
 ## Migrating existing instances to IBM Cloud accounts
 
 Because of the integration of {{site.data.keyword.vmwaresolutions_short}} with IAM, instances that are deployed in V2.5 and later releases in your {{site.data.keyword.cloud_notm}} account are automatically added to your account and are managed by IAM.
 
 For your existing instances that were deployed in V2.4 and earlier releases, you can migrate them to specified {{site.data.keyword.cloud_notm}} accounts for IAM-enabled management. For more information, see the following topics:
-* [Migrating pre-V2.5 vCenter Server instances to IBM Cloud accounts](/docs/services/vmwaresolutions/vcenter/vc_addinstancetousraccount.html)
-* [Migrating pre-V2.5 vCenter Server with Hybridity Bundle instances to IBM Cloud accounts](/docs/services/vmwaresolutions/vcenter/vc_hybrid_addinstancetousraccount.html)
-* [Migrating pre-V2.5 Cloud Foundation instances to IBM Cloud accounts](/docs/services/vmwaresolutions/sddc/sd_addinstancetousraccount.html)
-* [Migrating pre-V2.5 NetApp ONTAP Select instances to IBM Cloud accounts](/docs/services/vmwaresolutions/netapp/np_addinstancetousraccount.html)
-* [Migrating pre-V2.5 VMware Federal instances to IBM Cloud accounts](/docs/services/vmwaresolutions/vcenter/vc_fed_addinstancetousraccount.html)
+* [Migrating pre-V2.5 vCenter Server instances to IBM Cloud accounts](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-migrating-pre-v2-5-vcenter-server-instances-to-ibm-cloud-accounts)
+* [Migrating pre-V2.5 vCenter Server with Hybridity Bundle instances to IBM Cloud accounts](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-migrating-pre-v2-5-vcenter-server-with-hybridity-bundle-instances-to-ibm-cloud-accounts)
+* [Migrating pre-V2.5 Cloud Foundation instances to IBM Cloud accounts](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-migrating-pre-v2-5-cloud-foundation-instances-to-ibm-cloud-accounts)
+* [Migrating pre-V2.5 NetApp ONTAP Select instances to IBM Cloud accounts](/docs/services/vmwaresolutions/netapp?topic=vmware-solutions-migrating-pre-v2-5-netapp-ontap-select-instances-to-ibm-cloud-accounts)
+* [Migrating pre-V2.5 VMware Federal instances to IBM Cloud accounts](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-migrating-pre-v2-5-vmware-federal-instances-to-ibm-cloud-accounts)
 
 ### Related links
 
-* [Managing identity and access](/docs/iam/quickstart.html)
+* [Managing identity and access](/docs/iam?topic=iam-getstarted)
 * [Managing users and access](/docs/iam/iamusermanage.html)
-* [What is IAM](/docs/iam/index.html)
+* [What is IAM](/docs/iam?topic=iam-iamoverview)

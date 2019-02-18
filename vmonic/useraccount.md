@@ -24,7 +24,7 @@ You can also specify whether you want to receive email and console notifications
 ## Before you begin
 
 * You can link only one {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account to one {{site.data.keyword.cloud_notm}} user account.
-* The {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account that you're using must meet certain requirements. For more information, see [{{site.data.keyword.cloud_notm}} infrastructure account requirements](/docs/services/vmwaresolutions/vmonic/slaccountrequirement.html).
+* The {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account that you're using must meet certain requirements. For more information, see [{{site.data.keyword.cloud_notm}} infrastructure account requirements](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-requirements-for-the-ibm-cloud-infrastructure-account).
 * If the API key for your {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account changes, you must update the key on the **Settings** page in the {{site.data.keyword.vmwaresolutions_short}} console.
 
    **Important:** It is your responsibility to ensure that the API key that is saved on the **Settings** page is correct and up-to-date. Otherwise, operations that require API key validation might fail.
@@ -38,7 +38,7 @@ You can also specify whether you want to receive email and console notifications
 3. In the **IBM Cloud Infrastructure Credentials** area, enter the user name and API key of your {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account:
    * If your {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account and your {{site.data.keyword.cloud_notm}} account are linked, click **Retrieve** to enter the credentials automatically.
    * If your {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account and your {{site.data.keyword.cloud_notm}} account aren't linked, you must link them. Log in to the [{{site.data.keyword.cloud_notm}} infrastructure customer portal](https://control.softlayer.com/) and follow the instructions on the console to get the credentials, then enter them.
-   * If you don't have an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account, [sign up for one](/docs/services/vmwaresolutions/vmonic/signing_softlayer_account.html) and follow the instructions on the console to get the credentials, then enter them.
+   * If you don't have an {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) account, [sign up for one](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-signing-up-for-required-accounts) and follow the instructions on the console to get the credentials, then enter them.
 4. Click **Save Credentials**.
 
 ## Results
@@ -51,8 +51,8 @@ If email or console notifications are enabled for certain instance events, you'r
 
 ### Related links
 
-* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
-* [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter/vc_orderinginstance.html)
-* [Notifications](/docs/services/vmwaresolutions/vmonic/notifications.html)
-* [SoftLayer API](/docs/customer-portal/cpapi.html){:new_window}
+* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-general-faq-about-ibm-cloud-for-vmware-solutions)
+* [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-ordering-cloud-foundation-instances)
+* [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-ordering-vcenter-server-instances)
+* [Notifications](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-system-notifications)
+* [SoftLayer API](/docs/customer-portal?topic=customer-portal-customerportal_api){:new_window}

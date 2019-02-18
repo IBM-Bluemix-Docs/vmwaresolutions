@@ -73,5 +73,5 @@ By default, all unread notifications are displayed. You can filter the notificat
 
 ### Related links
 
-* [FAQ](/docs/services/vmwaresolutions/vmonic/faq.html)
-* [User account and settings](/docs/services/vmwaresolutions/vmonic/useraccount.html)
+* [FAQ](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-general-faq-about-ibm-cloud-for-vmware-solutions)
+* [User account and settings](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-managing-user-accounts-and-settings)

@@ -85,6 +85,6 @@ You can use the Windows AD servers within this design to create certificates tha
 
 ### Related links
 
-* [Physical infrastructure design](/docs/services/vmwaresolutions/archiref/solution/design_physicalinfrastructure.html)
-* [Virtual infrastructure design](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html)
-* [Infrastructure management design](/docs/services/vmwaresolutions/archiref/solution/design_infrastructuremgmt.html)
+* [Physical infrastructure design](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-physical-infrastructure-design)
+* [Virtual infrastructure design](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-virtual-infrastructure-design)
+* [Infrastructure management design](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-infrastructure-management-design)

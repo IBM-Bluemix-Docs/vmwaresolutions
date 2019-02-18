@@ -212,5 +212,5 @@ You might want to delete a cluster from an instance when it is no longer needed.
 
 ### Related links
 
-* [Viewing Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
-* [Expanding and contracting capacity for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
+* [Viewing Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-viewing-cloud-foundation-instances)
+* [Expanding and contracting capacity for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-expanding-and-contracting-capacity-for-cloud-foundation-instances)

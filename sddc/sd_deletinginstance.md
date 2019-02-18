@@ -51,9 +51,9 @@ You are billed until the end of the {{site.data.keyword.cloud_notm}} billing cyc
 
 ### Related links
 
-* [Deleting Cloud Foundation instances in a multi-site configuration](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html)
-* [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [Viewing Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_viewinginstances.html)
-* [Expanding and contracting capacity for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
-* [Deleting multi-site configurations](/docs/services/vmwaresolutions/sddc/sd_deletinginstance_multi.html)
-* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html)
+* [Deleting Cloud Foundation instances in a multi-site configuration](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-deleting-cloud-foundation-instances-in-a-multi-site-configuration)
+* [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-ordering-cloud-foundation-instances)
+* [Viewing Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-viewing-cloud-foundation-instances)
+* [Expanding and contracting capacity for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-expanding-and-contracting-capacity-for-cloud-foundation-instances)
+* [Deleting multi-site configurations](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-deleting-cloud-foundation-instances-in-a-multi-site-configuration)
+* [Contacting IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-contacting-ibm-support)

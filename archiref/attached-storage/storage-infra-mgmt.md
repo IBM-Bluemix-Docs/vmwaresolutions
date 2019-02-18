@@ -16,11 +16,11 @@ lastupdated: "2019-01-23"
 
 Infrastructure management refers to the VMware components that are managing the vSphere ESXi infrastructure.
 
-For more information about the components, see Figure 2. NSX Manager network overview in [Virtual infrastructure design](/docs/services/vmwaresolutions/archiref/solution/design_virtualinfrastructure.html).
+For more information about the components, see Figure 2. NSX Manager network overview in [Virtual infrastructure design](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-virtual-infrastructure-design).
 
 ## Virtual networking design
 
-The network virtualization that is used in this design uses the existing vSphere Distributed Switch (vDS) associated with the private network and specified in the [{{site.data.keyword.vmwaresolutions_full}} architecture](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html).
+The network virtualization that is used in this design uses the existing vSphere Distributed Switch (vDS) associated with the private network and specified in the [{{site.data.keyword.vmwaresolutions_full}} architecture](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-overview-of-ibm-cloud-for-vmware-solutions).
 
 ## vSphere Distributed Switch
 
@@ -52,4 +52,4 @@ Although the vDS is configured with a new port group and a VMkernel port is assi
 
 ### Related links
 
-* [Solution overview](/docs/services/vmwaresolutions/archiref/solution/solution_overview.html)
+* [Solution overview](/docs/services/vmwaresolutions/archiref/solution?topic=vmware-solutions-overview-of-ibm-cloud-for-vmware-solutions)

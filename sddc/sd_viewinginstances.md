@@ -111,7 +111,7 @@ Table 5. Cloud Foundation instance deployment history
 
 ## What to do if errors occur
 
-If errors occur during instance deployment or instance deletion, the {{site.data.keyword.cloud_notm}} Support team is automatically notified. To inquire about the status of your ticket, you can [contact IBM Support](/docs/services/vmwaresolutions/vmonic/trbl_support.html).
+If errors occur during instance deployment or instance deletion, the {{site.data.keyword.cloud_notm}} Support team is automatically notified. To inquire about the status of your ticket, you can [contact IBM Support](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-contacting-ibm-support).
 
 ## What to do next
 
@@ -122,12 +122,12 @@ Before you click **vCenter console** on the instance summary page to go to the v
 
 Review the following topics for information to help you complete the login instructions:
 
-* For the requirements and necessary steps before you access the vSphere Web Client, see [Timeout reached while connecting to the vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_timeout_vc_console.html).
+* For the requirements and necessary steps before you access the vSphere Web Client, see [Timeout reached while connecting to the vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-timeout-reached-while-connecting-to-the-vmware-vsphere-web-client).
 * For a list of access points to log in to the {{site.data.keyword.cloud_notm}} Private Network by using VPN, see [VPN Access](http://www.softlayer.com/vpn-access){:new_window}.
-* If you have problems when you deploy an OVF (Open Virtualization Format) file by using the vSphere Web Client, see [Deploying an OVF file by using the vSphere Web Client](/docs/services/vmwaresolutions/vmonic/trbl_deploy_ovf.html).
+* If you have problems when you deploy an OVF (Open Virtualization Format) file by using the vSphere Web Client, see [Deploying an OVF file by using the vSphere Web Client](/docs/services/vmwaresolutions/vmonic?topic=vmware-solutions-deploying-an-ovf-file-using-the-vmware-vsphere-web-client).
 
 ### Related links
 
-* [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_orderinginstance.html)
-* [Expanding and contracting capacity for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_addingremovingservers.html)
-* [Deleting Cloud Foundation instances](/docs/services/vmwaresolutions/sddc/sd_deletinginstance.html)
+* [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-ordering-cloud-foundation-instances)
+* [Expanding and contracting capacity for Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-expanding-and-contracting-capacity-for-cloud-foundation-instances)
+* [Deleting Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-deleting-cloud-foundation-instances)
