@@ -4,7 +4,7 @@ copyright:
 
   years:  2016, 2019
 
-lastupdated: "2019-02-14"
+lastupdated: "2019-03-21"
 
 ---
 
@@ -39,7 +39,7 @@ Table 2. BOM for the software components in vCenter Server instances
 
 | Manufacturer  | Component                      | Version       |
 |:------------- |:------------------------------ |:------------- |
-| VMware       | vSphere ESXi                    | 6.5 Update P3 (build 6.5.0-10884925) |
+| VMware       | vSphere ESXi                    | 6.5 Update EP11 (build 6.5.0-10719125) |
 | VMware       | vCenter Server Appliance        | 6.5 U2d (build 6.5.0-10964411) |
 | VMware       | Platform Services Controller    | 6.5 U2d (build 6.5.0-10964411) |
 | VMware       | vSAN                            | 6.6.1        |
