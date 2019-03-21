@@ -6,6 +6,9 @@ copyright:
 
 lastupdated: "2019-02-08"
 
+subcollection: vmwaresolutions
+
+
 ---
 
 # Release notes for V2.8
@@ -57,7 +60,6 @@ Starting with the V2.8 release, the following new {{site.data.keyword.cloud_notm
 For more information, see the *{{site.data.keyword.baremetal_short_sing}} settings* section in:
 * [Ordering vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_orderinginstance#bare-metal-server-settings)
 * [Ordering vCenter Server with Hybridity Bundle instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_hybrid_orderinginstance#bare-metal-server-settings)
-* [Ordering Cloud Foundation instances](/docs/services/vmwaresolutions/sddc?topic=vmware-solutions-sd_orderinginstance#bare-metal-server-settings)
 * [Ordering new vSphere clusters](/docs/services/vmwaresolutions/vsphere?topic=vmware-solutions-vs_orderinginstances#bare-metal-server-settings)
 
 ## Embedded Platform Services Controller
@@ -76,7 +78,7 @@ For more information, see the *vCenter Server architecture* section in [vCenter 
 
 This release applies the following upgrades and improvements:
 
-* vSphere ESXi 6.5 Update P3 (build 6.5.0-10884925)
+* vSphere ESXi 6.5 Update EP11 (build 6.5.0-10719125)
 * vCenter Server 6.5 U2d (build 6.5.0-10964411)
 * Platform Services Controller 6.5 U2d (build 6.5.0-10964411)
 
@@ -109,9 +111,10 @@ For more information, see [KMIP for VMware on {{site.data.keyword.cloud_notm}} o
 ## Reference architecture documentation
 {: #relnotes_v28-ref}
 
-(Updated on February 08, 2019) The following technical documents are now available in the *Reference* section of the user documentation:
+(Updated on February 08, 2019) The following technical documents are new or updated in the *Reference* section of the user documentation:
 
-* [{{site.data.keyword.vmwaresolutions_short}} with NSX-T architecture](/docs/services/vmwaresolutions/archiref/vcsarch?topic=vmware-solutions-vcsarch-overview)
+* [{{site.data.keyword.vmwaresolutions_short}} architecture (with NSX-V and NSX-T)
+](/docs/services/vmwaresolutions/services?topic=vmware-solutions-solution_overview#solution_overview)
 * [Caveonix RiskForesight reference architecture](/docs/services/vmwaresolutions/archiref/caveonix?topic=vmware-solutions-caveonix-on-vcs)
 * [HCX on {{site.data.keyword.cloud_notm}} deployment and operations guide](/docs/services/vmwaresolutions/archiref/vcshcx?topic=vmware-solutions-vcshcx-intro)
 
