@@ -18,6 +18,8 @@ The installation of VMware HCX on IBM Cloud has the following software requireme
 * If NSX is used, version 6.2.2 or higher. NSX is required for policy migration.
 * To use cross-cloud vMotion, the same affinity restrictions apply across clouds as they do on-premises. For more information, see the [VMware EVC and CPU Compatibility FAQ](https://kb.vmware.com/s/article/1005764).
 
+Here is how EVC is set in VCS at time of cluster deployment. If cluster is Broadwell, EVC mode for cluster is set to Broadwell. If vSphere 6.5 and cluster is Skylake, EVC mode for cluster is not set. If vSphere 6.7 and cluster is Skylake, EVC mode for cluster is set to Skylake. {:note}
+
 ## Configuring network connectivity
 {: #hcx-archi-prep-install-config-net}
 
