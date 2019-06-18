@@ -18,7 +18,7 @@ subcollection: vmware-solutions
 # FortiGate Security Appliance on IBM Cloud overview
 {: #fsa_considerations}
 
-The FortiGate Security Appliance on {{site.data.keyword.cloud}} service deploys a pair of FortiGate Security Appliance (FSA) 300 series devices in a highly available mode to provide firewall, routing, NAT, and VPN services to protect all the servers and virtual machines on the public VLAN of your instances.
+The FortiGate Security Appliance on {{site.data.keyword.cloud}} service deploys a pair of FortiGate Security Appliance (FSA) 300 series devices in a highly available mode to provide firewall, routing, NAT, and VPN services to protect all the servers and virtual machines on the public VLAN of your instances and Fortinet firewalls with Gateway Security protects enterprises against web attacks with URL filtering, visibility and control of encrypted web traffic via SSL inspection, and application of granular web application policies.
 
 You can manage this service by using the FortiOS Web Client or the command line interface via SSH.
 
