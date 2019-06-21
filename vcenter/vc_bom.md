@@ -137,6 +137,18 @@ To update the MTU setting for the Public Switch, complete the following steps in
 
    When the MTU size in a vDS is changed, the attached uplinks (physical NICs) are brought down and up again. As a result, a brief outage occurs for the VMs that are using the uplink. Therefore, it is recommended to plan the MTU setting update during scheduled downtime.
    {:note}
+   
+## Enhanced vMotion Compatibility (EVC) mode settings
+{: #vc_bom-evc-mode-settings}
+
+Review the following table for an overview of the VMware Enhanced vMotion Compatibility (EVC) mode settings settings for vCenter Server instances, and the differences between vSphere versions.
+
+Table 6. Enhanced vMotion Compatibility (EVC) mode settings for vCenter Server instances and clusters
+
+| Bare Metal Server CPU model | vSphere 6.5  | vSphere 6.7 |
+|:------------- |:------------- |:------------- |
+| Broadwell | EVC is set to Intel **Broadwell** Generation | EVC is set to Intel **Broadwell** Generation |
+| Skylake | Not set | EVC is set to Intel **Skylake** Generation |
 
 ## Related links
 {: #vc_bom-related}
@@ -147,3 +159,4 @@ To update the MTU setting for the Public Switch, complete the following steps in
 * [{{site.data.keyword.vmwaresolutions_short}} Protection Data Sheet](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=236C87407E7411E6BA51E79BE9476040){:new_window}
 * [vCenter Server overview](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_vcenterserveroverview)
 * [Planning vCenter Server instances](/docs/services/vmwaresolutions/vcenter?topic=vmware-solutions-vc_planning)
+* [Enhanced vMotion Compatibility (EVC) processor support (1003212)](https://kb.vmware.com/s/article/1003212)
