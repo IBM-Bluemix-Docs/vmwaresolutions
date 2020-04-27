@@ -358,11 +358,11 @@ Terraform is used to deploy the VMs for bootstrap, control-plane, and compute no
 
 After Terraform provisions the VMs, the OpenShift cluster bootstraps itself:
 
-1. The bootstrap node boots and starts hosting the remote resources that are required for the compute-nodes to boot.
-2. The compute-nodes fetch the remote resources from the bootstrap node and finish booting.
-3. The compute-nodes use the bootstrap node to form an etcd cluster.
+1. The bootstrap node boots and starts hosting the remote resources that are required for the control plane nodes to boot.
+2. The control-plane nodes fetch the remote resources from the bootstrap node and finish booting.
+3. The control-plane nodes use the bootstrap node to form an etcd cluster.
 4. The bootstrap node starts a temporary Kubernetes control plane by using the new etcd cluster.
-5. The temporary control plane schedules the production control plane to the compute-nodes.
+5. The temporary control plane schedules the production control plane to the control-plane nodes.
 6. The temporary control plane shuts down and passes control to the production control plane.
 7. The bootstrap node injects OpenShift Container Platform components into the production control plane.
 8. The control plane sets up the compute nodes.
