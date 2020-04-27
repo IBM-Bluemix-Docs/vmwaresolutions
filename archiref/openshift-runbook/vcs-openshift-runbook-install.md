@@ -22,7 +22,7 @@ subcollection: vmware-solutions
 Red Hat OpenShift 4 introduced the following concepts:
 
 * Installer Provisioned Infrastructure (IPI) - For use on supported platforms, only AWS currently. The installer provisions the underlying infrastructure for the cluster and it configures the cluster.
-* User Provisioned Infrastructure (UPI)  -  For use on bare metal, vSphere, and other clouds that do not support IPI. The user is required to provision the infrastructure; compute, network, storage that the OpenStack cluster is hosted on. The installer configures only the cluster.
+* User Provisioned Infrastructure (UPI)  -  For use on bare metal, vSphere, and other clouds that do not support IPI. The user is required to provision the infrastructure; compute, network, storage that the OpenShift cluster is hosted on. The installer configures only the cluster.
 
 These instructions use the OpenShift installer in the UPI mode. Terraform is used to provision the seven VMs for the bootstrap, control-plane, and compute nodes. The following process is completed:
 
@@ -112,7 +112,7 @@ cp install-config.yaml install-config.bak
 ## Running the OpenShift Ignition command
 {: #openshift-runbook-runbook-install-ignition-cmd}
 
-Now that the install-config.yaml is created and populated run the OpenStack Installer to create the ignition files
+Now that the install-config.yaml is created and populated run the OpenShift Installer to create the ignition files
 
 ```bash
 cd /opt/ocp42install/
@@ -121,7 +121,7 @@ openshift-install create ignition-configs --dir=/opt/ocp42install/
   The Ignition files are valid for 24 hours and your OpenShift deployment must be completed within this time. Otherwise, you must regenerate the Ignition files. For more information, see [Troubleshooting OpenShift problems](/docs/vmwaresolutions?topic=vmware-solutions-openshift-runbook-runbook-trbl-intro).
    {:note}
 
-The following files are produced by the OpenStack Installer:
+The following files are produced by the OpenShift Installer:
 
 ```bash
 .
