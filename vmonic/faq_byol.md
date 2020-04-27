@@ -2,7 +2,7 @@
 
 copyright:
 
-  years:  2016, 2020
+years:  2016, 2020
 
 lastupdated: "2020-04-01"
 
