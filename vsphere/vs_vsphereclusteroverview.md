@@ -21,7 +21,7 @@ subcollection: vmwaresolutions
 # VMware vSphere overview
 {: #vs_vsphereclusteroverview}
 
-VMware vSphere® is a streamlined and optimized ordering platform for VMware®. With this platform, you can build your own {{site.data.keyword.IBM}}-hosted VMware environment by customizing and ordering the VMware-compatible hardware based on your selected VMware components. A minimum of four ESXi servers is required.
+VMware vSphere® is a streamlined and optimized ordering platform for VMware®. With this platform, you can build your own {{site.data.keyword.IBM}}-hosted VMware environment by customizing and ordering the VMware-compatible hardware based on your selected VMware components. A minimum of four ESXi servers are required for vSAN cluster. A minimum of three ESXi servers are required for NFS cluster.
 {: shortdesc}
 
 The {{site.data.keyword.vmwaresolutions_short}} console filters the hardware automatically, based on the VMware components that you select. For example, when you create a new all-flash VMware vSAN cluster, only the hardware that is validated against the [VMware Compatibility Guide](https://www.vmware.com/resources/compatibility/search.php){:external} is presented.
