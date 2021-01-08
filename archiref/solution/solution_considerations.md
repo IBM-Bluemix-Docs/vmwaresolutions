@@ -108,6 +108,7 @@ Ensure to plan for and implement the following solutions for monitoring your ins
 - Proactive monitoring of hosts, drives, management software, and network, including vSAN monitoring if applicable. The [VMware vRealize Operations on IBM Cloud](/docs/vmwaresolutions?topic=vmwaresolutions-vrops_overview) offering can help you operate and monitor the performance, health, and capacity of your VMware environment.
 - Capacity monitoring and planning. You can [add and remove clusters](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingviewingclusters#vc_addingviewingclusters) and [add and remove hosts](/docs/vmwaresolutions?topic=vmwaresolutions-vc_addingremovingservers) to your instance from the {{site.data.keyword.vmwaresolutions_short}} console.
 - Monitoring your backup infrastructure and backup jobs.
+- vSphere Distributed Switch Health Check is enabled by default and can generate a significant number of MAC addresses for testing teaming policy, MTU size, VLAN configuration, resulting in extra network traffic. You many want to disable this Health Check and only re-enable as needed for Network Troubleshooting. For more information, see https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.networking.doc/GUID-4A6C1E1C-8577-4AE6-8459-EEB942779A82.html. 
 
 ## Business continuity and availability
 {: #solution_considerations-business-cont}
