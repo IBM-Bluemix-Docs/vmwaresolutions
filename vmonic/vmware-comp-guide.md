@@ -44,7 +44,7 @@ Review the following tables for information about the products and versions that
 ## SuperMicro server reference
 {: #vmware-comp-guide-supermicro-server}
 
-| Server configuration | MOBO | CPU | RAID | NIC | Tivoli Provisioning Manager |
+| Server configuration | MOBO | CPU | RAID | NIC | Trusted Platform Module |
 |:-------------------- |:---- |:--- |:---- |:--- |:--- |
 | PIO-628U-TR4T +-ST031 (1U/2U)</br>SYS-6028U-TR4T+ | X10DRU-i+_R1.02b | E5-2600-v4</br>Intel C612 chipset | (LSI) MegaRAID SAS 9361-8i | AOC-2UR6-i4XT</br>Intel X540-AT2 | AOM-TPM-9655V |
 | PIO-648R-E1CR36L +-ST031 (4U)</br>SSG-6048R-E1CR36N | X10DRI-T4+</br>X10DRI-T4+_1.02 | E5-2600-v4</br>Intel C612 chipset | (LSI) MegaRAID SAS 9361-8i | 4x Onboard X540 Quad port 10GBase-T Intel X540 | AOM-TPM-9655V |
